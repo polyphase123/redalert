@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupGlobalSearch();
   setupCalendar();
   setupMap();
+  setupStrategicAnalysisTab();
   
   // Run initial renders
   updateLiveTicker();
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMarketTab();
   renderUpdatesTab();
   renderMldTab();
+  renderStrategicAnalysisTab();
 });
 
 // Helper: Extract Parent Conglomerate from raw Affiliation text
@@ -211,6 +213,8 @@ function setupNavigation() {
         }, 150);
       } else if (tabId === 'calendar') {
         renderCalendarGrid();
+      } else if (tabId === 'compliance-analysis') {
+        renderStrategicAnalysisTab();
       }
     });
   });
@@ -2634,5 +2638,270 @@ function formatDateVal(val) {
   }
   
   return val;
+}
+
+// 18. Strategic Compliance & Affiliate Market Power Loop Controller
+window.openDrawerByPlantKey = function(facility, unit) {
+  const p = state.powerPlants.find(x => x.facility.toLowerCase().includes(facility.toLowerCase()) && x.unit.toLowerCase().includes(unit.toLowerCase()));
+  if (p && p.outagesList && p.outagesList.length > 0) {
+    openDrawer(p.outagesList[0]);
+  } else {
+    // Fallback: search raw outages
+    const o = state.outages.find(x => x.facility.toLowerCase().includes(facility.toLowerCase()) && x.unit.toLowerCase().includes(unit.toLowerCase()));
+    if (o) openDrawer(o);
+  }
+};
+
+function setupStrategicAnalysisTab() {
+  const container = document.getElementById('conglomerate-selectors');
+  if (!container) return;
+  const buttons = container.querySelectorAll('button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active-conglom-btn'));
+      btn.classList.add('active-conglom-btn');
+      const group = btn.getAttribute('data-group');
+      renderConglomerateMatrix(group);
+    });
+  });
+}
+
+function renderComplianceBreachLeaderboard() {
+  const tbody = document.getElementById('compliance-breach-leaderboard-body');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  // Filter power plants that have exceeded their allowable outage days (exceededDays > 0)
+  const breachers = state.powerPlants.filter(p => p.exceededDays > 0);
+  
+  // Sort descending by exceededDays
+  breachers.sort((a, b) => b.exceededDays - a.exceededDays);
+
+  if (breachers.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="6" style="text-align: center; padding: 20px; color: var(--text-muted);">
+          No power plant units have exceeded the annual unplanned ERC compliance limits during this period.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  breachers.forEach(p => {
+    const allowance = p.outagesList && p.outagesList.length > 0 ? parseFloat(p.outagesList[0].outage_allowance) || 0 : 0;
+    const accumulated = p.accumulatedDays;
+    const exceeded = p.exceededDays;
+
+    const row = document.createElement('tr');
+    row.style.cursor = 'pointer';
+    row.style.transition = 'background-color 0.2s';
+    
+    row.addEventListener('mouseover', () => {
+      row.style.backgroundColor = 'var(--bg-secondary)';
+    });
+    row.addEventListener('mouseout', () => {
+      row.style.backgroundColor = '';
+    });
+
+    row.addEventListener('click', () => {
+      if (p.outagesList && p.outagesList.length > 0) {
+        openDrawer(p.outagesList[0]);
+      }
+    });
+
+    row.innerHTML = `
+      <td style="padding: 12px 14px; font-weight: 500;">
+        <span class="badge ${p.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}">${p.grid}</span>
+      </td>
+      <td style="padding: 12px 14px;">
+        <div style="font-weight: 800; color: var(--text-primary);">${p.facility} (${p.unit})</div>
+        <div style="font-size: 10px; color: var(--text-muted);">${p.genco}</div>
+      </td>
+      <td style="padding: 12px 14px; text-align: center; font-weight: 600; color: var(--text-secondary);">
+        ${Math.round(p.capacity)}
+      </td>
+      <td style="padding: 12px 14px; text-align: center; font-weight: 500; color: var(--text-muted);">
+        ${allowance.toFixed(1)}
+      </td>
+      <td style="padding: 12px 14px; text-align: center; font-weight: 600; color: var(--text-secondary);">
+        ${accumulated.toFixed(1)}
+      </td>
+      <td style="padding: 12px 14px; text-align: right; font-weight: 800; color: var(--status-red);">
+        +${exceeded.toFixed(1)}d
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function renderConglomerateMatrix(filterGroup) {
+  const container = document.getElementById('conglomerates-matrix-container');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  const groups = [
+    {
+      id: 'aboitiz',
+      className: 'aboitiz',
+      title: 'Aboitiz Power (AP) Loop',
+      badgeText: 'COAL TO DIESEL ARBITRAGE',
+      badgeColor: '#f97316',
+      plantSearch: { facility: 'TVI CFPP', unit: 'Unit 2' },
+      plantName: 'TVI CFPP Units 1 & 2',
+      technology: 'Coal Baseload',
+      grid: 'Visayas Grid',
+      capacity: '338',
+      exceeded: '56.3',
+      offtakers: 'VECO, NEPC, AEC, INEC, CEBECO I',
+      contractedLevel: '109 MW Bilateral Capacity Allocations',
+      contractImpact: 'Forced CEBECO & VECO utilities to purchase expensive replacement power from WESM.',
+      peakerName: 'Therma Mobile (TMO) Units 1 & 2',
+      peakerTech: '100 MW Oil Peaking Plants (Merchant)',
+      description: '<strong>Economic Dynamic:</strong> TVI (Aboitiz) coal forced outages reduced Visayas reserve margins, triggering Red/Yellow alerts. Sibling Therma Mobile peaking units (also Aboitiz Power) were dispatched in WESM, setting the price at the <strong>₱32,000/MWh cap</strong> on multiple occasions (e.g. May 14, 15, and 16). While the group suffered capacity limits on baseload contracts, its merchant peaking assets captured massive windfall revenues from the spot market ceiling, paid for by retail consumers.'
+    },
+    {
+      id: 'smc',
+      className: 'smc',
+      title: 'San Miguel Corporation (SMC) Loop',
+      badgeText: 'GAS TO BESS DYNAMIC',
+      badgeColor: '#3b82f6',
+      plantSearch: { facility: 'Batangas CCPP', unit: 'Unit 1' },
+      plantName: 'Batangas CCPP Unit 1 (EERI)',
+      technology: 'Natural Gas Baseload',
+      grid: 'Luzon Grid',
+      capacity: '440',
+      exceeded: '75.9',
+      offtakers: 'MERALCO (Manila Electric Co.)',
+      contractedLevel: '1,200 MW Meralco Power Supply Agreement',
+      contractImpact: 'EERI outage directly exposed Meralco to massive replacement power purchase requirements in WESM.',
+      peakerName: 'Jasaan, Villanueva, Kabankalan BESS',
+      peakerTech: 'SMC Battery Energy Storage Systems (Merchant)',
+      description: '<strong>Economic Dynamic:</strong> Excellent Energy Resources Inc. (EERI) Unit 1 suffered a prolonged outage in Luzon, restricting grid reserves and triggering Yellow/Red alerts. During these peak hours, SMC\'s strategically deployed Battery Energy Storage Systems (BESS) — Villanueva BESS, Jasaan BESS, and Kabankalan BESS — were dispatched to provide fast-acting reserves, repeatedly setting the WESM MCP at the <strong>₱32,000/MWh cap</strong>. SMC battery storage assets, with near-zero fuel costs, captured maximum spot market revenues, offsetting contract penalty exposures elsewhere in the conglomerate.'
+    },
+    {
+      id: 'firstgen',
+      className: 'firstgen',
+      title: 'First Gen / EDC Loop',
+      badgeText: 'GEOTHERMAL TO BESS DYNAMIC',
+      badgeColor: '#10b981',
+      plantSearch: { facility: 'Mahanagdong', unit: 'Unit 1' },
+      plantName: 'Mahanagdong & Upper Mahiao Geothermal',
+      technology: 'Geothermal Baseload',
+      grid: 'Visayas Grid',
+      capacity: '53',
+      exceeded: '57.5',
+      offtakers: 'LEYECO III/IV/V, ESAMELCO, DORELCO, BILECO',
+      contractedLevel: '19 MW Electric Coop Allocations',
+      contractImpact: 'Pushed local cooperatives in Leyte and Samar to experience rotational brownouts or buy spot power.',
+      peakerName: 'Southern Negros BESS',
+      peakerTech: 'EDC / First Gen Battery Storage (Merchant)',
+      description: '<strong>Economic Dynamic:</strong> Multiple EDC geothermal units in the Visayas went on forced outage (exceeding annual limits by over 50+ days), contributing to regional capacity deficits. During these peak shortfall intervals (especially on May 13), First Gen\'s <strong>Southern Negros BESS</strong> set the WESM MCP at the <strong>₱32,000/MWh cap</strong> to support grid frequency. The geothermal shortfalls in capacity commitments were thus economically offset by sister battery spot market price-setting capture.'
+    },
+    {
+      id: 'spc',
+      className: 'spc',
+      title: 'SPC Power Loop',
+      badgeText: 'SUB-GRID ISLANDING PREMIUM',
+      badgeColor: '#8b5cf6',
+      plantSearch: { facility: 'Bohol DPP', unit: 'DG 1' },
+      plantName: 'Bohol DPP Units 1, 2, 3',
+      technology: 'Diesel Baseload',
+      grid: 'Visayas Sub-Grid',
+      capacity: '18',
+      exceeded: '31.4',
+      offtakers: 'Bilateral Cooperatives (Bohol)',
+      contractedLevel: '18 MW Island Support Allocations',
+      contractImpact: 'Islands experienced severe capacity deficits, requiring emergency local generation support.',
+      peakerName: 'Bohol DPP Unit 4, PB 101/104',
+      peakerTech: 'Bohol In-island DPP / Power Barges (Merchant)',
+      description: '<strong>Economic Dynamic:</strong> With Bohol diesel units on forced outage, sister peaking units (Bohol DPP Unit 4, Bohol In-island DPP, and Power Barges 101/104) were run at full capacity to cover the local island deficit. During these sub-grid islanding events, these sister peaking plants set the WESM prices at the peak cap of <strong>₱32,000/MWh</strong>, capturing highly lucrative islanding premiums under localized market rules.'
+    }
+  ];
+
+  const filtered = filterGroup === 'all' ? groups : groups.filter(g => g.id === filterGroup);
+  
+  filtered.forEach(g => {
+    const card = document.createElement('div');
+    card.className = `conglomerate-loop-card ${g.className}`;
+    card.innerHTML = `
+      <div class="loop-title-row">
+        <div class="loop-title">${g.title}</div>
+        <span class="badge" style="background-color: ${g.badgeColor}22; color: ${g.badgeColor}; border: 1px solid ${g.badgeColor}44; font-weight:800; font-size:11px;">
+          ${g.badgeText}
+        </span>
+      </div>
+      
+      <div class="loop-visual-flow">
+        <!-- Node 1: Baseload Outage -->
+        <div class="loop-node" style="cursor: pointer;" onclick="openDrawerByPlantKey('${g.plantSearch.facility}', '${g.plantSearch.unit}')">
+          <div class="loop-node-title" style="color:var(--status-red); border-bottom-color: #fee2e2;">Baseload Outage Asset</div>
+          <div class="loop-node-content">
+            <div style="font-weight:800; color:var(--text-primary); font-size:13px;">${g.plantName}</div>
+            <div style="font-size:11px; color:var(--text-muted);">${g.technology} • ${g.grid}</div>
+            <div style="font-size:11px; font-weight:700; margin-top:2px; color:var(--status-red);">Capacity Lost: -${g.capacity} MW</div>
+            <div style="font-size:11px; color:#ef4444; font-weight:700; margin-top:1px;">+${g.exceeded} Days Limit Breach</div>
+            <div style="font-size:9.5px; color:var(--accent-color); font-weight:600; margin-top:4px; display:flex; align-items:center; gap:2px;">
+              <span>🔍 Click to inspect outages</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Arrow 1 -->
+        <div class="loop-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+        
+        <!-- Node 2: Bilateral PSA Exposure -->
+        <div class="loop-node">
+          <div class="loop-node-title" style="color:var(--status-info); border-bottom-color: #e0f2fe;">Bilateral PSA Exposure</div>
+          <div class="loop-node-content">
+            <div style="font-weight:800; color:var(--text-primary); font-size:13px;">${g.offtakers}</div>
+            <div style="font-size:11px; color:var(--text-muted);">${g.contractedLevel}</div>
+            <div style="font-size:11.5px; line-height:1.4; margin-top:3px; color:var(--text-secondary);">${g.contractImpact}</div>
+          </div>
+        </div>
+        
+        <!-- Arrow 2 -->
+        <div class="loop-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+        
+        <!-- Node 3: Sibling Peaking Price-Setter -->
+        <div class="loop-node">
+          <div class="loop-node-title" style="color:#a855f7; border-bottom-color: #f3e8ff;">Affiliate Price-Setter</div>
+          <div class="loop-node-content">
+            <div style="font-weight:800; color:var(--text-primary); font-size:13px;">${g.peakerName}</div>
+            <div style="font-size:11px; color:var(--text-muted);">${g.peakerTech}</div>
+            <div style="font-size:11px; font-weight:700; color:#a855f7; margin-top:2px;">WESM Spot Peak Capture</div>
+            <div style="font-size:12px; color:var(--accent-hover); font-weight:800; margin-top:1px;">₱32,000/MWh Price Cap</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="loop-description">
+        ${g.description}
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function renderStrategicAnalysisTab() {
+  renderComplianceBreachLeaderboard();
+  
+  let activeGroup = 'all';
+  const activeBtn = document.querySelector('#conglomerate-selectors button.active-conglom-btn');
+  if (activeBtn) {
+    activeGroup = activeBtn.getAttribute('data-group');
+  }
+  
+  renderConglomerateMatrix(activeGroup);
 }
 
