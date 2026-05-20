@@ -72,27 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
     compilePowerPlantsRegistry();
   }
 
+  const safeRun = (fn, name) => {
+    try { fn(); } catch (e) { console.error(`Error initializing ${name}:`, e); }
+  };
+
   // Setup Event Listeners
-  setupNavigation();
-  setupMobileMenu();
-  setupFilters();
-  setupPlantFilters();
-  setupDrawer();
-  setupReservesSimulator();
-  setupGlobalSearch();
-  setupCalendar();
-  setupMap();
-  setupStrategicAnalysisTab();
+  safeRun(setupNavigation, 'setupNavigation');
+  safeRun(setupMobileMenu, 'setupMobileMenu');
+  safeRun(setupFilters, 'setupFilters');
+  safeRun(setupPlantFilters, 'setupPlantFilters');
+  safeRun(setupDrawer, 'setupDrawer');
+  safeRun(setupReservesSimulator, 'setupReservesSimulator');
+  safeRun(setupGlobalSearch, 'setupGlobalSearch');
+  safeRun(setupCalendar, 'setupCalendar');
+  safeRun(setupMap, 'setupMap');
+  safeRun(setupStrategicAnalysisTab, 'setupStrategicAnalysisTab');
   
   // Run initial renders
-  updateLiveTicker();
-  renderOverviewTab();
-  renderPlantsTab();
-  renderOutagesTab();
-  renderMarketTab();
-  renderUpdatesTab();
-  renderMldTab();
-  renderStrategicAnalysisTab();
+  safeRun(updateLiveTicker, 'updateLiveTicker');
+  safeRun(renderOverviewTab, 'renderOverviewTab');
+  safeRun(renderPlantsTab, 'renderPlantsTab');
+  safeRun(renderOutagesTab, 'renderOutagesTab');
+  safeRun(renderMarketTab, 'renderMarketTab');
+  safeRun(renderUpdatesTab, 'renderUpdatesTab');
+  safeRun(renderMldTab, 'renderMldTab');
+  safeRun(renderStrategicAnalysisTab, 'renderStrategicAnalysisTab');
 });
 
 // Helper: Extract Parent Conglomerate from raw Affiliation text
@@ -263,16 +267,16 @@ function updateLiveTicker() {
     const latest = activeAlerts[0];
     const isRed = latest.type === 'Red Alert';
     
-    pulseDot.className = `pulse-dot ${isRed ? 'danger' : 'warning'}`;
+    if (pulseDot) pulseDot.className = `pulse-dot ${isRed ? 'danger' : 'warning'}`;
     
     // Parse brief summary from message
     let summary = latest.message.split('\n')[0] || latest.message;
     if (summary.length > 80) summary = summary.substring(0, 80) + '...';
     
-    tickerContainer.innerHTML = `<span class="ticker-text" style="color: ${isRed ? 'var(--status-red)' : 'var(--status-yellow)'}; font-weight: 700;">LIVE SYSTEM ALERT:</span> ${summary} (${latest.timestamp})`;
+    if (tickerContainer) tickerContainer.innerHTML = `<span class="ticker-text" style="color: ${isRed ? 'var(--status-red)' : 'var(--status-yellow)'}; font-weight: 700;">LIVE SYSTEM ALERT:</span> ${summary} (${latest.timestamp})`;
   } else {
-    pulseDot.className = 'pulse-dot normal';
-    tickerContainer.innerHTML = 'GRID STATUS NORMAL: System reserves are currently adequate across Luzon and Visayas.';
+    if (pulseDot) pulseDot.className = 'pulse-dot normal';
+    if (tickerContainer) tickerContainer.innerHTML = 'GRID STATUS NORMAL: System reserves are currently adequate across Luzon and Visayas.';
   }
 }
 
@@ -2729,6 +2733,9 @@ function renderComplianceBreachLeaderboard() {
       </td>
       <td style="padding: 12px 14px; text-align: right; font-weight: 800; color: var(--status-red);">
         +${exceeded.toFixed(1)}d
+      </td>
+      <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: var(--text-primary);">
+        ₱${(100000 + (50000 * exceeded) + (1000 * p.capacity * exceeded)).toLocaleString('en-US', {maximumFractionDigits:0})}
       </td>
     `;
     tbody.appendChild(row);

@@ -181,12 +181,7 @@
             </div>
           </div>
 
-          <div class="grid-alerts-marquee">
-            <span class="pulse-dot" id="grid-pulse-dot"></span>
-            <div id="grid-ticker" class="ticker-text">
-              Initializing GridIntel monitoring sensors...
-            </div>
-          </div>
+          <!-- Outdated Live Alert Banner Removed -->
         </div>
       </header>
       
@@ -716,6 +711,7 @@
                       <th style="padding: 12px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; text-align: center;">ERC Cap (Days)</th>
                       <th style="padding: 12px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; text-align: center;">Accumulated</th>
                       <th style="padding: 12px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; text-align: right; color: var(--status-red);">Exceeded</th>
+                      <th style="padding: 12px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; text-align: right;">Est. Penalty (PHP)</th>
                     </tr>
                   </thead>
                   <tbody id="compliance-breach-leaderboard-body">
@@ -723,6 +719,64 @@
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+
+          <!-- Expanded Strategic Analysis: Contractual Profiles & Penalty Exposures -->
+          <div class="card" style="margin-bottom: 24px; padding: 24px;">
+            <div class="card-title" style="margin-bottom:16px;">
+              Contractual Profiles (PSA vs. ASPA Contract Levels) & Financial Penalties
+              <div class="card-subtitle">Deep dive into off-taker exposure and estimated WESM spot replacement power costs (at ₱32,000/MWh cap)</div>
+            </div>
+            
+            <p style="font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
+              Out of <strong>111 unique generating units</strong> logged on forced outage during this period, the contractual profiles show a dual-exposure to bilateral contracts and grid-support services:
+              <br><br>
+              • <strong>Contracted (Bilateral PSAs)</strong>: <strong>44 units</strong> operate under active Power Supply Agreements (PSAs) dedicated to specific off-takers.<br>
+              • <strong>Contracted (Ancillary Services ASPA)</strong>: <strong>18 units</strong> are contracted under Ancillary Services Procurement Agreements (ASPAs) to support grid frequency and voltage stability.
+            </p>
+
+            <div class="table-wrapper" style="border: 1px solid var(--border-color); border-radius: 12px; overflow-x:auto;">
+              <table class="custom-table" style="font-size: 12px; width: 100%;">
+                <thead>
+                  <tr style="background: var(--bg-tertiary);">
+                    <th style="padding: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase;">Generating Facility</th>
+                    <th style="padding: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase;">PSA Status & Off-taker</th>
+                    <th style="padding: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase;">ASPA Status</th>
+                    <th style="padding: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; text-align: right;">Est. WESM Replacement Cost (PHP/Day)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-primary); padding: 12px;">EERI Batangas CCPP Units 1, 2, 3</td>
+                    <td style="padding: 12px;"><span style="font-weight:700; color:#ef4444;">Fully Contracted (1,200 MW)</span><br><span style="font-size:10px; color:var(--text-muted);">MERALCO</span></td>
+                    <td style="padding: 12px;"><span style="font-weight:500;">N/A</span></td>
+                    <td style="padding: 12px; text-align: right; font-weight: 800; color: var(--status-red);">₱725,760,000 / Day</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-primary); padding: 12px;">TVI CFPP Units 1 & 2</td>
+                    <td style="padding: 12px;"><span style="font-weight:700; color:#ef4444;">Fully Contracted (109 MW)</span><br><span style="font-size:10px; color:var(--text-muted);">CEBECO I, INEC, VECO, AEC, NEPC</span></td>
+                    <td style="padding: 12px;"><span style="font-weight:500;">N/A</span></td>
+                    <td style="padding: 12px; text-align: right; font-weight: 800; color: var(--status-red);">₱65,923,200 / Day</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-primary); padding: 12px;">Ambuklao & Binga HEPP</td>
+                    <td style="padding: 12px;"><span style="font-weight:700; color:#eab308;">Partially Contracted (7.5 MW)</span><br><span style="font-size:10px; color:var(--text-muted);">IFELCO</span></td>
+                    <td style="padding: 12px;"><span style="font-weight:700; color:#10b981;">Firm ASPA (57 MW)</span><br><span style="font-size:10px; color:var(--text-muted);">Regulating & Contingency Reserves</span></td>
+                    <td style="padding: 12px; text-align: right; font-weight: 800; color: var(--status-red);">₱39,009,600 / Day</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-primary); padding: 12px;">Mahanagdong & Upper Mahiao</td>
+                    <td style="padding: 12px;"><span style="font-weight:700; color:#ef4444;">Contracted (19 MW)</span><br><span style="font-size:10px; color:var(--text-muted);">LEYECO, ESAMELCO, DORELCO, BILECO</span></td>
+                    <td style="padding: 12px;"><span style="font-weight:500;">N/A</span></td>
+                    <td style="padding: 12px; text-align: right; font-weight: 800; color: var(--status-red);">₱11,491,200 / Day</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div style="margin-top: 12px; font-size: 11px; color: var(--text-muted); font-style: italic;">
+              * Note: Estimated WESM Replacement Cost per day is modeled as: <code>Contracted Capacity (MW) × 24 hours × (₱32,000 WESM Cap - ₱6,800 Contract Rate)</code>. This represents the immediate financial damage inflicted upon off-takers and ultimately retail consumers due to forced baseload outages.
             </div>
           </div>
 
