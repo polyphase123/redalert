@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GridIntel — NGCP Power Grid Reliability Dashboard</title>
+  
+  <!-- Vanilla CSS index.css loaded here -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Chart.js CDN for robust modern data visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Leaflet CDN Map Library for Geographic Visualization -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+  <!-- Responsive Mobile Header -->
+  <header class="mobile-navbar">
+    <button id="mobile-hamburger-btn" aria-label="Toggle Navigation Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-logo">
+      <div class="logo-icon" style="width: 32px; height: 32px; border-radius: 8px; box-shadow: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+      </div>
+      <span style="font-family: var(--font-title); font-size: 18px; font-weight: 800; letter-spacing: -0.5px; background: var(--gradient-cyber); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">GridIntel</span>
+    </div>
+    <div style="width: 24px;"></div> <!-- visual spacer -->
+  </header>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar-drawer">
+      <div class="logo-container">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div class="logo-text" style="flex-grow: 1;">
+          <span>GridIntel</span>
+          <span class="logo-sub">Reliability Hub</span>
+        </div>
+        <button id="mobile-sidebar-close-btn" aria-label="Close Sidebar" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-muted); padding: 4px; margin-left: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <nav class="nav-menu">
+        <li class="nav-item active" data-tab="overview">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9"></rect>
+              <rect x="14" y="3" width="7" height="5"></rect>
+              <rect x="14" y="12" width="7" height="9"></rect>
+              <rect x="3" y="16" width="7" height="5"></rect>
+            </svg>
+            System Overview
+          </button>
+        </li>
+        <li class="nav-item" data-tab="plants">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            Power Plants Registry
+          </button>
+        </li>
+        <li class="nav-item" data-tab="outages">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            Outages Explorer
+          </button>
+        </li>
+        <li class="nav-item" data-tab="market">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            WESM Pricing
+          </button>
+        </li>
+        <li class="nav-item" data-tab="updates">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            NGCP Bulletins Log
+          </button>
+        </li>
+        <li class="nav-item" data-tab="mld">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Load Shedding (MLD)
+          </button>
+        </li>
+        <li class="nav-item" data-tab="map">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+            Grid Map Explorer
+          </button>
+        </li>
+        <li class="nav-item" data-tab="calendar">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Outage Calendar
+          </button>
+        </li>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <p>© 2026 GridIntel Ltd.</p>
+        <p style="font-size: 10px; margin-top: 4px;">Data updated: May 19, 2026</p>
+      </div>
+    </aside>
+    
+    <!-- Main Content Panel -->
+    <main class="main-content">
+      
+      <!-- Top header bar with real-time running ticker and global search -->
+      <header class="header-bar">
+        <div class="header-title-container">
+          <h1 id="header-title">National Grid Dashboard</h1>
+          <p>PH Power Transmission System Operations & Compliance</p>
+        </div>
+        
+        <div style="display:flex; align-items:center; gap:20px; flex: 1; justify-content: flex-end; max-width: 750px;">
+          <!-- Universal Command Palette Search bar -->
+          <div style="position:relative; width: 260px;">
+            <span class="search-icon" style="left:12px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input type="text" id="global-search" class="search-input" style="padding: 9px 12px 9px 36px; font-size:12.5px; border-radius:20px; background-color: var(--bg-secondary); border: 1px solid var(--border-color); width: 100%; transition: all 0.2s;" placeholder="Search coops, plants, alert logs...">
+            <!-- Floating Results Dropdown -->
+            <div id="global-search-results" style="position:absolute; top:45px; right:0; width:360px; max-height:380px; overflow-y:auto; z-index:200; display:none;">
+              <!-- Search results dynamically loaded -->
+            </div>
+          </div>
+
+          <div class="grid-alerts-marquee">
+            <span class="pulse-dot" id="grid-pulse-dot"></span>
+            <div id="grid-ticker" class="ticker-text">
+              Initializing GridIntel monitoring sensors...
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Content Pages -->
+      <div class="page-container">
+        
+        <!-- Tab 1: System Overview Dashboard -->
+        <section id="overview-tab" class="tab-page active">
+          
+          <!-- Key Metrics Cards -->
+          <div class="metrics-grid">
+            <div class="metric-card danger" id="active-outage-card">
+              <div class="metric-header">
+                <span class="metric-label">Active Outage Capacity</span>
+                <div class="metric-icon-container" style="color: var(--status-red);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-active-outage">0 MW</div>
+              <div class="metric-subtitle">Currently active forced plant outages</div>
+            </div>
+            
+            <div class="metric-card info" id="total-outages-card">
+              <div class="metric-header">
+                <span class="metric-label">Total Outage Events</span>
+                <div class="metric-icon-container" style="color: var(--status-info);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-total-outages">0</div>
+              <div class="metric-subtitle">Outage instances logged (May 12-18)</div>
+            </div>
+            
+            <div class="metric-card warning" id="exceeded-limits-card">
+              <div class="metric-header">
+                <span class="metric-label">ERC Limit Breaches</span>
+                <div class="metric-icon-container" style="color: var(--status-yellow);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-exceeded-limits">0</div>
+              <div class="metric-subtitle">Plants exceeding regulatory outage caps</div>
+            </div>
+            
+            <div class="metric-card normal" id="peak-price-card">
+              <div class="metric-header">
+                <span class="metric-label">Peak WESM Price</span>
+                <div class="metric-icon-container" style="color: var(--status-normal);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-peak-price">₱0/MWh</div>
+              <div class="metric-subtitle">Highest market clearing price reached</div>
+            </div>
+          </div>
+          
+          <!-- Chart Row 1: Tech Impact & WESM Trends -->
+          <div class="charts-grid">
+            <div class="card">
+              <div class="card-title">
+                <div>
+                  WESM Price Fluctuations during Alerts
+                  <div class="card-subtitle">Indicative Administered Prices (AP) & Cap Peaks (Luzon vs Visayas)</div>
+                </div>
+                <span class="badge badge-tech" style="font-size:10px;">₱ / MWh</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="wesmPricingChart"></canvas>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-title">
+                Outages by Technology
+                <div class="card-subtitle">Proportion of capacity (MW) on forced shutdown</div>
+              </div>
+              <div class="chart-container" style="min-height: 180px; max-height: 200px;">
+                <canvas id="techOutagesChart"></canvas>
+              </div>
+              
+              <!-- HTML Progress bars breakdown -->
+              <div class="progress-list" id="tech-progress-list" style="margin-top: 20px;">
+                <!-- Filled dynamically by app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Row 2: Reserves Margin Simulator & Conglomerate monopoly explorer -->
+          <div class="charts-grid" style="margin-top: 24px;">
+            <div class="card">
+              <div class="card-title">
+                Luzon Grid Reserve Margin Simulator
+                <div class="card-subtitle">Simulate restoring major active outages to see real-time grid status & price updates</div>
+              </div>
+              
+              <div style="display:flex; flex-direction:column; gap:16px; margin-top:10px;">
+                <!-- Simulated Grid Health Indicator -->
+                <div id="sim-grid-status-card" class="list-item" style="border-left: 5px solid var(--status-red); background-color: #fee2e2; padding:12px; border-radius:10px; border-color: var(--status-red);">
+                  <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                    <div>
+                      <div id="sim-status-title" style="font-weight:700; font-size:14px; color:var(--status-red);">SYSTEM RED ALERT (Supply Deficit)</div>
+                      <div id="sim-status-desc" style="font-size:11px; color:var(--text-secondary); margin-top:2px;">Available Luzon: 13,508 MW • Peak Demand: 13,881 MW</div>
+                    </div>
+                    <div id="sim-margin-badge" class="badge badge-status-active" style="font-size:12px; padding:6px 10px; font-family:var(--font-title); font-weight:800; background-color: var(--status-red-bg); color: var(--status-red); border-color: var(--status-red-border);">-373 MW Margin</div>
+                  </div>
+                </div>
+
+                <!-- Simulation progress bar -->
+                <div class="progress-item">
+                  <div class="progress-label-row">
+                    <span style="font-size:12px; font-weight:500;">Simulated Reserve Margin Gauge</span>
+                    <span id="sim-margin-percent" style="font-weight:600; font-size:12px;">-2.7% Margin</span>
+                  </div>
+                  <div class="progress-bar-bg" style="height:10px; border-radius:5px;">
+                    <div id="sim-margin-bar" class="progress-bar-fill" style="width: 45%; background-color: var(--status-red); border-radius:5px;"></div>
+                  </div>
+                </div>
+
+                <!-- Simulated Market Price -->
+                <div style="display:flex; justify-content:space-between; align-items:center; border: 1px solid var(--border-color); border-radius:10px; padding:10px 14px; background-color:var(--bg-secondary);">
+                  <span style="font-size:12.5px; font-weight:600; color:var(--text-secondary);">Simulated WESM Price:</span>
+                  <span id="sim-wesm-price" style="font-family:var(--font-title); font-size:16px; font-weight:800; color:var(--status-red);">₱32,000 / MWh</span>
+                </div>
+
+                <!-- Checkboxes for active outages -->
+                <div style="display:flex; flex-direction:column; gap:8px; margin-top:5px;">
+                  <span style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted);">Active Luzon Outages (Check to restore)</span>
+                  
+                  <div class="sim-toggle-item" style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; border: 1px solid var(--border-color); border-radius:8px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <input type="checkbox" id="sim-restore-gnpd" class="sim-checkbox" style="width:16px; height:16px; cursor:pointer;">
+                      <div>
+                        <div style="font-size:12.5px; font-weight:600; color:var(--text-primary);">GNPD Unit 1 (668 MW)</div>
+                        <div style="font-size:11px; color:var(--text-muted);">Exceeded limit (+80d) • Coal</div>
+                      </div>
+                    </div>
+                    <span class="badge" style="background-color:#fee2e2; color:#ef4444; font-size:11px; border:none;">+668 MW</span>
+                  </div>
+
+                  <div class="sim-toggle-item" style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; border: 1px solid var(--border-color); border-radius:8px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <input type="checkbox" id="sim-restore-tvi1" class="sim-checkbox" style="width:16px; height:16px; cursor:pointer;">
+                      <div>
+                        <div style="font-size:12.5px; font-weight:600; color:var(--text-primary);">TVI Unit 1 (169 MW)</div>
+                        <div style="font-size:11px; color:var(--text-muted);">Exceeded limit (+125d) • Coal</div>
+                      </div>
+                    </div>
+                    <span class="badge" style="background-color:#fee2e2; color:#ef4444; font-size:11px; border:none;">+169 MW</span>
+                  </div>
+
+                  <div class="sim-toggle-item" style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; border: 1px solid var(--border-color); border-radius:8px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <input type="checkbox" id="sim-restore-tvi2" class="sim-checkbox" style="width:16px; height:16px; cursor:pointer;">
+                      <div>
+                        <div style="font-size:12.5px; font-weight:600; color:var(--text-primary);">TVI Unit 2 (169 MW)</div>
+                        <div style="font-size:11px; color:var(--text-muted);">Compliant • Coal</div>
+                      </div>
+                    </div>
+                    <span class="badge" style="background-color:#fee2e2; color:#ef4444; font-size:11px; border:none;">+169 MW</span>
+                  </div>
+
+                  <div class="sim-toggle-item" style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; border: 1px solid var(--border-color); border-radius:8px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <input type="checkbox" id="sim-restore-pedc" class="sim-checkbox" style="width:16px; height:16px; cursor:pointer;">
+                      <div>
+                        <div style="font-size:12.5px; font-weight:600; color:var(--text-primary);">PEDC Unit 3 (150 MW)</div>
+                        <div style="font-size:11px; color:var(--text-muted);">Compliant • Coal</div>
+                      </div>
+                    </div>
+                    <span class="badge" style="background-color:#fee2e2; color:#ef4444; font-size:11px; border:none;">+150 MW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-title">
+                Offline Capacity by Conglomerate Parent
+                <div class="card-subtitle">Active forced outages capacity (MW) aggregated by parent corporate conglomerate group</div>
+              </div>
+              <div class="chart-container" style="min-height: 280px; max-height: 380px; margin-top: 15px;">
+                <canvas id="conglomerateChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Overview Bottom: Regulatory Exceedance Leaderboard -->
+          <div class="card" style="margin-top: 24px; margin-bottom: 24px;">
+            <div class="card-title">
+              Critical Regulatory Outage Breaches
+              <div class="card-subtitle">Leaderboard of generating units that have exceeded ERC Resolution 04 allowable unplanned days by the largest margin</div>
+            </div>
+            <div class="list-container" id="leaderboard-list">
+              <!-- Loaded dynamically by app.js -->
+            </div>
+          </div>
+          
+        </section>
+
+        <!-- Tab 2: Power Plants Directory -->
+        <section id="plants-tab" class="tab-page">
+          <!-- Interactive Search and Filters for Registry -->
+          <div class="filter-bar">
+            <div class="search-wrapper">
+              <span class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <input type="text" id="plants-search" class="search-input" placeholder="Search power plants by name, owner (GenCo), or conglomerate parent...">
+            </div>
+            
+            <div class="filter-group">
+              <select id="plants-grid-filter" class="select-input">
+                <option value="all">All Grids</option>
+                <option value="Luzon">Luzon Grid</option>
+                <option value="Visayas">Visayas Grid</option>
+              </select>
+              
+              <select id="plants-tech-filter" class="select-input">
+                <option value="all">All Technologies</option>
+                <!-- Loaded dynamically by app.js -->
+              </select>
+              
+              <select id="plants-status-filter" class="select-input">
+                <option value="all">All Compliance Statuses</option>
+                <option value="exceeded">ERC Limit Breached</option>
+                <option value="ok">Within Allowable Limit</option>
+                <option value="active">Currently Offline Today</option>
+              </select>
+              
+              <button id="plants-reset" class="reset-button">Reset Filters</button>
+            </div>
+          </div>
+
+          <!-- Plants Directory Metrics & Calculators -->
+          <div class="plants-widgets" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:20px; margin-top:20px; margin-bottom:20px;">
+            
+            <!-- ERC Penalty Risk Estimator Card -->
+            <div class="card" style="margin-bottom:0;">
+              <div class="card-title">
+                ERC Regulatory Penalty & Risk Estimator
+                <div class="card-subtitle">Calculate grid-wide economic loss and financial exposure for units exceeding ERC unplanned caps</div>
+              </div>
+              
+              <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px;">
+                <div>
+                  <label style="font-size:11px; font-weight:600; color:var(--text-muted); display:block; margin-bottom:4px;">Replacement Cost (₱/MWh)</label>
+                  <input type="number" id="calc-replacement-cost" class="select-input" style="width:100%; height:34px; padding:6px 10px; font-size:12.5px;" value="8500">
+                </div>
+                <div>
+                  <label style="font-size:11px; font-weight:600; color:var(--text-muted); display:block; margin-bottom:4px;">ERC Penalty Rate (₱/Day)</label>
+                  <input type="number" id="calc-penalty-rate" class="select-input" style="width:100%; height:34px; padding:6px 10px; font-size:12.5px;" value="150000">
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:15px; background:var(--bg-secondary); padding:12px; border-radius:8px; border: 1px solid var(--border-color);">
+                <div>
+                  <div style="font-size:10px; font-weight:700; text-transform:uppercase; color:var(--text-muted);">Est. Grid Regulatory Penalty</div>
+                  <div id="out-total-penalties" style="font-family:var(--font-title); font-size:16px; font-weight:800; color:var(--status-red); margin-top:2px;">₱0</div>
+                </div>
+                <div>
+                  <div style="font-size:10px; font-weight:700; text-transform:uppercase; color:var(--text-muted);">Est. Replacement Power Exposure</div>
+                  <div id="out-total-replacement" style="font-family:var(--font-title); font-size:16px; font-weight:800; color:var(--status-red); margin-top:2px;">₱0</div>
+                </div>
+              </div>
+              
+              <div style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.4;">
+                *Note: Exposure = Exceeded Days × 24h × Outage Capacity × Replacement Cost. Penalty = Exceeded Days × Penalty Rate.
+              </div>
+            </div>
+            
+            <!-- Technology Reliability Scorecard Card -->
+            <div class="card" style="margin-bottom:0;">
+              <div class="card-title">
+                Technology Reliability & Risk Scorecard
+                <div class="card-subtitle">Historical forced trip stats, MTTR indicators, and risk classifications by fuel type</div>
+              </div>
+              <div class="table-wrapper" style="margin-top:10px; max-height:220px; overflow-y:auto; border: 1px solid var(--border-color); border-radius:8px;">
+                <table class="custom-table" style="font-size:11.5px; border:none; margin-bottom: 0;">
+                  <thead>
+                    <tr style="background-color: var(--bg-secondary);">
+                      <th style="padding:6px 10px;">Fuel Technology</th>
+                      <th style="padding:6px 10px; text-align:center;">Trips</th>
+                      <th style="padding:6px 10px; text-align:right;">Mean Duration (Days)</th>
+                      <th style="padding:6px 10px; text-align:center;">Risk Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tech-scorecard-body">
+                    <!-- Loaded dynamically by app.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="plants-grid" id="plants-grid-container">
+            <!-- Filled dynamically by app.js -->
+          </div>
+        </section>
+        
+        <!-- Tab 3: Outages Explorer -->
+        <section id="outages-tab" class="tab-page">
+          
+          <!-- Interactive Search and Filters -->
+          <div class="filter-bar">
+            <div class="search-wrapper">
+              <span class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <input type="text" id="outages-search" class="search-input" placeholder="Search by GenCo, Facility name, Unit, Tech, or Outage Reason...">
+            </div>
+            
+            <div class="filter-group">
+              <select id="outages-grid-filter" class="select-input">
+                <option value="all">All Grids</option>
+                <option value="Luzon">Luzon Grid</option>
+                <option value="Visayas">Visayas Grid</option>
+              </select>
+              
+              <select id="outages-tech-filter" class="select-input">
+                <option value="all">All Technologies</option>
+                <!-- Loaded dynamically by app.js -->
+              </select>
+              
+              <select id="outages-status-filter" class="select-input">
+                <option value="all">All Outage States</option>
+                <option value="active">Active Outages</option>
+                <option value="restored">Restored Plants</option>
+                <option value="exceeded">Exceeded ERC Cap</option>
+                <option value="ok">Within ERC Cap</option>
+              </select>
+              
+              <button id="outages-reset" class="reset-button">Reset Filters</button>
+            </div>
+          </div>
+          
+          <!-- Outages Grid Table -->
+          <div class="table-card">
+            <div class="table-wrapper">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Grid</th>
+                    <th>Generating Unit / Owner</th>
+                    <th>Technology</th>
+                    <th>Outage (MW)</th>
+                    <th>Occurrence Out</th>
+                    <th>Outage State</th>
+                    <th>ERC Compliance</th>
+                  </tr>
+                </thead>
+                <tbody id="outages-table-body">
+                  <!-- Filled dynamically by app.js -->
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Table Pagination -->
+            <div class="pagination-container">
+              <div id="pagination-info" class="pagination-info">Showing 0 to 0 of 0 entries</div>
+              <div class="pagination-buttons">
+                <button id="pagination-prev" class="pagination-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  Previous
+                </button>
+                <button id="pagination-next" class="pagination-btn">
+                  Next
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+        
+        <!-- Tab 4: WESM Pricing Alerts -->
+        <section id="market-tab" class="tab-page">
+          <div class="filter-bar" style="margin-bottom: 24px;">
+            <div class="header-title-container" style="flex:1;">
+              <h2 style="font-size:16px; font-family:var(--font-title); font-weight:700;">WESM Marginal Plants & Pricing Log</h2>
+              <p style="font-size:12px; color:var(--text-muted);">Historical logs of price setting marginal plants during grid alert intervals</p>
+            </div>
+            
+            <div class="filter-group">
+              <select id="market-grid-filter" class="select-input">
+                <option value="all">All Grids</option>
+                <option value="Luzon">Luzon</option>
+                <option value="Visayas">Visayas</option>
+              </select>
+              
+              <select id="market-alert-filter" class="select-input">
+                <option value="all">All Alert States</option>
+                <option value="RED">RED Alerts Only</option>
+                <option value="YELLOW">YELLOW Alerts Only</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="table-card">
+            <div class="table-wrapper">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Alert Date</th>
+                    <th>Dispatch Hour</th>
+                    <th>Grid</th>
+                    <th>Alert Level</th>
+                    <th>WESM Pricing</th>
+                    <th>Price Setting Marginal Plant</th>
+                  </tr>
+                </thead>
+                <tbody id="market-table-body">
+                  <!-- Dynamic content loaded by app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Tab 5: NGCP Chronological Feed -->
+        <section id="updates-tab" class="tab-page">
+          <div class="timeline" id="timeline-container">
+            <!-- Dynamic feed loaded by app.js -->
+          </div>
+        </section>
+        
+        <!-- Tab 6: Load Shedding / MLD Schedule -->
+        <section id="mld-tab" class="tab-page">
+          <div class="mld-grid">
+            
+            <!-- Left: Running Schedule Block timeline -->
+            <div class="card">
+              <div class="card-title">
+                Manual Load Dropping Schedule
+                <div class="card-subtitle">Rotational power interruption hours implemented by NGCP to safeguard system integrity</div>
+              </div>
+              <div class="mld-timeline-view" id="mld-timeline-view">
+                <!-- Dynamically populated by app.js -->
+              </div>
+            </div>
+            
+            <!-- Right: Interactive Search Lookup -->
+            <div style="display:flex; flex-direction:column; gap:24px;">
+              <div class="card">
+                <div class="card-title">
+                  MLD Lookup Tool
+                  <div class="card-subtitle">Check if your electrical cooperative or area is affected by rolling power interruptions</div>
+                </div>
+                
+                <div style="position:relative; margin-bottom: 20px;">
+                  <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </span>
+                  <input type="text" id="mld-search" class="search-input" placeholder="Type cooperative (e.g. Meralco, Batelec, Aleco, Leyeco, Veco)...">
+                </div>
+                
+                <div id="mld-search-results" class="list-container">
+                  <!-- Dynamically calculated search results -->
+                </div>
+              </div>
+              
+              <div class="card" style="background-color: var(--accent-light); border-color: rgba(79, 70, 229, 0.2);">
+                <h3 style="font-family: var(--font-title); font-size:15px; font-weight:700; color:var(--accent-color); margin-bottom:10px;">Why is Manual Load Dropping Implemented?</h3>
+                <p style="font-size:12.5px; line-height:1.6; color: var(--text-secondary);">
+                  Manual Load Dropping (MLD) or rotational brownouts are executed as a last resort measure when the available electricity supply drops far below the consumer demand. 
+                  <br><br>
+                  By cutting off power temporarily in controlled blocks (rotational schedules), NGCP prevents a total, catastrophic collapse of the electrical grid (blackout), which would take days to restore. 
+                  <br><br>
+                  <em>Barring unexpected plant trips, MLD schedules may be shortened or cancelled if the actual system demand drops below the projected peak.</em>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+        
+        <!-- Tab 7: Grid Map Spatial Explorer -->
+        <section id="map-tab" class="tab-page">
+          <!-- Simulation Control Deck Card -->
+          <div class="card simulation-deck-card" style="padding: 16px; margin-bottom: 16px; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: var(--shadow-sm);">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+              <div>
+                <div style="font-weight: 700; font-size: 15px; color: var(--text-primary); display:flex; align-items:center; gap:8px;">
+                  <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background-color:#ef4444; animation: pulse 1.5s infinite;"></span>
+                  Forced Outage Timeline Playback Simulator
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-muted); margin-top:2px;">Replay the chronological sequence of forced outages and cooperative load-shedding cycles</div>
+              </div>
+              <!-- Simulated Counters -->
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <div class="sim-counter-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:6px 12px; min-width:100px; text-align:center;">
+                  <div style="font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Active Capacity Lost</div>
+                  <div id="sim-mw-offline" style="font-size:16px; font-weight:800; color:#ef4444; font-family:var(--font-title); margin-top:2px;">0 MW</div>
+                </div>
+                <div class="sim-counter-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:6px 12px; min-width:100px; text-align:center;">
+                  <div style="font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Active Plant Trips</div>
+                  <div id="sim-trips-count" style="font-size:16px; font-weight:800; color:#f59e0b; font-family:var(--font-title); margin-top:2px;">0 Units</div>
+                </div>
+                <div class="sim-counter-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:6px 12px; min-width:140px; text-align:center;">
+                  <div style="font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Consumers Affected (Est.)</div>
+                  <div id="sim-consumers-affected" style="font-size:16px; font-weight:800; color:#3b82f6; font-family:var(--font-title); margin-top:2px;">0</div>
+                </div>
+                <div class="sim-counter-card" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:6px 12px; min-width:110px; text-align:center;">
+                  <div style="font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Grid Reserve Status</div>
+                  <div id="sim-grid-status" style="font-size:12px; font-weight:700; padding:3px 6px; border-radius:4px; display:inline-block; margin-top:4px; background:#dcfce7; color:#15803d; border:1px solid #bbf7d0;">NORMAL</div>
+                </div>
+              </div>
+            </div>
+            
+            <hr style="border:0; border-top:1px dashed #e2e8f0; margin:16px 0;">
+
+            <div style="display:grid; grid-template-columns: auto 1fr auto; gap:20px; align-items:center;">
+              <!-- Playback Control Buttons -->
+              <div style="display:flex; align-items:center; gap:8px;">
+                <button id="sim-play-pause-btn" class="reset-button" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--primary-color); color:white; border:none; cursor:pointer; transition:all 0.2s; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);">
+                  <svg id="sim-play-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <svg id="sim-pause-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <button id="sim-reset-btn" class="reset-button" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                </button>
+              </div>
+              
+              <!-- Timeline scrubbing slider -->
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size:11px; font-weight:600; color:var(--text-muted);">SIMULATED TIMELINE</span>
+                  <span id="sim-clock-display" style="font-size:13px; font-weight:700; color:#1d4ed8; font-family:var(--font-title); background:#eff6ff; padding:2px 8px; border-radius:4px; border:1px solid #bfdbfe;">May 12, 2026 12:00 AM</span>
+                </div>
+                <input id="sim-time-slider" type="range" min="0" max="167" value="0" style="width:100%; height:6px; border-radius:3px; background:#e2e8f0; outline:none; cursor:pointer; accent-color:var(--primary-color);">
+                <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--text-muted); font-weight:600; margin-top:2px;">
+                  <span>MAY 12 (START)</span>
+                  <span>MAY 14</span>
+                  <span>MAY 16 (PEAK DAYS)</span>
+                  <span>MAY 18 (END)</span>
+                </div>
+              </div>
+
+              <!-- Adjustable Speed Deck -->
+              <div style="display:flex; flex-direction:column; gap:6px; width:150px;">
+                <div style="display:flex; justify-content:space-between; font-size:11px; font-weight:600; color:var(--text-muted);">
+                  <span>PLAYBACK SPEED</span>
+                  <span id="sim-speed-label" style="font-family:var(--font-title); color:var(--primary-color); font-weight:700;">3 hrs/sec</span>
+                </div>
+                <input id="sim-speed-slider" type="range" min="1" max="12" value="3" style="width:100%; height:6px; border-radius:3px; background:#e2e8f0; outline:none; cursor:pointer; accent-color:var(--primary-color);">
+                <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--text-muted); font-weight:600; margin-top:2px;">
+                  <span>1 hr/sec</span>
+                  <span>24 hrs/sec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-layout">
+            <!-- Leaflet Map Container -->
+            <div class="card" style="padding: 16px; margin-bottom: 0; min-height: 600px; display: flex; flex-direction: column;">
+              <div class="card-title" style="margin-bottom: 12px; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  Geographic Grid Spatial Explorer
+                  <div class="card-subtitle">Locational mapping of power generating facilities and regional distribution cooperatives across the Philippine electrical grid</div>
+                </div>
+                <span id="sim-badge" class="badge" style="background:#f1f5f9; color:#475569; border:none; display:none; align-items:center; gap:6px; font-weight:700;"><span style="width:6px; height:6px; border-radius:50%; background:#ef4444; animation: pulse 1s infinite;"></span>SIMULATOR ACTIVE</span>
+              </div>
+              <div id="grid-leaflet-map" style="flex-grow: 1; height: 500px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); z-index: 1;"></div>
+            </div>
+
+            <!-- Map Control Panel & Sidebar Legend -->
+            <div class="map-control-panel">
+              <div class="card" style="margin-bottom: 0;">
+                <div class="card-title">Grid Map Controls</div>
+                <div style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+                  <button id="map-fit-luzon" class="reset-button" style="width:100%; text-align:center; padding: 10px;">Zoom to Luzon Grid</button>
+                  <button id="map-fit-visayas" class="reset-button" style="width:100%; text-align:center; padding: 10px;">Zoom to Visayas Grid</button>
+                  <button id="map-fit-all" class="reset-button" style="width:100%; text-align:center; padding: 10px;">Show Entire Grid</button>
+                </div>
+              </div>
+
+              <!-- Live Event Ticker Panel -->
+              <div class="card" style="margin-bottom: 0; flex-grow: 1; display: flex; flex-direction: column; max-height: 250px;">
+                <div class="card-title" style="display:flex; justify-content:space-between; align-items:center;">
+                  Live Simulation Event Feed
+                  <span class="badge" style="font-size:10px; background-color:rgba(79, 70, 229, 0.1); color:var(--primary-color); border:none; padding:2px 6px;">SIMULATED</span>
+                </div>
+                <div id="sim-event-ticker" style="flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; padding-right: 4px; font-size: 11px;">
+                  <div id="sim-event-empty" style="text-align: center; color: var(--text-muted); padding: 30px 10px; font-style: italic;">
+                    Start playback to stream live grid occurrences...
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="margin-bottom: 0;">
+                <div class="card-title">Marker Legend</div>
+                <div style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:12px; height:12px; border-radius:50%; background-color:#ef4444; border: 2px solid white; box-shadow:0 0 4px rgba(0,0,0,0.3);"></div>
+                    <span style="font-size:12px; font-weight:600; color:var(--text-secondary);">Offline / Tripped Plant</span>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:12px; height:12px; border-radius:50%; background-color:#10b981; border: 2px solid white; box-shadow:0 0 4px rgba(0,0,0,0.3);"></div>
+                    <span style="font-size:12px; font-weight:600; color:var(--text-secondary);">Restored / Online Plant</span>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:12px; height:12px; border-radius:50%; background-color:#4f46e5; border: 2px solid white; box-shadow:0 0 4px rgba(0,0,0,0.3);"></div>
+                    <span style="font-size:12px; font-weight:600; color:var(--text-secondary);">Distribution Utility / Coop</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="margin-bottom: 0; background-color: var(--bg-secondary);">
+                <div style="font-size:11px; line-height:1.5; color:var(--text-muted);">
+                  <strong>Interactivity:</strong> Click on markers to inspect capacities and cooperatives. Outage marker popups include drawer shortcuts!
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 8: Forced Outage Chronological Calendar -->
+        <section id="calendar-tab" class="tab-page">
+          <div class="calendar-layout">
+            <!-- Left: Calendar Heatmap Grid -->
+            <div class="calendar-card">
+              <div class="calendar-header-row">
+                <div class="card-title" style="margin-bottom: 0;">
+                  Generator Trippings Heatmap Calendar
+                  <div class="card-subtitle">Grid-wide chronological visualization of forced generator outage incidents</div>
+                </div>
+                
+                <div style="display:flex; align-items:center; gap:12px; background:var(--bg-secondary); padding:4px 10px; border-radius:20px; border:1px solid var(--border-color);">
+                  <button id="cal-prev" style="background:none; border:none; color:var(--accent-color); cursor:pointer; font-weight:800; font-size:14px; padding:2px 6px;">&larr;</button>
+                  <span id="cal-month-year" style="font-family:var(--font-title); font-weight:800; font-size:13.5px; color:var(--text-primary);">May 2026</span>
+                  <button id="cal-next" style="background:none; border:none; color:var(--accent-color); cursor:pointer; font-weight:800; font-size:14px; padding:2px 6px;">&rarr;</button>
+                </div>
+              </div>
+
+              <!-- Heatmap Legend bar -->
+              <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-bottom:15px; font-size:11px; color:var(--text-muted);">
+                <span>Trip Count Intensity:</span>
+                <div style="display:flex; align-items:center; gap:3px;">
+                  <div class="density-level-0" style="width:12px; height:12px; border-radius:2px; border:1px solid var(--border-light);"></div>
+                  <div class="density-level-1" style="width:12px; height:12px; border-radius:2px; border:1px solid #fee2e2;"></div>
+                  <div class="density-level-2" style="width:12px; height:12px; border-radius:2px; border:1px solid #fca5a5;"></div>
+                  <div class="density-level-3" style="width:12px; height:12px; border-radius:2px; border:1px solid #f87171;"></div>
+                  <div class="density-level-4" style="width:12px; height:12px; border-radius:2px; border:1px solid #ef4444;"></div>
+                </div>
+                <span style="font-weight:600; margin-left:4px;">High</span>
+              </div>
+
+              <div class="calendar-grid" id="calendar-days-grid">
+                <!-- Day Labels and Date grids loaded by app.js -->
+              </div>
+            </div>
+
+            <!-- Right: Date Detail Cards Panel -->
+            <div style="display:flex; flex-direction:column; gap:20px;">
+              <div class="card" style="margin-bottom:0;">
+                <div class="card-title">
+                  Outages on Selected Date
+                  <div class="card-subtitle" id="calendar-selected-date-str">May 15, 2026</div>
+                </div>
+                
+                <div id="calendar-date-outages-list" class="list-container" style="max-height: 480px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+                  <!-- Dynamic tripped plants listing populated by app.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </main>
+  </div>
+  
+  <!-- Slide-Over Drawer Details Overlay Panel -->
+  <div class="drawer-backdrop" id="detail-drawer-backdrop"></div>
+  <div class="drawer" id="detail-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-container">
+        <h2 class="drawer-title" id="drawer-facility-title">Plant Name</h2>
+        <p class="drawer-subtitle" id="drawer-genco">Generating Company Owner</p>
+      </div>
+      <button class="close-btn" id="drawer-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div class="drawer-body">
+      <!-- Section A: Grid Stats -->
+      <div class="detail-section">
+        <span class="detail-section-title">Technical Specifications</span>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Power Grid Sector</span>
+            <span class="detail-value" id="drawer-grid">Luzon</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Outage Capacity</span>
+            <span class="detail-value" style="color:var(--status-red)" id="drawer-capacity">0 MW</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Technology Fuel</span>
+            <span class="detail-value" id="drawer-tech">Coal-Fired</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Occurrence Date Out</span>
+            <span class="detail-value" id="drawer-date-out">TBD</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section B: Status Details -->
+      <div class="detail-section">
+        <span class="detail-section-title">Outage State</span>
+        <div class="detail-item">
+          <span class="detail-label" id="drawer-resumption-label">Resumption Status / Return Date In</span>
+          <span class="detail-value" id="drawer-date-in">Active Outage</span>
+        </div>
+      </div>
+      
+      <!-- Section C: Reason text -->
+      <div class="detail-section">
+        <span class="detail-section-title">Technical Outage Cause</span>
+        <div class="detail-item">
+          <p class="detail-value reason-text" id="drawer-reason">Plant forced trip logged on leakage.</p>
+        </div>
+      </div>
+      
+      <!-- Section D: Regulatory Limit Status -->
+      <div class="detail-section">
+        <span class="detail-section-title">ERC Reliability Compliance</span>
+        <div class="detail-grid" style="margin-bottom:12px;">
+          <div class="detail-item">
+            <span class="detail-label">ERC Allowable Days (Annual)</span>
+            <span class="detail-value" id="drawer-allowance">7 Days</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Accumulated Days Out</span>
+            <span class="detail-value" id="drawer-accumulated">35 Days</span>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Annual Safety Reserve Status</span>
+          <div class="detail-value" id="drawer-compliance-status" style="font-size:14px; margin-top:2px;">COMPLIANT</div>
+        </div>
+      </div>
+      
+      <!-- Section D2: WESM Contractual & ASPA Status -->
+      <div class="detail-section">
+        <span class="detail-section-title">WESM Contractual & ASPA Status</span>
+        <div class="detail-grid" style="margin-bottom:12px;">
+          <div class="detail-item">
+            <span class="detail-label">PSA Contract Off-taker</span>
+            <span class="detail-value" id="drawer-offtaker" style="font-size:12px; font-weight:600;">N/A</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">PSA Contracted Capacity</span>
+            <span class="detail-value" id="drawer-psa-cap" style="font-size:12px; font-weight:600;">N/A</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">ASPA Ancillary Type</span>
+            <span class="detail-value" id="drawer-aspa-type" style="font-size:12px; font-weight:600;">N/A</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">ASPA Ancillary Capacity</span>
+            <span class="detail-value" id="drawer-aspa-cap" style="font-size:12px; font-weight:600;">N/A</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section E: Corporate Relationship Affiliations -->
+      <div class="detail-section">
+        <span class="detail-section-title">Corporate Affiliations & Sibling Units</span>
+        <div class="affiliates-card" id="drawer-affiliates" style="font-size: 12px; line-height: 1.5; color: var(--text-secondary);">
+          Group links
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loaded self-contained JavaScript files containing the parsed Excel and Txt Data -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  
+  <!-- Sidebar Backdrop overlay for mobile drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+</body>
+</html>

@@ -1,0 +1,2638 @@
+// NGCP Power Grid Reliability Dashboard & Compliance Controller
+
+// Global App State
+const state = {
+  currentTab: 'overview',
+  outages: [],          // Raw combined Luzon and Visayas outages
+  marginalPlants: [],   // Raw WESM pricing intervals
+  ngcpUpdates: [],      // NGCP bulletins
+  
+  // Power Plants directory aggregated database
+  powerPlants: [],
+  
+  // Outage Table Pagination & Filtering
+  filters: {
+    search: '',
+    grid: 'all',
+    tech: 'all',
+    status: 'all',
+  },
+  pagination: {
+    currentPage: 1,
+    pageSize: 15,
+  },
+
+  // Power Plants Directory Filtering
+  plantFilters: {
+    search: '',
+    grid: 'all',
+    tech: 'all',
+    status: 'all', // all, exceeded, ok, active
+  },
+
+  // Chart References
+  charts: {
+    techOutages: null,
+    wesmPricing: null,
+    conglomerate: null
+  },
+
+  // Map & Calendar state
+  calendarDate: new Date(2026, 4, 15), // May 15, 2026 (outage peak)
+  mapInstance: null,
+  mapMarkers: [],
+  mapPolylines: [], // Transmission line polyline references
+
+  // Real-Time Playback Simulation state
+  simPlaying: false,
+  simCurrentHour: 0,
+  simSpeed: 3, // Hours advanced per tick
+  simInterval: null,
+  simTimeline: []
+};
+
+// Initialize Application
+document.addEventListener('DOMContentLoaded', () => {
+  // Load and combine data from data.js
+  if (typeof DASHBOARD_DATA !== 'undefined') {
+    state.outages = [
+      ...DASHBOARD_DATA.luzon_outages.map(o => ({ ...o, grid: 'Luzon' })),
+      ...DASHBOARD_DATA.visayas_outages.map(o => ({ ...o, grid: 'Visayas' }))
+    ];
+    state.marginalPlants = [
+      ...DASHBOARD_DATA.luzon_marginal.map(m => ({ ...m, grid: 'Luzon' })),
+      ...DASHBOARD_DATA.visayas_marginal.map(m => ({ ...m, grid: 'Visayas' }))
+    ];
+    state.ngcpUpdates = DASHBOARD_DATA.ngcp_updates;
+    
+    // Standardize and sanitize mixed date-time formatting inconsistencies on load
+    sanitizeOutagesData();
+    
+    // Aggregate unique power plants registry
+    compilePowerPlantsRegistry();
+  }
+
+  // Setup Event Listeners
+  setupNavigation();
+  setupMobileMenu();
+  setupFilters();
+  setupPlantFilters();
+  setupDrawer();
+  setupReservesSimulator();
+  setupGlobalSearch();
+  setupCalendar();
+  setupMap();
+  
+  // Run initial renders
+  updateLiveTicker();
+  renderOverviewTab();
+  renderPlantsTab();
+  renderOutagesTab();
+  renderMarketTab();
+  renderUpdatesTab();
+  renderMldTab();
+});
+
+// Helper: Extract Parent Conglomerate from raw Affiliation text
+function getParentConglomerate(affiliates) {
+  if (!affiliates) return 'Independent / Other';
+  const firstLine = affiliates.split('\n')[0].trim();
+  if (firstLine.startsWith('Under ')) {
+    // Extract group name up to first comma, semicolon, period, or parenthesis
+    const parts = firstLine.replace('Under ', '').split(/[,;.\(]/);
+    let parent = parts[0].trim();
+    if (parent.includes('Group')) return parent;
+    if (parent.includes('Corporation')) return parent;
+    return parent + ' Group';
+  }
+  if (firstLine.includes('Affiliation') || firstLine.includes('affiliations')) {
+    return 'Affiliated GenCo';
+  }
+  return 'Independent / Other';
+}
+
+// 1. Compile Unique Power Plant Registry Database
+function compilePowerPlantsRegistry() {
+  const plantsMap = {};
+  
+  state.outages.forEach(o => {
+    const key = `${o.facility.trim()} | ${o.unit.trim()}`;
+    const cap = parseFloat(o.capacity) || 0;
+    const accumDays = parseFloat(o.accumulated_days) || 0;
+    const limitStatus = parseFloat(o.status) || 0;
+    const isActive = o.actual_resumption_date === "";
+
+    if (!plantsMap[key]) {
+      plantsMap[key] = {
+        key: key,
+        facility: o.facility.trim(),
+        unit: o.unit.trim(),
+        genco: o.genco ? o.genco.trim() : 'Unknown GenCo',
+        technology: o.technology || 'Other',
+        grid: o.grid,
+        capacity: cap,
+        accumulatedDays: accumDays,
+        exceededDays: limitStatus > 0 ? limitStatus : 0,
+        tripEvents: 0,
+        activeOutage: false,
+        affiliates: o.affiliates || '',
+        parentConglomerate: getParentConglomerate(o.affiliates),
+        outagesList: []
+      };
+    }
+    
+    // Update variables
+    plantsMap[key].tripEvents++;
+    if (isActive) {
+      plantsMap[key].activeOutage = true;
+    }
+    // Track maximum capacity declared
+    if (cap > plantsMap[key].capacity) {
+      plantsMap[key].capacity = cap;
+    }
+    // Track highest accumulated outage days and exceeded days
+    if (accumDays > plantsMap[key].accumulatedDays) {
+      plantsMap[key].accumulatedDays = accumDays;
+    }
+    if (limitStatus > 0 && limitStatus > plantsMap[key].exceededDays) {
+      plantsMap[key].exceededDays = limitStatus;
+    }
+    
+    // Append full record to this plant's timeline list
+    plantsMap[key].outagesList.push(o);
+  });
+
+  // Sort outages inside each plant chronologically desc
+  Object.keys(plantsMap).forEach(key => {
+    plantsMap[key].outagesList.sort((a, b) => {
+      const dateA = new Date(a.date_out);
+      const dateB = new Date(b.date_out);
+      return dateB.getTime() - dateA.getTime();
+    });
+  });
+
+  state.powerPlants = Object.values(plantsMap).sort((a, b) => b.accumulatedDays - a.accumulatedDays);
+}
+
+// 2. Navigation & Tab Switching
+function setupNavigation() {
+  const navButtons = document.querySelectorAll('.nav-menu .nav-item');
+  navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update Active Navigation Item
+      navButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      
+      // Update Tab Page Visibility
+      const tabId = button.getAttribute('data-tab');
+      state.currentTab = tabId;
+      
+      const pages = document.querySelectorAll('.tab-page');
+      pages.forEach(page => page.classList.remove('active'));
+      
+      const activePage = document.getElementById(`${tabId}-tab`);
+      if (activePage) {
+        activePage.classList.add('active');
+      }
+
+      // Close mobile drawer menu
+      closeMobileMenu();
+
+      // Re-trigger visual updates or refits for active tabs (especially charts)
+      if (tabId === 'overview') {
+        setTimeout(() => {
+          Object.values(state.charts).forEach(chart => {
+            if (chart) chart.update();
+          });
+        }, 100);
+      } else if (tabId === 'map') {
+        setTimeout(() => {
+          initLeafletMap();
+        }, 150);
+      } else if (tabId === 'calendar') {
+        renderCalendarGrid();
+      }
+    });
+  });
+}
+
+// Mobile Responsive Drawer menu toggles
+function setupMobileMenu() {
+  const hamburger = document.getElementById('mobile-hamburger-btn');
+  const closeBtn = document.getElementById('mobile-sidebar-close-btn');
+  const backdrop = document.getElementById('sidebar-backdrop');
+  
+  if (hamburger) {
+    hamburger.addEventListener('click', openMobileMenu);
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMobileMenu);
+  }
+  if (backdrop) {
+    backdrop.addEventListener('click', closeMobileMenu);
+  }
+}
+
+function openMobileMenu() {
+  const drawer = document.getElementById('sidebar-drawer');
+  const backdrop = document.getElementById('sidebar-backdrop');
+  if (drawer) drawer.classList.add('open');
+  if (backdrop) backdrop.classList.add('open');
+}
+
+function closeMobileMenu() {
+  const drawer = document.getElementById('sidebar-drawer');
+  const backdrop = document.getElementById('sidebar-backdrop');
+  if (drawer) drawer.classList.remove('open');
+  if (backdrop) backdrop.classList.remove('open');
+}
+
+// 3. Live Grid Alerts Ticker in Header
+function updateLiveTicker() {
+  const tickerContainer = document.getElementById('grid-ticker');
+  const pulseDot = document.getElementById('grid-pulse-dot');
+  
+  // Find the latest red or yellow alert in updates
+  const activeAlerts = state.ngcpUpdates.filter(u => u.type === 'Red Alert' || u.type === 'Yellow Alert');
+  
+  if (activeAlerts.length > 0) {
+    const latest = activeAlerts[0];
+    const isRed = latest.type === 'Red Alert';
+    
+    pulseDot.className = `pulse-dot ${isRed ? 'danger' : 'warning'}`;
+    
+    // Parse brief summary from message
+    let summary = latest.message.split('\n')[0] || latest.message;
+    if (summary.length > 80) summary = summary.substring(0, 80) + '...';
+    
+    tickerContainer.innerHTML = `<span class="ticker-text" style="color: ${isRed ? 'var(--status-red)' : 'var(--status-yellow)'}; font-weight: 700;">LIVE SYSTEM ALERT:</span> ${summary} (${latest.timestamp})`;
+  } else {
+    pulseDot.className = 'pulse-dot normal';
+    tickerContainer.innerHTML = 'GRID STATUS NORMAL: System reserves are currently adequate across Luzon and Visayas.';
+  }
+}
+
+// 4. System Overview Tab Renderer
+function renderOverviewTab() {
+  // A. Calculate Metrics
+  const totalOutagesCount = state.outages.length;
+  let totalActiveCapacity = 0;
+  let totalExceededAllowanceCount = 0;
+  let peakWesmPrice = 0;
+  
+  state.outages.forEach(o => {
+    const cap = parseFloat(o.capacity) || 0;
+    const isRestored = o.actual_resumption_date !== "";
+    
+    if (!isRestored) {
+      totalActiveCapacity += cap;
+    }
+    
+    const limitStatus = parseFloat(o.status) || 0;
+    if (limitStatus > 0) {
+      totalExceededAllowanceCount++;
+    }
+  });
+
+  // WESM Price Calculation
+  state.marginalPlants.forEach(m => {
+    let p = m.price === 'AP' ? parseFloat(m.indicative_ap) : parseFloat(m.price);
+    if (p > peakWesmPrice) {
+      peakWesmPrice = p;
+    }
+  });
+
+  // B. Write Metrics to UI
+  document.getElementById('metric-active-outage').textContent = `${Math.round(totalActiveCapacity).toLocaleString()} MW`;
+  document.getElementById('metric-total-outages').textContent = totalOutagesCount.toString();
+  document.getElementById('metric-exceeded-limits').textContent = totalExceededAllowanceCount.toString();
+  document.getElementById('metric-peak-price').textContent = `${Math.round(peakWesmPrice).toLocaleString()} ₱/MWh`;
+
+  const exceededCard = document.getElementById('exceeded-limits-card');
+  if (totalExceededAllowanceCount > 25) {
+    exceededCard.className = "metric-card danger";
+  } else if (totalExceededAllowanceCount > 0) {
+    exceededCard.className = "metric-card warning";
+  } else {
+    exceededCard.className = "metric-card normal";
+  }
+
+  // C. Setup Technology Breakdown Chart & List
+  setupTechBreakdown();
+
+  // D. Setup WESM Pricing Line Chart
+  setupWesmLineChart();
+
+  // E. Setup Conglomerate Monopoly Explorer Chart
+  setupConglomerateChart();
+
+  // F. Setup ERC Exceedance Leaderboard
+  setupExceededLeaderboard();
+}
+
+function setupTechBreakdown() {
+  const techMap = {};
+  state.outages.forEach(o => {
+    const tech = o.technology || 'Other';
+    const cap = parseFloat(o.capacity) || 0;
+    if (!techMap[tech]) techMap[tech] = { count: 0, capacity: 0 };
+    techMap[tech].count++;
+    techMap[tech].capacity += cap;
+  });
+
+  const sortedTechs = Object.keys(techMap).map(tech => ({
+    name: tech,
+    ...techMap[tech]
+  })).sort((a, b) => b.capacity - a.capacity);
+
+  const container = document.getElementById('tech-progress-list');
+  container.innerHTML = '';
+  
+  const colors = {
+    'Coal-Fired': '#475569',
+    'Combined-Cycle': '#3b82f6',
+    'Hydroelectric': '#0ea5e9',
+    'Geothermal': '#10b981',
+    'Biomass': '#84cc16',
+    'Diesel': '#f59e0b',
+    'Oil-Fired Thermal': '#ef4444'
+  };
+
+  const totalCap = sortedTechs.reduce((acc, t) => acc + t.capacity, 0);
+
+  sortedTechs.forEach(t => {
+    const pct = totalCap > 0 ? (t.capacity / totalCap) * 100 : 0;
+    const color = colors[t.name] || '#8b5cf6';
+    
+    const itemHtml = `
+      <div class="progress-item">
+        <div class="progress-label-row">
+          <div class="progress-label-left">
+            <span class="progress-dot-icon" style="background-color: ${color}"></span>
+            <span>${t.name}</span>
+          </div>
+          <span style="font-weight:600;">${Math.round(t.capacity).toLocaleString()} MW (${Math.round(pct)}%)</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: ${pct}%; background-color: ${color};"></div>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', itemHtml);
+  });
+
+  // Doughnut Chart
+  const ctx = document.getElementById('techOutagesChart').getContext('2d');
+  if (state.charts.techOutages) {
+    state.charts.techOutages.destroy();
+  }
+
+  state.charts.techOutages = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: sortedTechs.map(t => t.name),
+      datasets: [{
+        data: sortedTechs.map(t => Math.round(t.capacity)),
+        backgroundColor: sortedTechs.map(t => colors[t.name] || '#8b5cf6'),
+        borderWidth: 1,
+        borderColor: '#ffffff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.parsed || 0;
+              return ` ${label}: ${value.toLocaleString()} MW`;
+            }
+          }
+        }
+      },
+      cutout: '65%'
+    }
+  });
+}
+
+function setupWesmLineChart() {
+  const sortMarginal = (arr) => {
+    return [...arr].sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateA.getTime() - dateB.getTime();
+      }
+      return parseInt(a.hour) - parseInt(b.hour);
+    });
+  };
+
+  const luzonData = sortMarginal(state.marginalPlants.filter(m => m.grid === 'Luzon'));
+  const visayasData = sortMarginal(state.marginalPlants.filter(m => m.grid === 'Visayas'));
+
+  const getLabel = (item) => {
+    if (!item.date) return `Hour ${item.hour}`;
+    const d = new Date(item.date);
+    const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    return `${dateStr} H${item.hour}`;
+  };
+
+  const allLabels = [];
+  const mapLuzon = {};
+  const mapVisayas = {};
+
+  luzonData.forEach(item => {
+    const lbl = getLabel(item);
+    if (!allLabels.includes(lbl)) allLabels.push(lbl);
+    const p = item.price === 'AP' ? parseFloat(item.indicative_ap) : parseFloat(item.price);
+    mapLuzon[lbl] = p || null;
+  });
+
+  visayasData.forEach(item => {
+    const lbl = getLabel(item);
+    if (!allLabels.includes(lbl)) allLabels.push(lbl);
+    const p = item.price === 'AP' ? parseFloat(item.indicative_ap) : parseFloat(item.price);
+    mapVisayas[lbl] = p || null;
+  });
+
+  const labelsToShow = allLabels.slice(-20); // last 20
+
+  const ctx = document.getElementById('wesmPricingChart').getContext('2d');
+  if (state.charts.wesmPricing) {
+    state.charts.wesmPricing.destroy();
+  }
+
+  state.charts.wesmPricing = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labelsToShow,
+      datasets: [
+        {
+          label: 'Luzon Grid Price',
+          data: labelsToShow.map(lbl => mapLuzon[lbl]),
+          borderColor: '#4f46e5',
+          backgroundColor: 'rgba(79, 70, 229, 0.04)',
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: '#4f46e5',
+          tension: 0.15,
+          fill: true
+        },
+        {
+          label: 'Visayas Grid Price',
+          data: labelsToShow.map(lbl => mapVisayas[lbl]),
+          borderColor: '#7c3aed',
+          backgroundColor: 'rgba(124, 58, 237, 0.04)',
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: '#7c3aed',
+          tension: 0.15,
+          fill: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { family: 'Inter', size: 11, weight: 500 }, color: '#475569' }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: function(context) {
+              const label = context.dataset.label || '';
+              const value = context.parsed.y || 0;
+              return ` ${label}: ₱${Math.round(value).toLocaleString()}/MWh`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { family: 'Inter', size: 10 }, color: '#94a3b8' }
+        },
+        y: {
+          ticks: {
+            font: { family: 'Inter', size: 10 },
+            color: '#94a3b8',
+            callback: function(value) {
+              return '₱' + (value / 1000) + 'k';
+            }
+          },
+          grid: { color: '#f1f5f9' }
+        }
+      }
+    }
+  });
+}
+
+// Conglomerate Offline Capacity Share horizontal bar chart
+function setupConglomerateChart() {
+  const activeOutages = state.outages.filter(o => o.actual_resumption_date === "");
+  const conglomerateMap = {};
+
+  activeOutages.forEach(o => {
+    const parent = getParentConglomerate(o.affiliates);
+    const cap = parseFloat(o.capacity) || 0;
+    conglomerateMap[parent] = (conglomerateMap[parent] || 0) + cap;
+  });
+
+  const sortedConglomerates = Object.keys(conglomerateMap).map(parent => ({
+    name: parent,
+    capacity: conglomerateMap[parent]
+  })).sort((a, b) => b.capacity - a.capacity);
+
+  const ctx = document.getElementById('conglomerateChart').getContext('2d');
+  if (state.charts.conglomerate) {
+    state.charts.conglomerate.destroy();
+  }
+
+  const corporateColors = {
+    'Aboitiz Equity Ventures': '#4f46e5',
+    'First Gen Corporation': '#0ea5e9',
+    'Union Equities, Inc. Group': '#f59e0b',
+    'Chan Group': '#84cc16',
+    'San Miguel Global Power': '#ef4444',
+    'Independent / Other': '#64748b'
+  };
+
+  state.charts.conglomerate = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sortedConglomerates.map(c => c.name),
+      datasets: [{
+        label: 'Offline Capacity (MW)',
+        data: sortedConglomerates.map(c => Math.round(c.capacity)),
+        backgroundColor: sortedConglomerates.map(c => corporateColors[c.name] || '#8b5cf6'),
+        borderRadius: 6,
+        barThickness: 16
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return ` ${context.parsed.x.toLocaleString()} MW offline`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { font: { family: 'Inter', size: 10 }, color: '#94a3b8' },
+          grid: { color: '#f1f5f9' }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { font: { family: 'Inter', size: 11, weight: 500 }, color: '#475569' }
+        }
+      }
+    }
+  });
+}
+
+function setupExceededLeaderboard() {
+  const exceededList = state.outages
+    .map(o => {
+      const statusDays = parseFloat(o.status) || 0;
+      return { ...o, statusDays };
+    })
+    .filter(o => o.statusDays > 0)
+    .sort((a, b) => b.statusDays - a.statusDays)
+    .slice(0, 5); // top 5
+
+  const container = document.getElementById('leaderboard-list');
+  container.innerHTML = '';
+  
+  if (exceededList.length === 0) {
+    container.innerHTML = '<div style="font-size:12px; color:var(--text-muted); text-align:center; padding: 20px;">No outage has exceeded the ERC allowance.</div>';
+    return;
+  }
+
+  exceededList.forEach(o => {
+    const parent = getParentConglomerate(o.affiliates);
+    const itemHtml = `
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">${o.facility} (${o.unit})</div>
+          <div class="list-item-sub">${o.genco} • <span style="font-weight:600; color:var(--accent-color);">${parent}</span></div>
+        </div>
+        <div class="list-item-value" style="color:var(--status-red)">
+          +${Math.round(o.statusDays)} Days Out
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', itemHtml);
+  });
+}
+
+// 5. Power Plants Directory Tab
+function setupPlantFilters() {
+  const searchInput = document.getElementById('plants-search');
+  const gridSelect = document.getElementById('plants-grid-filter');
+  const techSelect = document.getElementById('plants-tech-filter');
+  const statusSelect = document.getElementById('plants-status-filter');
+  const resetBtn = document.getElementById('plants-reset');
+
+  searchInput.addEventListener('input', (e) => {
+    state.plantFilters.search = e.target.value.toLowerCase();
+    renderPlantsTab();
+  });
+
+  gridSelect.addEventListener('change', (e) => {
+    state.plantFilters.grid = e.target.value;
+    renderPlantsTab();
+  });
+
+  techSelect.addEventListener('change', (e) => {
+    state.plantFilters.tech = e.target.value;
+    renderPlantsTab();
+  });
+
+  statusSelect.addEventListener('change', (e) => {
+    state.plantFilters.status = e.target.value;
+    renderPlantsTab();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    gridSelect.value = 'all';
+    techSelect.value = 'all';
+    statusSelect.value = 'all';
+    
+    state.plantFilters.search = '';
+    state.plantFilters.grid = 'all';
+    state.plantFilters.tech = 'all';
+    state.plantFilters.status = 'all';
+    
+    renderPlantsTab();
+  });
+
+  // Dynamic values in dropdowns
+  const uniqueTechs = [...new Set(state.powerPlants.map(p => p.technology).filter(Boolean))].sort();
+  techSelect.innerHTML = '<option value="all">All Technologies</option>';
+  uniqueTechs.forEach(t => {
+    techSelect.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`);
+  });
+
+  // ERC Calculator event listeners
+  const costInput = document.getElementById('calc-replacement-cost');
+  const penaltyInput = document.getElementById('calc-penalty-rate');
+  if (costInput) {
+    costInput.addEventListener('input', updateErcCalculator);
+  }
+  if (penaltyInput) {
+    penaltyInput.addEventListener('input', updateErcCalculator);
+  }
+}
+
+function renderPlantsTab() {
+  // Update grid-wide overview widgets
+  updateErcCalculator();
+  renderTechScorecard();
+
+  const container = document.getElementById('plants-grid-container');
+  container.innerHTML = '';
+
+  const filtered = state.powerPlants.filter(p => {
+    // 1. Search Query
+    const searchMatch = !state.plantFilters.search ||
+      p.facility.toLowerCase().includes(state.plantFilters.search) ||
+      p.unit.toLowerCase().includes(state.plantFilters.search) ||
+      p.genco.toLowerCase().includes(state.plantFilters.search) ||
+      p.parentConglomerate.toLowerCase().includes(state.plantFilters.search);
+      
+    // 2. Grid Filter
+    const gridMatch = state.plantFilters.grid === 'all' || p.grid === state.plantFilters.grid;
+    
+    // 3. Tech Filter
+    const techMatch = state.plantFilters.tech === 'all' || p.technology === state.plantFilters.tech;
+    
+    // 4. Compliance/Active Status Filter
+    let statusMatch = true;
+    if (state.plantFilters.status === 'exceeded') {
+      statusMatch = p.exceededDays > 0;
+    } else if (state.plantFilters.status === 'ok') {
+      statusMatch = p.exceededDays === 0;
+    } else if (state.plantFilters.status === 'active') {
+      statusMatch = p.activeOutage;
+    }
+
+    return searchMatch && gridMatch && techMatch && statusMatch;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: span 3; text-align: center; padding: 40px; color: var(--text-muted); border: 1px dashed var(--border-color); border-radius:12px;">
+        No generating powerplants matching your query filters were found in our directory registry.
+      </div>
+    `;
+    return;
+  }
+
+  filtered.forEach(p => {
+    const isOffline = p.activeOutage;
+    const gridBadge = `<span class="badge ${p.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}">${p.grid}</span>`;
+    const complianceBadge = p.exceededDays > 0 ?
+      `<span class="badge badge-compliance-exceeded">+${Math.round(p.exceededDays)}d Limit Breach</span>` :
+      `<span class="badge badge-compliance-ok">Compliant</span>`;
+
+    const statusPill = isOffline ?
+      `<span class="badge badge-status-active">OFFLINE</span>` :
+      `<span class="badge badge-status-restored">RESTORED / ONLINE</span>`;
+
+    const card = document.createElement('div');
+    card.className = 'plant-card';
+    card.innerHTML = `
+      <div class="plant-card-header">
+        <div>
+          <div class="plant-card-title">${p.facility} (${p.unit})</div>
+          <div class="plant-card-owner">${p.genco}</div>
+        </div>
+        ${statusPill}
+      </div>
+      <div class="plant-card-body">
+        <div class="plant-card-row">
+          <span class="plant-card-label">Conglomerate Parent:</span>
+          <span class="plant-card-value" style="color:var(--accent-color);">${p.parentConglomerate}</span>
+        </div>
+        <div class="plant-card-row">
+          <span class="plant-card-label">Technology Fuel:</span>
+          <span class="plant-card-value">${p.technology}</span>
+        </div>
+        <div class="plant-card-row">
+          <span class="plant-card-label">Generating Sector:</span>
+          <span>${gridBadge}</span>
+        </div>
+        <div class="plant-card-row">
+          <span class="plant-card-label">Max Outage Capacity:</span>
+          <span class="plant-card-value" style="font-family:var(--font-title); font-weight:700; color:var(--text-primary);">${Math.round(p.capacity)} MW</span>
+        </div>
+        <div class="plant-card-row">
+          <span class="plant-card-label">Outage Frequency:</span>
+          <span class="plant-card-value" style="color:var(--status-info);">${p.tripEvents} Trip Events</span>
+        </div>
+      </div>
+      <div class="plant-card-footer">
+        <div style="display:flex; flex-direction:column;">
+          <span style="font-size:10px; color:var(--text-muted);">Accumulated Outage</span>
+          <span style="font-weight:700; color:var(--text-secondary); font-size:13px;">${p.accumulatedDays.toFixed(1)} Days</span>
+        </div>
+        ${complianceBadge}
+      </div>
+    `;
+
+    // Click handler: find the latest outage record of this powerplant and open drawer details
+    card.addEventListener('click', () => {
+      if (p.outagesList && p.outagesList.length > 0) {
+        openDrawer(p.outagesList[0]);
+      }
+    });
+    container.appendChild(card);
+  });
+}
+
+// 6. Outages Explorer Tab
+function setupFilters() {
+  const searchInput = document.getElementById('outages-search');
+  const gridSelect = document.getElementById('outages-grid-filter');
+  const techSelect = document.getElementById('outages-tech-filter');
+  const statusSelect = document.getElementById('outages-status-filter');
+  const resetBtn = document.getElementById('outages-reset');
+
+  searchInput.addEventListener('input', (e) => {
+    state.filters.search = e.target.value.toLowerCase();
+    state.pagination.currentPage = 1;
+    renderOutagesTab();
+  });
+
+  gridSelect.addEventListener('change', (e) => {
+    state.filters.grid = e.target.value;
+    state.pagination.currentPage = 1;
+    renderOutagesTab();
+  });
+
+  techSelect.addEventListener('change', (e) => {
+    state.filters.tech = e.target.value;
+    state.pagination.currentPage = 1;
+    renderOutagesTab();
+  });
+
+  statusSelect.addEventListener('change', (e) => {
+    state.filters.status = e.target.value;
+    state.pagination.currentPage = 1;
+    renderOutagesTab();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    gridSelect.value = 'all';
+    techSelect.value = 'all';
+    statusSelect.value = 'all';
+    
+    state.filters.search = '';
+    state.filters.grid = 'all';
+    state.filters.tech = 'all';
+    state.filters.status = 'all';
+    state.pagination.currentPage = 1;
+    
+    renderOutagesTab();
+  });
+
+  // Dynamic values in dropdowns
+  const uniqueTechs = [...new Set(state.outages.map(o => o.technology).filter(Boolean))].sort();
+  techSelect.innerHTML = '<option value="all">All Technologies</option>';
+  uniqueTechs.forEach(t => {
+    techSelect.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`);
+  });
+}
+
+function renderOutagesTab() {
+  let filtered = state.outages.filter(o => {
+    const searchMatch = !state.filters.search || 
+      (o.genco && o.genco.toLowerCase().includes(state.filters.search)) ||
+      (o.facility && o.facility.toLowerCase().includes(state.filters.search)) ||
+      (o.unit && o.unit.toLowerCase().includes(state.filters.search)) ||
+      (o.reason && o.reason.toLowerCase().includes(state.filters.search)) ||
+      (o.technology && o.technology.toLowerCase().includes(state.filters.search));
+      
+    const gridMatch = state.filters.grid === 'all' || o.grid === state.filters.grid;
+    const techMatch = state.filters.tech === 'all' || o.technology === state.filters.tech;
+    
+    let statusMatch = true;
+    const isRestored = o.actual_resumption_date !== "";
+    const statusVal = parseFloat(o.status) || 0;
+    
+    if (state.filters.status === 'active') {
+      statusMatch = !isRestored;
+    } else if (state.filters.status === 'restored') {
+      statusMatch = isRestored;
+    } else if (state.filters.status === 'exceeded') {
+      statusMatch = statusVal > 0;
+    } else if (state.filters.status === 'ok') {
+      statusMatch = statusVal <= 0;
+    }
+
+    return searchMatch && gridMatch && techMatch && statusMatch;
+  });
+
+  // Sort: active outages on top, then sort by date out descending
+  filtered.sort((a, b) => {
+    const isRestoredA = a.actual_resumption_date !== "";
+    const isRestoredB = b.actual_resumption_date !== "";
+    
+    if (isRestoredA !== isRestoredB) {
+      return isRestoredA ? 1 : -1;
+    }
+    
+    const dateA = new Date(a.date_out + "T" + (a.time_out || "00:00"));
+    const dateB = new Date(b.date_out + "T" + (b.time_out || "00:00"));
+    return dateB.getTime() - dateA.getTime();
+  });
+
+  // Paginate
+  const totalItems = filtered.length;
+  const totalPages = Math.ceil(totalItems / state.pagination.pageSize) || 1;
+  
+  if (state.pagination.currentPage > totalPages) {
+    state.pagination.currentPage = totalPages;
+  }
+  
+  const startIdx = (state.pagination.currentPage - 1) * state.pagination.pageSize;
+  const endIdx = Math.min(startIdx + state.pagination.pageSize, totalItems);
+  const paginated = filtered.slice(startIdx, endIdx);
+
+  const tableBody = document.getElementById('outages-table-body');
+  tableBody.innerHTML = '';
+
+  if (paginated.length === 0) {
+    tableBody.innerHTML = `
+      <tr>
+        <td colspan="7" style="text-align: center; padding: 40px; color: var(--text-muted);">
+          No power grid outages found matching active filters.
+        </td>
+      </tr>
+    `;
+    updatePaginationControls(0, 0, 0, 1);
+    return;
+  }
+
+  paginated.forEach(o => {
+    const isRestored = o.actual_resumption_date !== "";
+    const cap = parseFloat(o.capacity) || 0;
+    const statusVal = parseFloat(o.status) || 0;
+    
+    const gridBadge = `<span class="badge ${o.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}">${o.grid}</span>`;
+    const statusBadge = isRestored ? 
+      `<span class="badge badge-status-restored">Restored</span>` : 
+      `<span class="badge badge-status-active">Active</span>`;
+      
+    let complianceBadge = '';
+    if (statusVal > 0) {
+      complianceBadge = `<span class="badge badge-compliance-exceeded">+${Math.round(statusVal)}d Limit Breach</span>`;
+    } else {
+      complianceBadge = `<span class="badge badge-compliance-ok">Compliant</span>`;
+    }
+
+    const dateOutStr = o.date_out ? new Date(o.date_out).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'TBD';
+    const timeOutStr = o.time_out ? o.time_out.substring(0, 5) : '';
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${gridBadge}</td>
+      <td>
+        <div style="font-weight: 600; color: var(--text-primary);">${o.facility}</div>
+        <div style="font-size: 11px; color: var(--text-muted);">${o.genco}</div>
+      </td>
+      <td><span class="badge badge-tech">${o.technology || 'Other'}</span></td>
+      <td style="font-weight:600; font-family:var(--font-title);">${Math.round(cap)} MW</td>
+      <td>
+        <div>${dateOutStr}</div>
+        <div style="font-size: 11px; color: var(--text-muted);">${timeOutStr}</div>
+      </td>
+      <td>${statusBadge}</td>
+      <td>${complianceBadge}</td>
+    `;
+    
+    row.addEventListener('click', () => openDrawer(o));
+    tableBody.appendChild(row);
+  });
+
+  updatePaginationControls(startIdx + 1, endIdx, totalItems, totalPages);
+}
+
+function updatePaginationControls(start, end, total, totalPages) {
+  document.getElementById('pagination-info').textContent = total > 0 ? 
+    `Showing ${start} to ${end} of ${total} entries` : 'Showing 0 to 0 of 0 entries';
+    
+  const prevBtn = document.getElementById('pagination-prev');
+  const nextBtn = document.getElementById('pagination-next');
+  
+  prevBtn.disabled = state.pagination.currentPage === 1;
+  nextBtn.disabled = state.pagination.currentPage === totalPages || totalPages === 0;
+  
+  prevBtn.onclick = () => {
+    if (state.pagination.currentPage > 1) {
+      state.pagination.currentPage--;
+      renderOutagesTab();
+    }
+  };
+  
+  nextBtn.onclick = () => {
+    if (state.pagination.currentPage < totalPages) {
+      state.pagination.currentPage++;
+      renderOutagesTab();
+    }
+  };
+}
+
+// 7. Drawer Slide-Over Detail Panel & Sibling Units lookup
+function setupDrawer() {
+  const backdrop = document.getElementById('detail-drawer-backdrop');
+  const drawer = document.getElementById('detail-drawer');
+  const closeBtn = document.getElementById('drawer-close-btn');
+
+  const close = () => {
+    backdrop.classList.remove('open');
+    drawer.classList.remove('open');
+  };
+
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+}
+
+function openDrawer(o) {
+  const backdrop = document.getElementById('detail-drawer-backdrop');
+  const drawer = document.getElementById('detail-drawer');
+  
+  document.getElementById('drawer-facility-title').textContent = `${o.facility} - ${o.unit}`;
+  document.getElementById('drawer-genco').textContent = o.genco;
+  document.getElementById('drawer-grid').textContent = o.grid;
+  document.getElementById('drawer-tech').textContent = o.technology || 'Other';
+  document.getElementById('drawer-capacity').textContent = `${parseFloat(o.capacity).toLocaleString()} MW`;
+  
+  const dateOutStr = o.date_out ? new Date(o.date_out).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'TBD';
+  const timeOutStr = o.time_out ? o.time_out.substring(0, 5) : '';
+  document.getElementById('drawer-date-out').textContent = `${dateOutStr} at ${timeOutStr}`;
+
+  const isRestored = o.actual_resumption_date !== "";
+  if (isRestored) {
+    const dateInStr = new Date(o.actual_resumption_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const timeInStr = o.actual_resumption_time ? o.actual_resumption_time.substring(0, 5) : '';
+    document.getElementById('drawer-date-in').textContent = `${dateInStr} at ${timeInStr}`;
+    document.getElementById('drawer-resumption-label').style.color = 'var(--status-normal)';
+  } else {
+    const estDateStr = o.est_resumption_date ? new Date(o.est_resumption_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'TBD';
+    const estTimeStr = o.est_resumption_time ? o.est_resumption_time.substring(0, 5) : '';
+    document.getElementById('drawer-date-in').textContent = o.est_resumption_date ? `Est: ${estDateStr} at ${estTimeStr}` : 'To Be Determined (TBD)';
+    document.getElementById('drawer-resumption-label').style.color = 'var(--status-red)';
+  }
+
+  document.getElementById('drawer-reason').textContent = o.reason || 'No specific technical reason was logged by grid operators.';
+
+  const allowance = parseFloat(o.outage_allowance) || 0;
+  const accumulated = parseFloat(o.accumulated_days) || 0;
+  const breach = parseFloat(o.status) || 0;
+
+  document.getElementById('drawer-allowance').textContent = allowance > 0 ? `${allowance} Days` : 'N/A';
+  document.getElementById('drawer-accumulated').textContent = accumulated > 0 ? `${accumulated.toFixed(2)} Days` : 'N/A';
+  
+  // WESM Contract and ASPA data population
+  document.getElementById('drawer-offtaker').textContent = o.psa_offtaker || 'N/A';
+  document.getElementById('drawer-psa-cap').textContent = o.psa_capacity || 'N/A';
+  document.getElementById('drawer-aspa-type').textContent = o.aspa_type || 'N/A';
+  document.getElementById('drawer-aspa-cap').textContent = o.aspa_capacity || 'N/A';
+  
+  const complianceStatusEl = document.getElementById('drawer-compliance-status');
+  if (breach > 0) {
+    complianceStatusEl.innerHTML = `<span style="color:var(--status-red); font-weight:700;">LIMIT BREACHED (+${breach.toFixed(2)} Days Exceeded)</span>`;
+  } else if (allowance > 0) {
+    complianceStatusEl.innerHTML = `<span style="color:var(--status-normal); font-weight:700;">COMPLIANT (${(allowance - accumulated).toFixed(2)} Days Remaining)</span>`;
+  } else {
+    complianceStatusEl.innerHTML = `<span style="color:var(--text-muted);">NOT TRACKED</span>`;
+  }
+
+  // Corporate Sibling / Sister Units Lookup Explorer
+  const affiliatesEl = document.getElementById('drawer-affiliates');
+  const parentGroup = getParentConglomerate(o.affiliates);
+  
+  // Find all unique plants owned by the same Conglomerate (excluding current unit)
+  const siblings = state.powerPlants.filter(p => {
+    return p.parentConglomerate === parentGroup && `${p.facility} | ${p.unit}` !== `${o.facility.trim()} | ${o.unit.trim()}`;
+  });
+
+  let siblingsHtml = `<div style="font-weight:700; color:var(--text-primary); margin-bottom: 6px;">Corporate Group: <span style="color:var(--accent-color);">${parentGroup}</span></div>`;
+  if (o.affiliates) {
+    siblingsHtml += `<div style="margin-bottom:12px; font-size:11.5px; color:var(--text-muted); font-style:italic;">"${o.affiliates.split('\n')[0]}"</div>`;
+  }
+
+  if (siblings.length > 0) {
+    siblingsHtml += `<div style="font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted); margin-bottom:6px;">Sister Power Plant Units:</div>`;
+    siblingsHtml += `<div style="display:flex; flex-wrap:wrap; gap:6px;">`;
+    siblings.forEach(sib => {
+      const isOff = sib.activeOutage;
+      const statusColor = isOff ? 'border-color: var(--status-red); color: var(--status-red);' : 'border-color: var(--status-normal); color: var(--status-normal);';
+      siblingsHtml += `
+        <button onclick="drawerHopToPlant('${sib.facility}', '${sib.unit}')" class="badge" style="background:#ffffff; border:1.5px solid #e2e8f0; font-size:11px; padding:4px 8px; cursor:pointer; font-weight:600; text-align:left; ${statusColor}">
+          ${sib.facility} (${sib.unit}) — ${Math.round(sib.capacity)}MW
+        </button>
+      `;
+    });
+    siblingsHtml += `</div>`;
+  } else {
+    siblingsHtml += `<div style="font-size:11px; color:var(--text-muted);">No other sister generating plant units are logged under this conglomerate in our system directory.</div>`;
+  }
+
+  affiliatesEl.innerHTML = siblingsHtml;
+
+  // Open backdrop
+  backdrop.classList.add('open');
+  drawer.classList.add('open');
+}
+
+// Click listener to hop directly from one sister plant to another within the drawer
+window.drawerHopToPlant = function(facility, unit) {
+  const plantKey = `${facility} | ${unit}`;
+  const target = state.powerPlants.find(p => p.key === plantKey);
+  if (target && target.outagesList && target.outagesList.length > 0) {
+    openDrawer(target.outagesList[0]);
+  }
+};
+
+// 8. WESM Marginal Pricing Tab
+function renderMarketTab() {
+  const gridFilter = document.getElementById('market-grid-filter');
+  const alertFilter = document.getElementById('market-alert-filter');
+  const tableBody = document.getElementById('market-table-body');
+
+  const updateTable = () => {
+    const gridVal = gridFilter.value;
+    const alertVal = alertFilter.value;
+
+    let filtered = state.marginalPlants.filter(m => {
+      const gridMatch = gridVal === 'all' || m.grid === gridVal;
+      const alertMatch = alertVal === 'all' || m.alert === alertVal;
+      return gridMatch && alertMatch;
+    });
+
+    filtered.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateB.getTime() - dateA.getTime();
+      }
+      return parseInt(b.hour) - parseInt(a.hour);
+    });
+
+    tableBody.innerHTML = '';
+
+    if (filtered.length === 0) {
+      tableBody.innerHTML = `
+        <tr>
+          <td colspan="6" style="text-align: center; padding: 40px; color: var(--text-muted);">
+            No WESM market alerts match active filters.
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    filtered.forEach(m => {
+      const dateStr = m.date ? new Date(m.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'TBD';
+      
+      const gridBadge = `<span class="badge ${m.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}">${m.grid}</span>`;
+      const alertBadge = m.alert === 'RED' ? 
+        `<span class="badge badge-status-active">RED ALERT</span>` : 
+        `<span class="badge badge-status-active" style="background-color: var(--status-yellow-bg); color: var(--status-yellow); border-color: var(--status-yellow-border);">YELLOW ALERT</span>`;
+
+      let priceHtml = '';
+      if (m.price === 'AP') {
+        const ind = parseFloat(m.indicative_ap) || 0;
+        priceHtml = `
+          <div><span style="font-weight: 700; color:var(--accent-color);">AP Active</span></div>
+          <div style="font-size:11px; color:var(--text-muted);">Indicative: ₱${Math.round(ind).toLocaleString()}/MWh</div>
+        `;
+      } else {
+        const p = parseFloat(m.price) || 0;
+        priceHtml = `<span style="font-weight:700;">₱${p.toLocaleString()}/MWh</span>`;
+      }
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${dateStr}</td>
+        <td>Hour ${m.hour}</td>
+        <td>${gridBadge}</td>
+        <td>${alertBadge}</td>
+        <td>${priceHtml}</td>
+        <td><span style="font-weight: 600; color:var(--text-primary);">${m.marginal_plant || 'System Reserve'}</span></td>
+      `;
+      tableBody.appendChild(row);
+    });
+  };
+
+  gridFilter.addEventListener('change', updateTable);
+  alertFilter.addEventListener('change', updateTable);
+  updateTable();
+}
+
+// 9. Chronological Bulletins Feed
+function renderUpdatesTab() {
+  const container = document.getElementById('timeline-container');
+  container.innerHTML = '';
+
+  state.ngcpUpdates.forEach(u => {
+    let alertClass = 'normal';
+    if (u.type === 'Red Alert') alertClass = 'red-alert';
+    if (u.type === 'Yellow Alert') alertClass = 'yellow-alert';
+    if (u.type === 'Manual Load Dropping') alertClass = 'mld';
+
+    let badgeColor = 'var(--text-muted)';
+    if (u.type === 'Red Alert') badgeColor = 'var(--status-red)';
+    if (u.type === 'Yellow Alert') badgeColor = 'var(--status-yellow)';
+    if (u.type === 'Manual Load Dropping') badgeColor = 'var(--status-info)';
+
+    const itemHtml = `
+      <div class="timeline-item ${alertClass}" id="bulletin-node-${u.timestamp.replace(/\s+/g, '-')}">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-time">${u.timestamp}</span>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <span class="badge" style="border: 1px solid ${badgeColor}; color: ${badgeColor}; font-weight:700; font-size:10px;">${u.type.toUpperCase()}</span>
+              <span class="timeline-sender">${u.sender}</span>
+            </div>
+          </div>
+          <div class="timeline-message">${u.message}</div>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', itemHtml);
+  });
+}
+
+// 10. Manual Load Dropping Tab
+function renderMldTab() {
+  const mldSearchInput = document.getElementById('mld-search');
+  const mldResults = document.getElementById('mld-search-results');
+
+  const mldSchedules = [
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '2:00 PM - 3:00 PM',
+      areas: ['LUELCO (La Union)', 'ISELCO I (Santiago City)', 'ISELCO II (City of Ilagan)', 'CELCOR (Cabanatuan City)', 'AEC (Angeles City)', 'OEDC (Olongapo City)', 'IEC (Batangas)', 'ALECO (Albay)', 'MERALCO (Metro Manila)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '3:00 PM - 4:00 PM',
+      areas: ['LUELCO (La Union)', 'ABRECO (Abra)', 'PANELCO III (Pangasinan)', 'CAGELCO 2 (Cagayan)', 'OEDC (Olongapo City)', 'CELCOR (Cabanatuan City)', 'AEC (Angeles City)', 'MERALCO (Metro Manila)', 'BATELEC I (Batangas)', 'QUEZELCO I (Quezon)', 'ALECO (Albay)', 'CANORECO (Camarines Norte)']
+    },
+    {
+      grid: 'Visayas',
+      date: 'May 15, 2026',
+      hour: '3:00 PM - 10:00 PM',
+      areas: ['VECO (Visayas Elec)', 'MECO (Mactan Elec)', 'CEBECO I (Cebu)', 'CEBECO II (Cebu)', 'CEBECO III (Cebu)', 'NEPC (Negros Elec)', 'NOCECO (Negros Occ)', 'NORECO I (Negros Or)', 'NORECO II (Negros Or)', 'NONECO (Negros Occ)', 'MORE (Iloilo City)', 'AKELCO (Aklan)', 'ANTECO (Antique)', 'CAPELCO (Capiz)', 'ILECO I (Iloilo)', 'ILECO II (Iloilo)', 'ILECO III (Iloilo)', 'GUIMELCO (Guimaras)', 'LEYECO II (Leyte)', 'SOLECO (Southern Leyte)', 'DORELCO (Leyte)', 'LEYECO III (Leyte)', 'LEYECO IV (Leyte)', 'LEYECO V (Leyte)', 'ESAMELCO (Eastern Samar)', 'BILECO (Biliran)', 'NORSAMELCO (Northern Samar)', 'SAMELCO I (Samar)', 'SAMELCO II (Samar)', 'BLCI (Bohol)', 'BOHECO I (Bohol)', 'BOHECO II (Bohol)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '4:00 PM - 5:00 PM',
+      areas: ['LUELCO (La Union)', 'ABRECO (Abra)', 'PANELCO III (Pangasinan)', 'CAGELCO II (Cagayan)', 'OEDC (Olongapo City)', 'CELCOR (Cabanatuan City)', 'AEC (Angeles City)', 'MERALCO (Metro Manila)', 'QUEZELCO I (Quezon)', 'ALECO (Albay)', 'BATELEC I (Batangas)', 'CANORECO (Camarines Norte)', 'TARELCO II (Tarlac & Pampanga)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '5:00 PM - 6:00 PM',
+      areas: ['INEC (Ilocos Norte)', 'ISECO (Ilocos Sur)', 'LUECO (La Union)', 'DECORP (Dagupan City)', 'PANELCO III (Pangasinan)', 'NUVELCO (Nueva Vizcaya)', 'TARELCO II (Tarlac & Pampanga)', 'PELCO I (Pampanga)', 'PELCO II (Pampanga)', 'SFELAPCO (Pampanga)', 'BATELEC I (Batangas)', 'CANORECO (Camarines Norte)', 'CASURECO II (Camarines Sur)', 'QUEZELCO I (Quezon)', 'MERALCO (Metro Manila)', 'ZAMECO II (Zambales)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '6:00 PM - 7:00 PM',
+      areas: ['INEC (Ilocos Norte)', 'ISECO (Ilocos Sur)', 'LUECO (La Union)', 'DECORP (Dagupan City)', 'PANELCO III (Pangasinan)', 'NUVELCO (Nueva Vizcaya)', 'TARELCO II (Tarlac & Pampanga)', 'PELCO I (Pampanga)', 'PELCO II (Pampanga)', 'SFELAPCO (Pampanga)', 'ZAMECO II (Zambales)', 'BATELEC II (Batangas)', 'CASURECO II (Camarines Sur)', 'MERALCO (Metro Manila)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '7:00 PM - 8:00 PM',
+      areas: ['LUELCO (La Union)', 'ISELCO I (Isabela)', 'TARELCO II (Tarlac & Pampanga)', 'PELCO I (Pampanga)', 'PELCO II (Pampanga)', 'SFELAPCO (Pampanga)', 'ZAMECO II (Zambales)', 'BATELEC I & II (Batangas)', 'CASURECO II (Camarines Sur)', 'MERALCO (Metro Manila)', 'CENPELCO (Pangasinan)', 'DECORP (Dagupan City)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '8:00 PM - 9:00 PM',
+      areas: ['LUELCO (La Union)', 'CENPELCO (Pangasinan)', 'DECORP (Dagupan City)', 'ISELCO I (Isabela)', 'PENELCO (Bataan)', 'TARELCO I (Tarlac & Nueva Ecija)', 'BATELEC I & II (Batangas)', 'CASURECO III & IV (Camarines Sur)', 'MERALCO (Metro Manila)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '9:00 PM - 10:00 PM',
+      areas: ['ISECO (Ilocos Sur)', 'ISELCO I (Isabela)', 'QUIRELCO (Quirino)', 'CAGELCO II (Cagayan & Apayao)', 'PENELCO (Bataan)', 'TARELCO I (Tarlac & Nueva Ecija)', 'BATELEC II (Batangas)', 'CASURECO III & IV (Camarines Sur)', 'MERALCO (Metro Manila)']
+    },
+    {
+      grid: 'Luzon',
+      date: 'May 15, 2026',
+      hour: '10:00 PM - 11:00 PM',
+      areas: ['ISECO (Ilocos Sur)', 'ISELCO I (Isabela)', 'QUIRELCO (Quirino)', 'CAGELCO II (Cagayan & Apayao)', 'TARELCO I (Tarlac & Nueva Ecija)', 'PENELCO (Bataan)', 'BATELEC II (Batangas)', 'CASURECO III & IV (Camarines Sur)', 'MERALCO (Metro Manila)']
+    }
+  ];
+
+  const timelineView = document.getElementById('mld-timeline-view');
+  timelineView.innerHTML = '';
+  
+  mldSchedules.forEach(sched => {
+    const gridBadge = `<span class="badge ${sched.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}" style="font-size:10px; padding: 2px 6px;">${sched.grid}</span>`;
+    
+    let areaTagsHtml = '';
+    sched.areas.forEach(area => {
+      areaTagsHtml += `<span class="mld-area-tag">${area}</span>`;
+    });
+
+    const blockHtml = `
+      <div class="mld-hour-block">
+        <div class="mld-hour-header">
+          <span>${sched.hour}</span>
+          <div style="display:flex; gap:6px; align-items:center;">
+            <span style="font-size:11px; font-weight:500; color:var(--text-muted);">${sched.date}</span>
+            ${gridBadge}
+          </div>
+        </div>
+        <div class="mld-hour-body">
+          <div class="mld-area-list">
+            ${areaTagsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+    timelineView.insertAdjacentHTML('beforeend', blockHtml);
+  });
+
+  const handleSearch = () => {
+    const q = mldSearchInput.value.trim().toLowerCase();
+    mldResults.innerHTML = '';
+
+    if (!q) {
+      mldResults.innerHTML = '<div style="color:var(--text-muted); text-align:center; padding: 20px; font-size:13px;">Type your electric cooperative (e.g. Meralco, Casureco, Boheco) or province/city above to check your schedule.</div>';
+      return;
+    }
+
+    const matches = [];
+    mldSchedules.forEach(sched => {
+      sched.areas.forEach(area => {
+        if (area.toLowerCase().includes(q)) {
+          matches.push({
+            area: area,
+            grid: sched.grid,
+            hour: sched.hour,
+            date: sched.date
+          });
+        }
+      });
+    });
+
+    if (matches.length === 0) {
+      mldResults.innerHTML = `
+        <div style="text-align:center; padding: 20px; border: 1px dashed var(--border-color); border-radius:12px; background-color:var(--bg-secondary);">
+          <div style="font-weight:600; color:var(--text-primary); font-size:14px; margin-bottom:4px;">No Scheduled Load Shedding Found</div>
+          <div style="color:var(--text-muted); font-size:12px;">"${mldSearchInput.value}" is not listed in today's Manual Load Dropping schedules.</div>
+        </div>
+      `;
+      return;
+    }
+
+    matches.forEach(m => {
+      const gridBadge = `<span class="badge ${m.grid === 'Luzon' ? 'badge-grid-luzon' : 'badge-grid-visayas'}">${m.grid}</span>`;
+      const resultHtml = `
+        <div class="list-item" style="border-left: 4px solid var(--status-info); background-color: #f0f9ff; border-color: var(--status-info);">
+          <div>
+            <div class="list-item-title" style="font-size:14px;">${m.area}</div>
+            <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Scheduled outage on ${m.date}</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-family:var(--font-title); font-weight:700; font-size:13px; color:var(--text-primary);">${m.hour}</div>
+            <div style="margin-top:2px;">${gridBadge}</div>
+          </div>
+        </div>
+      `;
+      mldResults.insertAdjacentHTML('beforeend', resultHtml);
+    });
+  };
+
+  mldSearchInput.addEventListener('input', handleSearch);
+  handleSearch();
+}
+
+// 11. Interactive Grid Reserves Margin Simulator (Luzon)
+function setupReservesSimulator() {
+  const gnpd = document.getElementById('sim-restore-gnpd');
+  const tvi1 = document.getElementById('sim-restore-tvi1');
+  const tvi2 = document.getElementById('sim-restore-tvi2');
+  const pedc = document.getElementById('sim-restore-pedc');
+
+  const runSimulation = () => {
+    // Peak Demand: 13,881 MW
+    // Base Available Capacity: 13,508 MW
+    let restoredMW = 0;
+    if (gnpd.checked) restoredMW += 668;
+    if (tvi1.checked) restoredMW += 169;
+    if (tvi2.checked) restoredMW += 169;
+    if (pedc.checked) restoredMW += 150;
+
+    const baseCapacity = 13508;
+    const peakDemand = 13881;
+    const simulatedCapacity = baseCapacity + restoredMW;
+    const simulatedMargin = simulatedCapacity - peakDemand;
+    const simulatedPercent = (simulatedMargin / peakDemand) * 100;
+
+    // DOM Elements
+    const statusCard = document.getElementById('sim-grid-status-card');
+    const statusTitle = document.getElementById('sim-status-title');
+    const statusDesc = document.getElementById('sim-status-desc');
+    const marginBadge = document.getElementById('sim-margin-badge');
+    const marginPercent = document.getElementById('sim-margin-percent');
+    const marginBar = document.getElementById('sim-margin-bar');
+    const wesmPrice = document.getElementById('sim-wesm-price');
+
+    // Update available details
+    statusDesc.innerHTML = `Available Luzon: ${simulatedCapacity.toLocaleString()} MW • Peak Demand: ${peakDemand.toLocaleString()} MW`;
+    marginBadge.textContent = `${simulatedMargin > 0 ? '+' : ''}${Math.round(simulatedMargin).toLocaleString()} MW Margin`;
+
+    // Alert levels: Red, Yellow, Normal
+    let alertState = 'RED';
+    if (simulatedMargin >= 250) {
+      alertState = 'NORMAL';
+    } else if (simulatedMargin >= -100) {
+      alertState = 'YELLOW';
+    }
+
+    if (alertState === 'RED') {
+      statusCard.style.borderColor = 'var(--status-red)';
+      statusCard.style.backgroundColor = '#fee2e2';
+      statusTitle.textContent = 'SYSTEM RED ALERT (Supply Deficit)';
+      statusTitle.style.color = 'var(--status-red)';
+      
+      marginBadge.style.backgroundColor = 'var(--status-red-bg)';
+      marginBadge.style.color = 'var(--status-red)';
+      marginBadge.style.borderColor = 'var(--status-red-border)';
+
+      marginBar.style.backgroundColor = 'var(--status-red)';
+      wesmPrice.textContent = '₱32,000 / MWh';
+      wesmPrice.style.color = 'var(--status-red)';
+    } else if (alertState === 'YELLOW') {
+      statusCard.style.borderColor = 'var(--status-yellow)';
+      statusCard.style.backgroundColor = '#fef3c7';
+      statusTitle.textContent = 'SYSTEM YELLOW ALERT (Contingency Deficit)';
+      statusTitle.style.color = 'var(--status-yellow)';
+
+      marginBadge.style.backgroundColor = 'var(--status-yellow-bg)';
+      marginBadge.style.color = 'var(--status-yellow)';
+      marginBadge.style.borderColor = 'var(--status-yellow-border)';
+
+      marginBar.style.backgroundColor = 'var(--status-yellow)';
+      wesmPrice.textContent = '₱21,180 / MWh';
+      wesmPrice.style.color = 'var(--status-yellow)';
+    } else {
+      statusCard.style.borderColor = 'var(--status-normal)';
+      statusCard.style.backgroundColor = '#d1fae5';
+      statusTitle.textContent = 'SYSTEM NORMAL (Adequate Spare Reserves)';
+      statusTitle.style.color = 'var(--status-normal)';
+
+      marginBadge.style.backgroundColor = 'var(--status-normal-bg)';
+      marginBadge.style.color = 'var(--status-normal)';
+      marginBadge.style.borderColor = 'var(--status-normal-border)';
+
+      marginBar.style.backgroundColor = 'var(--status-normal)';
+      wesmPrice.textContent = '₱6,800 / MWh';
+      wesmPrice.style.color = 'var(--status-normal)';
+    }
+
+    // Gauge Percent Calculations
+    marginPercent.textContent = `${simulatedPercent > 0 ? '+' : ''}${simulatedPercent.toFixed(1)}% Spare Margin`;
+    
+    // Map -5% to +10% into 0% - 100% width
+    const progressWidth = Math.max(0, Math.min(100, ((simulatedPercent + 5) / 15) * 100));
+    marginBar.style.width = `${progressWidth}%`;
+  };
+
+  [gnpd, tvi1, tvi2, pedc].forEach(el => {
+    if (el) el.addEventListener('change', runSimulation);
+  });
+  
+  // Initial run
+  runSimulation();
+}
+
+// 12. Floating Universal Global Search Panel logic
+function setupGlobalSearch() {
+  const globalInput = document.getElementById('global-search');
+  const resultsContainer = document.getElementById('global-search-results');
+
+  const performSearch = () => {
+    const q = globalInput.value.trim().toLowerCase();
+    resultsContainer.innerHTML = '';
+    
+    if (!q) {
+      resultsContainer.style.display = 'none';
+      return;
+    }
+
+    const matches = [];
+
+    // Category A: Power Plants Registry (Max 3)
+    let plantHits = 0;
+    state.powerPlants.forEach(p => {
+      if (plantHits < 3 && (
+        p.facility.toLowerCase().includes(q) ||
+        p.unit.toLowerCase().includes(q) ||
+        p.genco.toLowerCase().includes(q) ||
+        p.parentConglomerate.toLowerCase().includes(q)
+      )) {
+        matches.push({
+          category: 'Power Plant Registry',
+          title: `${p.facility} (${p.unit})`,
+          desc: `${p.genco} • ${p.parentConglomerate} • ${Math.round(p.capacity)}MW`,
+          action: () => {
+            // Hop to plants directory and search for this plant
+            const tabBtn = document.querySelector('[data-tab="plants"]');
+            if (tabBtn) tabBtn.click();
+            
+            const registrySearchInput = document.getElementById('plants-search');
+            registrySearchInput.value = `${p.facility} ${p.unit}`;
+            
+            state.plantFilters.search = `${p.facility} ${p.unit}`.toLowerCase();
+            renderPlantsTab();
+          }
+        });
+        plantHits++;
+      }
+    });
+
+    // Category B: Outages logs (Max 3)
+    let outageHits = 0;
+    state.outages.forEach(o => {
+      if (outageHits < 3 && (
+        (o.facility && o.facility.toLowerCase().includes(q)) ||
+        (o.genco && o.genco.toLowerCase().includes(q)) ||
+        (o.reason && o.reason.toLowerCase().includes(q))
+      )) {
+        const isRestored = o.actual_resumption_date !== "";
+        matches.push({
+          category: 'Grid Outage Event Log',
+          title: `${o.facility} (${o.unit}) — ${Math.round(o.capacity)} MW`,
+          desc: `${o.grid} • ${isRestored ? 'Restored' : 'Active forced trip'} due to ${o.reason || 'unlogged trip'}`,
+          action: () => {
+            openDrawer(o);
+          }
+        });
+        outageHits++;
+      }
+    });
+
+    // Category C: Electrical Cooperatives MLD schedule (Max 2)
+    let coopHits = 0;
+    const allAreas = [
+      { name: 'MERALCO (Metro Manila)', coop: 'meralco' },
+      { name: 'VECO (Visayas Elec)', coop: 'veco' },
+      { name: 'CEBECO I & II (Cebu)', coop: 'cebeco' },
+      { name: 'LUELCO (La Union)', coop: 'luelco' },
+      { name: 'BATELEC I & II (Batangas)', coop: 'batelec' },
+      { name: 'ISELCO I & II (Isabela)', coop: 'iselco' },
+      { name: 'ALECO (Albay)', coop: 'aleco' }
+    ];
+
+    allAreas.forEach(area => {
+      if (coopHits < 2 && area.name.toLowerCase().includes(q)) {
+        matches.push({
+          category: 'Manual Load Dropping (MLD)',
+          title: area.name,
+          desc: 'Rolling scheduled power interruption cooperative block',
+          action: () => {
+            const tabBtn = document.querySelector('[data-tab="mld"]');
+            if (tabBtn) tabBtn.click();
+            
+            const mldSearchInput = document.getElementById('mld-search');
+            mldSearchInput.value = area.coop;
+            
+            // Dispatch input event to fire cooperative lookups
+            mldSearchInput.dispatchEvent(new Event('input'));
+          }
+        });
+        coopHits++;
+      }
+    });
+
+    // Category D: Bulletins (Max 2)
+    let bulletinHits = 0;
+    state.ngcpUpdates.forEach(u => {
+      if (bulletinHits < 2 && u.message.toLowerCase().includes(q)) {
+        matches.push({
+          category: 'NGCP System Telegram Update',
+          title: `${u.type} (${u.timestamp})`,
+          desc: u.message.substring(0, 70) + '...',
+          action: () => {
+            const tabBtn = document.querySelector('[data-tab="updates"]');
+            if (tabBtn) tabBtn.click();
+            
+            // Scroll to the timeline node item
+            const nodeId = `bulletin-node-${u.timestamp.replace(/\s+/g, '-')}`;
+            const targetEl = document.getElementById(nodeId);
+            if (targetEl) {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              targetEl.style.backgroundColor = 'var(--accent-light)';
+              setTimeout(() => {
+                targetEl.style.backgroundColor = '';
+              }, 2500);
+            }
+          }
+        });
+        bulletinHits++;
+      }
+    });
+
+    // Render hits in the floating results panel
+    if (matches.length === 0) {
+      resultsContainer.innerHTML = `
+        <div style="padding: 16px; text-align:center; color:var(--text-muted); font-size:12.5px;">
+          No matching profiles or logs found in the power system databases.
+        </div>
+      `;
+    } else {
+      matches.forEach(m => {
+        const item = document.createElement('div');
+        item.className = 'global-search-item';
+        item.innerHTML = `
+          <div class="global-search-category">${m.category}</div>
+          <div class="global-search-title">${m.title}</div>
+          <div class="global-search-desc">${m.desc}</div>
+        `;
+        
+        item.addEventListener('mousedown', () => {
+          m.action();
+          resultsContainer.style.display = 'none';
+          globalInput.value = '';
+        });
+        resultsContainer.appendChild(item);
+      });
+    }
+
+    resultsContainer.style.display = 'block';
+  };
+
+  globalInput.addEventListener('input', performSearch);
+  
+  // Close dropdown on blur
+  globalInput.addEventListener('blur', () => {
+    // Delay slightly to allow click handlers on items to register
+    setTimeout(() => {
+      resultsContainer.style.display = 'none';
+    }, 200);
+  });
+
+  globalInput.addEventListener('focus', () => {
+    if (globalInput.value) {
+      resultsContainer.style.display = 'block';
+    }
+  });
+}
+
+// 13. ERC Penalty & Risk Calculator logic
+function updateErcCalculator() {
+  const costInput = document.getElementById('calc-replacement-cost');
+  const penaltyInput = document.getElementById('calc-penalty-rate');
+  
+  if (!costInput || !penaltyInput) return;
+  
+  const replacementCost = parseFloat(costInput.value) || 0;
+  const penaltyRate = parseFloat(penaltyInput.value) || 0;
+  
+  let totalPenalties = 0;
+  let totalReplacementExposure = 0;
+  
+  state.outages.forEach(o => {
+    const statusVal = parseFloat(o.status) || 0; // Exceeded days
+    if (statusVal > 0) {
+      totalPenalties += statusVal * penaltyRate;
+      const capacity = parseFloat(o.capacity) || 0;
+      // Exposure = Exceeded Days * 24 Hours * Outage Capacity * Replacement Cost
+      totalReplacementExposure += statusVal * 24 * capacity * replacementCost;
+    }
+  });
+  
+  const penaltiesEl = document.getElementById('out-total-penalties');
+  const replacementEl = document.getElementById('out-total-replacement');
+  
+  if (penaltiesEl) {
+    penaltiesEl.textContent = `₱${Math.round(totalPenalties).toLocaleString()}`;
+  }
+  if (replacementEl) {
+    replacementEl.textContent = `₱${Math.round(totalReplacementExposure).toLocaleString()}`;
+  }
+}
+
+// 14. Technology Reliability Scorecard logic
+function renderTechScorecard() {
+  const body = document.getElementById('tech-scorecard-body');
+  if (!body) return;
+  
+  const techStats = {};
+  state.outages.forEach(o => {
+    const tech = o.technology || 'Other';
+    const duration = parseFloat(o.accumulated_days) || 0;
+    
+    if (!techStats[tech]) {
+      techStats[tech] = { count: 0, totalDuration: 0 };
+    }
+    techStats[tech].count++;
+    techStats[tech].totalDuration += duration;
+  });
+  
+  const sorted = Object.keys(techStats).map(tech => {
+    const count = techStats[tech].count;
+    const avgDuration = count > 0 ? techStats[tech].totalDuration / count : 0;
+    
+    let riskGrade = 'LOW RISK';
+    let riskColor = 'var(--status-normal)';
+    
+    if (count > 25 && avgDuration > 10) {
+      riskGrade = 'CRITICAL';
+      riskColor = 'var(--status-red)';
+    } else if (count > 10 || avgDuration > 8) {
+      riskGrade = 'HIGH RISK';
+      riskColor = 'var(--status-yellow)';
+    } else if (count > 3) {
+      riskGrade = 'MED RISK';
+      riskColor = '#64748b';
+    }
+    
+    return { tech, count, avgDuration, riskGrade, riskColor };
+  }).sort((a, b) => b.count - a.count);
+  
+  body.innerHTML = '';
+  sorted.forEach(s => {
+    const row = `
+      <tr>
+        <td style="font-weight:600; padding:10px; color:var(--text-secondary); border-bottom: 1px solid var(--border-light);">${s.tech}</td>
+        <td style="text-align:center; padding:10px; font-weight:700; border-bottom: 1px solid var(--border-light);">${s.count} Trips</td>
+        <td style="text-align:right; padding:10px; font-family:var(--font-title); font-weight:600; border-bottom: 1px solid var(--border-light);">${s.avgDuration.toFixed(1)} Days</td>
+        <td style="text-align:center; padding:10px; border-bottom: 1px solid var(--border-light);">
+          <span class="badge" style="border:none; background-color:${s.riskColor}15; color:${s.riskColor}; font-weight:800; font-size:9.5px; padding:2px 6px;">${s.riskGrade}</span>
+        </td>
+      </tr>
+    `;
+    body.insertAdjacentHTML('beforeend', row);
+  });
+}
+
+function openDetailDrawer(p) {
+  if (p && p.outagesList && p.outagesList.length > 0) {
+    openDrawer(p.outagesList[0]);
+  }
+}
+
+// 15. Chronological Outage Calendar Heatmap Controller
+function setupCalendar() {
+  const prevBtn = document.getElementById('cal-prev');
+  const nextBtn = document.getElementById('cal-next');
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      state.calendarDate.setMonth(state.calendarDate.getMonth() - 1);
+      renderCalendarGrid();
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      state.calendarDate.setMonth(state.calendarDate.getMonth() + 1);
+      renderCalendarGrid();
+    });
+  }
+}
+
+function parseOutageDate(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (!isNaN(d.getTime())) return d;
+  
+  // Clean text patterns from Viber logs
+  const lower = dateStr.toLowerCase();
+  if (lower.includes('may 12') || lower.includes('12 may')) return new Date(2026, 4, 12);
+  if (lower.includes('may 13') || lower.includes('13 may')) return new Date(2026, 4, 13);
+  if (lower.includes('may 14') || lower.includes('14 may')) return new Date(2026, 4, 14);
+  if (lower.includes('may 15') || lower.includes('15 may')) return new Date(2026, 4, 15);
+  if (lower.includes('may 16') || lower.includes('16 may')) return new Date(2026, 4, 16);
+  if (lower.includes('may 17') || lower.includes('17 may')) return new Date(2026, 4, 17);
+  if (lower.includes('may 18') || lower.includes('18 may')) return new Date(2026, 4, 18);
+  if (lower.includes('may 19') || lower.includes('19 may')) return new Date(2026, 4, 19);
+  
+  return null;
+}
+
+function renderCalendarGrid() {
+  const grid = document.getElementById('calendar-days-grid');
+  const title = document.getElementById('cal-month-year');
+  if (!grid || !title) return;
+  
+  const targetYear = state.calendarDate.getFullYear();
+  const targetMonth = state.calendarDate.getMonth(); // 0-11
+  
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  
+  title.textContent = `${monthNames[targetMonth]} ${targetYear}`;
+  grid.innerHTML = '';
+  
+  // Add Day Labels
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  daysOfWeek.forEach(day => {
+    grid.insertAdjacentHTML('beforeend', `<div class="calendar-day-label">${day}</div>`);
+  });
+  
+  // Calculate Calendar boundaries
+  const firstDayIndex = new Date(targetYear, targetMonth, 1).getDay();
+  const totalDays = new Date(targetYear, targetMonth + 1, 0).getDate();
+  
+  // Gather all outages on each date of this month
+  const dailyTrips = {};
+  state.outages.forEach(o => {
+    const oDate = parseOutageDate(o.date_out);
+    if (oDate && oDate.getFullYear() === targetYear && oDate.getMonth() === targetMonth) {
+      const dateNum = oDate.getDate();
+      if (!dailyTrips[dateNum]) {
+        dailyTrips[dateNum] = [];
+      }
+      dailyTrips[dateNum].push(o);
+    }
+  });
+  
+  // Spacer cells for previous month
+  for (let i = 0; i < firstDayIndex; i++) {
+    grid.insertAdjacentHTML('beforeend', `<div class="calendar-cell other-month"></div>`);
+  }
+  
+  // Day grids
+  for (let day = 1; day <= totalDays; day++) {
+    const outages = dailyTrips[day] || [];
+    const count = outages.length;
+    let totalMw = 0;
+    outages.forEach(o => { totalMw += parseFloat(o.capacity) || 0; });
+    
+    // Choose density level
+    let densityClass = 'density-level-0';
+    if (count >= 12) densityClass = 'density-level-4';
+    else if (count >= 6) densityClass = 'density-level-3';
+    else if (count >= 3) densityClass = 'density-level-2';
+    else if (count >= 1) densityClass = 'density-level-1';
+    
+    const cellId = `cal-cell-${day}`;
+    const cellHtml = `
+      <div class="calendar-cell ${densityClass}" id="${cellId}" data-day="${day}">
+        <span class="calendar-date-num">${day}</span>
+        ${count > 0 ? `<span class="calendar-cell-trips">${count} Trips</span>` : ''}
+      </div>
+    `;
+    grid.insertAdjacentHTML('beforeend', cellHtml);
+    
+    const cellElement = document.getElementById(cellId);
+    if (cellElement) {
+      cellElement.addEventListener('click', () => {
+        // Highlight active day
+        document.querySelectorAll('.calendar-cell').forEach(c => c.classList.remove('active-day'));
+        cellElement.classList.add('active-day');
+        showOutagesForDate(targetYear, targetMonth, day, outages);
+      });
+    }
+  }
+  
+  // Auto-select May 15, 2026 on initial calendar load
+  if (targetYear === 2026 && targetMonth === 4) {
+    const targetCell = document.getElementById('cal-cell-15');
+    if (targetCell) {
+      targetCell.click();
+    }
+  } else {
+    // Select first day of month if not May
+    const firstCell = document.getElementById('cal-cell-1');
+    if (firstCell) {
+      firstCell.click();
+    }
+  }
+}
+
+function showOutagesForDate(year, month, day, outages) {
+  const dateStrEl = document.getElementById('calendar-selected-date-str');
+  const listEl = document.getElementById('calendar-date-outages-list');
+  if (!dateStrEl || !listEl) return;
+  
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  dateStrEl.textContent = `${monthNames[month]} ${day}, ${year}`;
+  listEl.innerHTML = '';
+  
+  if (outages.length === 0) {
+    listEl.innerHTML = `
+      <div style="text-align:center; padding: 30px; color:var(--text-muted); font-size:12px; border:1px dashed var(--border-color); border-radius:8px;">
+        No generator forced trippings were logged on this date.
+      </div>
+    `;
+    return;
+  }
+  
+  outages.forEach(o => {
+    const card = document.createElement('div');
+    card.className = 'list-item';
+    card.style.cursor = 'pointer';
+    card.style.borderLeft = `4px solid ${o.grid === 'Luzon' ? '#4f46e5' : '#10b981'}`;
+    card.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <div style="font-weight:700; font-size:12.5px; color:var(--text-primary);">${o.facility} (${o.unit})</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">${o.technology} • ${o.genco}</div>
+        </div>
+        <span class="badge" style="font-family:var(--font-title); font-weight:700; font-size:11px; color:var(--status-red); background-color:rgba(239, 68, 68, 0.1); border:none;">-${Math.round(o.capacity)} MW</span>
+      </div>
+      <div style="font-size:11.5px; color:var(--text-secondary); margin-top:6px; line-height:1.4; font-style:italic;">
+        "${o.reason || 'Cause not specified'}"
+      </div>
+    `;
+    
+    // Bind drawer click shortcut
+    card.addEventListener('click', () => {
+      // Find matching plant profile in registry to open drawer
+      const plantProfile = state.powerPlants.find(p => p.facility === o.facility && p.unit === o.unit);
+      if (plantProfile) {
+        openDetailDrawer(plantProfile);
+      }
+    });
+    
+    listEl.appendChild(card);
+  });
+}
+
+// 16. Leaflet Map Geographic Explorer Controller
+// Dictionary of major Philippine power plants coordinates
+const plantCoordinates = [
+  { name: 'GNPD CFPP', lat: 14.4371, lng: 120.5367 },
+  { name: 'TVI', lat: 10.3797, lng: 123.6367 },
+  { name: 'PEDC', lat: 10.7022, lng: 122.6103 },
+  { name: 'Masinloc Power Plant', lat: 15.5417, lng: 119.9572 },
+  { name: 'Sta. Rita Power Plant', lat: 13.7744, lng: 121.0264 },
+  { name: 'Calaca Power Plant', lat: 13.9264, lng: 120.7936 },
+  { name: 'Sual Power Plant', lat: 16.1260, lng: 120.1017 },
+  { name: 'Kepco-SPC', lat: 10.2106, lng: 123.7550 },
+  { name: 'Palimpinon Geothermal', lat: 9.2889, lng: 123.1814 },
+  { name: 'Tongonan Geothermal', lat: 11.1442, lng: 124.6339 },
+  { name: 'Ilijan CCPP', lat: 13.6264, lng: 121.0964 }
+];
+
+// Dictionary of regional Philippine distribution utilities / coops coordinates (Extensive List)
+const utilityCoordinates = [
+  // Luzon Grid Utilities
+  { name: 'MERALCO', sector: 'Luzon', lat: 14.5878, lng: 121.0625 },
+  { name: 'Dasmariñas Substation', sector: 'Luzon', lat: 14.3292, lng: 120.9367 },
+  { name: 'Tayabas Substation', sector: 'Luzon', lat: 14.0247, lng: 121.5833 },
+  { name: 'BENECO (Benguet)', sector: 'Luzon', lat: 16.4164, lng: 120.5931 },
+  { name: 'PANELCO I (Pangasinan)', sector: 'Luzon', lat: 16.0270, lng: 119.9806 },
+  { name: 'CAGELCO I (Cagayan)', sector: 'Luzon', lat: 17.6132, lng: 121.7270 },
+  { name: 'ISELCO I (Isabela)', sector: 'Luzon', lat: 16.9749, lng: 121.7709 },
+  { name: 'NECO (Nueva Ecija)', sector: 'Luzon', lat: 15.4855, lng: 120.9674 },
+  { name: 'PELCO I (Pampanga)', sector: 'Luzon', lat: 15.0083, lng: 120.6975 },
+  { name: 'PENELCO (Bataan)', sector: 'Luzon', lat: 14.6792, lng: 120.5412 },
+  { name: 'TARLAC II (Tarlac)', sector: 'Luzon', lat: 15.4802, lng: 120.5979 },
+  { name: 'ZAMECO I (Zambales)', sector: 'Luzon', lat: 15.3256, lng: 120.0811 },
+  { name: 'QUEZELCO I (Quezon)', sector: 'Luzon', lat: 13.9372, lng: 121.6146 },
+  { name: 'CASURECO II (Camarines Sur)', sector: 'Luzon', lat: 13.6218, lng: 123.1948 },
+  { name: 'ALECO (Albay)', sector: 'Luzon', lat: 13.1437, lng: 123.7438 },
+  { name: 'SORECO I (Sorsogon)', sector: 'Luzon', lat: 12.9620, lng: 123.9930 },
+  { name: 'BATELEC I (Batangas)', sector: 'Luzon', lat: 13.7565, lng: 121.0583 },
+  { name: 'ORMECO (Oriental Mindoro)', sector: 'Luzon', lat: 13.4115, lng: 121.1802 },
+  { name: 'BISELCO (Biliran)', sector: 'Luzon', lat: 11.5976, lng: 124.4754 },
+
+  // Visayas Grid Utilities
+  { name: 'VECO (Metro Cebu)', sector: 'Visayas', lat: 10.3204, lng: 123.9056 },
+  { name: 'CEBECO I (Cebu South)', sector: 'Visayas', lat: 10.0135, lng: 123.5410 },
+  { name: 'CEBECO II (Cebu North)', sector: 'Visayas', lat: 10.7989, lng: 124.0150 },
+  { name: 'ILECO I (Iloilo South)', sector: 'Visayas', lat: 10.7811, lng: 122.5639 },
+  { name: 'ILECO II (Iloilo Central)', sector: 'Visayas', lat: 10.9984, lng: 122.6841 },
+  { name: 'AKELCO (Aklan)', sector: 'Visayas', lat: 11.7058, lng: 122.3608 },
+  { name: 'ANTECO (Antique)', sector: 'Visayas', lat: 11.0028, lng: 122.0461 },
+  { name: 'CAPELCO (Capiz)', sector: 'Visayas', lat: 11.5853, lng: 122.7554 },
+  { name: 'NONECO (Negros Occ North)', sector: 'Visayas', lat: 10.9022, lng: 123.3644 },
+  { name: 'CENECO (Bacolod)', sector: 'Visayas', lat: 10.6765, lng: 122.9509 },
+  { name: 'NORECO I (Negros Or North)', sector: 'Visayas', lat: 9.7153, lng: 123.1554 },
+  { name: 'NORECO II (Negros Or South)', sector: 'Visayas', lat: 9.3084, lng: 123.3077 },
+  { name: 'LEYECO II (Tacloban)', sector: 'Visayas', lat: 11.2432, lng: 125.0042 },
+  { name: 'LEYECO V (Leyte West)', sector: 'Visayas', lat: 11.0022, lng: 124.4444 },
+  { name: 'SAMELCO I (Samar West)', sector: 'Visayas', lat: 12.0620, lng: 124.5930 },
+  { name: 'SAMELCO II (Samar East)', sector: 'Visayas', lat: 11.7011, lng: 125.0644 },
+  { name: 'SOLECO (Southern Leyte)', sector: 'Visayas', lat: 10.1378, lng: 124.9988 }
+];
+
+function setupMap() {
+  const fitLuzon = document.getElementById('map-fit-luzon');
+  const fitVisayas = document.getElementById('map-fit-visayas');
+  const fitAll = document.getElementById('map-fit-all');
+  
+  if (fitLuzon) {
+    fitLuzon.addEventListener('click', () => {
+      if (state.mapInstance) state.mapInstance.setView([15.2, 121.0], 7);
+    });
+  }
+  if (fitVisayas) {
+    fitVisayas.addEventListener('click', () => {
+      if (state.mapInstance) state.mapInstance.setView([10.6, 123.5], 8);
+    });
+  }
+  if (fitAll) {
+    fitAll.addEventListener('click', () => {
+      if (state.mapInstance) state.mapInstance.setView([13.0, 122.0], 6);
+    });
+  }
+}
+
+// Global popup helper
+window.mapOpenDrawer = function(facility, unit) {
+  const plantProfile = state.powerPlants.find(p => p.facility === facility && p.unit === unit);
+  if (plantProfile) {
+    openDetailDrawer(plantProfile);
+  }
+};
+
+// Dictionary of major high-voltage transmission lines (Luzon and Visayas backbone)
+const transmissionLines = [
+  { name: 'Masinloc - MERALCO 230kV Evacuation Line', startPlant: 'Masinloc Power Plant', endUtility: 'MERALCO' },
+  { name: 'Masinloc - ZAMECO I 69kV Line', startPlant: 'Masinloc Power Plant', endUtility: 'ZAMECO I (Zambales)' },
+  { name: 'Sual - BENECO 230kV TransCo Trunk Line', startPlant: 'Sual Power Plant', endUtility: 'BENECO (Benguet)' },
+  { name: 'Sual - PANELCO I 115kV Transmission Line', startPlant: 'Sual Power Plant', endUtility: 'PANELCO I (Pangasinan)' },
+  { name: 'GNPD - PENELCO 230kV Evacuation Line', startPlant: 'GNPD CFPP', endUtility: 'PENELCO (Bataan)' },
+  { name: 'Calaca - BATELEC I 115kV Evacuation Line', startPlant: 'Calaca Power Plant', endUtility: 'BATELEC I (Batangas)' },
+  { name: 'Sta. Rita - MERALCO 230kV Evacuation Line', startPlant: 'Sta. Rita Power Plant', endUtility: 'MERALCO' },
+  { name: 'Sta. Rita - BATELEC I 115kV Line', startPlant: 'Sta. Rita Power Plant', endUtility: 'BATELEC I (Batangas)' },
+  { name: 'Tongonan - LEYECO II 138kV Line', startPlant: 'Tongonan Geothermal', endUtility: 'LEYECO II (Tacloban)' },
+  { name: 'Tongonan - VECO Leyte-Cebu Interconnection Cable', startPlant: 'Tongonan Geothermal', endUtility: 'VECO (Metro Cebu)' },
+  { name: 'Palimpinon - NORECO II 138kV Line', startPlant: 'Palimpinon Geothermal', endUtility: 'NORECO II (Negros Or South)' },
+  { name: 'PEDC - ILECO I Panay 138kV Backbone Line', startPlant: 'PEDC', endUtility: 'ILECO I (Iloilo South)' },
+  { name: 'PEDC - AKELCO Panay-Aklan 138kV Line', startPlant: 'PEDC', endUtility: 'AKELCO (Aklan)' },
+  { name: 'TVI Toledo - VECO Cebu 138kV Backbone Link', startPlant: 'TVI', endUtility: 'VECO (Metro Cebu)' },
+  { name: 'TVI Toledo - CEBECO I 69kV Line', startPlant: 'TVI', endUtility: 'CEBECO I (Cebu South)' },
+  { name: 'Kepco-SPC Naga - VECO Cebu 138kV Line', startPlant: 'Kepco-SPC', endUtility: 'VECO (Metro Cebu)' },
+  { name: 'Ilijan - Dasmariñas 500kV Transmission Line', startPlant: 'Ilijan CCPP', endUtility: 'Dasmariñas Substation' },
+  { name: 'Ilijan - Tayabas 500kV Transmission Line', startPlant: 'Ilijan CCPP', endUtility: 'Tayabas Substation' }
+];
+
+function initLeafletMap() {
+  const mapContainer = document.getElementById('grid-leaflet-map');
+  if (!mapContainer || state.mapInstance) {
+    if (state.mapInstance) {
+      state.mapInstance.invalidateSize();
+    }
+    return;
+  }
+  
+  // Create map instance
+  state.mapInstance = L.map('grid-leaflet-map').setView([13.0, 122.0], 6);
+  
+  // Sleek Positron Light Tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 18
+  }).addTo(state.mapInstance);
+  
+  // Reset and draw Transmission Polylines (Underneath markers)
+  state.mapPolylines = [];
+  transmissionLines.forEach(line => {
+    const startCoord = plantCoordinates.find(c => c.name === line.startPlant);
+    const endCoord = utilityCoordinates.find(c => c.name === line.endUtility);
+    
+    if (startCoord && endCoord) {
+      const polyline = L.polyline([[startCoord.lat, startCoord.lng], [endCoord.lat, endCoord.lng]], {
+        color: '#10b981', // Safe energize green
+        weight: 3.5,
+        opacity: 0.8,
+        dashArray: 'none'
+      }).addTo(state.mapInstance);
+      
+      const popupHtml = `
+        <div style="font-family: var(--font-body); width: 220px;">
+          <div style="font-weight:700; font-size:13px; color:var(--text-primary);">${line.name}</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Type: High-Voltage Transmission Line Grid evacuated</div>
+          <div style="font-size:11.5px; margin-top:6px; line-height: 1.4;">
+            <strong>Evacuation Station:</strong> ${line.startPlant}<br>
+            <strong>Distribution Coop:</strong> ${line.endUtility}<br>
+            <strong id="line-popup-status-${line.name.replace(/\s+/g, '')}">Operational Status:</strong> <span style="color:#10b981; font-weight:700;">ENERGIZED</span>
+          </div>
+        </div>
+      `;
+      polyline.bindPopup(popupHtml);
+      
+      polyline.startPlant = line.startPlant;
+      polyline.endUtility = line.endUtility;
+      polyline.lineName = line.name;
+      
+      state.mapPolylines.push(polyline);
+    }
+  });
+  
+  // Populate Plant Markers
+  state.powerPlants.forEach(p => {
+    let coord = plantCoordinates.find(c => p.facility.startsWith(c.name));
+    if (!coord) {
+      if (p.grid === 'Luzon') {
+        coord = { lat: 14.5 + (Math.random() - 0.5) * 1.5, lng: 121.0 + (Math.random() - 0.5) * 1.0 };
+      } else {
+        coord = { lat: 10.5 + (Math.random() - 0.5) * 1.2, lng: 123.5 + (Math.random() - 0.5) * 1.2 };
+      }
+    }
+    
+    const isOffline = p.activeOutage;
+    const color = isOffline ? '#ef4444' : '#10b981';
+    
+    const marker = L.circleMarker([coord.lat, coord.lng], {
+      radius: 9,
+      fillColor: color,
+      color: '#ffffff',
+      weight: 2,
+      fillOpacity: 0.95
+    }).addTo(state.mapInstance);
+    
+    const popupHtml = `
+      <div style="font-family: var(--font-body); width: 200px;">
+        <div style="font-weight:700; font-size:13px; color:var(--text-primary);">${p.facility} (${p.unit})</div>
+        <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Owner: ${p.genco}</div>
+        <div style="font-size:11.5px; margin-top:6px; line-height: 1.4;">
+          <strong>Fuel Technology:</strong> ${p.technology}<br>
+          <strong>Max Capacity:</strong> ${Math.round(p.capacity)} MW<br>
+          <strong>Outage Days:</strong> ${p.accumulatedDays.toFixed(1)} Days<br>
+          <strong id="pop-status-${p.facility.replace(/\s+/g, '')}-${p.unit.replace(/\s+/g, '')}">Status:</strong> ${isOffline ? '<span style="color:#ef4444; font-weight:700;">OFFLINE</span>' : '<span style="color:#10b981; font-weight:700;">RESTORED</span>'}
+        </div>
+        <div style="margin-top:10px;">
+          <button class="reset-button" onclick="window.mapOpenDrawer('${p.facility.replace(/'/g, "\\'")}', '${p.unit.replace(/'/g, "\\'")}')" style="width:100%; text-align:center; padding: 5px 8px; font-size:11px; cursor:pointer;">View Plant History</button>
+        </div>
+      </div>
+    `;
+    
+    marker.bindPopup(popupHtml);
+    
+    // Tag marker properties for simulation
+    marker.isPlant = true;
+    marker.facilityKey = `${p.facility.trim()} | ${p.unit.trim()}`;
+    marker.plantName = `${p.facility.trim()} (${p.unit.trim()})`;
+    marker.capacity = p.capacity;
+    
+    state.mapMarkers.push(marker);
+  });
+  
+  // Populate Distribution Utility / Coop Markers
+  utilityCoordinates.forEach(u => {
+    const marker = L.circleMarker([u.lat, u.lng], {
+      radius: 8,
+      fillColor: '#4f46e5', // Indigo
+      color: '#ffffff',
+      weight: 2,
+      fillOpacity: 0.9
+    }).addTo(state.mapInstance);
+    
+    const popupHtml = `
+      <div style="font-family: var(--font-body); width: 180px;">
+        <div style="font-weight:700; font-size:13px; color:var(--text-primary);">${u.name}</div>
+        <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Grid Sector: ${u.sector}</div>
+        <div style="font-size:11.5px; margin-top:6px; line-height: 1.4;">
+          <strong>Rotational Shedding:</strong> Active MLD Schedule<br>
+          <strong>Interruption Duration:</strong> 2 to 3 hour cycles
+        </div>
+      </div>
+    `;
+    
+    marker.bindPopup(popupHtml);
+    
+    // Tag marker properties for simulation
+    marker.isCoop = true;
+    marker.coopName = u.name;
+    marker.sector = u.sector;
+    
+    state.mapMarkers.push(marker);
+  });
+
+  // Precompute and initialize simulated timeline controllers
+  precomputeSimulationTimeline();
+  initSimulation();
+}
+
+// 17. Programmatic Chronological Playback Outage Simulator Controller
+function precomputeSimulationTimeline() {
+  const startTime = new Date(2026, 4, 12, 0, 0, 0); // May 12, 2026 00:00 (Start of outages logs)
+  state.simTimeline = [];
+  
+  for (let hour = 0; hour < 168; hour++) {
+    const simTime = new Date(startTime.getTime() + hour * 60 * 60 * 1000);
+    
+    // 1. Gather active outages at this hour
+    const activeOutages = state.outages.filter(o => {
+      if (!o.date_out) return false;
+      const outDate = new Date(o.date_out + "T" + (o.time_out || "00:00"));
+      if (isNaN(outDate.getTime())) return false;
+      if (outDate > simTime) return false; // Tripped after this simulated hour
+      
+      // If no resumption date, it's still offline
+      if (!o.actual_resumption_date) return true;
+      
+      const inDate = new Date(o.actual_resumption_date + "T" + (o.actual_resumption_time || "00:00"));
+      if (isNaN(inDate.getTime())) return true;
+      
+      return inDate > simTime; // Synced after this simulated hour
+    });
+    
+    // 2. Identify new trips exactly in this hour
+    const trips = state.outages.filter(o => {
+      if (!o.date_out) return false;
+      const outDate = new Date(o.date_out + "T" + (o.time_out || "00:00"));
+      if (isNaN(outDate.getTime())) return false;
+      return outDate.getFullYear() === simTime.getFullYear() &&
+             outDate.getMonth() === simTime.getMonth() &&
+             outDate.getDate() === simTime.getDate() &&
+             outDate.getHours() === simTime.getHours();
+    });
+    
+    // 3. Identify new restorations synchronized exactly in this hour
+    const restorations = state.outages.filter(o => {
+      if (!o.actual_resumption_date) return false;
+      const inDate = new Date(o.actual_resumption_date + "T" + (o.actual_resumption_time || "00:00"));
+      if (isNaN(inDate.getTime())) return false;
+      return inDate.getFullYear() === simTime.getFullYear() &&
+             inDate.getMonth() === simTime.getMonth() &&
+             inDate.getDate() === simTime.getDate() &&
+             inDate.getHours() === simTime.getHours();
+    });
+    
+    state.simTimeline.push({
+      hourIndex: hour,
+      timestamp: simTime,
+      activeOutages: activeOutages,
+      trips: trips,
+      restorations: restorations
+    });
+  }
+}
+
+function initSimulation() {
+  const playPauseBtn = document.getElementById('sim-play-pause-btn');
+  const playIcon = document.getElementById('sim-play-icon');
+  const pauseIcon = document.getElementById('sim-pause-icon');
+  const resetBtn = document.getElementById('sim-reset-btn');
+  const timeSlider = document.getElementById('sim-time-slider');
+  const speedSlider = document.getElementById('sim-speed-slider');
+  const speedLabel = document.getElementById('sim-speed-label');
+  const simBadge = document.getElementById('sim-badge');
+  
+  if (!playPauseBtn || !timeSlider) return;
+  
+  // Reset simulation state
+  state.simPlaying = false;
+  state.simCurrentHour = 0;
+  if (state.simInterval) {
+    clearInterval(state.simInterval);
+  }
+  
+  // Sync sliders
+  timeSlider.value = 0;
+  speedSlider.value = state.simSpeed;
+  speedLabel.textContent = `${state.simSpeed} hrs/sec`;
+  
+  // Set initial simulated display hour
+  setSimulationHour(0);
+  
+  // Play / Pause toggle listener
+  playPauseBtn.addEventListener('click', () => {
+    if (state.simPlaying) {
+      pauseSimulation();
+    } else {
+      startSimulation();
+    }
+  });
+  
+  // Reset listener
+  resetBtn.addEventListener('click', () => {
+    resetSimulation();
+  });
+  
+  // Timeline scrubbing slider listener
+  timeSlider.addEventListener('input', (e) => {
+    if (state.simPlaying) pauseSimulation();
+    setSimulationHour(parseInt(e.target.value));
+  });
+  
+  // Speed slider listener
+  speedSlider.addEventListener('input', (e) => {
+    state.simSpeed = parseInt(e.target.value);
+    speedLabel.textContent = `${state.simSpeed} ${state.simSpeed === 1 ? 'hr' : 'hrs'}/sec`;
+    
+    // Restart simulation loop dynamically if active
+    if (state.simPlaying) {
+      pauseSimulation();
+      startSimulation();
+    }
+  });
+}
+
+function startSimulation() {
+  const playIcon = document.getElementById('sim-play-icon');
+  const pauseIcon = document.getElementById('sim-pause-icon');
+  const simBadge = document.getElementById('sim-badge');
+  
+  state.simPlaying = true;
+  if (playIcon) playIcon.style.display = 'none';
+  if (pauseIcon) pauseIcon.style.display = 'block';
+  if (simBadge) {
+    simBadge.style.display = 'flex';
+    simBadge.style.backgroundColor = 'rgba(239, 68, 68, 0.08)';
+    simBadge.style.color = '#ef4444';
+  }
+  
+  // Tick every 1000ms
+  state.simInterval = setInterval(() => {
+    state.simCurrentHour += state.simSpeed;
+    if (state.simCurrentHour >= 167) {
+      state.simCurrentHour = 167;
+      setSimulationHour(state.simCurrentHour);
+      pauseSimulation();
+    } else {
+      setSimulationHour(state.simCurrentHour);
+    }
+  }, 1000);
+}
+
+function pauseSimulation() {
+  const playIcon = document.getElementById('sim-play-icon');
+  const pauseIcon = document.getElementById('sim-pause-icon');
+  
+  state.simPlaying = false;
+  if (playIcon) playIcon.style.display = 'block';
+  if (pauseIcon) pauseIcon.style.display = 'none';
+  
+  if (state.simInterval) {
+    clearInterval(state.simInterval);
+  }
+}
+
+function resetSimulation() {
+  pauseSimulation();
+  state.simCurrentHour = 0;
+  
+  const timeSlider = document.getElementById('sim-time-slider');
+  if (timeSlider) timeSlider.value = 0;
+  
+  const simBadge = document.getElementById('sim-badge');
+  if (simBadge) simBadge.style.display = 'none';
+  
+  // Clear feed
+  const tickerEl = document.getElementById('sim-event-ticker');
+  if (tickerEl) {
+    tickerEl.innerHTML = `
+      <div id="sim-event-empty" style="text-align: center; color: var(--text-muted); padding: 30px 10px; font-style: italic;">
+        Start playback to stream live grid occurrences...
+      </div>
+    `;
+  }
+  
+  setSimulationHour(0);
+}
+
+function setSimulationHour(hourIndex) {
+  state.simCurrentHour = hourIndex;
+  
+  const timeSlider = document.getElementById('sim-time-slider');
+  if (timeSlider) timeSlider.value = hourIndex;
+  
+  updateSimulationUI(hourIndex);
+}
+
+function updateSimulationUI(hourIndex) {
+  const h = state.simTimeline[hourIndex];
+  if (!h) return;
+  
+  // 1. Format clock display (e.g. May 15, 2026 02:00 PM)
+  const clockEl = document.getElementById('sim-clock-display');
+  if (clockEl) {
+    const dtStr = h.timestamp.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const tmStr = h.timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    clockEl.textContent = `${dtStr} at ${tmStr}`;
+  }
+  
+  // 2. Count active capacities and trip events
+  let activeCapLost = 0;
+  let activeTripsCount = 0;
+  
+  h.activeOutages.forEach(o => {
+    activeCapLost += parseFloat(o.capacity) || 0;
+    activeTripsCount++;
+  });
+  
+  const mwEl = document.getElementById('sim-mw-offline');
+  const countEl = document.getElementById('sim-trips-count');
+  const consumersEl = document.getElementById('sim-consumers-affected');
+  
+  if (mwEl) mwEl.textContent = `${Math.round(activeCapLost).toLocaleString()} MW`;
+  if (countEl) countEl.textContent = `${activeTripsCount} ${activeTripsCount === 1 ? 'Unit' : 'Units'}`;
+  
+  // Calculate estimated consumers affected (Philippine Grid Standard: ~1,150 consumers per MW)
+  const estConsumers = activeCapLost > 0 ? Math.round(activeCapLost * 1150) : 0;
+  if (consumersEl) {
+    consumersEl.textContent = estConsumers.toLocaleString();
+  }
+  
+  // 3. Set simulated Grid Status badge
+  const gridStatusEl = document.getElementById('sim-grid-status');
+  if (gridStatusEl) {
+    if (activeCapLost > 2500) {
+      gridStatusEl.textContent = 'RED ALERT';
+      gridStatusEl.style.backgroundColor = '#ffeeef';
+      gridStatusEl.style.color = '#ef4444';
+      gridStatusEl.style.borderColor = '#fca5a5';
+    } else if (activeCapLost > 1500) {
+      gridStatusEl.textContent = 'YELLOW ALERT';
+      gridStatusEl.style.backgroundColor = '#fffbeb';
+      gridStatusEl.style.color = '#d97706';
+      gridStatusEl.style.borderColor = '#fcd34d';
+    } else {
+      gridStatusEl.textContent = 'NORMAL';
+      gridStatusEl.style.backgroundColor = '#dcfce7';
+      gridStatusEl.style.color = '#15803d';
+      gridStatusEl.style.borderColor = '#bbf7d0';
+    }
+  }
+  
+  // 4. Color code Leaflet map markers and transmission lines
+  state.mapPolylines.forEach(polyline => {
+    // Check if the generating station connected to this line has any active unit outage
+    let isTrip = h.activeOutages.some(o => o.facility.trim().startsWith(polyline.startPlant));
+    
+    // Custom historical restoration overrides for Ilijan 500kV Lines:
+    const simTime = h.timestamp;
+    if (polyline.lineName === 'Ilijan - Tayabas 500kV Transmission Line') {
+      const tripStart = new Date(2026, 4, 13, 6, 0);
+      const tripEnd = new Date(2026, 4, 13, 14, 44);
+      if (simTime >= tripStart && simTime < tripEnd) {
+        isTrip = true;
+      } else if (simTime >= tripEnd) {
+        isTrip = false; // Restored at 2:44 PM
+      }
+    } else if (polyline.lineName === 'Ilijan - Dasmariñas 500kV Transmission Line') {
+      const tripStart = new Date(2026, 4, 13, 6, 0);
+      const tripEnd = new Date(2026, 4, 13, 16, 52);
+      if (simTime >= tripStart && simTime < tripEnd) {
+        isTrip = true;
+      } else if (simTime >= tripEnd) {
+        isTrip = false; // Restored at 4:52 PM
+      }
+    }
+    
+    const color = isTrip ? '#ef4444' : '#10b981'; // Tripped red, energized green
+    const weight = isTrip ? 2.5 : 3.5;
+    const dashPattern = isTrip ? '5, 8' : 'none';
+    
+    polyline.setStyle({
+      color: color,
+      weight: weight,
+      dashArray: dashPattern
+    });
+    
+    const popup = polyline.getPopup();
+    if (popup) {
+      let content = popup.getContent();
+      if (content) {
+        if (isTrip) {
+          content = content.replace('ENERGIZED', 'TRIPPED (DE-ENERGIZED)').replace('#10b981', '#ef4444');
+        } else {
+          content = content.replace('TRIPPED (DE-ENERGIZED)', 'ENERGIZED').replace('#ef4444', '#10b981');
+        }
+        popup.setContent(content);
+      }
+    }
+  });
+
+  state.mapMarkers.forEach(marker => {
+    if (marker.isPlant) {
+      // Check if this plant unit has an active outage at this hour
+      const isOut = h.activeOutages.some(o => `${o.facility.trim()} | ${o.unit.trim()}` === marker.facilityKey);
+      const color = isOut ? '#ef4444' : '#10b981';
+      
+      marker.setStyle({ fillColor: color });
+      
+      // Update bound popup text dynamically
+      const popup = marker.getPopup();
+      if (popup) {
+        let content = popup.getContent();
+        if (content) {
+          if (isOut) {
+            content = content.replace('RESTORED', 'OFFLINE').replace('#10b981', '#ef4444');
+          } else {
+            content = content.replace('OFFLINE', 'RESTORED').replace('#ef4444', '#10b981');
+          }
+          popup.setContent(content);
+        }
+      }
+    } else if (marker.isCoop) {
+      // If grid under stress, highlight coops in warning orange to show MLD threat
+      if (activeCapLost > 2500) {
+        marker.setStyle({ fillColor: '#ef4444' }); // Red for high blackout stress
+      } else if (activeCapLost > 1500) {
+        marker.setStyle({ fillColor: '#f59e0b' }); // Orange for load shedding warning
+      } else {
+        marker.setStyle({ fillColor: '#4f46e5' }); // Safe Indigo
+      }
+    }
+  });
+  
+  // 5. Append occurrences into Scrolling Events Feed
+  const tickerEl = document.getElementById('sim-event-ticker');
+  const emptyEl = document.getElementById('sim-event-empty');
+  
+  if (tickerEl) {
+    if (emptyEl && (h.trips.length > 0 || h.restorations.length > 0)) {
+      emptyEl.remove();
+    }
+    
+    const timeStr = h.timestamp.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+    const dateStr = h.timestamp.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    
+    // Add trips
+    h.trips.forEach(o => {
+      const el = document.createElement('div');
+      el.className = 'sim-event-card';
+      el.style.padding = '8px';
+      el.style.borderLeft = '3px solid #ef4444';
+      el.style.backgroundColor = '#fff5f5';
+      el.style.borderRadius = '4px';
+      el.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+      el.style.lineHeight = '1.3';
+      el.style.animation = 'fadeIn 0.3s ease-out';
+      
+      el.innerHTML = `
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:10px; color:#c53030;">
+          <span>⚠️ UNIT TRIP DETECTED</span>
+          <span>${dateStr} • ${timeStr}</span>
+        </div>
+        <div style="font-weight:700; color:var(--text-primary); margin-top:3px; font-size:11px;">
+          ${o.facility} (${o.unit})
+        </div>
+        <div style="color:var(--text-secondary); font-size:10.5px; margin-top:2px;">
+          Capacity Lost: <strong>-${Math.round(o.capacity)} MW</strong><br>
+          Reason: <em>"${o.reason || 'Technical trip logged'}"</em>
+        </div>
+      `;
+      tickerEl.appendChild(el);
+      tickerEl.scrollTop = tickerEl.scrollHeight;
+    });
+    
+    // Add restorations
+    h.restorations.forEach(o => {
+      const el = document.createElement('div');
+      el.className = 'sim-event-card';
+      el.style.padding = '8px';
+      el.style.borderLeft = '3px solid #10b981';
+      el.style.backgroundColor = '#f0fdf4';
+      el.style.borderRadius = '4px';
+      el.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+      el.style.lineHeight = '1.3';
+      el.style.animation = 'fadeIn 0.3s ease-out';
+      
+      el.innerHTML = `
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:10px; color:#15803d;">
+          <span>✅ UNIT SYNCHRONIZED</span>
+          <span>${dateStr} • ${timeStr}</span>
+        </div>
+        <div style="font-weight:700; color:var(--text-primary); margin-top:3px; font-size:11px;">
+          ${o.facility} (${o.unit})
+        </div>
+        <div style="color:var(--text-secondary); font-size:10.5px; margin-top:2px;">
+          Restored Capacity: <strong>+${Math.round(o.capacity)} MW</strong> back online.
+        </div>
+      `;
+      tickerEl.appendChild(el);
+      tickerEl.scrollTop = tickerEl.scrollHeight;
+    });
+  }
+}
+
+// 17. Client-Side Data Scrubbing & Sanitization Engine
+function sanitizeOutagesData() {
+  state.outages.forEach(o => {
+    // 1. Sanitize time values (Excel fractional day floats like "0.1243" to proper "HH:MM")
+    o.time_out = formatTimeVal(o.time_out);
+    o.actual_resumption_time = formatTimeVal(o.actual_resumption_time);
+    o.est_resumption_time = formatTimeVal(o.est_resumption_time);
+    
+    // 2. Sanitize date formats (non-standard strings like "TBD", "May 15, 2026" to standard "YYYY-MM-DD")
+    o.date_out = formatDateVal(o.date_out);
+    o.actual_resumption_date = formatDateVal(o.actual_resumption_date);
+    o.est_resumption_date = formatDateVal(o.est_resumption_date);
+  });
+}
+
+function formatTimeVal(val) {
+  if (!val) return "";
+  val = String(val).trim();
+  if (val === "" || val === "-" || val.toUpperCase() === "N/A" || val.toUpperCase() === "NULL") return "";
+  
+  // If already standard HH:MM or HH:MM:SS format
+  if (/^\d{1,2}:\d{2}(:\d{2})?$/.test(val)) {
+    const parts = val.split(':');
+    return `${parts[0].padStart(2, '0')}:${parts[1].padStart(2, '0')}`;
+  }
+  
+  // Convert Excel fractional day decimal floats (e.g. 0.12430555555555556)
+  const num = parseFloat(val);
+  if (!isNaN(num) && num >= 0 && num < 1) {
+    const totalMinutes = Math.round(num * 24 * 60);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+  }
+  
+  return val;
+}
+
+function formatDateVal(val) {
+  if (!val) return "";
+  val = String(val).trim();
+  if (val === "" || val === "-" || val.toUpperCase() === "TBD" || val.toUpperCase() === "N/A" || val.toUpperCase() === "NULL") return "";
+  
+  // If already standard YYYY-MM-DD
+  if (/^\d{4}-\d{2}-\d{2}$/.test(val)) {
+    return val;
+  }
+  
+  // Soft parsing fallback for textual dates (e.g. "May 15, 2026")
+  const d = new Date(val);
+  if (!isNaN(d.getTime())) {
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  }
+  
+  return val;
+}
+

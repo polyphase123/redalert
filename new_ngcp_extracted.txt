@@ -1,0 +1,70 @@
+[ May 19, 2026 8:02 AM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS
+Update as of 19 May 2026, 8AM
+Yellow Alert
+3:00PM-9:00PM
+Available Capacity - 2,691MW
+Peak Demand - 2,594MW
+12 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 10 plants are running on derated capacities, for a total of 846.3MW unavailable to the grid.
+Factors that contributed to the YELLOW Alert declaration:
+ 1. Unavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3
+ 2. High forecasted system demand
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid’s contingency requirement.
+#NGCPAdvisory
+#gridalertph
+[ May 19, 2026 9:04 PM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS as of 19 May 2026, 9PM
+Yellow alert for Visayas grid lifted
+As of 8:53PM, yellow alert has been lifted by NGCP for the Visayas grid.
+Available Capacity - 2,679MW
+Demand - 2,389MW
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid's contingency requirement.
+#NGCPAdvisory
+#gridalertph
+[ May 20, 2026 7:56 AM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS
+Update as of 20 May 2026, 8AM
+Yellow Alert
+5:00PM- 7:00PM
+Available Capacity - 2,691MW
+Peak Demand - 2,438MW
+11 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 13 plants are running on derated capacities, for a total of 852.1MW unavailable to the grid.
+Factors that contributed to the YELLOW Alert declaration:
+ 1. Unavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3
+ 2. High forecasted system demand
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid’s contingency requirement.
+#NGCPAdvisory
+#gridalertph
+[ May 20, 2026 2:05 PM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS
+Update as of 20 May 2026, 2PM
+EXTENDED YELLOW ALERT
+Yellow Alert
+4:00PM-8:00PM
+Available Capacity - 2,692MW
+Peak Demand - 2,503MW
+9 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 15 plants are running on derated capacities, for a total of 847MW unavailable to the grid.
+Factors that contributed to the YELLOW Alert extension:
+1. Unavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3
+ 2. Increased forecasted system demand by around 95MW. 
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid’s contingency requirement.
+#NGCPAdvisory
+#gridalertph
+[ May 20, 2026 6:31 PM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS
+Update as of 20 May 2026, 6:30PM
+EXTENDED YELLOW ALERT
+Yellow Alert
+4:00PM-9:00PM
+Available Capacity - 2,674MW
+Peak Demand - 2,473MW
+9 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 20 plants are running on derated capacities, for a total of 864.8MW unavailable to the grid.
+Factors that contributed to the YELLOW Alert extension:
+1. Unavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3
+ 2. Increased forecasted system demand by around 65MW. 
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid’s contingency requirement.
+#NGCPAdvisory
+#gridalertph
+[ May 20, 2026 9:32 PM ] ⁨Elaine Español | NGCP PRD⁩: VISAYAS GRID ALERT STATUS as of 20 May 2026, 9:30PM
+Yellow alert for Visayas grid lifted
+As of 9:20PM, yellow alert has been lifted by NGCP for the Visayas grid.
+Available Capacity - 2,674MW
+Demand - 2,384MW
+A yellow alert is issued when the operating margin is insufficient to meet the transmission grid's contingency requirement.
+#NGCPAdvisory
+#gridalertph
