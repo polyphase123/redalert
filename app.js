@@ -2517,7 +2517,7 @@ function updateSimulationUI(hourIndex) {
     // Custom historical restoration overrides for Ilijan 500kV Lines:
     const simTime = h.timestamp;
     if (polyline.lineName === 'Ilijan - Tayabas 500kV Transmission Line') {
-      const tripStart = new Date(2026, 4, 13, 6, 0);
+      const tripStart = new Date(2026, 4, 13, 6, 30);
       const tripEnd = new Date(2026, 4, 13, 14, 44);
       if (simTime >= tripStart && simTime < tripEnd) {
         isTrip = true;
@@ -2525,7 +2525,7 @@ function updateSimulationUI(hourIndex) {
         isTrip = false; // Restored at 2:44 PM
       }
     } else if (polyline.lineName === 'Ilijan - Dasmariñas 500kV Transmission Line') {
-      const tripStart = new Date(2026, 4, 13, 6, 0);
+      const tripStart = new Date(2026, 4, 13, 4, 46);
       const tripEnd = new Date(2026, 4, 13, 16, 52);
       if (simTime >= tripStart && simTime < tripEnd) {
         isTrip = true;
