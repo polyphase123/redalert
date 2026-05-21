@@ -1039,18 +1039,21 @@ function openDrawer(o) {
   const dateOutStr = o.date_out ? new Date(o.date_out).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'TBD';
   const timeOutStr = o.time_out ? o.time_out.substring(0, 5) : '';
   document.getElementById('drawer-date-out').textContent = `${dateOutStr} at ${timeOutStr}`;
+  document.getElementById('drawer-duration').textContent = o.duration ? (parseFloat(o.duration) ? parseFloat(o.duration).toFixed(2) + " Days" : o.duration) : '-';
+
+  const estDateStr = o.est_resumption_date ? new Date(o.est_resumption_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'TBD';
+  const estTimeStr = o.est_resumption_time ? o.est_resumption_time.substring(0, 5) : '';
+  document.getElementById('drawer-est-date').textContent = o.est_resumption_date ? `${estDateStr} at ${estTimeStr}` : 'To Be Determined (TBD)';
 
   const isRestored = o.actual_resumption_date !== "";
   if (isRestored) {
     const dateInStr = new Date(o.actual_resumption_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     const timeInStr = o.actual_resumption_time ? o.actual_resumption_time.substring(0, 5) : '';
-    document.getElementById('drawer-date-in').textContent = `${dateInStr} at ${timeInStr}`;
-    document.getElementById('drawer-resumption-label').style.color = 'var(--status-normal)';
+    document.getElementById('drawer-act-date').textContent = `${dateInStr} at ${timeInStr}`;
+    document.getElementById('drawer-act-date').style.color = 'var(--status-normal)';
   } else {
-    const estDateStr = o.est_resumption_date ? new Date(o.est_resumption_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'TBD';
-    const estTimeStr = o.est_resumption_time ? o.est_resumption_time.substring(0, 5) : '';
-    document.getElementById('drawer-date-in').textContent = o.est_resumption_date ? `Est: ${estDateStr} at ${estTimeStr}` : 'To Be Determined (TBD)';
-    document.getElementById('drawer-resumption-label').style.color = 'var(--status-red)';
+    document.getElementById('drawer-act-date').textContent = 'Active Outage';
+    document.getElementById('drawer-act-date').style.color = 'var(--status-red)';
   }
 
   document.getElementById('drawer-reason').textContent = o.reason || 'No specific technical reason was logged by grid operators.';
