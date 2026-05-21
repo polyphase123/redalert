@@ -716,8 +716,9 @@ function renderPlantsTab() {
   container.innerHTML = '';
 
   const filtered = state.powerPlants.filter(p => {
-    // 1. Search Query
+    const combinedName = `${p.facility} ${p.unit}`.toLowerCase();
     const searchMatch = !state.plantFilters.search ||
+      combinedName.includes(state.plantFilters.search) ||
       p.facility.toLowerCase().includes(state.plantFilters.search) ||
       p.unit.toLowerCase().includes(state.plantFilters.search) ||
       p.genco.toLowerCase().includes(state.plantFilters.search) ||
@@ -870,7 +871,9 @@ function setupFilters() {
 
 function renderOutagesTab() {
   let filtered = state.outages.filter(o => {
+    const combinedName = `${o.facility} ${o.unit}`.toLowerCase();
     const searchMatch = !state.filters.search || 
+      combinedName.includes(state.filters.search) ||
       (o.genco && o.genco.toLowerCase().includes(state.filters.search)) ||
       (o.facility && o.facility.toLowerCase().includes(state.filters.search)) ||
       (o.unit && o.unit.toLowerCase().includes(state.filters.search)) ||
