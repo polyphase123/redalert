@@ -1927,3 +1927,118 @@ input[type="range"]::-moz-range-thumb:hover {
 
 
 
+
+/* Custom Analytical Badges & Flags */
+.badge-flag-suspicious {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  font-weight: 800;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  70% { box-shadow: 0 0 0 4px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+.badge-repeat-offender {
+  background-color: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fcd34d;
+  font-weight: 800;
+}
+
+/* Violation Heatmap Grid */
+.heatmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.heatmap-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heatmap-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.heatmap-grid {
+  display: flex;
+  gap: 4px;
+}
+
+.heatmap-cell {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  border: 1px solid var(--text-primary);
+  color: rgba(255,255,255,0.9);
+}
+
+.heatmap-cell-0 { background-color: #f1f5f9; border: 1px solid #e2e8f0; }
+.heatmap-cell-1 { background-color: #fed7aa; border: 1px solid #fdba74; }
+.heatmap-cell-2 { background-color: #f97316; border: 1px solid #ea580c; color: white; }
+.heatmap-cell-3 { background-color: #dc2626; border: 1px solid #b91c1c; color: white; }
+.heatmap-cell-4 { background-color: #7f1d1d; border: 1px solid #450a0a; color: white; }
+
+.heatmap-header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.heatmap-header-label {
+  width: 24px;
+  text-align: center;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+/* Export Dossier Button */
+.btn-export-dossier {
+  background: var(--bg-primary);
+  border: 1px solid var(--status-red);
+  color: var(--status-red);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-export-dossier:hover {
+  background: var(--status-red);
+  color: white;
+}

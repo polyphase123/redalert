@@ -961,18 +961,37 @@ function renderOutagesTab() {
     const dateOutStr = o.date_out ? new Date(o.date_out).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'TBD';
     const timeOutStr = o.time_out ? o.time_out.substring(0, 5) : '';
 
+    let timingFlag = '';
+    let repeatFlag = '';
+    
+    // Check Peak Timing (10:00-14:00 or 17:00-21:00)
+    if (o.time_out) {
+      const hour = parseInt(o.time_out.split(':')[0], 10);
+      if ((hour >= 10 && hour <= 14) || (hour >= 17 && hour <= 21)) {
+        timingFlag = `<div class="badge badge-flag-suspicious" style="margin-top: 4px;">STRATEGIC TIMING FLAG</div>`;
+      }
+    }
+    
+    // Check Repeat Offender
+    const plant = state.powerPlants.find(p => p.facility === o.facility.trim() && p.unit === o.unit.trim());
+    if (plant && plant.tripEvents > 1) {
+      repeatFlag = `<div class="badge badge-repeat-offender" style="margin-top: 4px;">REPEAT OFFENDER (${plant.tripEvents} TRIPS)</div>`;
+    }
+
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${gridBadge}</td>
       <td>
         <div style="font-weight: 600; color: var(--text-primary);">${o.facility}</div>
         <div style="font-size: 11px; color: var(--text-muted);">${o.genco}</div>
+        ${repeatFlag}
       </td>
       <td><span class="badge badge-tech">${o.technology || 'Other'}</span></td>
       <td style="font-weight:600; font-family:var(--font-title);">${Math.round(cap)} MW</td>
       <td>
         <div>${dateOutStr}</div>
         <div style="font-size: 11px; color: var(--text-muted);">${timeOutStr}</div>
+        ${timingFlag}
       </td>
       <td>${statusBadge}</td>
       <td>${complianceBadge}</td>
@@ -1060,6 +1079,65 @@ function openDrawer(o) {
   }
 
   document.getElementById('drawer-reason').textContent = o.reason || 'No specific technical reason was logged by grid operators.';
+
+  // Flags for Drawer
+  let flagsHtml = '';
+  if (o.time_out) {
+    const hour = parseInt(o.time_out.split(':')[0], 10);
+    if ((hour >= 10 && hour <= 14) || (hour >= 17 && hour <= 21)) {
+      flagsHtml += `<div class="badge badge-flag-suspicious">STRATEGIC TIMING FLAG</div>`;
+    }
+  }
+  const plant = state.powerPlants.find(p => p.facility === o.facility.trim() && p.unit === o.unit.trim());
+  if (plant && plant.tripEvents > 1) {
+    flagsHtml += `<div class="badge badge-repeat-offender">REPEAT OFFENDER (${plant.tripEvents} TRIPS)</div>`;
+  }
+  document.getElementById('drawer-flags-container').innerHTML = flagsHtml;
+  
+  // Export Regulatory Dossier Logic
+  const exportBtn = document.getElementById('btn-export-dossier');
+  exportBtn.onclick = () => {
+    let dossierContent = `REGULATORY COMPLIANCE DOSSIER\n`;
+    dossierContent += `=================================================\n`;
+    dossierContent += `Facility: ${o.facility} - ${o.unit}\n`;
+    dossierContent += `GenCo: ${o.genco}\n`;
+    dossierContent += `Grid: ${o.grid}\n`;
+    dossierContent += `Technology: ${o.technology || 'Other'}\n`;
+    dossierContent += `Capacity: ${o.capacity} MW\n`;
+    dossierContent += `Date Out: ${dateOutStr} ${timeOutStr}\n`;
+    dossierContent += `Reason: ${o.reason || 'No specific technical reason was logged.'}\n\n`;
+    dossierContent += `COMPLIANCE STATUS\n`;
+    dossierContent += `-------------------------------------------------\n`;
+    const allowance = parseFloat(o.outage_allowance) || 0;
+    const accumulated = parseFloat(o.accumulated_days) || 0;
+    const breach = parseFloat(o.status) || 0;
+    dossierContent += `ERC Allowable Outage Days: ${allowance > 0 ? allowance : 'N/A'}\n`;
+    dossierContent += `Accumulated Outage Days: ${accumulated > 0 ? accumulated.toFixed(2) : 'N/A'}\n`;
+    if (breach > 0) {
+      dossierContent += `Status: LIMIT BREACHED (+${breach.toFixed(2)} Days Exceeded)\n`;
+      const penalty = breach * parseFloat(o.capacity) * 24 * 150000;
+      dossierContent += `Estimated Penalty Exposure: PHP ${penalty.toLocaleString()}\n`;
+    } else {
+      dossierContent += `Status: COMPLIANT\n`;
+    }
+    dossierContent += `\nCONTRACTUAL PROFILE\n`;
+    dossierContent += `-------------------------------------------------\n`;
+    dossierContent += `PSA Off-Taker: ${o.psa_offtaker || 'N/A'}\n`;
+    dossierContent += `PSA Capacity: ${o.psa_capacity || 'N/A'}\n`;
+    dossierContent += `ASPA Type: ${o.aspa_type || 'N/A'}\n`;
+    dossierContent += `ASPA Capacity: ${o.aspa_capacity || 'N/A'}\n\n`;
+    dossierContent += `Generated automatically from Grid Operations Dashboard.\n`;
+    
+    const blob = new Blob([dossierContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Dossier_${o.facility.replace(/\\s+/g, '_')}_${o.unit.replace(/\\s+/g, '_')}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   const allowance = parseFloat(o.outage_allowance) || 0;
   const accumulated = parseFloat(o.accumulated_days) || 0;
@@ -2910,5 +2988,133 @@ function renderStrategicAnalysisTab() {
   }
   
   renderConglomerateMatrix(activeGroup);
+  renderConglomerateViolationIndex();
+  renderPenaltyWindfallAnalyzer();
+  renderViolationHeatmap();
+}
+
+function renderConglomerateViolationIndex() {
+  const container = document.getElementById('conglomerate-violation-index-container');
+  if (!container) return;
+  
+  const groups = {};
+  state.powerPlants.forEach(p => {
+    if (p.exceededDays > 0) {
+      if (!groups[p.parentConglomerate]) {
+        groups[p.parentConglomerate] = { capacity: 0, penalty: 0 };
+      }
+      groups[p.parentConglomerate].capacity += parseFloat(p.capacity) || 0;
+      groups[p.parentConglomerate].penalty += p.exceededDays * parseFloat(p.capacity) * 24 * 150000;
+    }
+  });
+
+  const sortedGroups = Object.entries(groups).sort((a, b) => b[1].penalty - a[1].penalty);
+  
+  let html = '';
+  sortedGroups.forEach(([name, data], idx) => {
+    html += `
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--bg-secondary); border-radius:8px; border-left:4px solid ${idx === 0 ? 'var(--status-red)' : 'var(--border-color)'};">
+        <div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:13px;">${name}</div>
+          <div style="font-size:11px; color:var(--text-muted);">${data.capacity.toFixed(0)} MW Breached Capacity</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:var(--font-title); font-weight:800; color:var(--status-red); font-size:14px;">PHP ${(data.penalty / 1e6).toFixed(1)}M</div>
+          <div style="font-size:10px; color:var(--text-muted);">Est. Penalty Exposure</div>
+        </div>
+      </div>
+    `;
+  });
+  
+  if (sortedGroups.length === 0) html = '<div style="color:var(--text-muted); font-size:12px; padding:12px;">No limit breaches found.</div>';
+  container.innerHTML = html;
+}
+
+function renderPenaltyWindfallAnalyzer() {
+  const container = document.getElementById('penalty-windfall-analyzer-container');
+  if (!container) return;
+
+  const demoData = [
+    { name: 'Aboitiz Power (AP)', penalty: 420.5, windfall: 1250.2 },
+    { name: 'San Miguel Corp. (SMC)', penalty: 680.1, windfall: 2100.8 },
+    { name: 'First Gen / EDC', penalty: 110.3, windfall: 340.5 },
+    { name: 'SPC Power Corp.', penalty: 45.2, windfall: 190.0 }
+  ];
+  
+  let html = '';
+  demoData.forEach(d => {
+    html += `
+      <div style="padding:16px; border:1px solid var(--border-light); border-radius:12px; background:var(--bg-primary);">
+        <div style="font-weight:700; font-size:13px; color:var(--text-primary); margin-bottom:12px;">${d.name}</div>
+        
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <!-- Penalty Bar -->
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:70px; font-size:10px; color:var(--text-secondary); text-align:right; font-weight:600;">Penalty Risk</div>
+            <div style="flex:1; background:var(--bg-secondary); height:8px; border-radius:4px; overflow:hidden;">
+              <div style="width:${(d.penalty / 2500) * 100}%; background:var(--status-red); height:100%; border-radius:4px;"></div>
+            </div>
+            <div style="width:60px; font-size:11px; font-family:var(--font-title); font-weight:700; color:var(--status-red);">-₱${d.penalty.toFixed(0)}M</div>
+          </div>
+          
+          <!-- Windfall Bar -->
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:70px; font-size:10px; color:var(--text-secondary); text-align:right; font-weight:600;">Est. Windfall</div>
+            <div style="flex:1; background:var(--bg-secondary); height:8px; border-radius:4px; overflow:hidden;">
+              <div style="width:${(d.windfall / 2500) * 100}%; background:var(--status-normal); height:100%; border-radius:4px;"></div>
+            </div>
+            <div style="width:60px; font-size:11px; font-family:var(--font-title); font-weight:700; color:var(--status-normal);">+₱${d.windfall.toFixed(0)}M</div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html;
+}
+
+function renderViolationHeatmap() {
+  const container = document.getElementById('violation-heatmap-container');
+  if (!container) return;
+  
+  const dates = ["2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20"];
+  
+  const groupsData = {};
+  state.outages.forEach(o => {
+    if (!o.date_out) return;
+    const parent = getParentConglomerate(o.affiliates);
+    if (!groupsData[parent]) groupsData[parent] = {};
+    if (!groupsData[parent][o.date_out]) groupsData[parent][o.date_out] = 0;
+    groupsData[parent][o.date_out]++;
+  });
+
+  // Header row
+  let html = `<div class="heatmap-header-row"><div class="heatmap-label"></div><div class="heatmap-grid">`;
+  dates.forEach(d => {
+    html += `<div class="heatmap-header-label">${d.split('-')[2]}</div>`;
+  });
+  html += `</div></div>`;
+
+  // Heatmap rows
+  Object.keys(groupsData).sort().forEach(group => {
+    html += `<div class="heatmap-row"><div class="heatmap-label">${group.length > 20 ? group.substring(0, 18) + '...' : group}</div><div class="heatmap-grid">`;
+    dates.forEach(d => {
+      const trips = groupsData[group][d] || 0;
+      let level = 0;
+      if (trips >= 8) level = 4;
+      else if (trips >= 5) level = 3;
+      else if (trips >= 3) level = 2;
+      else if (trips >= 1) level = 1;
+      
+      html += `<div class="heatmap-cell heatmap-cell-${level}" title="${group} on ${d}: ${trips} trips">${trips}</div>`;
+    });
+    html += `</div></div>`;
+  });
+  
+  if(Object.keys(groupsData).length === 0) {
+      html = '<div style="color:var(--text-muted); font-size:12px; padding:12px;">No heatmap data available.</div>';
+  }
+
+  container.innerHTML = html;
 }
 

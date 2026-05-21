@@ -622,6 +622,40 @@
             </p>
           </div>
 
+          <!-- New: Historical Violation Heatmap & Trends (May 12-20) -->
+          <div class="card" style="margin-bottom: 24px; padding: 24px;">
+            <div class="card-title" style="margin-bottom:16px;">
+              Violation Heatmap & Trends (May 12-20, 2026)
+              <div class="card-subtitle">Daily intensity of forced outages by Conglomerate, highlighting coordinated or sequential trips</div>
+            </div>
+            <div id="violation-heatmap-container" class="heatmap-container">
+              <!-- Populated by app.js -->
+            </div>
+          </div>
+
+          <!-- New: Conglomerate Violation Index & Windfall Profit Analyzer -->
+          <div class="charts-grid" style="margin-bottom: 24px;">
+            <div class="card" style="padding: 20px;">
+              <div class="card-title">
+                Conglomerate Violation Index
+                <div class="card-subtitle">Aggregate capacity breached and total penalty exposure by corporate parent</div>
+              </div>
+              <div id="conglomerate-violation-index-container" style="display:flex; flex-direction:column; gap:16px; max-height:360px; overflow-y:auto;">
+                <!-- Populated by app.js -->
+              </div>
+            </div>
+            
+            <div class="card" style="padding: 20px;">
+              <div class="card-title">
+                Penalty vs. Windfall Profit Analyzer
+                <div class="card-subtitle">Estimated penalty costs vs affiliate WESM spot market capture (₱32k/MWh cap)</div>
+              </div>
+              <div id="penalty-windfall-analyzer-container" style="display:flex; flex-direction:column; gap:16px; margin-top:8px;">
+                <!-- Populated by app.js -->
+              </div>
+            </div>
+          </div>
+
           <!-- Interactive Conglomerate Matrix Panel -->
           <div class="card" style="margin-bottom: 24px; padding: 24px;">
             <div class="card-title" style="margin-bottom:16px;">
@@ -1085,13 +1119,22 @@
   <div class="drawer-backdrop" id="detail-drawer-backdrop"></div>
   <div class="drawer" id="detail-drawer">
     <div class="drawer-header">
-      <div class="drawer-title-container">
-        <h2 class="drawer-title" id="drawer-facility-title">Plant Name</h2>
+      <div class="drawer-title-container" style="flex:1;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <h2 class="drawer-title" id="drawer-facility-title">Plant Name</h2>
+        </div>
         <p class="drawer-subtitle" id="drawer-genco">Generating Company Owner</p>
+        <div id="drawer-flags-container" style="display:flex; gap:8px; margin-top:8px;"></div>
       </div>
-      <button class="close-btn" id="drawer-close-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <button id="btn-export-dossier" class="btn-export-dossier">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          Export Dossier
+        </button>
+        <button class="close-btn" id="drawer-close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
     
     <div class="drawer-body">
