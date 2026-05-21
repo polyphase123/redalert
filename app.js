@@ -1521,15 +1521,9 @@ function setupGlobalSearch() {
           title: `${p.facility} (${p.unit})`,
           desc: `${p.genco} • ${p.parentConglomerate} • ${Math.round(p.capacity)}MW`,
           action: () => {
-            // Hop to plants directory and search for this plant
-            const tabBtn = document.querySelector('[data-tab="plants"]');
-            if (tabBtn) tabBtn.click();
-            
-            const registrySearchInput = document.getElementById('plants-search');
-            registrySearchInput.value = `${p.facility} ${p.unit}`;
-            
-            state.plantFilters.search = `${p.facility} ${p.unit}`.toLowerCase();
-            renderPlantsTab();
+            if (p.outagesList && p.outagesList.length > 0) {
+              openDrawer(p.outagesList[0]);
+            }
           }
         });
         plantHits++;
