@@ -1,0 +1,137 @@
+[
+  {
+    "grid": "Mindanao",
+    "genco": "GNPower Kauswagan Ltd. Co.",
+    "facility": "GNPower Kauswagan",
+    "unit": "Units 1-4",
+    "capacity": 552,
+    "technology": "Coal-Fired",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 1 HEPP",
+    "unit": "Units 1-2",
+    "capacity": 80,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 2 HEPP",
+    "unit": "Units 1-3",
+    "capacity": 180,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 4 HEPP",
+    "unit": "Units 1-3",
+    "capacity": 158.1,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 5 HEPP",
+    "unit": "Units 1-2",
+    "capacity": 55,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 6 HEPP",
+    "unit": "Units 1-5",
+    "capacity": 200,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Agus 7 HEPP",
+    "unit": "Units 1-2",
+    "capacity": 54,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "National Power Corporation",
+    "facility": "Pulangi 4 HEPP",
+    "unit": "Units 1-3",
+    "capacity": 255,
+    "technology": "Hydroelectric",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "FDC Misamis Power Corporation",
+    "facility": "FDC Misamis CFPP",
+    "unit": "Units 1-3",
+    "capacity": 405,
+    "technology": "Coal-Fired",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "STEAG State Power Inc.",
+    "facility": "STEAG Mindanao CFPP",
+    "unit": "Units 1-2",
+    "capacity": 210,
+    "technology": "Coal-Fired",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "Therma South, Inc.",
+    "facility": "TSI Davao CFPP",
+    "unit": "Units 1-2",
+    "capacity": 300,
+    "technology": "Coal-Fired",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "SMC Consolidated Power Corp.",
+    "facility": "SMC Davao CFPP",
+    "unit": "Units 1-2",
+    "capacity": 300,
+    "technology": "Coal-Fired",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "Energy Development Corporation",
+    "facility": "Mt. Apo Geothermal",
+    "unit": "Units 1-3",
+    "capacity": 108.48,
+    "technology": "Geothermal",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "Western Mindanao Power Corp.",
+    "facility": "WMPC DPP",
+    "unit": "Units 1-10",
+    "capacity": 100,
+    "technology": "Diesel",
+    "status": "active"
+  },
+  {
+    "grid": "Mindanao",
+    "genco": "Therma Marine, Inc.",
+    "facility": "Therma Marine 1 & 2",
+    "unit": "M1, M2",
+    "capacity": 200,
+    "technology": "Diesel",
+    "status": "active"
+  }
+]

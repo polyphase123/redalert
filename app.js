@@ -6,6 +6,7 @@ const state = {
   outages: [],          // Raw combined Luzon and Visayas outages
   marginalPlants: [],   // Raw WESM pricing intervals
   ngcpUpdates: [],      // NGCP bulletins
+  gompOutages: [],      // GOMP calendar
   
   // Power Plants directory aggregated database
   powerPlants: [],
@@ -65,11 +66,36 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     state.ngcpUpdates = DASHBOARD_DATA.ngcp_updates;
     
+    if (DASHBOARD_DATA.gomp_outages) {
+      state.gompOutages = DASHBOARD_DATA.gomp_outages;
+    }
+
     // Standardize and sanitize mixed date-time formatting inconsistencies on load
     sanitizeOutagesData();
     
     // Aggregate unique power plants registry
     compilePowerPlantsRegistry();
+    
+    // Append Mindanao plants
+    if (DASHBOARD_DATA.mindanao_plants) {
+      const minPlants = DASHBOARD_DATA.mindanao_plants.map(p => ({
+        key: `${p.facility} | ${p.unit}`,
+        facility: p.facility,
+        unit: p.unit,
+        genco: p.genco,
+        technology: p.technology,
+        grid: p.grid,
+        capacity: p.capacity,
+        accumulatedDays: 0,
+        exceededDays: 0,
+        tripEvents: 0,
+        activeOutage: false,
+        affiliates: '',
+        parentConglomerate: p.genco,
+        outagesList: []
+      }));
+      state.powerPlants = [...state.powerPlants, ...minPlants];
+    }
   }
 
   const safeRun = (fn, name) => {
@@ -86,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
   safeRun(setupGlobalSearch, 'setupGlobalSearch');
   safeRun(setupCalendar, 'setupCalendar');
   safeRun(setupMap, 'setupMap');
+  safeRun(setupGompCalendar, 'setupGompCalendar');
+  safeRun(setupTopologySimulation, 'setupTopologySimulation');
   safeRun(setupStrategicAnalysisTab, 'setupStrategicAnalysisTab');
   
   // Run initial renders
@@ -217,6 +245,10 @@ function setupNavigation() {
         }, 150);
       } else if (tabId === 'calendar') {
         renderCalendarGrid();
+      } else if (tabId === 'gomp') {
+        renderGompGrid();
+      } else if (tabId === 'topology') {
+        renderTopologyView();
       } else if (tabId === 'compliance-analysis') {
         renderStrategicAnalysisTab();
       }
@@ -3118,3 +3150,505 @@ function renderViolationHeatmap() {
   container.innerHTML = html;
 }
 
+
+
+
+
+function setupGompCalendar() {
+  const searchInput = document.getElementById('gomp-search');
+  const gridSelect = document.getElementById('gomp-grid-filter');
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', () => { state.pagination.currentPage = 1; renderGompGrid(); });
+  }
+  if (gridSelect) {
+    gridSelect.addEventListener('change', () => { state.pagination.currentPage = 1; renderGompGrid(); });
+  }
+  
+  const prev = document.getElementById('gomp-pagination-prev');
+  const next = document.getElementById('gomp-pagination-next');
+  if (prev) prev.addEventListener('click', () => { state.pagination.currentPage = Math.max(1, state.pagination.currentPage - 1); renderGompGrid(); });
+  if (next) next.addEventListener('click', () => { state.pagination.currentPage++; renderGompGrid(); });
+}
+
+function renderGompGrid() {
+  const tbody = document.getElementById('gomp-table-body');
+  if (!tbody) return;
+  
+  const searchInput = document.getElementById('gomp-search');
+  const gridSelect = document.getElementById('gomp-grid-filter');
+  
+  const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+  const gridFilter = gridSelect ? gridSelect.value : 'all';
+  
+  const filtered = state.gompOutages.filter(o => {
+    const searchMatch = !searchTerm || o.plant.toLowerCase().includes(searchTerm);
+    const gridMatch = gridFilter === 'all' || o.grid === gridFilter;
+    return searchMatch && gridMatch;
+  });
+  
+  document.getElementById('gomp-stats').textContent = `${filtered.length} Outages Scheduled`;
+  
+  const pageSize = 50;
+  const totalPages = Math.ceil(filtered.length / pageSize) || 1;
+  state.pagination.currentPage = Math.min(state.pagination.currentPage, totalPages);
+  
+  const start = (state.pagination.currentPage - 1) * pageSize;
+  const pageItems = filtered.slice(start, start + pageSize);
+  
+  tbody.innerHTML = '';
+  pageItems.forEach(o => {
+    let badgeColor = '#3b82f6';
+    if (o.grid === 'Luzon') badgeColor = '#4f46e5';
+    if (o.grid === 'Visayas') badgeColor = '#7c3aed';
+    if (o.grid === 'Mindanao') badgeColor = '#10b981';
+    
+    const gridBadge = `<span class="badge" style="background:${badgeColor}20; color:${badgeColor}; border:none;">${o.grid}</span>`;
+    
+    tbody.insertAdjacentHTML('beforeend', `
+      <tr>
+        <td>${gridBadge}</td>
+        <td style="font-weight: 600;">${o.plant}</td>
+        <td>${o.capacity} MW</td>
+        <td>${o.start}</td>
+        <td>${o.end}</td>
+        <td><div style="background:var(--bg-tertiary); border-radius:4px; height:6px; width:100%;"><div style="background:${badgeColor}; height:100%; width:100%; border-radius:4px;"></div></div></td>
+      </tr>
+    `);
+  });
+  
+  const info = document.getElementById('gomp-pagination-info');
+  if (info) {
+    info.textContent = `Showing ${filtered.length === 0 ? 0 : start + 1} to ${Math.min(start + pageSize, filtered.length)} of ${filtered.length} entries`;
+  }
+}
+
+
+// --- SLD & GOMP Interactive Simulation ---
+let topologyState = {
+  startDate: new Date(2026, 0, 1),
+  currentDayOffset: 0,
+  maxOffset: 1095, // 3 years roughly
+  playing: false,
+  playInterval: null,
+  probabilityData: [],
+  nodeElements: null,
+  linkElements: null,
+  simulation: null
+};
+
+function setupTopologySimulation() {
+  const slider = document.getElementById('topology-timeline-slider');
+  const playBtn = document.getElementById('topology-play-btn');
+  
+  if (slider) {
+    slider.addEventListener('input', (e) => {
+      topologyState.currentDayOffset = parseInt(e.target.value);
+      updateTopologyForCurrentDate();
+  if (state.charts.probChart) state.charts.probChart.draw();
+    });
+  }
+  
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      topologyState.playing = !topologyState.playing;
+      playBtn.textContent = topologyState.playing ? 'Pause' : 'Play Sim';
+      
+      if (topologyState.playing) {
+        topologyState.playInterval = setInterval(() => {
+          topologyState.currentDayOffset += 5; // skip 5 days at a time
+          if (topologyState.currentDayOffset > topologyState.maxOffset) {
+            topologyState.currentDayOffset = 0;
+            topologyState.playing = false;
+            playBtn.textContent = 'Play Sim';
+            clearInterval(topologyState.playInterval);
+          }
+          if (slider) slider.value = topologyState.currentDayOffset;
+          updateTopologyForCurrentDate();
+  if (state.charts.probChart) state.charts.probChart.draw();
+        }, 100);
+      } else {
+        clearInterval(topologyState.playInterval);
+      }
+    });
+  }
+  
+  // Pre-calculate Alert Probabilities for the entire timeline
+  calculateAlertProbabilities();
+}
+
+
+function parseGompDate(dateStr, targetYear) {
+  if (!dateStr) return new Date(NaN);
+  const monthStr = dateStr.substring(0, 3);
+  const dayStr = dateStr.substring(3);
+  const monthMap = { 'Jan':0, 'Feb':1, 'Mar':2, 'Apr':3, 'May':4, 'Jun':5, 'Jul':6, 'Aug':7, 'Sep':8, 'Oct':9, 'Nov':10, 'Dec':11 };
+  const month = monthMap[monthStr];
+  const day = parseInt(dayStr, 10);
+  if (month === undefined || isNaN(day)) return new Date(NaN);
+  return new Date(targetYear, month, day);
+}
+
+function isGompActiveOnDate(o, d) {
+  const targetYear = d.getFullYear();
+  let start = parseGompDate(o.start, targetYear);
+  let end = parseGompDate(o.end, targetYear);
+  
+  if (isNaN(start) || isNaN(end)) return false;
+  
+  if (end < start) {
+    if (d.getMonth() === 11) {
+      end.setFullYear(targetYear + 1);
+    } else {
+      start.setFullYear(targetYear - 1);
+    }
+  }
+  return d >= start && d <= end;
+}
+
+function calculateAlertProbabilities() {
+  const timeline = [];
+  
+  for (let i = 0; i <= topologyState.maxOffset; i++) {
+    const d = new Date(topologyState.startDate);
+    d.setDate(d.getDate() + i);
+    
+    let luzonMw = 0, visayasMw = 0, mindanaoMw = 0;
+    
+    state.gompOutages.forEach(o => {
+      if (isGompActiveOnDate(o, d)) {
+        const cap = parseFloat(o.capacity) || 0;
+        if (o.grid === 'Luzon') luzonMw += cap;
+        else if (o.grid === 'Visayas') visayasMw += cap;
+        else if (o.grid === 'Mindanao') mindanaoMw += cap;
+      }
+    });
+    
+    let luzonRed = 0, luzonYellow = 0;
+    if (luzonMw > 2500) { luzonRed = 85; luzonYellow = 15; }
+    else if (luzonMw > 1500) { luzonRed = 20; luzonYellow = 60; }
+    else if (luzonMw > 800) { luzonRed = 0; luzonYellow = 30; }
+    
+    let visayasRed = 0, visayasYellow = 0;
+    if (visayasMw > 600) { visayasRed = 85; visayasYellow = 15; }
+    else if (visayasMw > 400) { visayasRed = 30; visayasYellow = 50; }
+    else if (visayasMw > 200) { visayasRed = 0; visayasYellow = 20; }
+    
+    let minRed = 0, minYellow = 0;
+    if (mindanaoMw > 800) { minRed = 85; minYellow = 15; }
+    else if (mindanaoMw > 500) { minRed = 20; minYellow = 60; }
+    else if (mindanaoMw > 300) { minRed = 0; minYellow = 20; }
+    
+    timeline.push({ 
+      day: i, date: new Date(d), 
+      luzonRed, luzonYellow, 
+      visayasRed, visayasYellow, 
+      minRed, minYellow 
+    });
+  }
+  
+  topologyState.probabilityData = timeline;
+  renderProbabilityChart();
+}
+
+const verticalLinePlugin = {
+  id: 'verticalLine',
+  afterDraw: chart => {
+    if (topologyState.currentDayOffset !== undefined && topologyState.currentDayOffset < chart.data.labels.length) {
+      const meta = chart.getDatasetMeta(0);
+      const point = meta.data[topologyState.currentDayOffset];
+      if (point) {
+        const x = point.x;
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(x, chart.scales.y.top);
+        ctx.lineTo(x, chart.scales.y.bottom);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'var(--text-primary)';
+        ctx.setLineDash([5, 5]);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+  }
+};
+
+function renderProbabilityChart() {
+  const ctx = document.getElementById('topologyProbabilityChart');
+  if (!ctx || !topologyState.probabilityData.length) return;
+  
+  // Use all data points for smooth line & slider matching
+  const labels = topologyState.probabilityData.map(d => d.date.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'2-digit'}));
+  
+  if (state.charts.probChart) state.charts.probChart.destroy();
+  
+  state.charts.probChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Luzon Red Alert',
+          data: topologyState.probabilityData.map(d => d.luzonRed),
+          borderColor: '#ef4444',
+          borderWidth: 2,
+          tension: 0.4,
+          pointRadius: 0
+        },
+        {
+          label: 'Luzon Yellow Alert',
+          data: topologyState.probabilityData.map(d => d.luzonYellow),
+          borderColor: '#f59e0b',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          tension: 0.4,
+          pointRadius: 0
+        },
+        {
+          label: 'Visayas Red Alert',
+          data: topologyState.probabilityData.map(d => d.visayasRed),
+          borderColor: '#7c3aed',
+          borderWidth: 2,
+          tension: 0.4,
+          pointRadius: 0
+        },
+        {
+          label: 'Visayas Yellow Alert',
+          data: topologyState.probabilityData.map(d => d.visayasYellow),
+          borderColor: '#c4b5fd',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          tension: 0.4,
+          pointRadius: 0
+        },
+        {
+          label: 'Mindanao Red Alert',
+          data: topologyState.probabilityData.map(d => d.minRed),
+          borderColor: '#10b981',
+          borderWidth: 2,
+          tension: 0.4,
+          pointRadius: 0
+        },
+        {
+          label: 'Mindanao Yellow Alert',
+          data: topologyState.probabilityData.map(d => d.minYellow),
+          borderColor: '#6ee7b7',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          tension: 0.4,
+          pointRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      plugins: { 
+        legend: { 
+          position: 'top',
+          labels: { font: { size: 10 }, boxWidth: 12 }
+        } 
+      },
+      scales: {
+        x: { 
+          grid: { display: false },
+          ticks: {
+            maxTicksLimit: 20
+          }
+        },
+        y: { max: 100, min: 0 }
+      }
+    },
+    plugins: [verticalLinePlugin]
+  });
+}
+function renderTopologyView() {
+  if (topologyState.simulation) return; // already rendered
+  if (!DASHBOARD_DATA.network_topology || typeof d3 === 'undefined') return;
+  
+  const svgEl = document.getElementById('topology-d3-svg');
+  if (!svgEl) return;
+  
+  const width = 800;
+  const height = 500;
+  
+  const svg = d3.select('#topology-d3-svg');
+  svg.selectAll('*').remove();
+  
+  // Apply responsive viewBox to fix clipping on tab load
+  svg.attr('viewBox', `0 0 ${width} ${height}`)
+     .attr('preserveAspectRatio', 'xMidYMid meet');
+  
+  // Setup Zoom
+  const g = svg.append('g');
+  svg.call(d3.zoom().on('zoom', (e) => {
+    g.attr('transform', e.transform);
+  }));
+  
+  const nodes = DASHBOARD_DATA.network_topology.nodes.map(d => Object.create(d));
+  const links = DASHBOARD_DATA.network_topology.edges.map(d => Object.create(d));
+  
+  // Link distance based on hierarchy
+  topologyState.simulation = d3.forceSimulation(nodes)
+      .force('link', d3.forceLink(links).id(d => d.id).distance(d => d.value === 10 ? 100 : 20))
+      .force('charge', d3.forceManyBody().strength(-30))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collide', d3.forceCollide().radius(8));
+      
+  topologyState.linkElements = g.append('g')
+      .attr('stroke', '#334155')
+      .attr('stroke-opacity', 0.6)
+      .selectAll('line')
+      .data(links)
+      .join('line')
+      .attr('stroke-width', d => Math.sqrt(d.value));
+      
+  topologyState.nodeElements = g.append('g')
+      .selectAll('circle')
+      .data(nodes)
+      .join('circle')
+      .attr('r', d => {
+        if (d.type === 'grid') return 12;
+        if (d.type === 'station') return 6;
+        return 4;
+      })
+      .attr('fill', d => {
+        if (d.type === 'grid') return '#3b82f6';
+        if (d.type === 'station') return '#94a3b8';
+        return '#10b981'; // default generator online
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.5)
+      .attr('class', 'd3-node');
+      
+  // Add labels for grids and stations
+  g.append('g')
+      .selectAll('text')
+      .data(nodes.filter(d => d.type === 'grid' || d.type === 'station'))
+      .join('text')
+      .text(d => d.name)
+      .attr('font-size', d => d.type === 'grid' ? '12px' : '8px')
+      .attr('fill', '#cbd5e1')
+      .attr('dx', 12)
+      .attr('dy', 4);
+
+  topologyState.simulation.on('tick', () => {
+    topologyState.linkElements
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y);
+        
+    topologyState.nodeElements
+        .attr('cx', d => d.x)
+        .attr('cy', d => d.y);
+        
+    g.selectAll('text')
+        .attr('x', d => d.x)
+        .attr('y', d => d.y);
+  });
+  
+  updateTopologyForCurrentDate();
+}
+
+function updateTopologyForCurrentDate() {
+  const d = new Date(topologyState.startDate);
+  d.setDate(d.getDate() + topologyState.currentDayOffset);
+  
+  const dateStrEl = document.getElementById('topology-current-date');
+  if (dateStrEl) {
+    dateStrEl.textContent = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  }
+  
+  // Find outages for this date
+  const activeOutages = state.gompOutages.filter(o => isGompActiveOnDate(o, d));
+  
+  let totalMw = 0;
+  let luzMw = 0, visMw = 0, minMw = 0;
+  activeOutages.forEach(o => {
+    const cap = parseFloat(o.capacity) || 0;
+    totalMw += cap;
+    if (o.grid === 'Luzon') luzMw += cap;
+    else if (o.grid === 'Visayas') visMw += cap;
+    else if (o.grid === 'Mindanao') minMw += cap;
+  });
+  
+  const mwEl = document.getElementById('topology-offline-mw');
+  if (mwEl) {
+    mwEl.textContent = `- ${Math.round(totalMw).toLocaleString()} MW Scheduled Offline Total`;
+  }
+  
+  // Calculate probabilities for breakdown
+  let lRed = 0, lYel = 0;
+  if (luzMw > 2500) { lRed = 85; lYel = 15; }
+  else if (luzMw > 1500) { lRed = 20; lYel = 60; }
+  else if (luzMw > 800) { lRed = 0; lYel = 30; }
+  
+  let vRed = 0, vYel = 0;
+  if (visMw > 600) { vRed = 85; vYel = 15; }
+  else if (visMw > 400) { vRed = 30; vYel = 50; }
+  else if (visMw > 200) { vRed = 0; vYel = 20; }
+  
+  let mRed = 0, mYel = 0;
+  if (minMw > 800) { mRed = 85; mYel = 15; }
+  else if (minMw > 500) { mRed = 20; mYel = 60; }
+  else if (minMw > 300) { mRed = 0; mYel = 20; }
+  
+  const bdEl = document.getElementById('topology-breakdown');
+  if (bdEl) {
+    bdEl.innerHTML = `
+      <div style="background:rgba(59, 130, 246, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #3b82f6;">
+        <strong style="color:#3b82f6">Luzon:</strong> ${Math.round(luzMw)} MW 
+        <span style="color:#ef4444; margin-left:4px;">Red: ${lRed}%</span> | <span style="color:#f59e0b">Yel: ${lYel}%</span>
+      </div>
+      <div style="background:rgba(139, 92, 246, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #8b5cf6;">
+        <strong style="color:#8b5cf6">Visayas:</strong> ${Math.round(visMw)} MW 
+        <span style="color:#ef4444; margin-left:4px;">Red: ${vRed}%</span> | <span style="color:#f59e0b">Yel: ${vYel}%</span>
+      </div>
+      <div style="background:rgba(16, 185, 129, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #10b981;">
+        <strong style="color:#10b981">Mindanao:</strong> ${Math.round(minMw)} MW 
+        <span style="color:#ef4444; margin-left:4px;">Red: ${mRed}%</span> | <span style="color:#f59e0b">Yel: ${mYel}%</span>
+      </div>
+    `;
+  }
+  
+  // Map GOMP plant names to SLD node names. GOMP uses facility names, SLD uses RESOURCE NAME.
+  // We'll do a simple substring match for the visualization.
+  const offlineNames = activeOutages.map(o => o.plant.toLowerCase());
+  
+  if (topologyState.nodeElements) {
+    topologyState.nodeElements.attr('fill', n => {
+      if (n.type !== 'generator') {
+        return n.type === 'grid' ? '#3b82f6' : '#94a3b8';
+      }
+      
+      const nodeName = n.name.toLowerCase();
+      let isOffline = false;
+      for (const name of offlineNames) {
+        if (nodeName.includes(name) || name.includes(nodeName)) {
+          isOffline = true; break;
+        }
+      }
+      
+      return isOffline ? '#ef4444' : '#10b981';
+    });
+    
+    // Add pulsing effect to offline nodes
+    topologyState.nodeElements.attr('r', n => {
+      if (n.type !== 'generator') return n.type === 'grid' ? 12 : 6;
+      const nodeName = n.name.toLowerCase();
+      let isOffline = false;
+      for (const name of offlineNames) {
+        if (nodeName.includes(name) || name.includes(nodeName)) {
+          isOffline = true; break;
+        }
+      }
+      return isOffline ? 8 : 4;
+    });
+  }
+}

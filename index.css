@@ -2042,3 +2042,24 @@ input[type="range"]::-moz-range-thumb:hover {
   background: var(--status-red);
   color: white;
 }
+
+
+/* Mobile Enhancements */
+@media (max-width: 768px) {
+  .sim-controls-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .sim-controls-card button {
+    width: 100%;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .metric-card {
+    padding: 12px;
+  }
+  .metric-value {
+    font-size: 20px !important;
+  }
+}

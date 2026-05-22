@@ -10,6 +10,7 @@
   
   <!-- Chart.js CDN for robust modern data visualizations -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <!-- Leaflet CDN Map Library for Geographic Visualization -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -148,6 +149,29 @@
               <line x1="3" y1="10" x2="21" y2="10"></line>
             </svg>
             Outage Calendar
+          </button>
+        </li>
+        <li class="nav-item" data-tab="gomp">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            GOMP Schedule
+          </button>
+        </li>
+        <li class="nav-item" data-tab="topology">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            SLD Simulation
           </button>
         </li>
       </nav>
@@ -397,6 +421,7 @@
                 <option value="all">All Grids</option>
                 <option value="Luzon">Luzon Grid</option>
                 <option value="Visayas">Visayas Grid</option>
+                <option value="Mindanao">Mindanao Grid</option>
               </select>
               
               <select id="plants-tech-filter" class="select-input">
@@ -499,6 +524,7 @@
                 <option value="all">All Grids</option>
                 <option value="Luzon">Luzon Grid</option>
                 <option value="Visayas">Visayas Grid</option>
+                <option value="Mindanao">Mindanao Grid</option>
               </select>
               
               <select id="outages-tech-filter" class="select-input">
@@ -570,6 +596,7 @@
                 <option value="all">All Grids</option>
                 <option value="Luzon">Luzon</option>
                 <option value="Visayas">Visayas</option>
+                <option value="Mindanao">Mindanao</option>
               </select>
               
               <select id="market-alert-filter" class="select-input">
@@ -1110,9 +1137,109 @@
             </div>
           </div>
         </section>
+
+        <!-- Tab 10: GOMP Outage Calendar -->
+        <section id="gomp-tab" class="tab-page">
+          <div class="filter-bar" style="margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between;">
+            <div class="header-title-container" style="flex:1;">
+              <h2 style="font-size:18px; font-family:var(--font-title); font-weight:800; background:var(--gradient-ocean); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; color:transparent;">GOMP 2026-2028 Scheduled Outages</h2>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">DOE-Approved Grid Operating and Maintenance Program</p>
+            </div>
+            
+            <div class="filter-group">
+              <div class="search-wrapper" style="width: 250px;">
+                <span class="search-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input type="text" id="gomp-search" class="search-input" placeholder="Search plants...">
+              </div>
+              <select id="gomp-grid-filter" class="select-input">
+                <option value="all">All Grids</option>
+                <option value="Luzon">Luzon</option>
+                <option value="Visayas">Visayas</option>
+                <option value="Mindanao">Mindanao</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; min-height: 500px;">
+            <div style="padding: 16px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary);">Planned Maintenance Schedule</div>
+              <div id="gomp-stats" style="font-size: 12px; font-weight: 600; color: var(--text-muted);">0 Outages</div>
+            </div>
+            <div class="table-wrapper" style="flex: 1; overflow-y: auto; max-height: 600px;">
+              <table class="custom-table" style="margin-bottom: 0;">
+                <thead style="position: sticky; top: 0; z-index: 10;">
+                  <tr>
+                    <th>Grid</th>
+                    <th>Plant / Unit</th>
+                    <th>Capacity (MW)</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="gomp-table-body">
+                  <!-- Populated by app.js -->
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-container" style="padding: 12px 20px; border-top: 1px solid var(--border-color);">
+              <div id="gomp-pagination-info" class="pagination-info">Showing 0 to 0 of 0 entries</div>
+              <div class="pagination-buttons">
+                <button id="gomp-pagination-prev" class="pagination-btn">Previous</button>
+                <button id="gomp-pagination-next" class="pagination-btn">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        <!-- Tab 11: SLD Simulation & Probability -->
+        <section id="topology-tab" class="tab-page">
+          <div style="display:flex; flex-direction:column; height: 100%;">
+          <div class="header-title-container" style="margin-bottom: 16px;">
+            <h2 style="font-size:18px; font-family:var(--font-title); font-weight:800; background:var(--gradient-ocean); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; color:transparent;">SLD Interactive Simulation & Risk Modeling</h2>
+            <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">Meshing GOMP 2026-2028 Scheduled Outages with Network Topology</p>
+          </div>
+          
+          <!-- Simulation Controls -->
+          <div class="card sim-controls-card" style="margin-bottom: 16px; padding: 16px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; flex-wrap: wrap;">
+            <div style="flex: 1;">
+              <div style="display:flex; gap: 16px; align-items: baseline; margin-bottom: 4px;">
+                <span id="topology-current-date" style="font-weight:700; font-size:16px; color:var(--text-primary);">January 1, 2026</span>
+                <span id="topology-offline-mw" style="font-weight:600; color:var(--text-muted); font-size:14px;">0 MW Scheduled Offline</span>
+              </div>
+              <div id="topology-breakdown" style="display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 12px; font-size: 11px; color:var(--text-muted);">
+                <!-- Breakdown injected here via JS -->
+              </div>
+              <input type="range" id="topology-timeline-slider" min="0" max="1095" value="0" style="width:100%; cursor:pointer;">
+            </div>
+            <button id="topology-play-btn" class="btn" style="background:var(--accent-color); color:white; padding:8px 16px; border-radius:6px; border:none; cursor:pointer;">Play Sim</button>
+          </div>
+          
+          <!-- Alert Probability Chart -->
+          <div class="card" style="margin-bottom: 16px; padding: 16px; height: 200px; flex-shrink: 0;">
+            <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Historical Probability of Red/Yellow Alert</div>
+            <div style="position:relative; height:150px; width:100%;">
+              <canvas id="topologyProbabilityChart"></canvas>
+            </div>
+          </div>
+          
+          <!-- D3 Topology Visualizer -->
+          <div class="card" style="flex: 1; padding: 0; overflow: hidden; position: relative; background: #0f172a; border-radius: 12px; min-height:400px;">
+            <div style="position:absolute; top:16px; left:16px; z-index:10; background:rgba(0,0,0,0.5); padding:8px; border-radius:8px; color:white; font-size:11px;">
+              <div><span style="display:inline-block; width:10px; height:10px; background:#ef4444; border-radius:50%; margin-right:4px;"></span> Generator Offline</div>
+              <div><span style="display:inline-block; width:10px; height:10px; background:#10b981; border-radius:50%; margin-right:4px;"></span> Generator Online</div>
+            </div>
+            <svg id="topology-d3-svg" style="width: 100%; height: 100%;"></svg>
+          </div>
+          </div>
+        </section>
         
       </div>
     </main>
+
   </div>
   
   <!-- Slide-Over Drawer Details Overlay Panel -->
