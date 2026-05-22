@@ -4765,6 +4765,63 @@ const DASHBOARD_DATA = {
   ],
   "gomp_outages": [
     {
+        "grid": "Visayas",
+        "plant": "05THVI_U01",
+        "capacity": 150.0,
+        "start": "May1",
+        "end": "May31"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "05THVI_U02",
+        "capacity": 150.0,
+        "start": "May1",
+        "end": "May31"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "08PEDC_U03",
+        "capacity": 150.0,
+        "start": "May1",
+        "end": "May31"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "06PAL2A_U01",
+        "capacity": 60.0,
+        "start": "May15",
+        "end": "May25"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "06CENPRI_U01",
+        "capacity": 10.0,
+        "start": "May15",
+        "end": "May25"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "08PDPP1_U05",
+        "capacity": 10.0,
+        "start": "May15",
+        "end": "May25"
+    },
+    {
+        "grid": "Visayas",
+        "plant": "Generic Visayas Forced",
+        "capacity": 355.0,
+        "start": "May1",
+        "end": "May31"
+    },
+    {
+        "grid": "Luzon",
+        "plant": "Luzon Major Forced Outages",
+        "capacity": 3200.0,
+        "start": "May1",
+        "end": "May20"
+    },
+
+    {
       "grid": "Luzon",
       "plant": "ANDA(APC2)",
       "capacity": 72.0,

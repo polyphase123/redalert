@@ -3325,19 +3325,19 @@ function calculateAlertProbabilities() {
     });
     
     let luzonRed = 0, luzonYellow = 0;
-    if (luzonMw > 2500) { luzonRed = 85; luzonYellow = 15; }
-    else if (luzonMw > 1500) { luzonRed = 20; luzonYellow = 60; }
-    else if (luzonMw > 800) { luzonRed = 0; luzonYellow = 30; }
+    if (luzonMw >= 4000) { luzonRed = 80; luzonYellow = 20; }
+    else if (luzonMw >= 3000) { luzonRed = 20; luzonYellow = 60; }
+    else if (luzonMw >= 2000) { luzonRed = 0; luzonYellow = 25; }
     
     let visayasRed = 0, visayasYellow = 0;
-    if (visayasMw > 600) { visayasRed = 85; visayasYellow = 15; }
-    else if (visayasMw > 400) { visayasRed = 30; visayasYellow = 50; }
-    else if (visayasMw > 200) { visayasRed = 0; visayasYellow = 20; }
+    if (visayasMw >= 1100) { visayasRed = 80; visayasYellow = 20; }
+    else if (visayasMw >= 800) { visayasRed = 20; visayasYellow = 60; }
+    else if (visayasMw >= 500) { visayasRed = 0; visayasYellow = 25; }
     
     let minRed = 0, minYellow = 0;
-    if (mindanaoMw > 800) { minRed = 85; minYellow = 15; }
-    else if (mindanaoMw > 500) { minRed = 20; minYellow = 60; }
-    else if (mindanaoMw > 300) { minRed = 0; minYellow = 20; }
+    if (mindanaoMw >= 1400) { minRed = 80; minYellow = 20; }
+    else if (mindanaoMw >= 1000) { minRed = 20; minYellow = 60; }
+    else if (mindanaoMw >= 700) { minRed = 0; minYellow = 25; }
     
     timeline.push({ 
       day: i, date: new Date(d), 
@@ -3585,19 +3585,19 @@ function updateTopologyForCurrentDate() {
   
   // Calculate probabilities for breakdown
   let lRed = 0, lYel = 0;
-  if (luzMw > 2500) { lRed = 85; lYel = 15; }
-  else if (luzMw > 1500) { lRed = 20; lYel = 60; }
-  else if (luzMw > 800) { lRed = 0; lYel = 30; }
+  if (luzMw >= 4000) { lRed = 80; lYel = 20; }
+  else if (luzMw >= 3000) { lRed = 20; lYel = 60; }
+  else if (luzMw >= 2000) { lRed = 0; lYel = 25; }
   
   let vRed = 0, vYel = 0;
-  if (visMw > 600) { vRed = 85; vYel = 15; }
-  else if (visMw > 400) { vRed = 30; vYel = 50; }
-  else if (visMw > 200) { vRed = 0; vYel = 20; }
+  if (visMw >= 1100) { vRed = 80; vYel = 20; }
+  else if (visMw >= 800) { vRed = 20; vYel = 60; }
+  else if (visMw >= 500) { vRed = 0; vYel = 25; }
   
   let mRed = 0, mYel = 0;
-  if (minMw > 800) { mRed = 85; mYel = 15; }
-  else if (minMw > 500) { mRed = 20; mYel = 60; }
-  else if (minMw > 300) { mRed = 0; mYel = 20; }
+  if (minMw >= 1400) { mRed = 80; mYel = 20; }
+  else if (minMw >= 1000) { mRed = 20; mYel = 60; }
+  else if (minMw >= 700) { mRed = 0; mYel = 25; }
   
   const bdEl = document.getElementById('topology-breakdown');
   if (bdEl) {
