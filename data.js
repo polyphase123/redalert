@@ -5327,56 +5327,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Feb8",
         "end": "Feb9"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Mar14",
         "end": "Mar29"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Jul5",
         "end": "Jul6"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Aug9",
         "end": "Aug10"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Sep11",
         "end": "Sep17"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct11",
         "end": "Oct12"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov8",
         "end": "Nov9"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 1",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Dec6",
         "end": "Dec7"
     },
@@ -5390,56 +5390,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Feb15",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Mar13",
         "end": "Mar18"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Jul12",
         "end": "Jul13"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Aug16",
         "end": "Aug17"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Sep12",
         "end": "Sep18"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct18",
         "end": "Oct19"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov15",
         "end": "Nov16"
     },
     {
         "grid": "Luzon",
         "plant": "AVION 2",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Dec13",
         "end": "Dec14"
     },
@@ -5467,7 +5467,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ILIJAN A1",
-        "capacity": 0.0,
+        "capacity": 600,
         "start": "Nov30",
         "end": "Dec6"
     },
@@ -5481,7 +5481,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ILIJAN A2",
-        "capacity": 0.0,
+        "capacity": 600,
         "start": "Dec10",
         "end": "Dec16"
     },
@@ -5530,119 +5530,119 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Jan24",
         "end": "Jan25"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Feb6",
         "end": "Feb9"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Feb21",
         "end": "Feb22"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Mar14",
         "end": "Mar15"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Mar28",
         "end": "Mar29"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Jul1",
         "end": "Jul16"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Jul25",
         "end": "Jul26"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Aug7",
         "end": "Aug10"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Aug22",
         "end": "Aug23"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Sep12",
         "end": "Sep13"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Sep26",
         "end": "Sep27"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Oct10",
         "end": "Oct11"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Oct24",
         "end": "Oct25"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Nov14",
         "end": "Nov15"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Nov28",
         "end": "Nov29"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Dec12",
         "end": "Dec13"
     },
     {
         "grid": "Luzon",
         "plant": "SAN GABRIEL",
-        "capacity": 0.0,
+        "capacity": 414,
         "start": "Dec26",
         "end": "Dec27"
     },
@@ -5950,7 +5950,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 1",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec6",
         "end": "Dec7"
     },
@@ -5964,7 +5964,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 2",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec8",
         "end": "Dec9"
     },
@@ -5978,7 +5978,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 3",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec10",
         "end": "Dec11"
     },
@@ -5992,7 +5992,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 4",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec12",
         "end": "Dec13"
     },
@@ -6006,7 +6006,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 5",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -6020,7 +6020,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "INGRID 6",
-        "capacity": 0.0,
+        "capacity": 25,
         "start": "Dec16",
         "end": "Dec17"
     },
@@ -6041,7 +6041,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U1",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Nov5",
         "end": "Nov6"
     },
@@ -6055,7 +6055,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U2",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Aug17",
         "end": "Aug18"
     },
@@ -6069,7 +6069,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U3",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Jul22",
         "end": "Jul23"
     },
@@ -6083,7 +6083,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U4",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Jul19",
         "end": "Jul20"
     },
@@ -6097,7 +6097,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U5",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Dec2",
         "end": "Dec3"
     },
@@ -6111,7 +6111,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U6",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Sep6",
         "end": "Sep7"
     },
@@ -6125,7 +6125,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U7",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Nov15",
         "end": "Nov16"
     },
@@ -6139,14 +6139,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SUBIC U8",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Feb1",
         "end": "Feb3"
     },
     {
         "grid": "Luzon",
         "plant": "SUBIC U8",
-        "capacity": 0.0,
+        "capacity": 14,
         "start": "Nov24",
         "end": "Nov25"
     },
@@ -6167,7 +6167,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U10",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec4",
         "end": "Dec7"
     },
@@ -6181,7 +6181,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U11",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul8",
         "end": "Jul14"
     },
@@ -6209,7 +6209,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb9",
         "end": "Feb15"
     },
@@ -6223,7 +6223,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U5",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb9",
         "end": "Feb15"
     },
@@ -6237,7 +6237,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U6",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb9",
         "end": "Feb15"
     },
@@ -6251,14 +6251,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U7",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul29",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U7",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul29",
         "end": "Aug17"
     },
@@ -6272,7 +6272,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U8",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov26",
         "end": "Nov29"
     },
@@ -6286,7 +6286,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 3 U9",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov30",
         "end": "Dec3"
     },
@@ -6300,7 +6300,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 4 U1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul20",
         "end": "Jul26"
     },
@@ -6314,7 +6314,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 4 U2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul20",
         "end": "Jul26"
     },
@@ -6328,7 +6328,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 4 U3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul20",
         "end": "Jul26"
     },
@@ -6342,7 +6342,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 4 U4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul20",
         "end": "Jul26"
     },
@@ -6356,7 +6356,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 4 U5",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul20",
         "end": "Jul26"
     },
@@ -6370,7 +6370,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6384,7 +6384,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U10",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6398,7 +6398,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U11",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6412,7 +6412,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U12",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6426,7 +6426,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U13",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6440,7 +6440,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6454,7 +6454,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6468,7 +6468,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6482,7 +6482,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U5",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6496,7 +6496,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U6",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6510,7 +6510,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U7",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6524,7 +6524,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U8",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6538,7 +6538,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB 6 U9",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul27",
         "end": "Aug3"
     },
@@ -6552,7 +6552,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6566,7 +6566,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U10",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb16"
     },
@@ -6580,14 +6580,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U11",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U11",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec8",
         "end": "Dec11"
     },
@@ -6601,21 +6601,21 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U12",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U12",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Oct9",
         "end": "Oct15"
     },
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U12",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec12",
         "end": "Dec15"
     },
@@ -6629,7 +6629,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6643,7 +6643,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6657,7 +6657,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6671,7 +6671,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U5",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb16"
     },
@@ -6685,7 +6685,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U6",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb16"
     },
@@ -6699,7 +6699,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U7",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb16"
     },
@@ -6713,7 +6713,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U8",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6727,7 +6727,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "TMO PB5 U9",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb15",
         "end": "Feb21"
     },
@@ -6853,7 +6853,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "MONTALBAN",
-        "capacity": 0.0,
+        "capacity": 8,
         "start": "Mar26",
         "end": "Mar27"
     },
@@ -6874,77 +6874,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb28",
         "end": "Mar1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Apr30",
         "end": "May1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May5",
         "end": "May14"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May16",
         "end": "May17"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May24",
         "end": "May25"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May27",
         "end": "Jun1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jun4",
         "end": "Jun5"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul31",
         "end": "Aug1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep30",
         "end": "Oct1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov30",
         "end": "Dec1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec7",
         "end": "Dec8"
     },
@@ -6958,77 +6958,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb28",
         "end": "Mar1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Apr30",
         "end": "May1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May5",
         "end": "May6"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May13",
         "end": "May14"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May16",
         "end": "May17"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May24",
         "end": "May25"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May27",
         "end": "Jun5"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul31",
         "end": "Aug1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep30",
         "end": "Oct1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov30",
         "end": "Dec1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec15",
         "end": "Dec16"
     },
@@ -7042,77 +7042,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb28",
         "end": "Mar1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Apr30",
         "end": "May1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May5",
         "end": "May6"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May13",
         "end": "May14"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May16",
         "end": "May25"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May27",
         "end": "Jun1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jun4",
         "end": "Jun5"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul31",
         "end": "Aug1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep30",
         "end": "Oct1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov30",
         "end": "Dec1"
     },
     {
         "grid": "Luzon",
         "plant": "AMB U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec22",
         "end": "Dec23"
     },
@@ -7350,77 +7350,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Feb17",
         "end": "Feb18"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Mar20",
         "end": "Mar21"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Apr25",
         "end": "Apr26"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "May5",
         "end": "May6"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jun22",
         "end": "Jun23"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jul6",
         "end": "Jul7"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Aug14",
         "end": "Aug15"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Sep3",
         "end": "Sep4"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Oct12",
         "end": "Oct13"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Nov1",
         "end": "Nov7"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Dec16",
         "end": "Dec17"
     },
@@ -7434,77 +7434,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Feb27",
         "end": "Feb28"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Mar24",
         "end": "Mar25"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Apr18",
         "end": "Apr19"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "May26",
         "end": "May27"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jun15",
         "end": "Jun16"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jul4",
         "end": "Jul5"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Aug2",
         "end": "Aug3"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Sep12",
         "end": "Sep13"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Nov8",
         "end": "Nov14"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -7518,70 +7518,70 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Feb5",
         "end": "Feb6"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Mar4",
         "end": "Mar5"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Apr4",
         "end": "Apr5"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jun6",
         "end": "Jun7"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jul14",
         "end": "Jul15"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Aug11",
         "end": "Aug12"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Sep30",
         "end": "Oct1"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Oct24",
         "end": "Oct25"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Nov15",
         "end": "Nov21"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U3",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Dec22",
         "end": "Dec23"
     },
@@ -7602,77 +7602,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Feb2",
         "end": "Feb3"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Mar14",
         "end": "Mar15"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Apr2",
         "end": "Apr3"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "May11",
         "end": "May12"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jun2",
         "end": "Jun3"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Jul1",
         "end": "Jul7"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Aug27",
         "end": "Aug28"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Sep15",
         "end": "Sep16"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Oct7",
         "end": "Oct8"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Dec2",
         "end": "Dec3"
     },
     {
         "grid": "Luzon",
         "plant": "ANG A U5",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Dec11",
         "end": "Dec12"
     },
@@ -7700,49 +7700,49 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Mar27",
         "end": "Mar28"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "May18",
         "end": "May19"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Jun1",
         "end": "Jun15"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Aug17",
         "end": "Aug18"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Sep25",
         "end": "Sep26"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov12",
         "end": "Nov13"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U3",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -7756,49 +7756,49 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Apr12",
         "end": "Apr13"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Jun16",
         "end": "Jun30"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Jul23",
         "end": "Jul24"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Sep4",
         "end": "Sep5"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct14",
         "end": "Oct15"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov29",
         "end": "Nov30"
     },
     {
         "grid": "Luzon",
         "plant": "ANG M U4",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Dec27",
         "end": "Dec28"
     },
@@ -7826,77 +7826,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb3",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb18",
         "end": "Feb24"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar2",
         "end": "Mar3"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar30",
         "end": "Mar31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May30",
         "end": "May31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul30",
         "end": "Jul31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Aug16",
         "end": "Aug17"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep20",
         "end": "Sep21"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Oct18",
         "end": "Oct19"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov22",
         "end": "Nov23"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U1",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec30",
         "end": "Dec31"
     },
@@ -7910,77 +7910,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb3",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb18",
         "end": "Feb24"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar2",
         "end": "Mar3"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar30",
         "end": "Mar31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May30",
         "end": "May31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul30",
         "end": "Jul31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Aug16",
         "end": "Aug17"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep20",
         "end": "Sep21"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Oct18",
         "end": "Oct19"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov22",
         "end": "Nov23"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U2",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec30",
         "end": "Dec31"
     },
@@ -7994,77 +7994,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb3",
         "end": "Feb4"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb15",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb18",
         "end": "Mar3"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar30",
         "end": "Mar31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May30",
         "end": "May31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul30",
         "end": "Jul31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Aug16",
         "end": "Aug17"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep20",
         "end": "Sep21"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Oct18",
         "end": "Oct19"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov22",
         "end": "Nov23"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U3",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec30",
         "end": "Dec31"
     },
@@ -8078,77 +8078,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb3",
         "end": "Feb4"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb15",
         "end": "Feb16"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Feb18",
         "end": "Mar3"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Mar30",
         "end": "Mar31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "May30",
         "end": "May31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Jul30",
         "end": "Jul31"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Aug16",
         "end": "Aug17"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Sep20",
         "end": "Sep21"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Oct18",
         "end": "Oct19"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Nov22",
         "end": "Nov23"
     },
     {
         "grid": "Luzon",
         "plant": "BIN U4",
-        "capacity": 0.0,
+        "capacity": 35,
         "start": "Dec30",
         "end": "Dec31"
     },
@@ -8232,14 +8232,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BOT 1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "May11",
         "end": "May15"
     },
     {
         "grid": "Luzon",
         "plant": "BOT 1",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Nov9",
         "end": "Nov13"
     },
@@ -8253,14 +8253,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "BOT 2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "May11",
         "end": "May15"
     },
     {
         "grid": "Luzon",
         "plant": "BOT 2",
-        "capacity": 0.0,
+        "capacity": 10,
         "start": "Nov9",
         "end": "Nov13"
     },
@@ -8274,14 +8274,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "CAL U1",
-        "capacity": 0.0,
+        "capacity": 300,
         "start": "May4",
         "end": "May8"
     },
     {
         "grid": "Luzon",
         "plant": "CAL U1",
-        "capacity": 0.0,
+        "capacity": 300,
         "start": "Nov2",
         "end": "Nov6"
     },
@@ -8295,7 +8295,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "CAL U2",
-        "capacity": 0.0,
+        "capacity": 300,
         "start": "Nov2",
         "end": "Nov6"
     },
@@ -9002,7 +9002,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "KAL 1",
-        "capacity": 0.0,
+        "capacity": 180,
         "start": "Nov2",
         "end": "Nov6"
     },
@@ -9016,7 +9016,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "KAL 2",
-        "capacity": 0.0,
+        "capacity": 180,
         "start": "Nov9",
         "end": "Nov13"
     },
@@ -9030,7 +9030,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "KAL 3",
-        "capacity": 0.0,
+        "capacity": 180,
         "start": "Nov18",
         "end": "Nov22"
     },
@@ -9044,7 +9044,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "KAL 4",
-        "capacity": 0.0,
+        "capacity": 180,
         "start": "Nov25",
         "end": "Nov29"
     },
@@ -9198,126 +9198,126 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr6",
         "end": "May11"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "Apr17"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "Apr18"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "May2"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "May12",
         "end": "May13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun15",
         "end": "Jun16"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun30",
         "end": "Jul1"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul13",
         "end": "Jul14"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul27",
         "end": "Jul28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug12",
         "end": "Aug13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug27",
         "end": "Aug28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep11",
         "end": "Sep12"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep28",
         "end": "Sep29"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct12",
         "end": "Oct13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov10",
         "end": "Nov11"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov26",
         "end": "Nov27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -9331,126 +9331,126 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr6",
         "end": "May10"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "May2"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "Apr17"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr20",
         "end": "Apr25"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "May13",
         "end": "May14"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun15",
         "end": "Jun16"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun30",
         "end": "Jul1"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul13",
         "end": "Jul14"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul27",
         "end": "Jul28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug12",
         "end": "Aug13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug27",
         "end": "Aug28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep11",
         "end": "Sep12"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep28",
         "end": "Sep29"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct12",
         "end": "Oct13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov10",
         "end": "Nov11"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov26",
         "end": "Nov27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -9464,126 +9464,126 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "Apr17"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "May2"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr27",
         "end": "May2"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "May14",
         "end": "May15"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun15",
         "end": "Jun16"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun30",
         "end": "Jul1"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul13",
         "end": "Jul14"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul27",
         "end": "Jul28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug12",
         "end": "Aug13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug27",
         "end": "Aug28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep11",
         "end": "Sep12"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep28",
         "end": "Sep29"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct12",
         "end": "Oct13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov10",
         "end": "Nov11"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov26",
         "end": "Nov27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -9597,119 +9597,119 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Apr13",
         "end": "Apr17"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "May4",
         "end": "May9"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "May15",
         "end": "May16"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun15",
         "end": "Jun16"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jun30",
         "end": "Jul1"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul13",
         "end": "Jul14"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Jul27",
         "end": "Jul28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug12",
         "end": "Aug13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Aug27",
         "end": "Aug28"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep11",
         "end": "Sep12"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Sep28",
         "end": "Sep29"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct12",
         "end": "Oct13"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov10",
         "end": "Nov11"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Nov26",
         "end": "Nov27"
     },
     {
         "grid": "Luzon",
         "plant": "LABAY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 4,
         "start": "Dec14",
         "end": "Dec15"
     },
@@ -9723,84 +9723,84 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan12",
         "end": "Jan17"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan12",
         "end": "Jan31"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan12",
         "end": "Jan31"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Mar26",
         "end": "Mar30"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "May25",
         "end": "May26"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jun23",
         "end": "Jun24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jul23",
         "end": "Jul24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug19",
         "end": "Aug20"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Sep21",
         "end": "Sep22"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 1",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Oct19",
         "end": "Oct20"
     },
@@ -9814,77 +9814,77 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan12",
         "end": "Jan31"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan12",
         "end": "Jan31"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Mar26",
         "end": "Mar30"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "May26",
         "end": "May27"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jun23",
         "end": "Jun24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jul23",
         "end": "Jul24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug19",
         "end": "Aug20"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Sep21",
         "end": "Sep22"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 2",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Oct19",
         "end": "Oct20"
     },
@@ -9898,70 +9898,70 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan19",
         "end": "Jan24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Mar26",
         "end": "Mar30"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "May27",
         "end": "May28"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jun23",
         "end": "Jun24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jul23",
         "end": "Jul24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug19",
         "end": "Aug20"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Sep21",
         "end": "Sep22"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 3",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Oct19",
         "end": "Oct20"
     },
@@ -9975,70 +9975,70 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jan26",
         "end": "Jan31"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Mar30",
         "end": "Apr4"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Apr6",
         "end": "Apr10"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "May28",
         "end": "May29"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jun23",
         "end": "Jun24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Jul23",
         "end": "Jul24"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Aug19",
         "end": "Aug20"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Sep21",
         "end": "Sep22"
     },
     {
         "grid": "Luzon",
         "plant": "LON-OY UNIT 4",
-        "capacity": 0.0,
+        "capacity": 3,
         "start": "Oct19",
         "end": "Oct20"
     },
@@ -10255,56 +10255,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb26",
         "end": "Feb27"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Mar2",
         "end": "Mar15"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul5",
         "end": "Jul6"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Sep1",
         "end": "Sep2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Oct1",
         "end": "Oct2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov3",
         "end": "Nov4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec3",
         "end": "Dec4"
     },
@@ -10318,56 +10318,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb26",
         "end": "Feb27"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Mar16",
         "end": "Mar29"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul5",
         "end": "Jul6"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Sep1",
         "end": "Sep2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Oct1",
         "end": "Oct2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov3",
         "end": "Nov4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec3",
         "end": "Dec4"
     },
@@ -10381,56 +10381,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb26",
         "end": "Feb27"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Mar30",
         "end": "Apr8"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul5",
         "end": "Jul6"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Sep1",
         "end": "Sep2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Oct1",
         "end": "Oct2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov3",
         "end": "Nov4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec3",
         "end": "Dec4"
     },
@@ -10444,56 +10444,56 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Feb26",
         "end": "Feb27"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Apr13",
         "end": "Apr26"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Jul5",
         "end": "Jul6"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Aug3",
         "end": "Aug4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Sep1",
         "end": "Sep2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Oct1",
         "end": "Oct2"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Nov3",
         "end": "Nov4"
     },
     {
         "grid": "Luzon",
         "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.0,
+        "capacity": 5,
         "start": "Dec3",
         "end": "Dec4"
     },
@@ -10507,7 +10507,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SN ROQUE 1",
-        "capacity": 0.0,
+        "capacity": 145,
         "start": "Jul29",
         "end": "Aug28"
     },
@@ -10521,7 +10521,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SN ROQUE 2",
-        "capacity": 0.0,
+        "capacity": 145,
         "start": "Jun1",
         "end": "Jun20"
     },
@@ -10535,7 +10535,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SN ROQUE 3",
-        "capacity": 0.0,
+        "capacity": 145,
         "start": "Jun15",
         "end": "Jul25"
     },
@@ -10577,7 +10577,7 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "CALATAGAN",
-        "capacity": 0.0,
+        "capacity": 63,
         "start": "Jun25",
         "end": "Jun26"
     },
@@ -10591,14 +10591,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "CARE Solar",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct3",
         "end": "Oct5"
     },
     {
         "grid": "Luzon",
         "plant": "CARE Solar",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov21",
         "end": "Nov23"
     },
@@ -10808,189 +10808,189 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct13",
         "end": "Oct14"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct14",
         "end": "Oct15"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct15",
         "end": "Oct16"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct19",
         "end": "Oct20"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct20",
         "end": "Oct21"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct21",
         "end": "Oct22"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct22",
         "end": "Oct23"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct26",
         "end": "Oct27"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct27",
         "end": "Oct28"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct28",
         "end": "Oct29"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Oct29",
         "end": "Oct30"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov2",
         "end": "Nov3"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov3",
         "end": "Nov4"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov4",
         "end": "Nov5"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov5",
         "end": "Nov6"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov9",
         "end": "Nov10"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov10",
         "end": "Nov11"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov11",
         "end": "Nov12"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov12",
         "end": "Nov13"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov16",
         "end": "Nov17"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov16",
         "end": "Nov17"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov17",
         "end": "Nov18"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov17",
         "end": "Nov18"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov18",
         "end": "Nov19"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov18",
         "end": "Nov19"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov19",
         "end": "Nov20"
     },
     {
         "grid": "Luzon",
         "plant": "Laoag Solar (PVSI)",
-        "capacity": 0.0,
+        "capacity": 50,
         "start": "Nov20",
         "end": "Nov21"
     },
@@ -11088,14 +11088,14 @@ const DASHBOARD_DATA = {
     {
         "grid": "Luzon",
         "plant": "SAN MARCELINO",
-        "capacity": 0.0,
+        "capacity": 283,
         "start": "Apr18",
         "end": "Apr23"
     },
     {
         "grid": "Luzon",
         "plant": "SAN MARCELINO",
-        "capacity": 0.0,
+        "capacity": 283,
         "start": "Apr24",
         "end": "Apr29"
     },
