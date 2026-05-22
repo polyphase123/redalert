@@ -1210,8 +1210,11 @@
                 <span id="topology-current-date" style="font-weight:700; font-size:16px; color:var(--text-primary);">January 1, 2026</span>
                 <span id="topology-offline-mw" style="font-weight:600; color:var(--text-muted); font-size:14px;">0 MW Scheduled Offline</span>
               </div>
-              <div id="topology-breakdown" style="display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 12px; font-size: 11px; color:var(--text-muted);">
+              <div id="topology-breakdown" style="display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 8px; font-size: 11px; color:var(--text-muted);">
                 <!-- Breakdown injected here via JS -->
+              </div>
+              <div id="topology-offline-plants-list" style="display:flex; flex-wrap:wrap; gap: 6px; margin-bottom: 12px; max-height: 80px; overflow-y:auto; padding-right:8px; align-items:flex-start;">
+                <!-- Offline plants injected here via JS -->
               </div>
               <input type="range" id="topology-timeline-slider" min="0" max="1095" value="0" style="width:100%; cursor:pointer;">
             </div>
@@ -1219,10 +1222,34 @@
           </div>
           
           <!-- Alert Probability Chart -->
-          <div class="card" style="margin-bottom: 16px; padding: 16px; height: 200px; flex-shrink: 0;">
-            <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Historical Probability of Red/Yellow Alert</div>
-            <div style="position:relative; height:150px; width:100%;">
-              <canvas id="topologyProbabilityChart"></canvas>
+          <div style="display:flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+            <div class="card" style="flex: 2; padding: 16px; height: 200px; min-width: 300px;">
+              <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Historical Probability of Red/Yellow Alert</div>
+              <div style="position:relative; height:150px; width:100%;">
+                <canvas id="topologyProbabilityChart"></canvas>
+              </div>
+            </div>
+            
+            <div class="card" style="flex: 1; padding: 16px; height: 200px; overflow-y: auto; min-width: 300px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <div style="font-size:13px; font-weight:700;">Top 20 Critical Risk Days</div>
+                <div style="display:flex; gap: 4px;">
+                  <select id="top-risk-grid-filter" style="font-size:10px; padding:2px; border-radius:4px; background:var(--bg-secondary); color:var(--text-primary); border:1px solid #334155;">
+                    <option value="All">All Grids</option>
+                    <option value="Luzon">Luzon</option>
+                    <option value="Visayas">Visayas</option>
+                    <option value="Mindanao">Mindanao</option>
+                  </select>
+                  <select id="top-risk-type-filter" style="font-size:10px; padding:2px; border-radius:4px; background:var(--bg-secondary); color:var(--text-primary); border:1px solid #334155;">
+                    <option value="All">All Alerts</option>
+                    <option value="Red">Red Alert</option>
+                    <option value="Yellow">Yellow Alert</option>
+                  </select>
+                </div>
+              </div>
+              <div id="top-risk-days-list" style="display:flex; flex-direction:column; gap:4px;">
+                <!-- Populated via JS -->
+              </div>
             </div>
           </div>
           

@@ -3274,6 +3274,11 @@ function setupTopologySimulation() {
   }
   
   // Pre-calculate Alert Probabilities for the entire timeline
+  
+  const gridFilter = document.getElementById('top-risk-grid-filter');
+  const typeFilter = document.getElementById('top-risk-type-filter');
+  if (gridFilter) gridFilter.addEventListener('change', renderTopRiskDays);
+  if (typeFilter) typeFilter.addEventListener('change', renderTopRiskDays);
   calculateAlertProbabilities();
 }
 
@@ -3341,6 +3346,7 @@ function calculateAlertProbabilities() {
     
     timeline.push({ 
       day: i, date: new Date(d), 
+      luzMw: luzonMw, visMw: visayasMw, minMw: mindanaoMw,
       luzonRed, luzonYellow, 
       visayasRed, visayasYellow, 
       minRed, minYellow 
@@ -3349,6 +3355,7 @@ function calculateAlertProbabilities() {
   
   topologyState.probabilityData = timeline;
   renderProbabilityChart();
+  renderTopRiskDays();
 }
 
 const verticalLinePlugin = {
@@ -3373,6 +3380,117 @@ const verticalLinePlugin = {
     }
   }
 };
+
+
+function renderTopRiskDays() {
+  const listEl = document.getElementById('top-risk-days-list');
+  const gridFilter = document.getElementById('top-risk-grid-filter')?.value || 'All';
+  const typeFilter = document.getElementById('top-risk-type-filter')?.value || 'All';
+  
+  if (!listEl || !topologyState.probabilityData.length) return;
+  
+  let events = [];
+  
+    const thresholdDate = new Date('2026-05-30T00:00:00');
+  topologyState.probabilityData.forEach(d => {
+    if (d.date < thresholdDate) return;
+    if ((gridFilter === 'All' || gridFilter === 'Luzon') && d.luzonRed > 0 && (typeFilter === 'All' || typeFilter === 'Red')) {
+      events.push({ day: d.day, date: d.date, grid: 'Luzon', type: 'Red Alert', prob: d.luzonRed, mw: d.luzMw, color: '#ef4444', bg: 'rgba(239, 68, 68, 0.1)' });
+    }
+    if ((gridFilter === 'All' || gridFilter === 'Luzon') && d.luzonYellow > 0 && (typeFilter === 'All' || typeFilter === 'Yellow')) {
+      events.push({ day: d.day, date: d.date, grid: 'Luzon', type: 'Yellow Alert', prob: d.luzonYellow, mw: d.luzMw, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.1)' });
+    }
+    
+    if ((gridFilter === 'All' || gridFilter === 'Visayas') && d.visayasRed > 0 && (typeFilter === 'All' || typeFilter === 'Red')) {
+      events.push({ day: d.day, date: d.date, grid: 'Visayas', type: 'Red Alert', prob: d.visayasRed, mw: d.visMw, color: '#7c3aed', bg: 'rgba(124, 58, 237, 0.1)' });
+    }
+    if ((gridFilter === 'All' || gridFilter === 'Visayas') && d.visayasYellow > 0 && (typeFilter === 'All' || typeFilter === 'Yellow')) {
+      events.push({ day: d.day, date: d.date, grid: 'Visayas', type: 'Yellow Alert', prob: d.visayasYellow, mw: d.visMw, color: '#c4b5fd', bg: 'rgba(196, 181, 253, 0.1)' });
+    }
+    
+    if ((gridFilter === 'All' || gridFilter === 'Mindanao') && d.minRed > 0 && (typeFilter === 'All' || typeFilter === 'Red')) {
+      events.push({ day: d.day, date: d.date, grid: 'Mindanao', type: 'Red Alert', prob: d.minRed, mw: d.minMw, color: '#10b981', bg: 'rgba(16, 185, 129, 0.1)' });
+    }
+    if ((gridFilter === 'All' || gridFilter === 'Mindanao') && d.minYellow > 0 && (typeFilter === 'All' || typeFilter === 'Yellow')) {
+      events.push({ day: d.day, date: d.date, grid: 'Mindanao', type: 'Yellow Alert', prob: d.minYellow, mw: d.minMw, color: '#6ee7b7', bg: 'rgba(110, 231, 183, 0.1)' });
+    }
+  });
+  
+  // Sort by probability descending, then MW descending
+  events.sort((a, b) => {
+    if (b.prob !== a.prob) return b.prob - a.prob;
+    return b.mw - a.mw;
+  });
+  
+  const top20 = events.slice(0, 20);
+  
+  if (top20.length === 0) {
+    listEl.innerHTML = '<div style="padding:12px; text-align:center; color:var(--text-muted); font-size:12px;">No risk events found.</div>';
+    return;
+  }
+  
+  listEl.innerHTML = top20.map((e, idx) => {
+    // Find active outages for this specific event grid and date
+    const active = state.gompOutages.filter(o => o.grid === e.grid && isGompActiveOnDate(o, e.date));
+    const sorted = active.sort((a,b) => (parseFloat(b.capacity)||0) - (parseFloat(a.capacity)||0));
+    
+    const detailsHtml = sorted.map(o => {
+      return `<div style="display:flex; justify-content:space-between; font-size:9px; padding:2px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:120px;" title="${o.plant}">${o.plant}</span>
+        <span style="color:var(--text-muted);">${o.capacity} MW</span>
+        <span style="color:${e.color}; white-space:nowrap;">${o.start}-${o.end}</span>
+      </div>`;
+    }).join('');
+
+    return `
+    <div class="risk-day-container" style="display:flex; flex-direction:column; margin-bottom:4px; background:${e.bg}; border-left: 3px solid ${e.color}; border-radius:6px; overflow:hidden;">
+      <div class="risk-day-item" data-day="${e.day}" data-idx="${idx}" style="display:flex; justify-content:space-between; align-items:center; padding: 6px 8px; cursor:pointer; transition: opacity 0.2s;">
+        <div style="display:flex; flex-direction:column;">
+          <span style="font-size:11px; font-weight:700; color:var(--text-primary);">${e.date.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</span>
+          <span style="font-size:10px; color:var(--text-muted);">${e.grid} • ${Math.round(e.mw)} MW Offline</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:flex-end;">
+          <span style="font-size:11px; font-weight:700; color:${e.color};">${e.prob}%</span>
+          <span style="font-size:9px; color:${e.color}; text-transform:uppercase;">${e.type}</span>
+        </div>
+      </div>
+      <div id="risk-details-${idx}" style="display:none; padding: 0 8px 8px 8px; flex-direction:column; gap:2px;">
+        <div style="font-size:9px; font-weight:bold; color:var(--text-muted); margin-bottom:2px; margin-top:4px;">OFFLINE UNITS:</div>
+        ${detailsHtml}
+      </div>
+    </div>
+  `}).join('');
+  
+  // Add click listeners to scrub timeline AND toggle accordion
+  document.querySelectorAll('.risk-day-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      const day = parseInt(e.currentTarget.getAttribute('data-day'));
+      const idx = e.currentTarget.getAttribute('data-idx');
+      
+      // Toggle accordion
+      const details = document.getElementById(`risk-details-${idx}`);
+      if (details) {
+        if (details.style.display === 'none') {
+          // close all others
+          document.querySelectorAll('[id^="risk-details-"]').forEach(el => el.style.display = 'none');
+          details.style.display = 'flex';
+        } else {
+          details.style.display = 'none';
+        }
+      }
+      
+      const slider = document.getElementById('topology-timeline-slider');
+      if (slider) {
+        slider.value = day;
+        topologyState.currentDayOffset = day;
+        updateTopologyForCurrentDate();
+        if (state.charts.probChart) state.charts.probChart.draw();
+      }
+    });
+    item.addEventListener('mouseenter', e => e.currentTarget.style.opacity = '0.8');
+    item.addEventListener('mouseleave', e => e.currentTarget.style.opacity = '1');
+  });
+}
 
 function renderProbabilityChart() {
   const ctx = document.getElementById('topologyProbabilityChart');
