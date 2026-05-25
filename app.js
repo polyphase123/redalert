@@ -3357,6 +3357,8 @@ function parseGompDate(dateStr, targetYear) {
 
 function isGompActiveOnDate(o, d) {
   const targetYear = d.getFullYear();
+  if (o.year && o.year !== targetYear) return false;
+  
   let start = parseGompDate(o.start, targetYear);
   let end = parseGompDate(o.end, targetYear);
   

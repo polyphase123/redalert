@@ -14305,6 +14305,1302 @@ const DASHBOARD_DATA = {
       "capacity": 0.0,
       "start": "Oct12",
       "end": "Oct18"
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 6.0,
+      "start": "May 18",
+      "end": "May 25",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 10.498,
+      "start": "May 17",
+      "end": "May 18",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 0.6,
+      "start": "May 17",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 0.6,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 70",
+      "capacity": 442.85,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 1.2,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 1.2,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 15.0,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 37.5,
+      "start": "May 16",
+      "end": "May 25",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 37.5,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 10.498,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 35.0,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 35.0,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 1",
+      "capacity": 6.0,
+      "start": "Nov 22",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 3",
+      "capacity": 6.0,
+      "start": "Apr 21",
+      "end": "Jul 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 6",
+      "capacity": 6.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 175.1,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 175.1,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 10.498,
+      "start": "May 15",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 3",
+      "capacity": 4.0,
+      "start": "Dec 6",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 7",
+      "capacity": 4.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 5",
+      "capacity": 15.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 15.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 4",
+      "capacity": 6.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 724.965,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 20.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 7",
+      "capacity": 6.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 11",
+      "capacity": 6.0,
+      "start": "Apr 26",
+      "end": "May 20",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 5",
+      "capacity": 6.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 37.5,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 37.5,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 90.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 37.5,
+      "start": "May 14",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 5",
+      "capacity": 4.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 175.1,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 155.55,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 90.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 90.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 0.6,
+      "start": "May 14",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 440.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 440.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 90.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 35.0,
+      "start": "May 14",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 35.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 37.5,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 35.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 90.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Block 1",
+      "capacity": 718.25,
+      "start": "May 13",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Block 2",
+      "capacity": 718.25,
+      "start": "May 13",
+      "end": "May 18",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 155.55,
+      "start": "May 13",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 175.1,
+      "start": "May 13",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 20.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 335.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Block 1",
+      "capacity": 718.25,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Block 2",
+      "capacity": 718.25,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 440.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 440.0,
+      "start": "May 13",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 440.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 35.7,
+      "start": "May 13",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 90.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 35.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 90.0,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 35.0,
+      "start": "May 12",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 37.5,
+      "start": "May 12",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 90.0,
+      "start": "May 12",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 90.0,
+      "start": "May 12",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 35.0,
+      "start": "May 11",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 35.0,
+      "start": "May 11",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 90.0,
+      "start": "May 11",
+      "end": "May 11",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 10.498,
+      "start": "May 11",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 10.498,
+      "start": "May 11",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 150.0,
+      "start": "May 10",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 37.5,
+      "start": "May 5",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 127.5,
+      "start": "May 4",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 35.0,
+      "start": "May 4",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 0.6,
+      "start": "Apr 22",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 0.6,
+      "start": "Apr 22",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 0.6,
+      "start": "Apr 22",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 4",
+      "capacity": 0.6,
+      "start": "Apr 22",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 6.0,
+      "start": "Mar 22",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "DG 1",
+      "capacity": 5.5,
+      "start": "Mar 18",
+      "end": "Jun 30",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 10.2,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 10.2,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 3.89,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 0.4,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 0.4,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 3",
+      "capacity": 0.4,
+      "start": "Mar 13",
+      "end": "Jun 1",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 2",
+      "capacity": 350.0,
+      "start": "Jul 24",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Luzon",
+      "plant": "Unit 1",
+      "capacity": 300.0,
+      "start": "May 3",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 15.0,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 5.0,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 21.76,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 20.0,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 1.328,
+      "start": "May 17",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 1.328,
+      "start": "May 17",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 83.7,
+      "start": "May 17",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Golf",
+      "capacity": 15.0,
+      "start": "May 16",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 40.0,
+      "start": "May 16",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 2",
+      "capacity": 7.059,
+      "start": "May 16",
+      "end": "May 19",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 5.52,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 3.6,
+      "start": "May 16",
+      "end": "May 18",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 1.328,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 15.0,
+      "start": "May 16",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 1.328,
+      "start": "May 16",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 41.0,
+      "start": "May 16",
+      "end": "May 18",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Echo",
+      "capacity": 15.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 4",
+      "capacity": 5.52,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 5.0,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 5.52,
+      "start": "May 15",
+      "end": "May 18",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Golf",
+      "capacity": 15.0,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 1",
+      "capacity": 11.45,
+      "start": "May 15",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 5",
+      "capacity": 7.44,
+      "start": "May 15",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 21.76,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 16.0,
+      "start": "May 15",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 5.52,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 3.6,
+      "start": "May 14",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 8",
+      "capacity": 7.059,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Charlie",
+      "capacity": 13.3,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 5.52,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 8.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Golf",
+      "capacity": 15.0,
+      "start": "May 14",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 37.5,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 16.0,
+      "start": "May 14",
+      "end": "May 15",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 1",
+      "capacity": 7.059,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 1",
+      "capacity": 7.059,
+      "start": "May 13",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 5.52,
+      "start": "May 13",
+      "end": "May 17",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 3.6,
+      "start": "May 13",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 1",
+      "capacity": 5.0,
+      "start": "May 12",
+      "end": "May 14",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 176.97,
+      "start": "May 12",
+      "end": "Aug 30",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "DG 6",
+      "capacity": 7.059,
+      "start": "May 12",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 5.0,
+      "start": "May 12",
+      "end": "May 12",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 3.6,
+      "start": "May 12",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 21.76,
+      "start": "May 12",
+      "end": "May 13",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 8.0,
+      "start": "May 11",
+      "end": "May 21",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 150.025,
+      "start": "May 6",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 8.0,
+      "start": "May 6",
+      "end": "May 19",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 30.0,
+      "start": "Apr 27",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 3",
+      "capacity": 37.36,
+      "start": "Apr 27",
+      "end": "May 16",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 7.0,
+      "start": "Apr 5",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 4",
+      "capacity": 37.36,
+      "start": "May 18",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 176.97,
+      "start": "Mar 24",
+      "end": "Aug 22",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 3.6,
+      "start": "Mar 21",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 4",
+      "capacity": 24.0,
+      "start": "Dec 2",
+      "end": "Jun 2",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 7.44,
+      "start": "Sep 14",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 0.4,
+      "start": "Aug 18",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 0.4,
+      "start": "Aug 14",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 26.256,
+      "start": "Nov 25",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 26.256,
+      "start": "Apr 28",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 37.36,
+      "start": "Oct 23",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 37.36,
+      "start": "Oct 23",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 19.99,
+      "start": "Nov 25",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 23.0,
+      "start": "Apr 21",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 8.0,
+      "start": "Nov 12",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 8.3,
+      "start": "May 26",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 1",
+      "capacity": 2.64,
+      "start": "Dec 31",
+      "end": "May 31",
+      "year": 2026
+    },
+    {
+      "grid": "Visayas",
+      "plant": "Unit 2",
+      "capacity": 2.64,
+      "start": "Dec 31",
+      "end": "May 31",
+      "year": 2026
     }
   ],
   "mindanao_plants": [
