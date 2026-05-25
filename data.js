@@ -19,11 +19,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "87.31",
       "status": "80.31",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Union Equities, Inc. Group with affiliations with the following:\n\n1. Catuiran Hydropower Corporation\n2. Grass Gold Renewable Energy Corporation\n3. San Jose City 1 Power Corp.\n4. VS Gripal Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -43,11 +43,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -67,11 +67,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -91,10 +91,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -115,11 +115,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "5.72",
       "status": "-1.9800000000000004",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -128,7 +128,7 @@ const DASHBOARD_DATA = {
       "unit": "Unit 1",
       "capacity": "1.2",
       "date_out": "2026-05-17",
-      "time_out": "0.12430555555555556",
+      "time_out": "02:59",
       "est_resumption_date": "",
       "est_resumption_time": "",
       "actual_resumption_date": "2026-05-17",
@@ -139,11 +139,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "132.014583333333",
       "status": "125.21458333333301",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -163,10 +163,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "142.954166666666",
       "status": "136.154166666666",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -187,11 +187,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.79",
       "status": "-12.21",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "110",
-      "affiliates": "Under Ayala Corporation with affiliations with the following:\n\n1. Alaminos BESS, Inc.\n2. Amihan Renewable Energy Corp.\n3. Bataan Solar Energy Inc. \n4. Bayog Wind Power Corporation\n5. Bulacan Power Generation Corporation\n6. CIP II Power Corporation\n7. Gigasol3, Inc. \n8. Guimaras Wind Corporation\n9. Ingrid Power Holdings, Inc. and AERSI\n10. Maibarara Geothermal, Inc.\n11. Monte Solar Energy Inc. \n12. Natures Renewable Energy Devt. Corporation\n13. Negros Island Solar Power Inc.\n14. North Luzon Renewable Energy Corp.\n15. Northwind Power Development Corporation\n16. One Subic Power Generation Corp.\n17. San Carlos Solar Energy, Inc.\n18. Santa Cruz Solar Energy Inc.\n19. Sinocalan Solar Power Corp. \n20. Solarace1 Energy Corp.\n21. South Luzon Thermal Energy Corporation and ACEN Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -211,11 +211,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -235,10 +235,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "21.94",
       "status": "15.14",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -259,10 +259,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "26.77",
       "status": "19.97",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -283,10 +283,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -307,10 +307,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "14.9",
       "status": "8.100000000000001",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -331,10 +331,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "4.64",
       "status": "-2.16",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -355,10 +355,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "138",
       "status": "124",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "RR and RPS",
-      "aspa_capacity": "19",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -379,10 +379,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "30.03",
       "status": "16.03",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "RR and RPS",
-      "aspa_capacity": "19",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -403,10 +403,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3",
       "status": "-11",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "RR and RPS",
-      "aspa_capacity": "19",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -427,10 +427,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -451,10 +451,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -475,10 +475,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -499,10 +499,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "138",
       "status": "124",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -523,10 +523,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.95",
       "status": "-11.05",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -547,11 +547,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.75",
       "status": "-12.25",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
-      "affiliates": "Under Ayala Corporation with affiliations with the following:\n\n1. Alaminos BESS, Inc.\n2. Amihan Renewable Energy Corp.\n3. Bataan Solar Energy Inc. \n4. Bayog Wind Power Corporation\n5. Bulacan Power Generation Corporation\n6. CIP II Power Corporation\n7. Gigasol3, Inc. \n8. Guimaras Wind Corporation\n9. Ingrid Power Holdings, Inc. and AERSI\n10. Maibarara Geothermal, Inc.\n11. Monte Solar Energy Inc. \n12. Natures Renewable Energy Devt. Corporation\n13. Negros Island Solar Power Inc.\n14. North Luzon Renewable Energy Corp.\n15. Northwind Power Development Corporation\n16. One Subic Power Generation Corp.\n17. San Carlos Solar Energy, Inc.\n18. Santa Cruz Solar Energy Inc.\n19. Sinocalan Solar Power Corp. \n20. Solarace1 Energy Corp.\n21. South Luzon Thermal Energy Corporation and ACEN Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -571,10 +571,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "110",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -595,11 +595,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.4",
       "status": "-10.6",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -619,10 +619,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.8",
       "accumulated_days": "6.12",
       "status": "-10.68",
-      "psa_offtaker": "AURELCO, NEECO I, PELCO III, PRESCO, TARELCO I & II, ZAMECO I & II, PENELCO, BILECO, DORELCO, LEYECO II-V,  SOLECO, NORSAMELCO, ESAMELCO, SAMELCO I & II, LUELCO, BATELEC i & II, TEI, ANTECO, ILECO II & III, PELCO II",
-      "psa_capacity": "553",
-      "aspa_type": "CR/GCM",
-      "aspa_capacity": "60",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -643,11 +643,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "1.92",
       "status": "-11.78",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Ayala Corporation with affiliations with the following:\n\n1. Alaminos BESS, Inc.\n2. Amihan Renewable Energy Corp.\n3. Bataan Solar Energy Inc. \n4. Bayog Wind Power Corporation\n5. Bulacan Power Generation Corporation\n6. CIP II Power Corporation\n7. Gigasol3, Inc. \n8. Guimaras Wind Corporation\n9. Ingrid Power Holdings, Inc. and AERSI\n10. Maibarara Geothermal, Inc.\n11. Monte Solar Energy Inc. \n12. Natures Renewable Energy Devt. Corporation\n13. Negros Island Solar Power Inc.\n14. North Luzon Renewable Energy Corp.\n15. Northwind Power Development Corporation\n16. One Subic Power Generation Corp.\n17. San Carlos Solar Energy, Inc.\n18. Santa Cruz Solar Energy Inc.\n19. Sinocalan Solar Power Corp. \n20. Solarace1 Energy Corp.\n21. South Luzon Thermal Energy Corporation and ACEN Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -667,11 +667,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.95",
       "status": "-11.05",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -691,10 +691,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "25",
       "status": "11",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -715,10 +715,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "4.17",
       "status": "-9.83",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -739,10 +739,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -763,10 +763,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -787,10 +787,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -811,10 +811,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -835,10 +835,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -859,10 +859,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "4.17",
       "status": "-9.83",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "DR and RPS",
-      "aspa_capacity": "46",
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -883,10 +883,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -907,10 +907,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -931,10 +931,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -955,10 +955,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -979,10 +979,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1003,11 +1003,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "22.16736111143109",
       "status": "14.467361111431092",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc., San Miguel Corporation and Manila Electric Company with affiliations with the following:\n\nAEVI\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc.\n\nSMC\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc. \n\nMERALCO\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1027,11 +1027,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1051,10 +1051,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1075,11 +1075,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "11.963194444440887",
       "status": "4.263194444440887",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc., San Miguel Corporation and Manila Electric Company with affiliations with the following:\n\nAEVI\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc.\n\nSMC\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc. \n\nMERALCO\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1099,11 +1099,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1123,10 +1123,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1147,10 +1147,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "20",
       "status": "13.2",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1171,10 +1171,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1195,10 +1195,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1219,10 +1219,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1243,11 +1243,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "5.2",
       "status": "-2.5",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc., San Miguel Corporation and Manila Electric Company with affiliations with the following:\n\nAEVI\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc.\n\nSMC\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc. \n\nMERALCO\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1267,10 +1267,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "115.79",
       "status": "108.09",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1291,11 +1291,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1315,10 +1315,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1339,10 +1339,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1363,11 +1363,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "25.65",
       "status": "18.849999999999998",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1387,11 +1387,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "2.21",
       "status": "-11.489999999999998",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1411,11 +1411,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.8",
       "accumulated_days": "2.74",
       "status": "-14.06",
-      "psa_offtaker": "BATELEC I, CASURECO II,CELCOR-BL, CELCOR-MM, LUECO, SFELAPCO, ABRECO, INEC, ISECO, KAELCO, LUELCO, MOPRECO, PANELCO I, PANELCO III & SAJELCO",
-      "psa_capacity": "336.84",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under San Miguel Corporation with affiliations with the following:\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1435,11 +1435,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc., San Miguel Corporation and Manila Electric Company with affiliations with the following:\n\nAEVI\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc.\n\nSMC\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc. \n\nMERALCO\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1459,10 +1459,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1483,10 +1483,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "83.64166666666279",
       "status": "75.94166666666278",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1507,10 +1507,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "22.16736111143109",
       "status": "14.467361111431092",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1531,10 +1531,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7.7",
       "accumulated_days": "11.963194444440887",
       "status": "4.263194444440887",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "1200",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1555,11 +1555,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "42.22",
       "status": "28.52",
-      "psa_offtaker": "BATELEC II, CAGELCO",
-      "psa_capacity": "75",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1579,11 +1579,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1603,10 +1603,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1627,10 +1627,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1651,10 +1651,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1675,10 +1675,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1699,10 +1699,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1723,10 +1723,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1747,10 +1747,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1771,10 +1771,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1795,10 +1795,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1819,10 +1819,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1843,10 +1843,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     },
     {
@@ -1867,11 +1867,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.9",
       "accumulated_days": "11.59",
       "status": "-5.309999999999999",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "300",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under San Miguel Corporation with affiliations with the following:\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1891,11 +1891,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR/ AGC",
-      "aspa_capacity": "23",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "N/A",
+      "psa_capacity": "N/A",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1917,9 +1917,9 @@ const DASHBOARD_DATA = {
       "status": "-6.26",
       "psa_offtaker": "N/A",
       "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under San Miguel Corporation with affiliations with the following:\n\n1. Angat Hydropower Corporation and Metropolitan Waterworks and Sewerage System\n2. Excellent Energy Resources, Inc.\n3. Isabel Ancillary Services Co. Ltd. and Aggreko Energy Rental Solutions, Inc.\n4. Limay Power Inc.\n5. Malita Power Inc.\n6. Mariveles Power Generation Corp.\n7. Masinloc Power Co. Ltd.\n8. Petron Corporation\n9. San Roque Power Corporation, PSALM, and San Roque Hydropower, Inc. (IPPA) \n10. SMGP BESS Power Inc.\n11. SMGP Kabankalan Power Co. Ltd.\n12. South Premiere Power Corp.\n13. Sual Power Inc."
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1939,11 +1939,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "29.43",
       "status": "22.63",
-      "psa_offtaker": "IFELCO",
-      "psa_capacity": "7.5",
-      "aspa_type": "RR and CR / GCM and AGC",
-      "aspa_capacity": "34",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -1963,10 +1963,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -1987,10 +1987,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2011,10 +2011,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2035,10 +2035,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2059,11 +2059,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "0.02",
       "status": "-6.78",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No affiliations; Under a Government Controlled arrangement"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -2083,11 +2083,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "98.71",
       "status": "84.71",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -2107,10 +2107,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "115.79",
       "status": "108.99000000000001",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2131,10 +2131,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "6.8",
       "accumulated_days": "118.27",
       "status": "111.47",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2155,10 +2155,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2179,10 +2179,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2203,10 +2203,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2227,10 +2227,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
       "affiliates": ""
     },
     {
@@ -2251,11 +2251,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "27.8",
       "accumulated_days": "138",
       "status": "110.2",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under One Power Systems Holdings, Inc. with affiliations with the following:\n\n1. Alterpower Digos Solar, Inc.\n2. Fort Pilar Energy, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
+      "affiliates": ""
     },
     {
       "grid": "Luzon",
@@ -2275,10 +2275,10 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
       "affiliates": ""
     }
   ],
@@ -2301,11 +2301,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "3.3159722221971624",
       "status": "-3.6840277778028376",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Chan Group with affiliations with the following:\n\n1. Central Azucarera De Bais, Inc.\n2. Central Azucarera De San Antonio, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2325,11 +2325,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.01805555554165",
       "status": "-10.98194444445835",
-      "psa_offtaker": "NEPC",
-      "psa_capacity": "18.9",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Energreen Power Inter-Island Corp. with affiliations with the following:\n\n1. Central Negros Power Reliability, Inc.\n2. Mindoro Harvest Energy Co. Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "NEPC"
     },
     {
       "grid": "Visayas",
@@ -2349,11 +2349,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "30.26",
       "status": "23.26",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No other affiliations; Owned majority by Individuals"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2373,11 +2373,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "9.804166666654043",
       "status": "2.8041666666540426",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Chan Group with affiliations with the following:\n\n1. Central Azucarera De Bais, Inc.\n2. Central Azucarera De San Antonio, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2397,11 +2397,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No affiliations; Under a Cooperative Arrangement"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2421,11 +2421,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2445,11 +2445,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.9",
       "accumulated_days": "1.9986111111065832",
       "status": "-14.901388888893415",
-      "psa_offtaker": "ILECO II \nPECO\nAKELCO",
-      "psa_capacity": "10 MW\n65 MW\n12 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Manila Electric Company with affiliations with the following:\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ILECO II \nPECO\nAKELCO"
     },
     {
       "grid": "Visayas",
@@ -2469,11 +2469,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.56",
       "status": "-11.44",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2493,11 +2493,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "21.08",
       "status": "14.079999999999998",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under LT Group, Inc. with affiliations with the following:\n\n1. Absolut Distillers, Inc.\n2. Victorias Milling Company, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2517,11 +2517,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.564583333325571",
       "status": "-11.43541666667443",
-      "psa_offtaker": "VECO",
-      "psa_capacity": "70 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Vivant Corporation with affiliations with the following:\n\n1. 1590 Energy Corp.\n2. Bukidnonpower Corporation\n3. Calamian Islands Power Corp.\n4. Cebu Energy Development Corporation\n5. Delta P, Inc. and AERSI\n6. Isla Norte Power Corporation\n7. Meridian Power Inc.\n8. Minergy Power Corporation\n9. North  Bukidnonpower Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "VECO"
     },
     {
       "grid": "Visayas",
@@ -2541,11 +2541,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.3534722222175333",
       "status": "-10.646527777782467",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -2565,11 +2565,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "ANTECO",
-      "psa_capacity": "8 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Sunwest Group Holding Company, Inc. with affiliations with the following:\n\n1. Sunwest Water and Electric Company 2, Inc.\n2. Sunwest Water and Electric Co. (SUWECO), Inc.\n3. SUWECO Tablas Energy Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ANTECO"
     },
     {
       "grid": "Visayas",
@@ -2589,11 +2589,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "BOHECO I",
-      "psa_capacity": "1 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No affiliations; Under a Cooperative Arrangement"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BOHECO I"
     },
     {
       "grid": "Visayas",
@@ -2613,11 +2613,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "3.3159722221971624",
       "status": "-3.6840277778028376",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Chan Group with affiliations with the following:\n\n1. Central Azucarera De Bais, Inc.\n2. Central Azucarera De San Antonio, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2637,11 +2637,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "BOHECO I",
-      "psa_capacity": "1 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No affiliations; Under a Cooperative Arrangement"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BOHECO I"
     },
     {
       "grid": "Visayas",
@@ -2661,11 +2661,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "10.3",
       "status": "-3.3999999999999986",
-      "psa_offtaker": "ILECO I  \nCAPELCO",
-      "psa_capacity": "18 MW\n12 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ILECO I  \nCAPELCO"
     },
     {
       "grid": "Visayas",
@@ -2685,11 +2685,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.77",
       "status": "-11.23",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2709,11 +2709,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.0208333333212067",
       "status": "-12.979166666678793",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -2733,11 +2733,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.2361111111094956",
       "status": "-11.763888888890504",
-      "psa_offtaker": "CENECO",
-      "psa_capacity": "18.9 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Energreen Power Inter-Island Corp. with affiliations with the following:\n\n1. Central Negros Power Reliability, Inc.\n2. Mindoro Harvest Energy Co. Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "CENECO"
     },
     {
       "grid": "Visayas",
@@ -2757,11 +2757,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.125000000007276",
       "status": "-10.874999999992724",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -2781,11 +2781,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2805,11 +2805,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "45.43611111154314",
       "status": "31.43611111154314",
-      "psa_offtaker": "MERALCO\nCEBECO III",
-      "psa_capacity": "73 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Manila Electric Company with affiliations with the following:\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "MERALCO\nCEBECO III"
     },
     {
       "grid": "Visayas",
@@ -2829,11 +2829,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "5.5",
       "status": "-8.5",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2853,11 +2853,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "NONESCO / VRESO",
-      "psa_capacity": "3 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No other affiliations; Owned majority by Individuals"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "NONESCO / VRESO"
     },
     {
       "grid": "Visayas",
@@ -2877,11 +2877,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "1.92",
       "status": "-5.08",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under JG Summit Holdings, Inc. Group"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2901,11 +2901,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.3534722222175333",
       "status": "-10.646527777782467",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -2925,11 +2925,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "ANTECO",
-      "psa_capacity": "8 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Sunwest Group Holding Company, Inc. with affiliations with the following:\n\n1. Sunwest Water and Electric Company 2, Inc.\n2. Sunwest Water and Electric Co. (SUWECO), Inc.\n3. SUWECO Tablas Energy Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "ANTECO"
     },
     {
       "grid": "Visayas",
@@ -2949,11 +2949,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.0027777777795586",
       "status": "-11.997222222220442",
-      "psa_offtaker": "VECO",
-      "psa_capacity": "70 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Vivant Corporation with affiliations with the following:\n\n1. 1590 Energy Corp.\n2. Bukidnonpower Corporation\n3. Calamian Islands Power Corp.\n4. Cebu Energy Development Corporation\n5. Delta P, Inc. and AERSI\n6. Isla Norte Power Corporation\n7. Meridian Power Inc.\n8. Minergy Power Corporation\n9. North  Bukidnonpower Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "VECO"
     },
     {
       "grid": "Visayas",
@@ -2973,11 +2973,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "11.6",
       "status": "-2.4000000000000004",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -2997,11 +2997,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.3534722222175333",
       "status": "-10.646527777782467",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -3021,11 +3021,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.210416667",
       "status": "-12.789583333",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3045,11 +3045,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3069,11 +3069,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "17.95",
       "status": "4.25",
-      "psa_offtaker": "ILECO I  \nCAPELCO",
-      "psa_capacity": "18 MW\n12 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ILECO I  \nCAPELCO"
     },
     {
       "grid": "Visayas",
@@ -3093,11 +3093,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "44.36",
       "status": "30.66",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3117,11 +3117,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.0124999999898125",
       "status": "-12.987500000010188",
-      "psa_offtaker": "VECO",
-      "psa_capacity": "70 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Vivant Corporation with affiliations with the following:\n\n1. 1590 Energy Corp.\n2. Bukidnonpower Corporation\n3. Calamian Islands Power Corp.\n4. Cebu Energy Development Corporation\n5. Delta P, Inc. and AERSI\n6. Isla Norte Power Corporation\n7. Meridian Power Inc.\n8. Minergy Power Corporation\n9. North  Bukidnonpower Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "VECO"
     },
     {
       "grid": "Visayas",
@@ -3141,11 +3141,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "1.0124999999898125",
       "status": "-12.987500000010188",
-      "psa_offtaker": "VECO",
-      "psa_capacity": "70 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "VECO"
     },
     {
       "grid": "Visayas",
@@ -3165,11 +3165,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "2.03125",
       "status": "-11.96875",
-      "psa_offtaker": "BLCI",
-      "psa_capacity": "16 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BLCI"
     },
     {
       "grid": "Visayas",
@@ -3189,11 +3189,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "ANTECO",
-      "psa_capacity": "8 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Sunwest Group Holding Company, Inc. with affiliations with the following:\n\n1. Sunwest Water and Electric Company 2, Inc.\n2. Sunwest Water and Electric Co. (SUWECO), Inc.\n3. SUWECO Tablas Energy Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ANTECO"
     },
     {
       "grid": "Visayas",
@@ -3213,11 +3213,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "4.53",
       "status": "-9.469999999999999",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Manila Electric Company with affiliations with the following:\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "NC",
+      "psa_capacity": "NC",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3237,11 +3237,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.9",
       "accumulated_days": "39.2",
       "status": "22.300000000000004",
-      "psa_offtaker": "CEBECO I\nINEC \nVECO\nAEC\nNEPC",
-      "psa_capacity": "2 MW\n3 MW\n45 MW\n39 MW\n20 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "CEBECO I\nINEC \nVECO\nAEC\nNEPC"
     },
     {
       "grid": "Visayas",
@@ -3261,11 +3261,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "24.268749999937416",
       "status": "10.268749999937416",
-      "psa_offtaker": "VECO",
-      "psa_capacity": "70 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Vivant Corporation with affiliations with the following:\n\n1. 1590 Energy Corp.\n2. Bukidnonpower Corporation\n3. Calamian Islands Power Corp.\n4. Cebu Energy Development Corporation\n5. Delta P, Inc. and AERSI\n6. Isla Norte Power Corporation\n7. Meridian Power Inc.\n8. Minergy Power Corporation\n9. North  Bukidnonpower Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "VECO"
     },
     {
       "grid": "Visayas",
@@ -3285,11 +3285,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "3.01805555554165",
       "status": "-10.98194444445835",
-      "psa_offtaker": "CENECO",
-      "psa_capacity": "18.9 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Energreen Power Inter-Island Corp. with affiliations with the following:\n\n1. Central Negros Power Reliability, Inc.\n2. Mindoro Harvest Energy Co. Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "CENECO"
     },
     {
       "grid": "Visayas",
@@ -3309,11 +3309,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "ANTECO",
-      "psa_capacity": "8 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Sunwest Group Holding Company, Inc. with affiliations with the following:\n\n1. Sunwest Water and Electric Company 2, Inc.\n2. Sunwest Water and Electric Co. (SUWECO), Inc.\n3. SUWECO Tablas Energy Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "ANTECO"
     },
     {
       "grid": "Visayas",
@@ -3333,11 +3333,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "NONESCO / VRESO",
-      "psa_capacity": "3 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No other affiliations; Owned majority by Individuals"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "NONESCO / VRESO"
     },
     {
       "grid": "Visayas",
@@ -3357,11 +3357,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "7.627083333318296",
       "status": "-6.372916666681704",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3381,11 +3381,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "16.9",
       "accumulated_days": "19.43749999998546",
       "status": "2.53749999998546",
-      "psa_offtaker": "ILECO II \nPECO\nAKELCO",
-      "psa_capacity": "10 MW\n65 MW\n12 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Manila Electric Company with affiliations with the following:\n\n1. Excellent Energy Resources, Inc.\n2. Cebu Energy Development Corporation\n2. Greentech Solar Energy, Inc.\n3. Nuevo Solar Energy Corp. \n5. Panay Energy Development Corporation\n6. Panay Power Corporation\n4. PH Renewables, Inc.\n5. Powersource First Bulacan Solar Inc. \n6. San Buenaventura Power Ltd. Co.\n7. Solar Philippines Calatagan Corporation\n8. Solar Philippines Tarlac Corporation\n9. South Premiere Power Corp.\n10. Toledo Power Co."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "ILECO II \nPECO\nAKELCO"
     },
     {
       "grid": "Visayas",
@@ -3405,11 +3405,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "66.10208333332416",
       "status": "59.10208333332416",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Chan Group with affiliations with the following:\n\n1. Central Azucarera De Bais, Inc.\n2. Central Azucarera De San Antonio, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3429,11 +3429,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No other affiliations; Owned majority by Individuals"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3453,11 +3453,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "103.17",
       "status": "89.47",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "C",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3477,11 +3477,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "71.19",
       "status": "57.489999999999995",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3501,11 +3501,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "64.87",
       "status": "51.17",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3525,11 +3525,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "69.99",
       "status": "56.28999999999999",
-      "psa_offtaker": "CEBECO I\nINEC \nVECO\nAEC\nNEPC",
-      "psa_capacity": "2 MW\n3 MW\n45 MW\n39 MW\n20 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Aboitiz Equity Ventures, Inc. Group with affiliations with the following:\n\n1. Aboitiz Solar Power Inc.\n2. AP Renewables, Inc.\n3. Apo Agua Infrastructure, Inc.\n4. CBK Power Company Limited\n5. Cebu Energy Development Corporation\n6. Cotabato Light & Power Company\n7. East Asia Utilities Corporation\n8. Excellent Energy Resources, Inc.\n9. GNPower Dinginin Ltd. Co.\n10. GNPower Mariveles Energy Center Ltd. Co.\n11. Hedcor Bukidnon, Inc.\n12. Hedcor Sabangan, Inc.\n13. Hedcor Sibulan, Inc.\n14. Hedcor Tudaya, Inc.\n15. Hedcor Inc.\n16. Pagbilao Energy Corporation\n17. PV Sinag Power Inc.\n18. RE Resources, Inc.\n19. Republic Cement & Building Materials, Inc.\n20. San Carlos Sun Power\n21. SN Aboitiz Power Benguet, Inc.\n22. SN Aboitiz Power Magat, Inc.\n23. South Premiere Power Corp.\n24. SPI Power Incorporated\n25. Therma Luzon, Inc.\n26. Therma Marine, Inc.\n27. Therma Mobile, Inc.\n28. Therma South Inc.\n29. Therma Visayas, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "CEBECO I\nINEC \nVECO\nAEC\nNEPC"
     },
     {
       "grid": "Visayas",
@@ -3549,11 +3549,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "ANTECO",
-      "psa_capacity": "8 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Sunwest Group Holding Company, Inc. with affiliations with the following:\n\n1. Sunwest Water and Electric Company 2, Inc.\n2. Sunwest Water and Electric Co. (SUWECO), Inc.\n3. SUWECO Tablas Energy Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "ANTECO"
     },
     {
       "grid": "Visayas",
@@ -3573,11 +3573,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "138",
       "status": "124.3",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3597,11 +3597,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "14",
       "accumulated_days": "139.98",
       "status": "125.97999999999999",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Korea Electric Power Corporation with affiliations with the following:\n\n1. KEPCO SPC Power Corporation\n2. SPC Island Power Corporation\n3. SPC Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3614,18 +3614,18 @@ const DASHBOARD_DATA = {
       "est_resumption_date": "TBD",
       "est_resumption_time": "",
       "actual_resumption_date": "",
-      "actual_resumption_time": "",
-      "duration": "-",
+      "actual_resumption_time": "2026-05-07",
+      "duration": "18:06",
       "reason": "Low water level",
       "technology": "Hydroelectric",
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Philippine Potamis Hydro Power Corp. with affiliations with the following:\n\n1. Amlan Hydroelectric Power Corporation\n2. Catuiran Hydropower Corporation\n3. Sta. Clara Power Corporation"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3645,11 +3645,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3669,11 +3669,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "138",
       "status": "131",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Thomaslloyd CTI Asia Holdings PTE. LTD with affiliations with the following:\n\n1. North Negros Biopower, Inc.\n2. San Carlos Biopower, Inc.\n3. South Negros Biopower, Inc."
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3693,11 +3693,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "138",
       "status": "131",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3717,11 +3717,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "138",
       "status": "124.3",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under First Gen Corporation with affiliations with the following:\n\n1. Bac-Man Geothermal Inc.\n2. EDC Burgos Wind Power Corporation\n3. Energy Development Corporation\n4. FGP Corp.\n5. FG Bukidnon Power Corporation\n6. First Gas Power Corporation\n7. First Gen Hydro Power Corporation\n8. First Natgas Power Corp.\n9. Fresh River Lakes Corp.\n10. Green Core Geothermal, Inc.\n11. Prime Meridian Powergen Corporation"
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3741,11 +3741,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "13.7",
       "accumulated_days": "138",
       "status": "124.3",
-      "psa_offtaker": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO",
-      "psa_capacity": "1 MW\n2 MW\n1 MW \n1 MW\n8 MW\n6 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": ""
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "BILECO\nDORELCO\nLEYECO III\nLEYECO IV\nLEYECO V\nESAMELCO"
     },
     {
       "grid": "Visayas",
@@ -3765,11 +3765,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "138",
       "status": "131",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "20 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Thomaslloyd CTI Asia Holdings PTE. LTD with affiliations with the following:\n\n1. North Negros Biopower, Inc.\n2. San Carlos Biopower, Inc.\n3. South Negros Biopower, Inc."
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
+      "affiliates": "MERALCO"
     },
     {
       "grid": "Visayas",
@@ -3789,11 +3789,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "7",
       "accumulated_days": "139.23",
       "status": "132.23",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under LT Group, Inc. with affiliations with the following:\n\n1. Absolut Distillers, Inc.\n2. Victorias Milling Company, Inc."
+      "psa_offtaker": "C",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3813,11 +3813,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "-",
       "accumulated_days": "-",
       "status": "-",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Kanlaon Loney Holdings, Inc."
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3837,11 +3837,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "N/A",
       "accumulated_days": "N/A",
       "status": "No valid COC",
-      "psa_offtaker": "MERALCO",
-      "psa_capacity": "20 MW",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "Under Roxas Holdings, Inc. with affiliations with the following:\n\n1. Central Azucarera Don Pedro, Inc.\n2. San Carlos Bioenergy, Inc."
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "NC",
+      "aspa_capacity": "NR",
+      "affiliates": "MERALCO"
     },
     {
       "grid": "Visayas",
@@ -3861,11 +3861,11 @@ const DASHBOARD_DATA = {
       "outage_allowance": "N/A",
       "accumulated_days": "N/A",
       "status": "No valid COC",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
-      "affiliates": "No affiliations; Under a Cooperative Arrangement"
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
     },
     {
       "grid": "Visayas",
@@ -3885,10 +3885,250 @@ const DASHBOARD_DATA = {
       "outage_allowance": "N/A",
       "accumulated_days": "N/A",
       "status": "No valid COC",
-      "psa_offtaker": "N/A",
-      "psa_capacity": "N/A",
-      "aspa_type": "N/A",
-      "aspa_capacity": "N/A",
+      "psa_offtaker": "NC",
+      "psa_capacity": "NR",
+      "aspa_type": "C",
+      "aspa_capacity": "NR",
+      "affiliates": "N/A"
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Bohol I Electric Cooperative, Inc.",
+      "facility": "Sevilla MHEPP",
+      "unit": "Unit 1",
+      "capacity": "1.328",
+      "date_out": "2026-05-11",
+      "time_out": "23:58",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-13",
+      "actual_resumption_time": "13:02",
+      "duration": "37.066666666651145",
+      "reason": "Low water level",
+      "technology": "Hydroelectric",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Bohol I Electric Cooperative, Inc.",
+      "facility": "Sevilla MHEPP",
+      "unit": "Unit 2",
+      "capacity": "1.328",
+      "date_out": "2026-05-11",
+      "time_out": "23:58",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-12",
+      "actual_resumption_time": "14:02",
+      "duration": "14.066666666592937",
+      "reason": "Low water level",
+      "technology": "Hydroelectric",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Bohol I Electric Cooperative, Inc.",
+      "facility": "Sevilla MHEPP",
+      "unit": "Unit 2",
+      "capacity": "1.328",
+      "date_out": "2026-05-12",
+      "time_out": "23:58",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-14",
+      "actual_resumption_time": "12:02",
+      "duration": "36.06666666653473",
+      "reason": "Low water level",
+      "technology": "Hydroelectric",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Bohol I Electric Cooperative, Inc.",
+      "facility": "Sevilla MHEPP",
+      "unit": "Unit 1",
+      "capacity": "1.328",
+      "date_out": "2026-05-13",
+      "time_out": "23:30",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-15",
+      "actual_resumption_time": "14:02",
+      "duration": "38.53333333338378",
+      "reason": "Low water level",
+      "technology": "Hydroelectric",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "SPC Island Power Corporation",
+      "facility": "Panay 3 DPP",
+      "unit": "Echo",
+      "capacity": "12",
+      "date_out": "2026-05-14",
+      "time_out": "11:01",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-14",
+      "actual_resumption_time": "20:05",
+      "duration": "9.066666666709352",
+      "reason": "Unable start unit Echo due to excessive water leak at charger cooler A- bank.",
+      "technology": "Diesel",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "SPC Island Power Corporation",
+      "facility": "Panay 3 DPP",
+      "unit": "Hotel",
+      "capacity": "13",
+      "date_out": "2026-05-14",
+      "time_out": "11:51",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-14",
+      "actual_resumption_time": "15:30",
+      "duration": "3.650000000023283",
+      "reason": "Emergency stopped unit Hotel due to sudden drop of lube oil pressure.",
+      "technology": "Diesel",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "SPC Power Corporation",
+      "facility": "Power Barge 104",
+      "unit": "Unit 4",
+      "capacity": "8",
+      "date_out": "2026-05-15",
+      "time_out": "14:22",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-15",
+      "actual_resumption_time": "17:31",
+      "duration": "3.1499999999650754",
+      "reason": "Unable to cut in due to excessive Exhaust gas leak at Cylinder 5R",
+      "technology": "Diesel",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "SPC Island Power Corporation",
+      "facility": "Panay 1 DPP",
+      "unit": "Unit 5",
+      "capacity": "5",
+      "date_out": "2026-05-15",
+      "time_out": "10:31",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-17",
+      "actual_resumption_time": "07:10",
+      "duration": "44.64999999990687",
+      "reason": "Unable to cut in unit 5 due to observed sudden increase of bearing temperature of main bearing no. 1",
+      "technology": "Diesel",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Meridian Power Inc.",
+      "facility": "MPI Bunker C-Fired DPP",
+      "unit": "DG 2",
+      "capacity": "7.059",
+      "date_out": "2026-05-15",
+      "time_out": "16:23",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-15",
+      "actual_resumption_time": "17:16",
+      "duration": "0.8833333334187046",
+      "reason": "Governor system failure",
+      "technology": "Diesel",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
+      "affiliates": ""
+    },
+    {
+      "grid": "Visayas",
+      "genco": "Bohol I Electric Cooperative, Inc.",
+      "facility": "Sevilla MHEPP",
+      "unit": "Unit 2",
+      "capacity": "1.328",
+      "date_out": "2026-05-15",
+      "time_out": "00:58",
+      "est_resumption_date": "",
+      "est_resumption_time": "",
+      "actual_resumption_date": "2026-05-16",
+      "actual_resumption_time": "12:02",
+      "duration": "35.06666666659294",
+      "reason": "Low water level",
+      "technology": "Hydroelectric",
+      "outage_allowance": "",
+      "accumulated_days": "",
+      "status": "",
+      "psa_offtaker": "",
+      "psa_capacity": "",
+      "aspa_type": "C",
+      "aspa_capacity": "C",
       "affiliates": ""
     }
   ],
@@ -4510,42 +4750,6 @@ const DASHBOARD_DATA = {
   ],
   "ngcp_updates": [
     {
-        "timestamp": "May 22, 2026 12:40 PM",
-        "sender": "Engr. Daryll M.",
-        "grid": "Palawan",
-        "type": "Blackout",
-        "message": "Total System Blackout (TSB) in the Palawan Grid - 22 May 2026\n\nTimeline:\n\u2022 9:22 AM \u2013 Total System Blackout due to cut-off/corrosion failure of 336.4 ACSR segment of NAPOCOR 69kV transmission line at Km 42, Sitio Tacduan, Brgy. Kamuning, Puerto Princesa. (This line segment was already scheduled for replacement in 2 weeks, but failed ahead of schedule.)\n\u2022 10:31 AM \u2013 Manually closed 21-1BP4 with R6\n\u2022 10:34 AM \u2013 Manually closed 21-2BP4 with R7\n  \u2192 Brooke\u2019s Point substantially restored (except one feeder already under scheduled maintenance)\n\u2022 10:59 AM \u2013 Manually closed 28ML4 and 29ML4\n\u2022 11:00 AM \u2013 Manually closed 21ML4 with R3\n\u2022 11:08 AM \u2013 Manually closed B3 Recloser\n  \u2192 Narra restored (except one feeder already under scheduled maintenance)\n\nStatus as of 12:40PM\n\u2022 Brooke\u2019s Point and Narra already restored\n\u2022 NPC Linemen remain on site for full system restoration of cut-off Transmission line Section.\n\u2022 Current commitment: full restoration on or before 2:00 PM\n\nRequested Engr. Daryll Malabanan (Focal for Palawan SGSO) for continuous update until full restoration update"
-    },
-    {
-        "timestamp": "May 22, 2026 8:00 AM",
-        "sender": "Trish Roque",
-        "grid": "Visayas",
-        "type": "Yellow Alert",
-        "message": "VISAYAS GRID ALERT STATUS\nUpdate as of 22 May 2026, 8:00AM\n\nYELLOW ALERT\n3:00PM- 4:00PM\n5:00PM- 9:00PM\n\nAvailable Capacity - 2,653MW\nPeak Demand - 2,485MW\n\n14 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 12 plants are running on derated capacities, for a total of 885.3MW unavailable to the grid.\n\nFactors that contributed to the YELLOW Alert declaration:\nUnavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3\n2. High forecasted system demand\n\nA yellow alert is issued when the operating margin is insufficient to meet the transmission grid\u2019s contingency requirement.\n\n#NGCPAdvisory\n#gridalertph"
-    },
-    {
-        "timestamp": "May 21, 2026 8:00 PM",
-        "sender": "Kimberly R",
-        "grid": "Visayas",
-        "type": "Yellow Alert",
-        "message": "VISAYAS GRID ALERT STATUS\nUpdate as of 21 May 2026, 8PM\n\nEXTENDED YELLOW ALERT\n\nYellow Alert\n4:00PM- 11:00PM\n\nAvailable Capacity - 2,519MW\nPeak Demand - 2,413MW\n\n18 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 15 plants are running on derated capacities, for a total of 934.55MW unavailable to the grid.\n\nFactors that contributed to the YELLOW Alert extension:\nUnavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3\n2. Forced outage of CENPRI Diesel, PDPP1 Unit 5, PDPP3, PGPP2 Unit 1 \n3. Increased forecasted system demand\n\nA yellow alert is issued when the operating margin is insufficient to meet the transmission grid\u2019s contingency requirement.\n\n#NGCPAdvisory\n#gridalertph"
-    },
-    {
-        "timestamp": "May 21, 2026 5:00 PM",
-        "sender": "NGCP System",
-        "grid": "Visayas",
-        "type": "Manual Load Dropping",
-        "message": "NGCP may implement Manual Load Dropping (MLD) in the following areas today, 21 May, to maintain the integrity of the power system:\n\nVISAYAS\n\n5PM-9PM\n\nVECO\nMECO\nCEBECO I\nCEBECO II\nCEBECO III\nNEPC\nNOCECO\nNORECO I\nNORECO II\nNONECO\nMORE\nAKELCO\nANTECO\nCAPELCO\nILECO I\nILECO II\nILECO III\nGUIMELCO\n\nAside from the unavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3, the manual load dropping is being implemented to prevent the overloading of the Daanbantayan-Tabango 230kV Line 2 due to the additional unplanned outage of CENPRI Diesel, PDPP1 Unit 5, PDPP3, PGPP2 Unit 1 amounting to 74MW. \n\nSchedule may be cancelled if system condition improves, such as if actual demand falls below projections.\n\nNGCP encourages everyone to exercise prudence in using electricity.\n\n#NGCPadvisory"
-    },
-    {
-        "timestamp": "May 21, 2026 1:30 PM",
-        "sender": "Kimberly R",
-        "grid": "Visayas",
-        "type": "Yellow Alert",
-        "message": "VISAYAS GRID ALERT STATUS\nUpdate as of 21 May 2026, 1:30PM\n\nEXTENDED YELLOW ALERT\n\nYellow Alert\n4:00PM-9:00PM\n\nAvailable Capacity - 2,668MW\nPeak Demand - 2,486MW\n\n11 plants are on forced outage since May 2026, 1 plant since March 2026, 3 plants since 2025, 2 plants since 2024, 2 plants since 2023, and 1 plant since 2021, while 14 plants are running on derated capacities, for a total of 870.2MW unavailable to the grid.\n\nFactors that contributed to the YELLOW Alert extension:\nUnavailability of Visayas' large coal plants TVI 1, TVI 2, and PEDC 3\n2. Increased forecasted system demand by around 43MW. \n\nA yellow alert is issued when the operating margin is insufficient to meet the transmission grid\u2019s contingency requirement.\n\n#NGCPAdvisory\n#gridalertph"
-    },
-
-    {
       "timestamp": "May 15, 2026 12:32 AM",
       "sender": "Kimberly R",
       "grid": "Visayas",
@@ -4765,9344 +4969,9344 @@ const DASHBOARD_DATA = {
   ],
   "gomp_outages": [
     {
-        "grid": "Luzon",
-        "plant": "ANDA(APC2)",
-        "capacity": 72.0,
-        "start": "Jan1",
-        "end": "Jan5"
+      "grid": "Luzon",
+      "plant": "ANDA(APC2)",
+      "capacity": 72.0,
+      "start": "Jan1",
+      "end": "Jan5"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANDA(APC2)",
-        "capacity": 0.0,
-        "start": "Dec19",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "ANDA(APC2)",
+      "capacity": 0.0,
+      "start": "Dec19",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "APEC",
-        "capacity": 25.0,
-        "start": "Oct24",
-        "end": "Nov7"
+      "grid": "Luzon",
+      "plant": "APEC",
+      "capacity": 25.0,
+      "start": "Oct24",
+      "end": "Nov7"
     },
     {
-        "grid": "Luzon",
-        "plant": "BCF 1",
-        "capacity": 240.0,
-        "start": "Oct31",
-        "end": "Nov19"
+      "grid": "Luzon",
+      "plant": "BCF 1",
+      "capacity": 240.0,
+      "start": "Oct31",
+      "end": "Nov19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BCF 2",
-        "capacity": 300.0,
-        "start": "Jan20",
-        "end": "Feb4"
+      "grid": "Luzon",
+      "plant": "BCF 2",
+      "capacity": 300.0,
+      "start": "Jan20",
+      "end": "Feb4"
     },
     {
-        "grid": "Luzon",
-        "plant": "BCF 2",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "BCF 2",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Oct18"
     },
     {
-        "grid": "Luzon",
-        "plant": "BT2020_2",
-        "capacity": 25.0,
-        "start": "Feb1",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "BT2020_2",
+      "capacity": 25.0,
+      "start": "Feb1",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "BT2020_2",
-        "capacity": 0.0,
-        "start": "Aug1",
-        "end": "Aug14"
+      "grid": "Luzon",
+      "plant": "BT2020_2",
+      "capacity": 0.0,
+      "start": "Aug1",
+      "end": "Aug14"
     },
     {
-        "grid": "Luzon",
-        "plant": "DINGININ 1",
-        "capacity": 668.0,
-        "start": "Nov6",
-        "end": "Nov26"
+      "grid": "Luzon",
+      "plant": "DINGININ 1",
+      "capacity": 668.0,
+      "start": "Nov6",
+      "end": "Nov26"
     },
     {
-        "grid": "Luzon",
-        "plant": "DINGININ 2",
-        "capacity": 668.0,
-        "start": "Feb16",
-        "end": "Mar22"
+      "grid": "Luzon",
+      "plant": "DINGININ 2",
+      "capacity": 668.0,
+      "start": "Feb16",
+      "end": "Mar22"
     },
     {
-        "grid": "Luzon",
-        "plant": "GNP 1",
-        "capacity": 316.0,
-        "start": "Jul8",
-        "end": "Sep10"
+      "grid": "Luzon",
+      "plant": "GNP 1",
+      "capacity": 316.0,
+      "start": "Jul8",
+      "end": "Sep10"
     },
     {
-        "grid": "Luzon",
-        "plant": "GNP 2",
-        "capacity": 316.0,
-        "start": "Jul1",
-        "end": "Jul18"
+      "grid": "Luzon",
+      "plant": "GNP 2",
+      "capacity": 316.0,
+      "start": "Jul1",
+      "end": "Jul18"
     },
     {
-        "grid": "Luzon",
-        "plant": "MPGC 1",
-        "capacity": 150.0,
-        "start": "Jul1",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "MPGC 1",
+      "capacity": 150.0,
+      "start": "Jul1",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "MPGC 2",
-        "capacity": 150.0,
-        "start": "Nov7",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "MPGC 2",
+      "capacity": 150.0,
+      "start": "Nov7",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "MPGC 3",
-        "capacity": 150.0,
-        "start": "Feb7",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "MPGC 3",
+      "capacity": 150.0,
+      "start": "Feb7",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "MPGC 4",
-        "capacity": 150.0,
-        "start": "Sep1",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "MPGC 4",
+      "capacity": 150.0,
+      "start": "Sep1",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "MSNLC 1",
-        "capacity": 344.0,
-        "start": "Jul6",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "MSNLC 1",
+      "capacity": 344.0,
+      "start": "Jul6",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MSNLC 2",
-        "capacity": 344.0,
-        "start": "Jan3",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "MSNLC 2",
+      "capacity": 344.0,
+      "start": "Jan3",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "MSNLC 3",
-        "capacity": 335.0,
-        "start": "Aug22",
-        "end": "Oct5"
+      "grid": "Luzon",
+      "plant": "MSNLC 3",
+      "capacity": 335.0,
+      "start": "Aug22",
+      "end": "Oct5"
     },
     {
-        "grid": "Luzon",
-        "plant": "PBL 1",
-        "capacity": 382.0,
-        "start": "Jul4",
-        "end": "Jul31"
+      "grid": "Luzon",
+      "plant": "PBL 1",
+      "capacity": 382.0,
+      "start": "Jul4",
+      "end": "Jul31"
     },
     {
-        "grid": "Luzon",
-        "plant": "PBL 2",
-        "capacity": 382.0,
-        "start": "Aug15",
-        "end": "Sep11"
+      "grid": "Luzon",
+      "plant": "PBL 2",
+      "capacity": 382.0,
+      "start": "Aug15",
+      "end": "Sep11"
     },
     {
-        "grid": "Luzon",
-        "plant": "PBL 3",
-        "capacity": 420.0,
-        "start": "Jan16",
-        "end": "Feb12"
+      "grid": "Luzon",
+      "plant": "PBL 3",
+      "capacity": 420.0,
+      "start": "Jan16",
+      "end": "Feb12"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETRON 1",
-        "capacity": 35.0,
-        "start": "Jan1",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "PETRON 1",
+      "capacity": 35.0,
+      "start": "Jan1",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETRON 2",
-        "capacity": 35.0,
-        "start": "Nov1",
-        "end": "Nov25"
+      "grid": "Luzon",
+      "plant": "PETRON 2",
+      "capacity": 35.0,
+      "start": "Nov1",
+      "end": "Nov25"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETRON 3",
-        "capacity": 35.0,
-        "start": "Oct1",
-        "end": "Oct25"
+      "grid": "Luzon",
+      "plant": "PETRON 3",
+      "capacity": 35.0,
+      "start": "Oct1",
+      "end": "Oct25"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETRON 5",
-        "capacity": 22.2,
-        "start": "Aug1",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "PETRON 5",
+      "capacity": 22.2,
+      "start": "Aug1",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "QPPL",
-        "capacity": 460.0,
-        "start": "Sep18",
-        "end": "Oct12"
+      "grid": "Luzon",
+      "plant": "QPPL",
+      "capacity": 460.0,
+      "start": "Sep18",
+      "end": "Oct12"
     },
     {
-        "grid": "Luzon",
-        "plant": "SBPL",
-        "capacity": 455.0,
-        "start": "Dec1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "SBPL",
+      "capacity": 455.0,
+      "start": "Dec1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "SCPC",
-        "capacity": 150.0,
-        "start": "Jul27",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "SCPC",
+      "capacity": 150.0,
+      "start": "Jul27",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "SCPC2",
-        "capacity": 150.0,
-        "start": "Jan10",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "SCPC2",
+      "capacity": 150.0,
+      "start": "Jan10",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "SCPC3",
-        "capacity": 150.0,
-        "start": "Sep14",
-        "end": "Oct5"
+      "grid": "Luzon",
+      "plant": "SCPC3",
+      "capacity": 150.0,
+      "start": "Sep14",
+      "end": "Oct5"
     },
     {
-        "grid": "Luzon",
-        "plant": "SCPC4",
-        "capacity": 150.0,
-        "start": "Feb11",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "SCPC4",
+      "capacity": 150.0,
+      "start": "Feb11",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "SLPGC 1",
-        "capacity": 150.0,
-        "start": "Jul22",
-        "end": "Aug15"
+      "grid": "Luzon",
+      "plant": "SLPGC 1",
+      "capacity": 150.0,
+      "start": "Jul22",
+      "end": "Aug15"
     },
     {
-        "grid": "Luzon",
-        "plant": "SLPGC 2",
-        "capacity": 149.6,
-        "start": "Dec1",
-        "end": "Dec30"
+      "grid": "Luzon",
+      "plant": "SLPGC 2",
+      "capacity": 149.6,
+      "start": "Dec1",
+      "end": "Dec30"
     },
     {
-        "grid": "Luzon",
-        "plant": "SLTEC 1",
-        "capacity": 122.0,
-        "start": "Jul19",
-        "end": "Sep17"
+      "grid": "Luzon",
+      "plant": "SLTEC 1",
+      "capacity": 122.0,
+      "start": "Jul19",
+      "end": "Sep17"
     },
     {
-        "grid": "Luzon",
-        "plant": "SLTEC 2",
-        "capacity": 124.0,
-        "start": "Jan1",
-        "end": "Feb14"
+      "grid": "Luzon",
+      "plant": "SLTEC 2",
+      "capacity": 124.0,
+      "start": "Jan1",
+      "end": "Feb14"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUAL 1",
-        "capacity": 647.0,
-        "start": "Sep24",
-        "end": "Oct23"
+      "grid": "Luzon",
+      "plant": "SUAL 1",
+      "capacity": 647.0,
+      "start": "Sep24",
+      "end": "Oct23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUAL 2",
-        "capacity": 647.0,
-        "start": "Oct28",
-        "end": "Dec26"
+      "grid": "Luzon",
+      "plant": "SUAL 2",
+      "capacity": 647.0,
+      "start": "Oct28",
+      "end": "Dec26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAL 2",
-        "capacity": 130.0,
-        "start": "Sep16",
-        "end": "Oct15"
+      "grid": "Luzon",
+      "plant": "MAL 2",
+      "capacity": 130.0,
+      "start": "Sep16",
+      "end": "Oct15"
     },
     {
-        "grid": "Luzon",
-        "plant": "BM 1",
-        "capacity": 60.0,
-        "start": "Feb11",
-        "end": "Mar6"
+      "grid": "Luzon",
+      "plant": "BM 1",
+      "capacity": 60.0,
+      "start": "Feb11",
+      "end": "Mar6"
     },
     {
-        "grid": "Luzon",
-        "plant": "BM 2",
-        "capacity": 60.0,
-        "start": "Mar1",
-        "end": "Mar4"
+      "grid": "Luzon",
+      "plant": "BM 2",
+      "capacity": 60.0,
+      "start": "Mar1",
+      "end": "Mar4"
     },
     {
-        "grid": "Luzon",
-        "plant": "BM 3",
-        "capacity": 20.0,
-        "start": "Mar1",
-        "end": "Mar4"
+      "grid": "Luzon",
+      "plant": "BM 3",
+      "capacity": 20.0,
+      "start": "Mar1",
+      "end": "Mar4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAI",
-        "capacity": 20.0,
-        "start": "Feb28",
-        "end": "Mar26"
+      "grid": "Luzon",
+      "plant": "MAI",
+      "capacity": 20.0,
+      "start": "Feb28",
+      "end": "Mar26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAI",
-        "capacity": 0.0,
-        "start": "Feb28",
-        "end": "Mar26"
+      "grid": "Luzon",
+      "plant": "MAI",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Mar26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAI2",
-        "capacity": 12.1,
-        "start": "Mar7",
-        "end": "Mar10"
+      "grid": "Luzon",
+      "plant": "MAI2",
+      "capacity": 12.1,
+      "start": "Mar7",
+      "end": "Mar10"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAI2",
-        "capacity": 0.0,
-        "start": "Mar7",
-        "end": "Mar10"
+      "grid": "Luzon",
+      "plant": "MAI2",
+      "capacity": 0.0,
+      "start": "Mar7",
+      "end": "Mar10"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 1",
-        "capacity": 40.0,
-        "start": "Oct11",
-        "end": "Oct11"
+      "grid": "Luzon",
+      "plant": "MB 1",
+      "capacity": 40.0,
+      "start": "Oct11",
+      "end": "Oct11"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 10",
-        "capacity": 13.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "MB 10",
+      "capacity": 13.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 10",
-        "capacity": 0.0,
-        "start": "Feb12",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "MB 10",
+      "capacity": 0.0,
+      "start": "Feb12",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 10",
-        "capacity": 0.0,
-        "start": "Nov8",
-        "end": "Nov9"
+      "grid": "Luzon",
+      "plant": "MB 10",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov9"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 2",
-        "capacity": 30.0,
-        "start": "Sep21",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "MB 2",
+      "capacity": 30.0,
+      "start": "Sep21",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 3",
-        "capacity": 44.0,
-        "start": "Jan1",
-        "end": "Jan26"
+      "grid": "Luzon",
+      "plant": "MB 3",
+      "capacity": 44.0,
+      "start": "Jan1",
+      "end": "Jan26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 3",
-        "capacity": 0.0,
-        "start": "Sep14",
-        "end": "Sep14"
+      "grid": "Luzon",
+      "plant": "MB 3",
+      "capacity": 0.0,
+      "start": "Sep14",
+      "end": "Sep14"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 4",
-        "capacity": 43.0,
-        "start": "Jan14",
-        "end": "Jan21"
+      "grid": "Luzon",
+      "plant": "MB 4",
+      "capacity": 43.0,
+      "start": "Jan14",
+      "end": "Jan21"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 4",
-        "capacity": 0.0,
-        "start": "Jul2",
-        "end": "Jul29"
+      "grid": "Luzon",
+      "plant": "MB 4",
+      "capacity": 0.0,
+      "start": "Jul2",
+      "end": "Jul29"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 4",
-        "capacity": 0.0,
-        "start": "Jul4",
-        "end": "Jul4"
+      "grid": "Luzon",
+      "plant": "MB 4",
+      "capacity": 0.0,
+      "start": "Jul4",
+      "end": "Jul4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 5",
-        "capacity": 55.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "MB 5",
+      "capacity": 55.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 5",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov19"
+      "grid": "Luzon",
+      "plant": "MB 5",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov19"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 6",
-        "capacity": 55.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "MB 6",
+      "capacity": 55.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 6",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov19"
+      "grid": "Luzon",
+      "plant": "MB 6",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov19"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 7",
-        "capacity": 20.0,
-        "start": "Nov28",
-        "end": "Dec30"
+      "grid": "Luzon",
+      "plant": "MB 7",
+      "capacity": 20.0,
+      "start": "Nov28",
+      "end": "Dec30"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 7",
-        "capacity": 0.0,
-        "start": "Nov30",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "MB 7",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 8",
-        "capacity": 0.0,
-        "start": "Nov30",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "MB 8",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 9",
-        "capacity": 17.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "MB 9",
+      "capacity": 17.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB 9",
-        "capacity": 0.0,
-        "start": "Nov8",
-        "end": "Nov9"
+      "grid": "Luzon",
+      "plant": "MB 9",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov9"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB O",
-        "capacity": 16.0,
-        "start": "Aug12",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "MB O",
+      "capacity": 16.0,
+      "start": "Aug12",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB O",
-        "capacity": 0.0,
-        "start": "Aug22",
-        "end": "Sep7"
+      "grid": "Luzon",
+      "plant": "MB O",
+      "capacity": 0.0,
+      "start": "Aug22",
+      "end": "Sep7"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB O",
-        "capacity": 0.0,
-        "start": "Aug23",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "MB O",
+      "capacity": 0.0,
+      "start": "Aug23",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "MB O",
-        "capacity": 0.0,
-        "start": "Aug23",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "MB O",
+      "capacity": 0.0,
+      "start": "Aug23",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "PALAYAN",
-        "capacity": 31.0,
-        "start": "Mar1",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "PALAYAN",
+      "capacity": 31.0,
+      "start": "Mar1",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "PALAYAN",
-        "capacity": 0.0,
-        "start": "Oct3",
-        "end": "Oct17"
+      "grid": "Luzon",
+      "plant": "PALAYAN",
+      "capacity": 0.0,
+      "start": "Oct3",
+      "end": "Oct17"
     },
     {
-        "grid": "Luzon",
-        "plant": "TANAWON",
-        "capacity": 31.0,
-        "start": "Mar1",
-        "end": "Mar4"
+      "grid": "Luzon",
+      "plant": "TANAWON",
+      "capacity": 31.0,
+      "start": "Mar1",
+      "end": "Mar4"
     },
     {
-        "grid": "Luzon",
-        "plant": "TANAWON",
-        "capacity": 0.0,
-        "start": "Jul1",
-        "end": "Jul21"
+      "grid": "Luzon",
+      "plant": "TANAWON",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TW 1",
-        "capacity": 0.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TW 1",
+      "capacity": 0.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TW 2",
-        "capacity": 22.0,
-        "start": "Jul10",
-        "end": "Jul11"
+      "grid": "Luzon",
+      "plant": "TW 2",
+      "capacity": 22.0,
+      "start": "Jul10",
+      "end": "Jul11"
     },
     {
-        "grid": "Luzon",
-        "plant": "TW 5",
-        "capacity": 40.0,
-        "start": "Aug5",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "TW 5",
+      "capacity": 40.0,
+      "start": "Aug5",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TW 6",
-        "capacity": 40.0,
-        "start": "Oct4",
-        "end": "Oct5"
+      "grid": "Luzon",
+      "plant": "TW 6",
+      "capacity": 40.0,
+      "start": "Oct4",
+      "end": "Oct5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Binary",
-        "capacity": 17.0,
-        "start": "Mar1",
-        "end": "Mar25"
+      "grid": "Luzon",
+      "plant": "Tiwi Binary",
+      "capacity": 17.0,
+      "start": "Mar1",
+      "end": "Mar25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Binary",
-        "capacity": 0.0,
-        "start": "Oct5",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "Tiwi Binary",
+      "capacity": 0.0,
+      "start": "Oct5",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 47.2,
-        "start": "Jan11",
-        "end": "Jan12"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 47.2,
+      "start": "Jan11",
+      "end": "Jan12"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Feb8",
-        "end": "Feb9"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb9"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Mar14",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Jul5",
-        "end": "Jul6"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Aug9",
-        "end": "Aug10"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Aug9",
+      "end": "Aug10"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Sep11",
-        "end": "Sep17"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Sep11",
+      "end": "Sep17"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Oct11",
-        "end": "Oct12"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Oct11",
+      "end": "Oct12"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Nov8",
-        "end": "Nov9"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov9"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 1",
-        "capacity": 50,
-        "start": "Dec6",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "AVION 1",
+      "capacity": 0.0,
+      "start": "Dec6",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 45.8,
-        "start": "Jan18",
-        "end": "Jan19"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 45.8,
+      "start": "Jan18",
+      "end": "Jan19"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Mar13",
-        "end": "Mar18"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Mar13",
+      "end": "Mar18"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Jul12",
-        "end": "Jul13"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul13"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Sep12",
-        "end": "Sep18"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Sep12",
+      "end": "Sep18"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Oct18",
-        "end": "Oct19"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct19"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Nov15",
-        "end": "Nov16"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov16"
     },
     {
-        "grid": "Luzon",
-        "plant": "AVION 2",
-        "capacity": 50,
-        "start": "Dec13",
-        "end": "Dec14"
+      "grid": "Luzon",
+      "plant": "AVION 2",
+      "capacity": 0.0,
+      "start": "Dec13",
+      "end": "Dec14"
     },
     {
-        "grid": "Luzon",
-        "plant": "EERI Unit 1",
-        "capacity": 440.0,
-        "start": "Oct6",
-        "end": "Nov3"
+      "grid": "Luzon",
+      "plant": "EERI Unit 1",
+      "capacity": 440.0,
+      "start": "Oct6",
+      "end": "Nov3"
     },
     {
-        "grid": "Luzon",
-        "plant": "EERI Unit 2",
-        "capacity": 440.0,
-        "start": "Nov10",
-        "end": "Dec8"
+      "grid": "Luzon",
+      "plant": "EERI Unit 2",
+      "capacity": 440.0,
+      "start": "Nov10",
+      "end": "Dec8"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN A1",
-        "capacity": 200.0,
-        "start": "Jan1",
-        "end": "Jan8"
+      "grid": "Luzon",
+      "plant": "ILIJAN A1",
+      "capacity": 200.0,
+      "start": "Jan1",
+      "end": "Jan8"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN A1",
-        "capacity": 600,
-        "start": "Nov30",
-        "end": "Dec6"
+      "grid": "Luzon",
+      "plant": "ILIJAN A1",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec6"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN A2",
-        "capacity": 200.0,
-        "start": "Jan1",
-        "end": "Jan13"
+      "grid": "Luzon",
+      "plant": "ILIJAN A2",
+      "capacity": 200.0,
+      "start": "Jan1",
+      "end": "Jan13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN A2",
-        "capacity": 600,
-        "start": "Dec10",
-        "end": "Dec16"
+      "grid": "Luzon",
+      "plant": "ILIJAN A2",
+      "capacity": 0.0,
+      "start": "Dec10",
+      "end": "Dec16"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN B1",
-        "capacity": 200.0,
-        "start": "Aug28",
-        "end": "Sep3"
+      "grid": "Luzon",
+      "plant": "ILIJAN B1",
+      "capacity": 200.0,
+      "start": "Aug28",
+      "end": "Sep3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ILIJAN B2",
-        "capacity": 200.0,
-        "start": "Aug18",
-        "end": "Aug24"
+      "grid": "Luzon",
+      "plant": "ILIJAN B2",
+      "capacity": 200.0,
+      "start": "Aug18",
+      "end": "Aug24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LMY A 2",
-        "capacity": 60.0,
-        "start": "Aug3",
-        "end": "Sep16"
+      "grid": "Luzon",
+      "plant": "LMY A 2",
+      "capacity": 60.0,
+      "start": "Aug3",
+      "end": "Sep16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LMY B 7",
-        "capacity": 60.0,
-        "start": "Jul10",
-        "end": "Jul19"
+      "grid": "Luzon",
+      "plant": "LMY B 7",
+      "capacity": 60.0,
+      "start": "Jul10",
+      "end": "Jul19"
     },
     {
-        "grid": "Luzon",
-        "plant": "LMY B 8",
-        "capacity": 90.0,
-        "start": "Oct26",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "LMY B 8",
+      "capacity": 90.0,
+      "start": "Oct26",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 417.4,
-        "start": "Jan10",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 417.4,
+      "start": "Jan10",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Jan24",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Jan24",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Feb6",
-        "end": "Feb9"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Feb6",
+      "end": "Feb9"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Feb21",
-        "end": "Feb22"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb22"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Mar14",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Mar28",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Mar28",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Jul1",
-        "end": "Jul16"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul16"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Jul25",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Jul25",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Aug7",
-        "end": "Aug10"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Aug7",
+      "end": "Aug10"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Aug22",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Aug22",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Sep12",
-        "end": "Sep13"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Sep12",
+      "end": "Sep13"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Sep26",
-        "end": "Sep27"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Sep26",
+      "end": "Sep27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Oct10",
-        "end": "Oct11"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Oct10",
+      "end": "Oct11"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Oct24",
-        "end": "Oct25"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Oct24",
+      "end": "Oct25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Nov14",
-        "end": "Nov15"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Nov14",
+      "end": "Nov15"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Nov28",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Nov28",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Dec12",
-        "end": "Dec13"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Dec12",
+      "end": "Dec13"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN GABRIEL",
-        "capacity": 414,
-        "start": "Dec26",
-        "end": "Dec27"
+      "grid": "Luzon",
+      "plant": "SAN GABRIEL",
+      "capacity": 0.0,
+      "start": "Dec26",
+      "end": "Dec27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 1",
-        "capacity": 265.0,
-        "start": "Feb20",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "SN LO 1",
+      "capacity": 265.0,
+      "start": "Feb20",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 1",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul13"
+      "grid": "Luzon",
+      "plant": "SN LO 1",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul13"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 1",
-        "capacity": 0.0,
-        "start": "Dec12",
-        "end": "Dec14"
+      "grid": "Luzon",
+      "plant": "SN LO 1",
+      "capacity": 0.0,
+      "start": "Dec12",
+      "end": "Dec14"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 265.0,
-        "start": "Jan3",
-        "end": "Feb23"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 265.0,
+      "start": "Jan3",
+      "end": "Feb23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Feb1",
-        "end": "Feb2"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Feb1",
+      "end": "Feb2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Feb8",
-        "end": "Feb9"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb9"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Mar2",
-        "end": "Mar9"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Mar2",
+      "end": "Mar9"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar16"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar16"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Mar22",
-        "end": "Mar23"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Mar22",
+      "end": "Mar23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul13"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul13"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Aug9",
-        "end": "Aug10"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Aug9",
+      "end": "Aug10"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Sep20",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Sep20",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Sep27",
-        "end": "Sep28"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Sep27",
+      "end": "Sep28"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Nov1",
-        "end": "Nov2"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Nov1",
+      "end": "Nov2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Nov8",
-        "end": "Nov9"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov9"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN LO 2",
-        "capacity": 0.0,
-        "start": "Dec19",
-        "end": "Dec21"
+      "grid": "Luzon",
+      "plant": "SN LO 2",
+      "capacity": 0.0,
+      "start": "Dec19",
+      "end": "Dec21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S1",
-        "capacity": 10.0,
-        "start": "Oct30",
-        "end": "Nov2"
+      "grid": "Luzon",
+      "plant": "BPPC S1",
+      "capacity": 10.0,
+      "start": "Oct30",
+      "end": "Nov2"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S1 U14",
-        "capacity": 10.0,
-        "start": "Sep25",
-        "end": "Sep26"
+      "grid": "Luzon",
+      "plant": "BPPC S1 U14",
+      "capacity": 10.0,
+      "start": "Sep25",
+      "end": "Sep26"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S2",
-        "capacity": 10.0,
-        "start": "Oct30",
-        "end": "Nov2"
+      "grid": "Luzon",
+      "plant": "BPPC S2",
+      "capacity": 10.0,
+      "start": "Oct30",
+      "end": "Nov2"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S2 U22",
-        "capacity": 10.0,
-        "start": "Aug25",
-        "end": "Aug26"
+      "grid": "Luzon",
+      "plant": "BPPC S2 U22",
+      "capacity": 10.0,
+      "start": "Aug25",
+      "end": "Aug26"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S2 U24",
-        "capacity": 10.0,
-        "start": "Dec28",
-        "end": "Dec29"
+      "grid": "Luzon",
+      "plant": "BPPC S2 U24",
+      "capacity": 10.0,
+      "start": "Dec28",
+      "end": "Dec29"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S2 U26",
-        "capacity": 10.0,
-        "start": "Feb18",
-        "end": "Feb19"
+      "grid": "Luzon",
+      "plant": "BPPC S2 U26",
+      "capacity": 10.0,
+      "start": "Feb18",
+      "end": "Feb19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3",
-        "capacity": 10.0,
-        "start": "Oct30",
-        "end": "Nov2"
+      "grid": "Luzon",
+      "plant": "BPPC S3",
+      "capacity": 10.0,
+      "start": "Oct30",
+      "end": "Nov2"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3 U32",
-        "capacity": 10.0,
-        "start": "Feb20",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "BPPC S3 U32",
+      "capacity": 10.0,
+      "start": "Feb20",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3 U33",
-        "capacity": 10.0,
-        "start": "Nov9",
-        "end": "Nov10"
+      "grid": "Luzon",
+      "plant": "BPPC S3 U33",
+      "capacity": 10.0,
+      "start": "Nov9",
+      "end": "Nov10"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3 U35",
-        "capacity": 10.0,
-        "start": "Sep7",
-        "end": "Sep8"
+      "grid": "Luzon",
+      "plant": "BPPC S3 U35",
+      "capacity": 10.0,
+      "start": "Sep7",
+      "end": "Sep8"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3 U36",
-        "capacity": 10.0,
-        "start": "Jul29",
-        "end": "Jul30"
+      "grid": "Luzon",
+      "plant": "BPPC S3 U36",
+      "capacity": 10.0,
+      "start": "Jul29",
+      "end": "Jul30"
     },
     {
-        "grid": "Luzon",
-        "plant": "BPPC S3 U37",
-        "capacity": 10.0,
-        "start": "Mar13",
-        "end": "Mar14"
+      "grid": "Luzon",
+      "plant": "BPPC S3 U37",
+      "capacity": 10.0,
+      "start": "Mar13",
+      "end": "Mar14"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 1",
-        "capacity": 3.5,
-        "start": "Jan10",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 1",
+      "capacity": 3.5,
+      "start": "Jan10",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 1",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov16"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 1",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov16"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 2",
-        "capacity": 3.5,
-        "start": "Jan17",
-        "end": "Jan18"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 2",
+      "capacity": 3.5,
+      "start": "Jan17",
+      "end": "Jan18"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 2",
-        "capacity": 0.0,
-        "start": "Feb22",
-        "end": "Feb23"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 2",
+      "capacity": 0.0,
+      "start": "Feb22",
+      "end": "Feb23"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 2",
-        "capacity": 0.0,
-        "start": "Dec5",
-        "end": "Dec6"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 2",
+      "capacity": 0.0,
+      "start": "Dec5",
+      "end": "Dec6"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 2",
-        "capacity": 0.0,
-        "start": "Dec20",
-        "end": "Dec21"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 2",
+      "capacity": 0.0,
+      "start": "Dec20",
+      "end": "Dec21"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 3",
-        "capacity": 7.0,
-        "start": "Feb16",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 3",
+      "capacity": 7.0,
+      "start": "Feb16",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 3",
-        "capacity": 0.0,
-        "start": "Nov7",
-        "end": "Nov8"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 3",
+      "capacity": 0.0,
+      "start": "Nov7",
+      "end": "Nov8"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 3",
-        "capacity": 0.0,
-        "start": "Nov8",
-        "end": "Nov9"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 3",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov9"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 3",
-        "capacity": 0.0,
-        "start": "Dec6",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 3",
+      "capacity": 0.0,
+      "start": "Dec6",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 4",
-        "capacity": 7.0,
-        "start": "Nov21",
-        "end": "Nov22"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 4",
+      "capacity": 7.0,
+      "start": "Nov21",
+      "end": "Nov22"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 4",
-        "capacity": 0.0,
-        "start": "Nov22",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 4",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "CIP II Unit 4",
-        "capacity": 0.0,
-        "start": "Nov29",
-        "end": "Nov30"
+      "grid": "Luzon",
+      "plant": "CIP II Unit 4",
+      "capacity": 0.0,
+      "start": "Nov29",
+      "end": "Nov30"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 1",
-        "capacity": 28.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 1",
+      "capacity": 28.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 1",
-        "capacity": 25,
-        "start": "Dec6",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "INGRID 1",
+      "capacity": 0.0,
+      "start": "Dec6",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 2",
-        "capacity": 22.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 2",
+      "capacity": 22.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 2",
-        "capacity": 25,
-        "start": "Dec8",
-        "end": "Dec9"
+      "grid": "Luzon",
+      "plant": "INGRID 2",
+      "capacity": 0.0,
+      "start": "Dec8",
+      "end": "Dec9"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 3",
-        "capacity": 22.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 3",
+      "capacity": 22.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 3",
-        "capacity": 25,
-        "start": "Dec10",
-        "end": "Dec11"
+      "grid": "Luzon",
+      "plant": "INGRID 3",
+      "capacity": 0.0,
+      "start": "Dec10",
+      "end": "Dec11"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 4",
-        "capacity": 28.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 4",
+      "capacity": 28.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 4",
-        "capacity": 25,
-        "start": "Dec12",
-        "end": "Dec13"
+      "grid": "Luzon",
+      "plant": "INGRID 4",
+      "capacity": 0.0,
+      "start": "Dec12",
+      "end": "Dec13"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 5",
-        "capacity": 22.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 5",
+      "capacity": 22.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 5",
-        "capacity": 25,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "INGRID 5",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 6",
-        "capacity": 28.0,
-        "start": "Dec1",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "INGRID 6",
+      "capacity": 28.0,
+      "start": "Dec1",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "INGRID 6",
-        "capacity": 25,
-        "start": "Dec16",
-        "end": "Dec17"
+      "grid": "Luzon",
+      "plant": "INGRID 6",
+      "capacity": 0.0,
+      "start": "Dec16",
+      "end": "Dec17"
     },
     {
-        "grid": "Luzon",
-        "plant": "RCBMI 2",
-        "capacity": 6.2,
-        "start": "Jan1",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "RCBMI 2",
+      "capacity": 6.2,
+      "start": "Jan1",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U1",
-        "capacity": 13.75,
-        "start": "Feb4",
-        "end": "Feb13"
+      "grid": "Luzon",
+      "plant": "SUBIC U1",
+      "capacity": 13.75,
+      "start": "Feb4",
+      "end": "Feb13"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U1",
-        "capacity": 14,
-        "start": "Nov5",
-        "end": "Nov6"
+      "grid": "Luzon",
+      "plant": "SUBIC U1",
+      "capacity": 0.0,
+      "start": "Nov5",
+      "end": "Nov6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U2",
-        "capacity": 13.75,
-        "start": "Jan10",
-        "end": "Jan14"
+      "grid": "Luzon",
+      "plant": "SUBIC U2",
+      "capacity": 13.75,
+      "start": "Jan10",
+      "end": "Jan14"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U2",
-        "capacity": 14,
-        "start": "Aug17",
-        "end": "Aug18"
+      "grid": "Luzon",
+      "plant": "SUBIC U2",
+      "capacity": 0.0,
+      "start": "Aug17",
+      "end": "Aug18"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U3",
-        "capacity": 13.75,
-        "start": "Jan5",
-        "end": "Jan9"
+      "grid": "Luzon",
+      "plant": "SUBIC U3",
+      "capacity": 13.75,
+      "start": "Jan5",
+      "end": "Jan9"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U3",
-        "capacity": 14,
-        "start": "Jul22",
-        "end": "Jul23"
+      "grid": "Luzon",
+      "plant": "SUBIC U3",
+      "capacity": 0.0,
+      "start": "Jul22",
+      "end": "Jul23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U4",
-        "capacity": 13.75,
-        "start": "Jan15",
-        "end": "Jan19"
+      "grid": "Luzon",
+      "plant": "SUBIC U4",
+      "capacity": 13.75,
+      "start": "Jan15",
+      "end": "Jan19"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U4",
-        "capacity": 14,
-        "start": "Jul19",
-        "end": "Jul20"
+      "grid": "Luzon",
+      "plant": "SUBIC U4",
+      "capacity": 0.0,
+      "start": "Jul19",
+      "end": "Jul20"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U5",
-        "capacity": 13.75,
-        "start": "Feb14",
-        "end": "Feb23"
+      "grid": "Luzon",
+      "plant": "SUBIC U5",
+      "capacity": 13.75,
+      "start": "Feb14",
+      "end": "Feb23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U5",
-        "capacity": 14,
-        "start": "Dec2",
-        "end": "Dec3"
+      "grid": "Luzon",
+      "plant": "SUBIC U5",
+      "capacity": 0.0,
+      "start": "Dec2",
+      "end": "Dec3"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U6",
-        "capacity": 13.75,
-        "start": "Jan20",
-        "end": "Jan24"
+      "grid": "Luzon",
+      "plant": "SUBIC U6",
+      "capacity": 13.75,
+      "start": "Jan20",
+      "end": "Jan24"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U6",
-        "capacity": 14,
-        "start": "Sep6",
-        "end": "Sep7"
+      "grid": "Luzon",
+      "plant": "SUBIC U6",
+      "capacity": 0.0,
+      "start": "Sep6",
+      "end": "Sep7"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U7",
-        "capacity": 13.75,
-        "start": "Jan25",
-        "end": "Jan29"
+      "grid": "Luzon",
+      "plant": "SUBIC U7",
+      "capacity": 13.75,
+      "start": "Jan25",
+      "end": "Jan29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U7",
-        "capacity": 14,
-        "start": "Nov15",
-        "end": "Nov16"
+      "grid": "Luzon",
+      "plant": "SUBIC U7",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov16"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U8",
-        "capacity": 13.75,
-        "start": "Jan30",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "SUBIC U8",
+      "capacity": 13.75,
+      "start": "Jan30",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U8",
-        "capacity": 14,
-        "start": "Feb1",
-        "end": "Feb3"
+      "grid": "Luzon",
+      "plant": "SUBIC U8",
+      "capacity": 0.0,
+      "start": "Feb1",
+      "end": "Feb3"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC U8",
-        "capacity": 14,
-        "start": "Nov24",
-        "end": "Nov25"
+      "grid": "Luzon",
+      "plant": "SUBIC U8",
+      "capacity": 0.0,
+      "start": "Nov24",
+      "end": "Nov25"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U1",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U1",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U10",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U10",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U10",
-        "capacity": 5,
-        "start": "Dec4",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U10",
+      "capacity": 0.0,
+      "start": "Dec4",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U11",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U11",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U11",
-        "capacity": 5,
-        "start": "Jul8",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U11",
+      "capacity": 0.0,
+      "start": "Jul8",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U2",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U2",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U3",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U3",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U4",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U4",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U4",
-        "capacity": 5,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U4",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U5",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U5",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U5",
-        "capacity": 5,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U5",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U6",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U6",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U6",
-        "capacity": 5,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U6",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U7",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U7",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U7",
-        "capacity": 5,
-        "start": "Jul29",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U7",
+      "capacity": 0.0,
+      "start": "Jul29",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U7",
-        "capacity": 5,
-        "start": "Jul29",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U7",
+      "capacity": 0.0,
+      "start": "Jul29",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U8",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U8",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U8",
-        "capacity": 5,
-        "start": "Nov26",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U8",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U9",
-        "capacity": 6.0,
-        "start": "Feb9",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U9",
+      "capacity": 6.0,
+      "start": "Feb9",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 3 U9",
-        "capacity": 5,
-        "start": "Nov30",
-        "end": "Dec3"
+      "grid": "Luzon",
+      "plant": "TMO PB 3 U9",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U1",
-        "capacity": 6.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U1",
+      "capacity": 6.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U1",
-        "capacity": 5,
-        "start": "Jul20",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U1",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U2",
-        "capacity": 6.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U2",
+      "capacity": 6.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U2",
-        "capacity": 5,
-        "start": "Jul20",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U2",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U3",
-        "capacity": 6.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U3",
+      "capacity": 6.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U3",
-        "capacity": 5,
-        "start": "Jul20",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U3",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U4",
-        "capacity": 6.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U4",
+      "capacity": 6.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U4",
-        "capacity": 5,
-        "start": "Jul20",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U4",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U5",
-        "capacity": 6.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U5",
+      "capacity": 6.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 4 U5",
-        "capacity": 5,
-        "start": "Jul20",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "TMO PB 4 U5",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U1",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U1",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U1",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U1",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U10",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U10",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U10",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U10",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U11",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U11",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U11",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U11",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U12",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U12",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U12",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U12",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U13",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U13",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U13",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U13",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U2",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U2",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U2",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U2",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U3",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U3",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U3",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U3",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U4",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U4",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U4",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U4",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U5",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U5",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U5",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U5",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U6",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U6",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U6",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U6",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U7",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U7",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U7",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U7",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U8",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U8",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U8",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U8",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U9",
-        "capacity": 4.0,
-        "start": "Jan1",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U9",
+      "capacity": 4.0,
+      "start": "Jan1",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB 6 U9",
-        "capacity": 5,
-        "start": "Jul27",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "TMO PB 6 U9",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U1",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U1",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U1",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U1",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U10",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U10",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U10",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U10",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U11",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U11",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U11",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U11",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U11",
-        "capacity": 5,
-        "start": "Dec8",
-        "end": "Dec11"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U11",
+      "capacity": 0.0,
+      "start": "Dec8",
+      "end": "Dec11"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U12",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U12",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U12",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U12",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U12",
-        "capacity": 5,
-        "start": "Oct9",
-        "end": "Oct15"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U12",
+      "capacity": 0.0,
+      "start": "Oct9",
+      "end": "Oct15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U12",
-        "capacity": 5,
-        "start": "Dec12",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U12",
+      "capacity": 0.0,
+      "start": "Dec12",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U2",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U2",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U2",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U2",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U3",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U3",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U3",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U3",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U4",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U4",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U4",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U4",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U5",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U5",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U5",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U5",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U6",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U6",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U6",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U6",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U7",
-        "capacity": 5.7,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U7",
+      "capacity": 5.7,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U7",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U7",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U8",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U8",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U8",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U8",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U9",
-        "capacity": 3.8,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U9",
+      "capacity": 3.8,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "TMO PB5 U9",
-        "capacity": 5,
-        "start": "Feb15",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TMO PB5 U9",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TransAsia Unit 1",
-        "capacity": 10.0,
-        "start": "Dec1",
-        "end": "Dec25"
+      "grid": "Luzon",
+      "plant": "TransAsia Unit 1",
+      "capacity": 10.0,
+      "start": "Dec1",
+      "end": "Dec25"
     },
     {
-        "grid": "Luzon",
-        "plant": "TransAsia Unit 2",
-        "capacity": 10.0,
-        "start": "Feb17",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "TransAsia Unit 2",
+      "capacity": 10.0,
+      "start": "Feb17",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "TransAsia Unit 3",
-        "capacity": 10.0,
-        "start": "Feb3",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "TransAsia Unit 3",
+      "capacity": 10.0,
+      "start": "Feb3",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "TransAsia Unit 4",
-        "capacity": 10.0,
-        "start": "Feb28",
-        "end": "Mar4"
+      "grid": "Luzon",
+      "plant": "TransAsia Unit 4",
+      "capacity": 10.0,
+      "start": "Feb28",
+      "end": "Mar4"
     },
     {
-        "grid": "Luzon",
-        "plant": "TransAsia Unit 5",
-        "capacity": 10.0,
-        "start": "Jan1",
-        "end": "Jan9"
+      "grid": "Luzon",
+      "plant": "TransAsia Unit 5",
+      "capacity": 10.0,
+      "start": "Jan1",
+      "end": "Jan9"
     },
     {
-        "grid": "Luzon",
-        "plant": "BBEC",
-        "capacity": 5.0,
-        "start": "Apr6",
-        "end": "Apr20"
+      "grid": "Luzon",
+      "plant": "BBEC",
+      "capacity": 5.0,
+      "start": "Apr6",
+      "end": "Apr20"
     },
     {
-        "grid": "Luzon",
-        "plant": "CBEC",
-        "capacity": 15.0,
-        "start": "Feb15",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "CBEC",
+      "capacity": 15.0,
+      "start": "Feb15",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "CBEC",
-        "capacity": 0.0,
-        "start": "Oct8",
-        "end": "Oct31"
+      "grid": "Luzon",
+      "plant": "CBEC",
+      "capacity": 0.0,
+      "start": "Oct8",
+      "end": "Oct31"
     },
     {
-        "grid": "Luzon",
-        "plant": "CLEAN GREEN",
-        "capacity": 10.8,
-        "start": "Sep1",
-        "end": "Sep30"
+      "grid": "Luzon",
+      "plant": "CLEAN GREEN",
+      "capacity": 10.8,
+      "start": "Sep1",
+      "end": "Sep30"
     },
     {
-        "grid": "Luzon",
-        "plant": "GIFTC",
-        "capacity": 12.0,
-        "start": "Jan1",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "GIFTC",
+      "capacity": 12.0,
+      "start": "Jan1",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "GIFTC2",
-        "capacity": 6.0,
-        "start": "Feb1",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "GIFTC2",
+      "capacity": 6.0,
+      "start": "Feb1",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "GRASS GOLD",
-        "capacity": 10.8,
-        "start": "Sep1",
-        "end": "Sep30"
+      "grid": "Luzon",
+      "plant": "GRASS GOLD",
+      "capacity": 10.8,
+      "start": "Sep1",
+      "end": "Sep30"
     },
     {
-        "grid": "Luzon",
-        "plant": "I-POWER",
-        "capacity": 10.8,
-        "start": "Nov1",
-        "end": "Nov30"
+      "grid": "Luzon",
+      "plant": "I-POWER",
+      "capacity": 10.8,
+      "start": "Nov1",
+      "end": "Nov30"
     },
     {
-        "grid": "Luzon",
-        "plant": "I-POWER 2",
-        "capacity": 10.8,
-        "start": "Jul1",
-        "end": "Jul30"
+      "grid": "Luzon",
+      "plant": "I-POWER 2",
+      "capacity": 10.8,
+      "start": "Jul1",
+      "end": "Jul30"
     },
     {
-        "grid": "Luzon",
-        "plant": "IBEC",
-        "capacity": 18.0,
-        "start": "Mar6",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "IBEC",
+      "capacity": 18.0,
+      "start": "Mar6",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "IBEC",
-        "capacity": 0.0,
-        "start": "Dec5",
-        "end": "Dec20"
+      "grid": "Luzon",
+      "plant": "IBEC",
+      "capacity": 0.0,
+      "start": "Dec5",
+      "end": "Dec20"
     },
     {
-        "grid": "Luzon",
-        "plant": "MONTALBAN",
-        "capacity": 1.0,
-        "start": "Feb19",
-        "end": "Feb20"
+      "grid": "Luzon",
+      "plant": "MONTALBAN",
+      "capacity": 1.0,
+      "start": "Feb19",
+      "end": "Feb20"
     },
     {
-        "grid": "Luzon",
-        "plant": "MONTALBAN",
-        "capacity": 8,
-        "start": "Mar26",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "MONTALBAN",
+      "capacity": 0.0,
+      "start": "Mar26",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "VS GRIPAL",
-        "capacity": 5.4,
-        "start": "Aug1",
-        "end": "Aug30"
+      "grid": "Luzon",
+      "plant": "VS GRIPAL",
+      "capacity": 5.4,
+      "start": "Aug1",
+      "end": "Aug30"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 37.5,
-        "start": "Jan31",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 37.5,
+      "start": "Jan31",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Feb28",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Apr30",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Apr30",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "May5",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "May5",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "May16",
-        "end": "May17"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May17"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "May24",
-        "end": "May25"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "May24",
+      "end": "May25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "May27",
-        "end": "Jun1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "Jun1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Jun4",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Jun4",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Jul31",
-        "end": "Aug1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Jul31",
+      "end": "Aug1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Nov30",
-        "end": "Dec1"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U1",
-        "capacity": 35,
-        "start": "Dec7",
-        "end": "Dec8"
+      "grid": "Luzon",
+      "plant": "AMB U1",
+      "capacity": 0.0,
+      "start": "Dec7",
+      "end": "Dec8"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 37.5,
-        "start": "Jan31",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 37.5,
+      "start": "Jan31",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Feb28",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Apr30",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Apr30",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "May5",
-        "end": "May6"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "May5",
+      "end": "May6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "May13",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "May13",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "May16",
-        "end": "May17"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May17"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "May24",
-        "end": "May25"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "May24",
+      "end": "May25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "May27",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Jul31",
-        "end": "Aug1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Jul31",
+      "end": "Aug1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Nov30",
-        "end": "Dec1"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U2",
-        "capacity": 35,
-        "start": "Dec15",
-        "end": "Dec16"
+      "grid": "Luzon",
+      "plant": "AMB U2",
+      "capacity": 0.0,
+      "start": "Dec15",
+      "end": "Dec16"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 37.5,
-        "start": "Jan31",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 37.5,
+      "start": "Jan31",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Feb28",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Apr30",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Apr30",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "May5",
-        "end": "May6"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "May5",
+      "end": "May6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "May13",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "May13",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "May16",
-        "end": "May25"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "May27",
-        "end": "Jun1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "Jun1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Jun4",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Jun4",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Jul31",
-        "end": "Aug1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Jul31",
+      "end": "Aug1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Nov30",
-        "end": "Dec1"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec1"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMB U3",
-        "capacity": 35,
-        "start": "Dec22",
-        "end": "Dec23"
+      "grid": "Luzon",
+      "plant": "AMB U3",
+      "capacity": 0.0,
+      "start": "Dec22",
+      "end": "Dec23"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 3.5,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 3.5,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Apr1",
-        "end": "Apr30"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr1",
+      "end": "Apr30"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov30",
-        "end": "Dec14"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov30",
+      "end": "Dec14"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 1",
-        "capacity": 0.0,
-        "start": "Dec15",
-        "end": "Dec16"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 1",
+      "capacity": 0.0,
+      "start": "Dec15",
+      "end": "Dec16"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 3.5,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 3.5,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Apr1",
-        "end": "Apr30"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr1",
+      "end": "Apr30"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 1.0,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 1.0,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Apr1",
-        "end": "Apr30"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr1",
+      "end": "Apr30"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "AMPOHAW UNIT 3",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "AMPOHAW UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 5.0,
-        "start": "Jan5",
-        "end": "Jan6"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 5.0,
+      "start": "Jan5",
+      "end": "Jan6"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Feb17",
-        "end": "Feb18"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Feb17",
+      "end": "Feb18"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Mar20",
-        "end": "Mar21"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Mar20",
+      "end": "Mar21"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Apr25",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "May5",
-        "end": "May6"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "May5",
+      "end": "May6"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Jun22",
-        "end": "Jun23"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Jun22",
+      "end": "Jun23"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Jul6",
-        "end": "Jul7"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Jul6",
+      "end": "Jul7"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Aug14",
-        "end": "Aug15"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Aug14",
+      "end": "Aug15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Sep3",
-        "end": "Sep4"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Sep3",
+      "end": "Sep4"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Nov1",
-        "end": "Nov7"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Nov1",
+      "end": "Nov7"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U1",
-        "capacity": 10,
-        "start": "Dec16",
-        "end": "Dec17"
+      "grid": "Luzon",
+      "plant": "ANG A U1",
+      "capacity": 0.0,
+      "start": "Dec16",
+      "end": "Dec17"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 5.0,
-        "start": "Jan15",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 5.0,
+      "start": "Jan15",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Feb27",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Feb27",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Mar24",
-        "end": "Mar25"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Mar24",
+      "end": "Mar25"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Apr18",
-        "end": "Apr19"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr19"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "May26",
-        "end": "May27"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "May26",
+      "end": "May27"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Jun15",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Jul4",
-        "end": "Jul5"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Jul4",
+      "end": "Jul5"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Aug2",
-        "end": "Aug3"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Aug2",
+      "end": "Aug3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Sep12",
-        "end": "Sep13"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Sep12",
+      "end": "Sep13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Nov8",
-        "end": "Nov14"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov14"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U2",
-        "capacity": 10,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "ANG A U2",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 5.0,
-        "start": "Jan17",
-        "end": "Jan18"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 5.0,
+      "start": "Jan17",
+      "end": "Jan18"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Feb5",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Feb5",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Mar4",
-        "end": "Mar5"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Mar4",
+      "end": "Mar5"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Apr4",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Apr4",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Jun6",
-        "end": "Jun7"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Jun6",
+      "end": "Jun7"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Jul14",
-        "end": "Jul15"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Jul14",
+      "end": "Jul15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Aug11",
-        "end": "Aug12"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Aug11",
+      "end": "Aug12"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Oct24",
-        "end": "Oct25"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Oct24",
+      "end": "Oct25"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Nov15",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U3",
-        "capacity": 10,
-        "start": "Dec22",
-        "end": "Dec23"
+      "grid": "Luzon",
+      "plant": "ANG A U3",
+      "capacity": 0.0,
+      "start": "Dec22",
+      "end": "Dec23"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U4",
-        "capacity": 5.0,
-        "start": "Jan1",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "ANG A U4",
+      "capacity": 5.0,
+      "start": "Jan1",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 5.0,
-        "start": "Jan12",
-        "end": "Jan13"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 5.0,
+      "start": "Jan12",
+      "end": "Jan13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Feb2",
-        "end": "Feb3"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Feb2",
+      "end": "Feb3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Mar14",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Apr2",
-        "end": "Apr3"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Apr2",
+      "end": "Apr3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "May11",
-        "end": "May12"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "May11",
+      "end": "May12"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Jun2",
-        "end": "Jun3"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Jun2",
+      "end": "Jun3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Jul1",
-        "end": "Jul7"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul7"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Aug27",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Aug27",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Sep15",
-        "end": "Sep16"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Sep15",
+      "end": "Sep16"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Oct7",
-        "end": "Oct8"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Oct7",
+      "end": "Oct8"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Dec2",
-        "end": "Dec3"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Dec2",
+      "end": "Dec3"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG A U5",
-        "capacity": 10,
-        "start": "Dec11",
-        "end": "Dec12"
+      "grid": "Luzon",
+      "plant": "ANG A U5",
+      "capacity": 0.0,
+      "start": "Dec11",
+      "end": "Dec12"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U1",
-        "capacity": 50.0,
-        "start": "Jan1",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "ANG M U1",
+      "capacity": 50.0,
+      "start": "Jan1",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U2",
-        "capacity": 50.0,
-        "start": "Jan1",
-        "end": "Jul18"
+      "grid": "Luzon",
+      "plant": "ANG M U2",
+      "capacity": 50.0,
+      "start": "Jan1",
+      "end": "Jul18"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50.0,
-        "start": "Jan22",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 50.0,
+      "start": "Jan22",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Mar27",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Mar27",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "May18",
-        "end": "May19"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "May18",
+      "end": "May19"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Jun1",
-        "end": "Jun15"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Jun1",
+      "end": "Jun15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Aug17",
-        "end": "Aug18"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Aug17",
+      "end": "Aug18"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Sep25",
-        "end": "Sep26"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Sep25",
+      "end": "Sep26"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Nov12",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Nov12",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U3",
-        "capacity": 50,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "ANG M U3",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50.0,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 50.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Apr12",
-        "end": "Apr13"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Apr12",
+      "end": "Apr13"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Jun16",
-        "end": "Jun30"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Jun16",
+      "end": "Jun30"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Jul23",
-        "end": "Jul24"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul24"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Sep4",
-        "end": "Sep5"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Sep4",
+      "end": "Sep5"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Oct14",
-        "end": "Oct15"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Oct14",
+      "end": "Oct15"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Nov29",
-        "end": "Nov30"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Nov29",
+      "end": "Nov30"
     },
     {
-        "grid": "Luzon",
-        "plant": "ANG M U4",
-        "capacity": 50,
-        "start": "Dec27",
-        "end": "Dec28"
+      "grid": "Luzon",
+      "plant": "ANG M U4",
+      "capacity": 0.0,
+      "start": "Dec27",
+      "end": "Dec28"
     },
     {
-        "grid": "Luzon",
-        "plant": "BAK 1",
-        "capacity": 37.4,
-        "start": "Mar7",
-        "end": "Mar12"
+      "grid": "Luzon",
+      "plant": "BAK 1",
+      "capacity": 37.4,
+      "start": "Mar7",
+      "end": "Mar12"
     },
     {
-        "grid": "Luzon",
-        "plant": "BAK 2",
-        "capacity": 37.4,
-        "start": "Mar7",
-        "end": "Mar12"
+      "grid": "Luzon",
+      "plant": "BAK 2",
+      "capacity": 37.4,
+      "start": "Mar7",
+      "end": "Mar12"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35.0,
-        "start": "Jan30",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 35.0,
+      "start": "Jan30",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Feb3",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Feb3",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Feb18",
-        "end": "Feb24"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Feb24"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Mar2",
-        "end": "Mar3"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Mar2",
+      "end": "Mar3"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Mar30",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "May30",
-        "end": "May31"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Jul30",
-        "end": "Jul31"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Jul30",
+      "end": "Jul31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Sep20",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Sep20",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Oct18",
-        "end": "Oct19"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Nov22",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U1",
-        "capacity": 35,
-        "start": "Dec30",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "BIN U1",
+      "capacity": 0.0,
+      "start": "Dec30",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35.0,
-        "start": "Jan30",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 35.0,
+      "start": "Jan30",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Feb3",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Feb3",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Feb18",
-        "end": "Feb24"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Feb24"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Mar2",
-        "end": "Mar3"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Mar2",
+      "end": "Mar3"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Mar30",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "May30",
-        "end": "May31"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Jul30",
-        "end": "Jul31"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Jul30",
+      "end": "Jul31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Sep20",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Sep20",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Oct18",
-        "end": "Oct19"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Nov22",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U2",
-        "capacity": 35,
-        "start": "Dec30",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "BIN U2",
+      "capacity": 0.0,
+      "start": "Dec30",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35.0,
-        "start": "Jan30",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 35.0,
+      "start": "Jan30",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Feb3",
-        "end": "Feb4"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Feb3",
+      "end": "Feb4"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Feb18",
-        "end": "Mar3"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Mar3"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Mar30",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "May30",
-        "end": "May31"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Jul30",
-        "end": "Jul31"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Jul30",
+      "end": "Jul31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Sep20",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Sep20",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Oct18",
-        "end": "Oct19"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Nov22",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U3",
-        "capacity": 35,
-        "start": "Dec30",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "BIN U3",
+      "capacity": 0.0,
+      "start": "Dec30",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35.0,
-        "start": "Jan30",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 35.0,
+      "start": "Jan30",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Feb3",
-        "end": "Feb4"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Feb3",
+      "end": "Feb4"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Feb15",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Feb18",
-        "end": "Mar3"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Mar3"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Mar30",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "May30",
-        "end": "May31"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Jul30",
-        "end": "Jul31"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Jul30",
+      "end": "Jul31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Aug16",
-        "end": "Aug17"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug17"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Sep20",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Sep20",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Oct18",
-        "end": "Oct19"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct19"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Nov22",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BIN U4",
-        "capacity": 35,
-        "start": "Dec30",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "BIN U4",
+      "capacity": 0.0,
+      "start": "Dec30",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 4.5,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 4.5,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Feb16",
-        "end": "Feb20"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Feb16",
+      "end": "Feb20"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar1",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar1",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Apr30",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr30",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul20",
-        "end": "Jul21"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul21"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "BINENG 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "BINENG 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 1",
-        "capacity": 10.4,
-        "start": "Jan19",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "BOT 1",
+      "capacity": 10.4,
+      "start": "Jan19",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 1",
-        "capacity": 10,
-        "start": "May11",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "BOT 1",
+      "capacity": 0.0,
+      "start": "May11",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 1",
-        "capacity": 10,
-        "start": "Nov9",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "BOT 1",
+      "capacity": 0.0,
+      "start": "Nov9",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 2",
-        "capacity": 10.4,
-        "start": "Jan19",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "BOT 2",
+      "capacity": 10.4,
+      "start": "Jan19",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 2",
-        "capacity": 10,
-        "start": "May11",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "BOT 2",
+      "capacity": 0.0,
+      "start": "May11",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "BOT 2",
-        "capacity": 10,
-        "start": "Nov9",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "BOT 2",
+      "capacity": 0.0,
+      "start": "Nov9",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAL U1",
-        "capacity": 14.0,
-        "start": "Jan14",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "CAL U1",
+      "capacity": 14.0,
+      "start": "Jan14",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAL U1",
-        "capacity": 300,
-        "start": "May4",
-        "end": "May8"
+      "grid": "Luzon",
+      "plant": "CAL U1",
+      "capacity": 0.0,
+      "start": "May4",
+      "end": "May8"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAL U1",
-        "capacity": 300,
-        "start": "Nov2",
-        "end": "Nov6"
+      "grid": "Luzon",
+      "plant": "CAL U1",
+      "capacity": 0.0,
+      "start": "Nov2",
+      "end": "Nov6"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAL U2",
-        "capacity": 14.0,
-        "start": "May4",
-        "end": "May8"
+      "grid": "Luzon",
+      "plant": "CAL U2",
+      "capacity": 14.0,
+      "start": "May4",
+      "end": "May8"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAL U2",
-        "capacity": 300,
-        "start": "Nov2",
-        "end": "Nov6"
+      "grid": "Luzon",
+      "plant": "CAL U2",
+      "capacity": 0.0,
+      "start": "Nov2",
+      "end": "Nov6"
     },
     {
-        "grid": "Luzon",
-        "plant": "CASEC 1",
-        "capacity": 41.0,
-        "start": "Mar2",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "CASEC 1",
+      "capacity": 41.0,
+      "start": "Mar2",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "CASEC 2",
-        "capacity": 41.0,
-        "start": "Apr6",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "CASEC 2",
+      "capacity": 41.0,
+      "start": "Apr6",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 1.2,
-        "start": "Mar16",
-        "end": "Apr14"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 1.2,
+      "start": "Mar16",
+      "end": "Apr14"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar16",
-        "end": "Mar21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar16",
+      "end": "Mar21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar23",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar23",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar30",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "May18",
-        "end": "May19"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "May18",
+      "end": "May19"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Jun25",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Jun25",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul7",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul7",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul21",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul21",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug5",
-        "end": "Aug6"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug5",
+      "end": "Aug6"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Aug21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Aug21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct7"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct7"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct20",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov20",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov20",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 2.0,
-        "start": "Feb2",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 2.0,
+      "start": "Feb2",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Mar11",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar11",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Mar16",
-        "end": "Apr14"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar16",
+      "end": "Apr14"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Mar23",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar23",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "May19",
-        "end": "May20"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "May19",
+      "end": "May20"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Jun25",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Jun25",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul7",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul7",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul21",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul21",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug5",
-        "end": "Aug6"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug5",
+      "end": "Aug6"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Aug21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Aug21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct7"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct7"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct13",
-        "end": "Oct14"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct13",
+      "end": "Oct14"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct20",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov20",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov20",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 2.0,
-        "start": "Mar9",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 2.0,
+      "start": "Mar9",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Mar16",
-        "end": "Apr14"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar16",
+      "end": "Apr14"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Mar23",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar23",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Mar27",
-        "end": "Apr3"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar27",
+      "end": "Apr3"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "May20",
-        "end": "May21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "May20",
+      "end": "May21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Jun25",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Jun25",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Jul7",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul7",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Jul21",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul21",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Aug5",
-        "end": "Aug6"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug5",
+      "end": "Aug6"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Aug21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Aug21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Sep15",
-        "end": "Sep16"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep15",
+      "end": "Sep16"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct7"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct7"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Oct20",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 3",
-        "capacity": 0.0,
-        "start": "Nov20",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov20",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 1.2,
-        "start": "Mar16",
-        "end": "Apr14"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 1.2,
+      "start": "Mar16",
+      "end": "Apr14"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Mar23",
-        "end": "Mar27"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Mar23",
+      "end": "Mar27"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Mar23",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Mar23",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "May21",
-        "end": "May22"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "May21",
+      "end": "May22"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Jun25",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Jun25",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Jul7",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul7",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Jul21",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul21",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Aug5",
-        "end": "Aug6"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug5",
+      "end": "Aug6"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Aug21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Aug21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct7"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct7"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Oct20",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "FLS PLANT UNIT 4",
-        "capacity": 0.0,
-        "start": "Nov20",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "FLS PLANT UNIT 4",
+      "capacity": 0.0,
+      "start": "Nov20",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.6,
-        "start": "Jan6",
-        "end": "Jan9"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.6,
+      "start": "Jan6",
+      "end": "Jan9"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jan12",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Feb9",
-        "end": "Feb24"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb24"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "May25",
-        "end": "May26"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "May25",
+      "end": "May26"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 1 UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov27",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "IRISAN 1 UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov27",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.4,
-        "start": "Jan12",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.4,
+      "start": "Jan12",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jan15",
-        "end": "Jan22"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan15",
+      "end": "Jan22"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jan26",
-        "end": "Jan28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Jan28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "May25",
-        "end": "May26"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "May25",
+      "end": "May26"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov27",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov27",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.4,
-        "start": "Jan12",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.4,
+      "start": "Jan12",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Jan26",
-        "end": "Jan28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Jan28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Jan26",
-        "end": "Feb2"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Feb2"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "May25",
-        "end": "May26"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "May25",
+      "end": "May26"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov27",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov27",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.4,
-        "start": "Jan12",
-        "end": "Jan16"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.4,
+      "start": "Jan12",
+      "end": "Jan16"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Jan26",
-        "end": "Jan28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Jan28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Feb5",
-        "end": "Feb12"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Feb5",
+      "end": "Feb12"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "May25",
-        "end": "May26"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "May25",
+      "end": "May26"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Aug24",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug24",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "IRISAN 3 UNIT 3",
-        "capacity": 0.0,
-        "start": "Nov27",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "IRISAN 3 UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov27",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 1",
-        "capacity": 183.0,
-        "start": "Jun1",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "KAL 1",
+      "capacity": 183.0,
+      "start": "Jun1",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 1",
-        "capacity": 180,
-        "start": "Nov2",
-        "end": "Nov6"
+      "grid": "Luzon",
+      "plant": "KAL 1",
+      "capacity": 0.0,
+      "start": "Nov2",
+      "end": "Nov6"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 2",
-        "capacity": 183.0,
-        "start": "Jun8",
-        "end": "Jun12"
+      "grid": "Luzon",
+      "plant": "KAL 2",
+      "capacity": 183.0,
+      "start": "Jun8",
+      "end": "Jun12"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 2",
-        "capacity": 180,
-        "start": "Nov9",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "KAL 2",
+      "capacity": 0.0,
+      "start": "Nov9",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 3",
-        "capacity": 184.6,
-        "start": "Jun15",
-        "end": "Jun19"
+      "grid": "Luzon",
+      "plant": "KAL 3",
+      "capacity": 184.6,
+      "start": "Jun15",
+      "end": "Jun19"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 3",
-        "capacity": 180,
-        "start": "Nov18",
-        "end": "Nov22"
+      "grid": "Luzon",
+      "plant": "KAL 3",
+      "capacity": 0.0,
+      "start": "Nov18",
+      "end": "Nov22"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 4",
-        "capacity": 185.0,
-        "start": "Jun22",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "KAL 4",
+      "capacity": 185.0,
+      "start": "Jun22",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "KAL 4",
-        "capacity": 180,
-        "start": "Nov25",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "KAL 4",
+      "capacity": 0.0,
+      "start": "Nov25",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 10.2,
-        "start": "Jan12",
-        "end": "Jan26"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 10.2,
+      "start": "Jan12",
+      "end": "Jan26"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Feb9",
-        "end": "Feb12"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb12"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Jun8",
-        "end": "Jun9"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Jun8",
+      "end": "Jun9"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul20",
-        "end": "Jul21"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul21"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug17",
-        "end": "Aug18"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug17",
+      "end": "Aug18"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 10.2,
-        "start": "Jan26",
-        "end": "Feb9"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 10.2,
+      "start": "Jan26",
+      "end": "Feb9"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Feb9",
-        "end": "Feb13"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Feb9",
+      "end": "Feb13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Jun8",
-        "end": "Jun9"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Jun8",
+      "end": "Jun9"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul20",
-        "end": "Jul21"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul20",
+      "end": "Jul21"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug17",
-        "end": "Aug18"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug17",
+      "end": "Aug18"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LA TRINIDAD UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov24"
+      "grid": "Luzon",
+      "plant": "LA TRINIDAD UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 0.6,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.6,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Apr6",
-        "end": "May11"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "May11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "Apr17"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "May12",
-        "end": "May13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "May12",
+      "end": "May13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Jun15",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Jun30",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Jul13",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul13",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Aug12",
-        "end": "Aug13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug12",
+      "end": "Aug13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Aug27",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug27",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Sep11",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep11",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Nov10",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Nov26",
-        "end": "Nov27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 1",
-        "capacity": 4,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 1",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 0.6,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.6,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Apr6",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "Apr17"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Apr20",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr20",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "May13",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "May13",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Jun15",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Jun30",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Jul13",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul13",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Aug12",
-        "end": "Aug13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug12",
+      "end": "Aug13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Aug27",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug27",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Sep11",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep11",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Nov10",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Nov26",
-        "end": "Nov27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 2",
-        "capacity": 4,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 2",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 0.6,
-        "start": "Apr6",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.6,
+      "start": "Apr6",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "Apr17"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Apr27",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr27",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "May14",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "May14",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Jun15",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Jun30",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Jul13",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul13",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Aug12",
-        "end": "Aug13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug12",
+      "end": "Aug13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Aug27",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug27",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Sep11",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep11",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Nov10",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Nov26",
-        "end": "Nov27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 3",
-        "capacity": 4,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 3",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 0.6,
-        "start": "Apr6",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.6,
+      "start": "Apr6",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Apr13",
-        "end": "Apr17"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "May4",
-        "end": "May9"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "May4",
+      "end": "May9"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "May15",
-        "end": "May16"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "May15",
+      "end": "May16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Jun15",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Jun30",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Jul13",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul13",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Jul27",
-        "end": "Jul28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul27",
+      "end": "Jul28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Aug12",
-        "end": "Aug13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug12",
+      "end": "Aug13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Aug27",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug27",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Sep11",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Sep11",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Nov10",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Nov26",
-        "end": "Nov27"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LABAY UNIT 4",
-        "capacity": 4,
-        "start": "Dec14",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "LABAY UNIT 4",
+      "capacity": 0.0,
+      "start": "Dec14",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 1.2,
-        "start": "Jan12",
-        "end": "Jan17"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 1.2,
+      "start": "Jan12",
+      "end": "Jan17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Jan12",
-        "end": "Jan17"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan17"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Mar26",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar26",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "May25",
-        "end": "May26"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "May25",
+      "end": "May26"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Jun23",
-        "end": "Jun24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jun23",
+      "end": "Jun24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Jul23",
-        "end": "Jul24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Aug19",
-        "end": "Aug20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 1",
-        "capacity": 3,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 0.6,
-        "start": "Jan6",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.6,
+      "start": "Jan6",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Mar26",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar26",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "May26",
-        "end": "May27"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "May26",
+      "end": "May27"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Jun23",
-        "end": "Jun24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jun23",
+      "end": "Jun24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Jul23",
-        "end": "Jul24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Aug19",
-        "end": "Aug20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 2",
-        "capacity": 3,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 0.6,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.6,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Jan19",
-        "end": "Jan24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jan19",
+      "end": "Jan24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Mar26",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar26",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "May27",
-        "end": "May28"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "May28"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Jun23",
-        "end": "Jun24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jun23",
+      "end": "Jun24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Jul23",
-        "end": "Jul24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Aug19",
-        "end": "Aug20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 3",
-        "capacity": 3,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 1.2,
-        "start": "Jan12",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 1.2,
+      "start": "Jan12",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Jan26",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Mar30",
-        "end": "Apr4"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Apr4"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Apr6",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Apr6",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "May28",
-        "end": "May29"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "May28",
+      "end": "May29"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Jun23",
-        "end": "Jun24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jun23",
+      "end": "Jun24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Jul23",
-        "end": "Jul24"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul24"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Aug19",
-        "end": "Aug20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "LON-OY UNIT 4",
-        "capacity": 3,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "LON-OY UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "LOWER LABAY",
-        "capacity": 0.6,
-        "start": "Apr1",
-        "end": "Jul4"
+      "grid": "Luzon",
+      "plant": "LOWER LABAY",
+      "capacity": 0.6,
+      "start": "Apr1",
+      "end": "Jul4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAG U1",
-        "capacity": 97.0,
-        "start": "Apr11",
-        "end": "May25"
+      "grid": "Luzon",
+      "plant": "MAG U1",
+      "capacity": 97.0,
+      "start": "Apr11",
+      "end": "May25"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAG U2",
-        "capacity": 97.0,
-        "start": "Apr11",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "MAG U2",
+      "capacity": 97.0,
+      "start": "Apr11",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAG U3",
-        "capacity": 97.0,
-        "start": "Apr1",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "MAG U3",
+      "capacity": 97.0,
+      "start": "Apr1",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAG U4",
-        "capacity": 97.0,
-        "start": "Apr1",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "MAG U4",
+      "capacity": 97.0,
+      "start": "Apr1",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "MARIS 1",
-        "capacity": 4.3,
-        "start": "Apr12",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "MARIS 1",
+      "capacity": 4.3,
+      "start": "Apr12",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MARIS 2",
-        "capacity": 4.3,
-        "start": "Apr12",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "MARIS 2",
+      "capacity": 4.3,
+      "start": "Apr12",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAS",
-        "capacity": 12.0,
-        "start": "Oct28",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "MAS",
+      "capacity": 12.0,
+      "start": "Oct28",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "MATUNO",
-        "capacity": 8.7,
-        "start": "Apr18",
-        "end": "Apr22"
+      "grid": "Luzon",
+      "plant": "MATUNO",
+      "capacity": 8.7,
+      "start": "Apr18",
+      "end": "Apr22"
     },
     {
-        "grid": "Luzon",
-        "plant": "MATUNO",
-        "capacity": 0.0,
-        "start": "Apr19",
-        "end": "Apr20"
+      "grid": "Luzon",
+      "plant": "MATUNO",
+      "capacity": 0.0,
+      "start": "Apr19",
+      "end": "Apr20"
     },
     {
-        "grid": "Luzon",
-        "plant": "MATUNO",
-        "capacity": 0.0,
-        "start": "Apr22",
-        "end": "Apr28"
+      "grid": "Luzon",
+      "plant": "MATUNO",
+      "capacity": 0.0,
+      "start": "Apr22",
+      "end": "Apr28"
     },
     {
-        "grid": "Luzon",
-        "plant": "MATUNO",
-        "capacity": 0.0,
-        "start": "May8",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "MATUNO",
+      "capacity": 0.0,
+      "start": "May8",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "MATUNO",
-        "capacity": 0.0,
-        "start": "Oct4",
-        "end": "Oct5"
+      "grid": "Luzon",
+      "plant": "MATUNO",
+      "capacity": 0.0,
+      "start": "Oct4",
+      "end": "Oct5"
     },
     {
-        "grid": "Luzon",
-        "plant": "PAN U1",
-        "capacity": 60.0,
-        "start": "Oct5",
-        "end": "Oct14"
+      "grid": "Luzon",
+      "plant": "PAN U1",
+      "capacity": 60.0,
+      "start": "Oct5",
+      "end": "Oct14"
     },
     {
-        "grid": "Luzon",
-        "plant": "PAN U2",
-        "capacity": 60.0,
-        "start": "Oct5",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "PAN U2",
+      "capacity": 60.0,
+      "start": "Oct5",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 7.5,
-        "start": "Feb24",
-        "end": "Feb27"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 7.5,
+      "start": "Feb24",
+      "end": "Feb27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Apr20",
-        "end": "Apr24"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Apr20",
+      "end": "Apr24"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Jul28",
-        "end": "Jul29"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul28",
+      "end": "Jul29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Aug26",
-        "end": "Aug27"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug26",
+      "end": "Aug27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Oct28",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct28",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 1",
-        "capacity": 0.0,
-        "start": "Nov25",
-        "end": "Nov26"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov25",
+      "end": "Nov26"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 7.5,
-        "start": "Mar3",
-        "end": "Mar6"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 7.5,
+      "start": "Mar3",
+      "end": "Mar6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Apr20",
-        "end": "Apr24"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Apr20",
+      "end": "Apr24"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Jul28",
-        "end": "Jul29"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul28",
+      "end": "Jul29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Aug26",
-        "end": "Aug27"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug26",
+      "end": "Aug27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Oct28",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct28",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SABANGAN HEPP UNIT 2",
-        "capacity": 0.0,
-        "start": "Nov25",
-        "end": "Nov26"
+      "grid": "Luzon",
+      "plant": "SABANGAN HEPP UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov25",
+      "end": "Nov26"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 0.6,
-        "start": "Feb23",
-        "end": "Feb25"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.6,
+      "start": "Feb23",
+      "end": "Feb25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Feb26",
-        "end": "Feb27"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Feb26",
+      "end": "Feb27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Mar2",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Mar2",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Jul5",
-        "end": "Jul6"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Sep1",
-        "end": "Sep2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Sep1",
+      "end": "Sep2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Oct1",
-        "end": "Oct2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Oct1",
+      "end": "Oct2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Nov3",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 1",
-        "capacity": 5,
-        "start": "Dec3",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 1",
+      "capacity": 0.0,
+      "start": "Dec3",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 0.6,
-        "start": "Feb23",
-        "end": "Feb25"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.6,
+      "start": "Feb23",
+      "end": "Feb25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Feb26",
-        "end": "Feb27"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Feb26",
+      "end": "Feb27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Mar16",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Mar16",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Jul5",
-        "end": "Jul6"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Sep1",
-        "end": "Sep2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Sep1",
+      "end": "Sep2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Oct1",
-        "end": "Oct2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Oct1",
+      "end": "Oct2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Nov3",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 2",
-        "capacity": 5,
-        "start": "Dec3",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 2",
+      "capacity": 0.0,
+      "start": "Dec3",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 0.6,
-        "start": "Feb23",
-        "end": "Feb25"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.6,
+      "start": "Feb23",
+      "end": "Feb25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Feb26",
-        "end": "Feb27"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Feb26",
+      "end": "Feb27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Mar30",
-        "end": "Apr8"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Apr8"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Jul5",
-        "end": "Jul6"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Sep1",
-        "end": "Sep2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Sep1",
+      "end": "Sep2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Oct1",
-        "end": "Oct2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Oct1",
+      "end": "Oct2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Nov3",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 3",
-        "capacity": 5,
-        "start": "Dec3",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 3",
+      "capacity": 0.0,
+      "start": "Dec3",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 0.6,
-        "start": "Feb23",
-        "end": "Feb25"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.6,
+      "start": "Feb23",
+      "end": "Feb25"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Feb26",
-        "end": "Feb27"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Feb26",
+      "end": "Feb27"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Apr13",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Apr13",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Jul5",
-        "end": "Jul6"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul6"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Sep1",
-        "end": "Sep2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Sep1",
+      "end": "Sep2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Oct1",
-        "end": "Oct2"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Oct1",
+      "end": "Oct2"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Nov3",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAL-ANGAN UNIT 4",
-        "capacity": 5,
-        "start": "Dec3",
-        "end": "Dec4"
+      "grid": "Luzon",
+      "plant": "SAL-ANGAN UNIT 4",
+      "capacity": 0.0,
+      "start": "Dec3",
+      "end": "Dec4"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 1",
-        "capacity": 145.0,
-        "start": "Jun1",
-        "end": "Jun20"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 1",
+      "capacity": 145.0,
+      "start": "Jun1",
+      "end": "Jun20"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 1",
-        "capacity": 145,
-        "start": "Jul29",
-        "end": "Aug28"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 1",
+      "capacity": 0.0,
+      "start": "Jul29",
+      "end": "Aug28"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 2",
-        "capacity": 145.0,
-        "start": "May4",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 2",
+      "capacity": 145.0,
+      "start": "May4",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 2",
-        "capacity": 145,
-        "start": "Jun1",
-        "end": "Jun20"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 2",
+      "capacity": 0.0,
+      "start": "Jun1",
+      "end": "Jun20"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 3",
-        "capacity": 145.0,
-        "start": "Jun1",
-        "end": "Jun20"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 3",
+      "capacity": 145.0,
+      "start": "Jun1",
+      "end": "Jun20"
     },
     {
-        "grid": "Luzon",
-        "plant": "SN ROQUE 3",
-        "capacity": 145,
-        "start": "Jun15",
-        "end": "Jul25"
+      "grid": "Luzon",
+      "plant": "SN ROQUE 3",
+      "capacity": 0.0,
+      "start": "Jun15",
+      "end": "Jul25"
     },
     {
-        "grid": "Luzon",
-        "plant": "BURGOS 2",
-        "capacity": 3.4,
-        "start": "Jul7",
-        "end": "Jul9"
+      "grid": "Luzon",
+      "plant": "BURGOS 2",
+      "capacity": 3.4,
+      "start": "Jul7",
+      "end": "Jul9"
     },
     {
-        "grid": "Luzon",
-        "plant": "BURGOS 3",
-        "capacity": 2.2,
-        "start": "Jul7",
-        "end": "Jul9"
+      "grid": "Luzon",
+      "plant": "BURGOS 3",
+      "capacity": 2.2,
+      "start": "Jul7",
+      "end": "Jul9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bataan Solar (BSEI)",
-        "capacity": 4.4,
-        "start": "May22",
-        "end": "May23"
+      "grid": "Luzon",
+      "plant": "Bataan Solar (BSEI)",
+      "capacity": 4.4,
+      "start": "May22",
+      "end": "May23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bongabon (GSEI)",
-        "capacity": 23.8,
-        "start": "Apr1",
-        "end": "Apr3"
+      "grid": "Luzon",
+      "plant": "Bongabon (GSEI)",
+      "capacity": 23.8,
+      "start": "Apr1",
+      "end": "Apr3"
     },
     {
-        "grid": "Luzon",
-        "plant": "CALATAGAN",
-        "capacity": 49.7,
-        "start": "Jun11",
-        "end": "Jun12"
+      "grid": "Luzon",
+      "plant": "CALATAGAN",
+      "capacity": 49.7,
+      "start": "Jun11",
+      "end": "Jun12"
     },
     {
-        "grid": "Luzon",
-        "plant": "CALATAGAN",
-        "capacity": 63,
-        "start": "Jun25",
-        "end": "Jun26"
+      "grid": "Luzon",
+      "plant": "CALATAGAN",
+      "capacity": 0.0,
+      "start": "Jun25",
+      "end": "Jun26"
     },
     {
-        "grid": "Luzon",
-        "plant": "CARE Solar",
-        "capacity": 74.2,
-        "start": "Feb7",
-        "end": "Feb9"
+      "grid": "Luzon",
+      "plant": "CARE Solar",
+      "capacity": 74.2,
+      "start": "Feb7",
+      "end": "Feb9"
     },
     {
-        "grid": "Luzon",
-        "plant": "CARE Solar",
-        "capacity": 50,
-        "start": "Oct3",
-        "end": "Oct5"
+      "grid": "Luzon",
+      "plant": "CARE Solar",
+      "capacity": 0.0,
+      "start": "Oct3",
+      "end": "Oct5"
     },
     {
-        "grid": "Luzon",
-        "plant": "CARE Solar",
-        "capacity": 50,
-        "start": "Nov21",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "CARE Solar",
+      "capacity": 0.0,
+      "start": "Nov21",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cagayan North",
-        "capacity": 115.0,
-        "start": "Jun9",
-        "end": "Jun11"
+      "grid": "Luzon",
+      "plant": "Cagayan North",
+      "capacity": 115.0,
+      "start": "Jun9",
+      "end": "Jun11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 94.7,
-        "start": "Sep7",
-        "end": "Sep8"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 94.7,
+      "start": "Sep7",
+      "end": "Sep8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep8",
-        "end": "Sep9"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep8",
+      "end": "Sep9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep9",
-        "end": "Sep10"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep9",
+      "end": "Sep10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep10",
-        "end": "Sep11"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep10",
+      "end": "Sep11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep14",
-        "end": "Sep15"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep14",
+      "end": "Sep15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep15",
-        "end": "Sep16"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep15",
+      "end": "Sep16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep16",
-        "end": "Sep17"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep16",
+      "end": "Sep17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep17",
-        "end": "Sep18"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep17",
+      "end": "Sep18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep21",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep23",
-        "end": "Sep24"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep23",
+      "end": "Sep24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep24",
-        "end": "Sep25"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep24",
+      "end": "Sep25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep29",
-        "end": "Sep30"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep29",
+      "end": "Sep30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Sep30",
-        "end": "Oct1"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Sep30",
+      "end": "Oct1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct1",
-        "end": "Oct2"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct1",
+      "end": "Oct2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct5",
-        "end": "Oct6"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct5",
+      "end": "Oct6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct7"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct7",
-        "end": "Oct8"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct7",
+      "end": "Oct8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct8",
-        "end": "Oct9"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct8",
+      "end": "Oct9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cayanga-Bugallon",
-        "capacity": 0.0,
-        "start": "Oct9",
-        "end": "Oct10"
+      "grid": "Luzon",
+      "plant": "Cayanga-Bugallon",
+      "capacity": 0.0,
+      "start": "Oct9",
+      "end": "Oct10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Concepcion 1 (SPTC)",
-        "capacity": 20.7,
-        "start": "Mar12",
-        "end": "Mar14"
+      "grid": "Luzon",
+      "plant": "Concepcion 1 (SPTC)",
+      "capacity": 20.7,
+      "start": "Mar12",
+      "end": "Mar14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cordon (GGI)",
-        "capacity": 63.9,
-        "start": "Mar18",
-        "end": "Mar20"
+      "grid": "Luzon",
+      "plant": "Cordon (GGI)",
+      "capacity": 63.9,
+      "start": "Mar18",
+      "end": "Mar20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Currimao 2 (NSEC)",
-        "capacity": 83.1,
-        "start": "Oct19",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "Currimao 2 (NSEC)",
+      "capacity": 83.1,
+      "start": "Oct19",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Currimao 2 (NSEC)",
-        "capacity": 0.0,
-        "start": "Nov16",
-        "end": "Nov20"
+      "grid": "Luzon",
+      "plant": "Currimao 2 (NSEC)",
+      "capacity": 0.0,
+      "start": "Nov16",
+      "end": "Nov20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Currimao 2 (NSEC)",
-        "capacity": 0.0,
-        "start": "Nov23",
-        "end": "Nov28"
+      "grid": "Luzon",
+      "plant": "Currimao 2 (NSEC)",
+      "capacity": 0.0,
+      "start": "Nov23",
+      "end": "Nov28"
     },
     {
-        "grid": "Luzon",
-        "plant": "GIGASOL",
-        "capacity": 50.5,
-        "start": "May15",
-        "end": "May20"
+      "grid": "Luzon",
+      "plant": "GIGASOL",
+      "capacity": 50.5,
+      "start": "May15",
+      "end": "May20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 159.0,
-        "start": "Oct12",
-        "end": "Oct13"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 159.0,
+      "start": "Oct12",
+      "end": "Oct13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct13",
-        "end": "Oct14"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct13",
+      "end": "Oct14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct14",
-        "end": "Oct15"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct14",
+      "end": "Oct15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct15",
-        "end": "Oct16"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct15",
+      "end": "Oct16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct19",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct19",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct20",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct21",
-        "end": "Oct22"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct21",
+      "end": "Oct22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct22",
-        "end": "Oct23"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct22",
+      "end": "Oct23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct26",
-        "end": "Oct27"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct27",
-        "end": "Oct28"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct27",
+      "end": "Oct28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct28",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct28",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Oct29",
-        "end": "Oct30"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Oct29",
+      "end": "Oct30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov2",
-        "end": "Nov3"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov2",
+      "end": "Nov3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov3",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov4",
-        "end": "Nov5"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov4",
+      "end": "Nov5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov5",
-        "end": "Nov6"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov5",
+      "end": "Nov6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov9",
-        "end": "Nov10"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov9",
+      "end": "Nov10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov10",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov11",
-        "end": "Nov12"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov11",
+      "end": "Nov12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov12",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov12",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov16",
-        "end": "Nov17"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov16",
+      "end": "Nov17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov16",
-        "end": "Nov17"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov16",
+      "end": "Nov17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov17",
-        "end": "Nov18"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov17",
+      "end": "Nov18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov17",
-        "end": "Nov18"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov17",
+      "end": "Nov18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov18",
-        "end": "Nov19"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov18",
+      "end": "Nov19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov18",
-        "end": "Nov19"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov18",
+      "end": "Nov19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov19",
-        "end": "Nov20"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov19",
+      "end": "Nov20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag Solar (PVSI)",
-        "capacity": 50,
-        "start": "Nov20",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "Laoag Solar (PVSI)",
+      "capacity": 0.0,
+      "start": "Nov20",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "NAIC Solar",
-        "capacity": 6.6,
-        "start": "Dec5",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "NAIC Solar",
+      "capacity": 6.6,
+      "start": "Dec5",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "PASUQUIN",
-        "capacity": 92.4,
-        "start": "Mar4",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "PASUQUIN",
+      "capacity": 92.4,
+      "start": "Mar4",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "PAVI Green (Orion)",
-        "capacity": 20.4,
-        "start": "Nov14",
-        "end": "Nov17"
+      "grid": "Luzon",
+      "plant": "PAVI Green (Orion)",
+      "capacity": 20.4,
+      "start": "Nov14",
+      "end": "Nov17"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETROSOLAR",
-        "capacity": 44.4,
-        "start": "Apr6",
-        "end": "Apr15"
+      "grid": "Luzon",
+      "plant": "PETROSOLAR",
+      "capacity": 44.4,
+      "start": "Apr6",
+      "end": "Apr15"
     },
     {
-        "grid": "Luzon",
-        "plant": "PETROSOLAR 2",
-        "capacity": 20.3,
-        "start": "Apr6",
-        "end": "Apr15"
+      "grid": "Luzon",
+      "plant": "PETROSOLAR 2",
+      "capacity": 20.3,
+      "start": "Apr6",
+      "end": "Apr15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Pinugay (PHRI)",
-        "capacity": 113.8,
-        "start": "May18",
-        "end": "May20"
+      "grid": "Luzon",
+      "plant": "Pinugay (PHRI)",
+      "capacity": 113.8,
+      "start": "May18",
+      "end": "May20"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG",
-        "capacity": 8.2,
-        "start": "Dec9",
-        "end": "Dec11"
+      "grid": "Luzon",
+      "plant": "RASLAG",
+      "capacity": 8.2,
+      "start": "Dec9",
+      "end": "Dec11"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG 2",
-        "capacity": 10.5,
-        "start": "Dec9",
-        "end": "Dec11"
+      "grid": "Luzon",
+      "plant": "RASLAG 2",
+      "capacity": 10.5,
+      "start": "Dec9",
+      "end": "Dec11"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG 3",
-        "capacity": 18.0,
-        "start": "Nov17",
-        "end": "Nov18"
+      "grid": "Luzon",
+      "plant": "RASLAG 3",
+      "capacity": 18.0,
+      "start": "Nov17",
+      "end": "Nov18"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG 3",
-        "capacity": 0.0,
-        "start": "Nov19",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "RASLAG 3",
+      "capacity": 0.0,
+      "start": "Nov19",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG 4",
-        "capacity": 36.6,
-        "start": "Oct12",
-        "end": "Oct14"
+      "grid": "Luzon",
+      "plant": "RASLAG 4",
+      "capacity": 36.6,
+      "start": "Oct12",
+      "end": "Oct14"
     },
     {
-        "grid": "Luzon",
-        "plant": "RASLAG 4",
-        "capacity": 0.0,
-        "start": "Oct21",
-        "end": "Oct24"
+      "grid": "Luzon",
+      "plant": "RASLAG 4",
+      "capacity": 0.0,
+      "start": "Oct21",
+      "end": "Oct24"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN MARCELINO",
-        "capacity": 326.4,
-        "start": "Mar21",
-        "end": "Mar26"
+      "grid": "Luzon",
+      "plant": "SAN MARCELINO",
+      "capacity": 326.4,
+      "start": "Mar21",
+      "end": "Mar26"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN MARCELINO",
-        "capacity": 283,
-        "start": "Apr18",
-        "end": "Apr23"
+      "grid": "Luzon",
+      "plant": "SAN MARCELINO",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr23"
     },
     {
-        "grid": "Luzon",
-        "plant": "SAN MARCELINO",
-        "capacity": 283,
-        "start": "Apr24",
-        "end": "Apr29"
+      "grid": "Luzon",
+      "plant": "SAN MARCELINO",
+      "capacity": 0.0,
+      "start": "Apr24",
+      "end": "Apr29"
     },
     {
-        "grid": "Luzon",
-        "plant": "SOLARACE1",
-        "capacity": 89.4,
-        "start": "Feb13",
-        "end": "Feb16"
+      "grid": "Luzon",
+      "plant": "SOLARACE1",
+      "capacity": 89.4,
+      "start": "Feb13",
+      "end": "Feb16"
     },
     {
-        "grid": "Luzon",
-        "plant": "SUBIC SOLAR",
-        "capacity": 85.5,
-        "start": "Feb7",
-        "end": "Feb10"
+      "grid": "Luzon",
+      "plant": "SUBIC SOLAR",
+      "capacity": 85.5,
+      "start": "Feb7",
+      "end": "Feb10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Samal Solar",
-        "capacity": 49.2,
-        "start": "Dec19",
-        "end": "Dec20"
+      "grid": "Luzon",
+      "plant": "Samal Solar",
+      "capacity": 49.2,
+      "start": "Dec19",
+      "end": "Dec20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Sinocalan (DomSol)",
-        "capacity": 59.8,
-        "start": "Mar6",
-        "end": "Mar11"
+      "grid": "Luzon",
+      "plant": "Sinocalan (DomSol)",
+      "capacity": 59.8,
+      "start": "Mar6",
+      "end": "Mar11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Subic Solar 4A",
-        "capacity": 72.1,
-        "start": "Feb7",
-        "end": "Feb10"
+      "grid": "Luzon",
+      "plant": "Subic Solar 4A",
+      "capacity": 72.1,
+      "start": "Feb7",
+      "end": "Feb10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Trust Solar",
-        "capacity": 20.89,
-        "start": "Dec19",
-        "end": "Dec20"
+      "grid": "Luzon",
+      "plant": "Trust Solar",
+      "capacity": 20.89,
+      "start": "Dec19",
+      "end": "Dec20"
     },
     {
-        "grid": "Luzon",
-        "plant": "BWPC",
-        "capacity": 80.0,
-        "start": "May13",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "BWPC",
+      "capacity": 80.0,
+      "start": "May13",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAPRIS (NLREC)",
-        "capacity": 81.0,
-        "start": "May20",
-        "end": "May22"
+      "grid": "Luzon",
+      "plant": "CAPRIS (NLREC)",
+      "capacity": 81.0,
+      "start": "May20",
+      "end": "May22"
     },
     {
-        "grid": "Luzon",
-        "plant": "CAPRIS 2 (AREC)",
-        "capacity": 50.0,
-        "start": "May28",
-        "end": "May29"
+      "grid": "Luzon",
+      "plant": "CAPRIS 2 (AREC)",
+      "capacity": 50.0,
+      "start": "May28",
+      "end": "May29"
     },
     {
-        "grid": "Luzon",
-        "plant": "EDC-BURGOS",
-        "capacity": 150.0,
-        "start": "May12",
-        "end": "May16"
+      "grid": "Luzon",
+      "plant": "EDC-BURGOS",
+      "capacity": 150.0,
+      "start": "May12",
+      "end": "May16"
     },
     {
-        "grid": "Luzon",
-        "plant": "NWIND",
-        "capacity": 32.4,
-        "start": "Jun3",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "NWIND",
+      "capacity": 32.4,
+      "start": "Jun3",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "NWIND2",
-        "capacity": 18.8,
-        "start": "Jun3",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "NWIND2",
+      "capacity": 18.8,
+      "start": "Jun3",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "PILILLIA",
-        "capacity": 54.0,
-        "start": "Jun22",
-        "end": "Jun25"
+      "grid": "Luzon",
+      "plant": "PILILLIA",
+      "capacity": 54.0,
+      "start": "Jun22",
+      "end": "Jun25"
     },
     {
-        "grid": "Luzon",
-        "plant": "ALAMINOS BESS",
-        "capacity": 40.0,
-        "start": "Feb2",
-        "end": "Feb6"
+      "grid": "Luzon",
+      "plant": "ALAMINOS BESS",
+      "capacity": 40.0,
+      "start": "Feb2",
+      "end": "Feb6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bacman BESS",
-        "capacity": 29.0,
-        "start": "Mar1",
-        "end": "Mar4"
+      "grid": "Luzon",
+      "plant": "Bacman BESS",
+      "capacity": 29.0,
+      "start": "Mar1",
+      "end": "Mar4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bacman BESS",
-        "capacity": 0.0,
-        "start": "Jul1",
-        "end": "Jul10"
+      "grid": "Luzon",
+      "plant": "Bacman BESS",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul10"
     },
     {
-        "grid": "Luzon",
-        "plant": "MAS-BESS",
-        "capacity": 10.0,
-        "start": "Nov14",
-        "end": "Nov23"
+      "grid": "Luzon",
+      "plant": "MAS-BESS",
+      "capacity": 10.0,
+      "start": "Nov14",
+      "end": "Nov23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balsik - Marilao 500kV line 1",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "Balsik - Marilao 500kV line 1",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Ilijan 500 kV Line",
-        "capacity": 0.0,
-        "start": "Jan11",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Ilijan 500 kV Line",
+      "capacity": 0.0,
+      "start": "Jan11",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Ilijan 500 kV Line",
-        "capacity": 0.0,
-        "start": "Jan29",
-        "end": "Jan30"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Ilijan 500 kV Line",
+      "capacity": 0.0,
+      "start": "Jan29",
+      "end": "Jan30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Ilijan 500 kV Line",
-        "capacity": 0.0,
-        "start": "Dec1",
-        "end": "Dec7"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Ilijan 500 kV Line",
+      "capacity": 0.0,
+      "start": "Dec1",
+      "end": "Dec7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Tayabas 500 kV Line",
-        "capacity": 0.0,
-        "start": "Jan18",
-        "end": "Jan18"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Tayabas 500 kV Line",
+      "capacity": 0.0,
+      "start": "Jan18",
+      "end": "Jan18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec5",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec5",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Ilijan Plant 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb2",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "Ilijan-Ilijan Plant 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb2",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Ilijan Plant 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr29",
-        "end": "Apr30"
+      "grid": "Luzon",
+      "plant": "Ilijan-Ilijan Plant 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr29",
+      "end": "Apr30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan- Tayabas 500kV Line",
-        "capacity": 0.0,
-        "start": "Jan25",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "Ilijan- Tayabas 500kV Line",
+      "capacity": 0.0,
+      "start": "Jan25",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan- Tayabas 500kV Line",
-        "capacity": 0.0,
-        "start": "Aug30",
-        "end": "Aug30"
+      "grid": "Luzon",
+      "plant": "Ilijan- Tayabas 500kV Line",
+      "capacity": 0.0,
+      "start": "Aug30",
+      "end": "Aug30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan- Tayabas 500kV Line",
-        "capacity": 0.0,
-        "start": "Dec12",
-        "end": "Dec12"
+      "grid": "Luzon",
+      "plant": "Ilijan- Tayabas 500kV Line",
+      "capacity": 0.0,
+      "start": "Dec12",
+      "end": "Dec12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan- Tayabas 500kV Line",
-        "capacity": 0.0,
-        "start": "Dec13",
-        "end": "Dec13"
+      "grid": "Luzon",
+      "plant": "Ilijan- Tayabas 500kV Line",
+      "capacity": 0.0,
+      "start": "Dec13",
+      "end": "Dec13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr19"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep5",
-        "end": "Sep5"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep5",
+      "end": "Sep5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 1",
-        "capacity": 0.0,
-        "start": "Oct18",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 1",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov15"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov15"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Balsik 500kV Line",
-        "capacity": 0.0,
-        "start": "Mar1",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "San Jose-Balsik 500kV Line",
+      "capacity": 0.0,
+      "start": "Mar1",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Nagsaag 500 kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov8",
-        "end": "Nov8"
+      "grid": "Luzon",
+      "plant": "San Jose-Nagsaag 500 kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov8",
+      "end": "Nov8"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb15",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "May3",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "May3",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul26",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul26",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep26",
-        "end": "Sep26"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep26",
+      "end": "Sep26"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Oct10",
-        "end": "Oct10"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Oct10",
+      "end": "Oct10"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov15"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov15"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose- Tayabas 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec27",
-        "end": "Dec31"
+      "grid": "Luzon",
+      "plant": "San Jose- Tayabas 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec27",
+      "end": "Dec31"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Tayabas 500 kV Line",
-        "capacity": 0.0,
-        "start": "Jul2",
-        "end": "Jul3"
+      "grid": "Luzon",
+      "plant": "Ilijan-Tayabas 500 kV Line",
+      "capacity": 0.0,
+      "start": "Jul2",
+      "end": "Jul3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Tayabas 500 kV Line",
-        "capacity": 0.0,
-        "start": "Sep29",
-        "end": "Sep30"
+      "grid": "Luzon",
+      "plant": "Ilijan-Tayabas 500 kV Line",
+      "capacity": 0.0,
+      "start": "Sep29",
+      "end": "Sep30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Pagbilao 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Jan31",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "Tayabas-Pagbilao 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Jan31",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Pagbilao 500kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep5",
-        "end": "Sep5"
+      "grid": "Luzon",
+      "plant": "Tayabas-Pagbilao 500kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep5",
+      "end": "Sep5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca 100MVA T05 (Future 300MVA)",
-        "capacity": 0.0,
-        "start": "Nov21",
-        "end": "Nov21"
+      "grid": "Luzon",
+      "plant": "Calaca 100MVA T05 (Future 300MVA)",
+      "capacity": 0.0,
+      "start": "Nov21",
+      "end": "Nov21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec6",
-        "end": "Dec6"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec6",
+      "end": "Dec6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Ilijan Plant 500kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul1",
-        "end": "Jul2"
+      "grid": "Luzon",
+      "plant": "Ilijan-Ilijan Plant 500kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Ilijan Plant 500kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep28",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "Ilijan-Ilijan Plant 500kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep28",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 2",
-        "capacity": 0.0,
-        "start": "May2",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 2",
+      "capacity": 0.0,
+      "start": "May2",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug16",
-        "end": "Aug16"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Bolo 500 kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov29",
-        "end": "Nov29"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Bolo 500 kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov29",
+      "end": "Nov29"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Nagsaag 500 kv Line 2",
-        "capacity": 0.0,
-        "start": "Nov22",
-        "end": "Nov22"
+      "grid": "Luzon",
+      "plant": "San Jose-Nagsaag 500 kv Line 2",
+      "capacity": 0.0,
+      "start": "Nov22",
+      "end": "Nov22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Pagbilao 500kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb1",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "Tayabas-Pagbilao 500kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb1",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Pagbilao 500kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep6",
-        "end": "Sep6"
+      "grid": "Luzon",
+      "plant": "Tayabas-Pagbilao 500kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep6",
+      "end": "Sep6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ilijan-Pagbilao 500kV Line",
-        "capacity": 0.0,
-        "start": "Nov1",
-        "end": "Nov7"
+      "grid": "Luzon",
+      "plant": "Ilijan-Pagbilao 500kV Line",
+      "capacity": 0.0,
+      "start": "Nov1",
+      "end": "Nov7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 1",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 1",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul18",
-        "end": "Jul18"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul18",
+      "end": "Jul18"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Oct3",
-        "end": "Oct3"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Oct3",
+      "end": "Oct3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Ambuklao-AHEP 230kV Tie Line",
-        "capacity": 0.0,
-        "start": "May27",
-        "end": "May27"
+      "grid": "Luzon",
+      "plant": "Ambuklao-AHEP 230kV Tie Line",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "May27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bauang-La Trinidad 230 kV L1 Breaker",
-        "capacity": 0.0,
-        "start": "Mar20",
-        "end": "Mar22"
+      "grid": "Luzon",
+      "plant": "Bauang-La Trinidad 230 kV L1 Breaker",
+      "capacity": 0.0,
+      "start": "Mar20",
+      "end": "Mar22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bacnotan-San Esteban 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun27"
+      "grid": "Luzon",
+      "plant": "Bacnotan-San Esteban 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bakun-San Esteban 230 kV Line",
-        "capacity": 0.0,
-        "start": "May24",
-        "end": "May24"
+      "grid": "Luzon",
+      "plant": "Bakun-San Esteban 230 kV Line",
+      "capacity": 0.0,
+      "start": "May24",
+      "end": "May24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bauang-Bacnotan 230 kV Line",
-        "capacity": 0.0,
-        "start": "May14",
-        "end": "May15"
+      "grid": "Luzon",
+      "plant": "Bauang-Bacnotan 230 kV Line",
+      "capacity": 0.0,
+      "start": "May14",
+      "end": "May15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bauang-Bacnotan 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jun7",
-        "end": "Jun7"
+      "grid": "Luzon",
+      "plant": "Bauang-Bacnotan 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jun7",
+      "end": "Jun7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bauang 230 kV Line",
-        "capacity": 0.0,
-        "start": "Mar28",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bauang 230 kV Line",
+      "capacity": 0.0,
+      "start": "Mar28",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bauang 230 kV Line",
-        "capacity": 0.0,
-        "start": "Sep26",
-        "end": "Sep26"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bauang 230 kV Line",
+      "capacity": 0.0,
+      "start": "Sep26",
+      "end": "Sep26"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bolo 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jan24",
-        "end": "Jan24"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bolo 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jan24",
+      "end": "Jan24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Payocpoc 230 kV Line",
-        "capacity": 0.0,
-        "start": "Apr25",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "Balingueo-Payocpoc 230 kV Line",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bayombong-Santiago 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr5",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "Bayombong-Santiago 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr5",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bayombong 230kV Bus 1",
-        "capacity": 0.0,
-        "start": "Nov1",
-        "end": "Nov1"
+      "grid": "Luzon",
+      "plant": "Bayombong 230kV Bus 1",
+      "capacity": 0.0,
+      "start": "Nov1",
+      "end": "Nov1"
     },
     {
-        "grid": "Luzon",
-        "plant": "BCCPP-Lamao 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug1",
-        "end": "Aug1"
+      "grid": "Luzon",
+      "plant": "BCCPP-Lamao 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug1",
+      "end": "Aug1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balsik-Olongapo 230kV Line",
-        "capacity": 0.0,
-        "start": "May23",
-        "end": "May23"
+      "grid": "Luzon",
+      "plant": "Balsik-Olongapo 230kV Line",
+      "capacity": 0.0,
+      "start": "May23",
+      "end": "May23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balsik-SBMA 230kV Line",
-        "capacity": 0.0,
-        "start": "May16",
-        "end": "May16"
+      "grid": "Luzon",
+      "plant": "Balsik-SBMA 230kV Line",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balsik - San Marcelino 230kV line 1",
-        "capacity": 0.0,
-        "start": "Apr20",
-        "end": "Apr20"
+      "grid": "Luzon",
+      "plant": "Balsik - San Marcelino 230kV line 1",
+      "capacity": 0.0,
+      "start": "Apr20",
+      "end": "Apr20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul8",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul8",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul14",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul14",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul22",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul22",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Binan 230 kV Line",
-        "capacity": 0.0,
-        "start": "Mar1",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "Calaca-Binan 230 kV Line",
+      "capacity": 0.0,
+      "start": "Mar1",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Binan 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul11"
+      "grid": "Luzon",
+      "plant": "Calaca-Binan 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan- Dasmarinas 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "Binan- Dasmarinas 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binga-Ambuklao 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb15",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "Binga-Ambuklao 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Balingueo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "Bolo-Balingueo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Balingueo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Oct17",
-        "end": "Oct17"
+      "grid": "Luzon",
+      "plant": "Bolo-Balingueo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Oct17",
+      "end": "Oct17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb1",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb1",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar21",
-        "end": "Mar21"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar21",
+      "end": "Mar21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun13",
-        "end": "Jun13"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun13",
+      "end": "Jun13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec5",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec5",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binga HEPP-Binga SS 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "Binga HEPP-Binga SS 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Botolan-Labrador 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug23",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "Botolan-Labrador 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug23",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Botolan-Subic 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jan11",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "Botolan-Subic 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jan11",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Botolan-Subic 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug30",
-        "end": "Aug30"
+      "grid": "Luzon",
+      "plant": "Botolan-Subic 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug30",
+      "end": "Aug30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Binan 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Calaca-Binan 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun2",
-        "end": "Jun2"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun2",
+      "end": "Jun2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov3",
-        "end": "Nov3"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov3",
+      "end": "Nov3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "May3",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Bay - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "May3",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun27"
+      "grid": "Luzon",
+      "plant": "Bay - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Cabanatuan-Pantabangan 230kV Line",
-        "capacity": 0.0,
-        "start": "Oct11",
-        "end": "Oct11"
+      "grid": "Luzon",
+      "plant": "Cabanatuan-Pantabangan 230kV Line",
+      "capacity": 0.0,
+      "start": "Oct11",
+      "end": "Oct11"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Feb8",
-        "end": "Feb8"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Salong 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jun26",
-        "end": "Jun29"
+      "grid": "Luzon",
+      "plant": "Calaca-Salong 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jun26",
+      "end": "Jun29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Salong 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug7",
-        "end": "Aug7"
+      "grid": "Luzon",
+      "plant": "Calaca-Salong 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug7",
+      "end": "Aug7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Salong 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Calaca-Salong 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul25",
-        "end": "Jul25"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul25",
+      "end": "Jul25"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May30",
-        "end": "May30"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May30"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun12",
-        "end": "Jun12"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun12",
+      "end": "Jun12"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov13",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov13",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Concepcion-Clark 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb14",
-        "end": "Feb14"
+      "grid": "Luzon",
+      "plant": "Concepcion-Clark 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb14",
+      "end": "Feb14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Concepcion-San Manuel Line 1",
-        "capacity": 0.0,
-        "start": "May3",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Concepcion-San Manuel Line 1",
+      "capacity": 0.0,
+      "start": "May3",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb18",
-        "end": "Feb18"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Feb18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar2",
-        "end": "Mar2"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar2",
+      "end": "Mar2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May23",
-        "end": "May23"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May23",
+      "end": "May23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar7",
-        "end": "Mar7"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar7",
+      "end": "Mar7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec5",
-        "end": "Dec5"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec5",
+      "end": "Dec5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas- Las Pinas 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr3",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "Dasmarinas- Las Pinas 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr3",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dona Imelda-Manila 230kV Line",
-        "capacity": 0.0,
-        "start": "Feb1",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "Dona Imelda-Manila 230kV Line",
+      "capacity": 0.0,
+      "start": "Feb1",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dona Imelda-Manila 230kV Line",
-        "capacity": 0.0,
-        "start": "May10",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "Dona Imelda-Manila 230kV Line",
+      "capacity": 0.0,
+      "start": "May10",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Hermosa-Duhat 230 kV L",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "Hermosa-Duhat 230 kV L",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Hermosa-Duhat 230 kV L",
-        "capacity": 0.0,
-        "start": "Jun13",
-        "end": "Jun17"
+      "grid": "Luzon",
+      "plant": "Hermosa-Duhat 230 kV L",
+      "capacity": 0.0,
+      "start": "Jun13",
+      "end": "Jun17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gamu-Tuguegarao Line",
-        "capacity": 0.0,
-        "start": "May3",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Gamu-Tuguegarao Line",
+      "capacity": 0.0,
+      "start": "May3",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca-Labo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "Gumaca-Labo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca-Labo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul23",
-        "end": "Jul29"
+      "grid": "Luzon",
+      "plant": "Gumaca-Labo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca-Labo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug25",
-        "end": "Aug25"
+      "grid": "Luzon",
+      "plant": "Gumaca-Labo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug25",
+      "end": "Aug25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca-Labo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep22",
-        "end": "Sep22"
+      "grid": "Luzon",
+      "plant": "Gumaca-Labo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep22",
+      "end": "Sep22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Hermosa-BCCPP 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul11"
+      "grid": "Luzon",
+      "plant": "Hermosa-BCCPP 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lamao - Alas-asin 230kV line 1",
-        "capacity": 0.0,
-        "start": "Jul17",
-        "end": "Jul17"
+      "grid": "Luzon",
+      "plant": "Lamao - Alas-asin 230kV line 1",
+      "capacity": 0.0,
+      "start": "Jul17",
+      "end": "Jul17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar28",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar28",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr25",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun19",
-        "end": "Jun25"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun19",
+      "end": "Jun25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep29",
-        "end": "Sep29"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep29",
+      "end": "Sep29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Limay-Batangas 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug15",
-        "end": "Aug15"
+      "grid": "Luzon",
+      "plant": "Limay-Batangas 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug15",
+      "end": "Aug15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun16",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun16",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep1",
-        "end": "Sep1"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep1",
+      "end": "Sep1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov17",
-        "end": "Nov17"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov17",
+      "end": "Nov17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Dec15",
-        "end": "Dec15"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Dec15",
+      "end": "Dec15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-Malaya 230 kV L1",
-        "capacity": 0.0,
-        "start": "Mar17",
-        "end": "Mar17"
+      "grid": "Luzon",
+      "plant": "Lumban-Malaya 230 kV L1",
+      "capacity": 0.0,
+      "start": "Mar17",
+      "end": "Mar17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-Malaya 230 kV L1",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "Lumban-Malaya 230 kV L1",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-Malaya 230 kV L1",
-        "capacity": 0.0,
-        "start": "Jul21",
-        "end": "Jul21"
+      "grid": "Luzon",
+      "plant": "Lumban-Malaya 230 kV L1",
+      "capacity": 0.0,
+      "start": "Jul21",
+      "end": "Jul21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-Malaya 230 kV L1",
-        "capacity": 0.0,
-        "start": "Aug22",
-        "end": "Aug22"
+      "grid": "Luzon",
+      "plant": "Lumban-Malaya 230 kV L1",
+      "capacity": 0.0,
+      "start": "Aug22",
+      "end": "Aug22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-Malaya 230 kV L1",
-        "capacity": 0.0,
-        "start": "Oct20",
-        "end": "Oct20"
+      "grid": "Luzon",
+      "plant": "Lumban-Malaya 230 kV L1",
+      "capacity": 0.0,
+      "start": "Oct20",
+      "end": "Oct20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-San Juan 230kV Line 1",
-        "capacity": 0.0,
-        "start": "May2",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Lumban-San Juan 230kV Line 1",
+      "capacity": 0.0,
+      "start": "May2",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-San Juan 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug3",
-        "end": "Aug4"
+      "grid": "Luzon",
+      "plant": "Lumban-San Juan 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug3",
+      "end": "Aug4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-San Juan 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug19",
-        "end": "Aug20"
+      "grid": "Luzon",
+      "plant": "Lumban-San Juan 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban-San Juan 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Nov10",
-        "end": "Nov10"
+      "grid": "Luzon",
+      "plant": "Lumban-San Juan 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Nov10",
+      "end": "Nov10"
     },
     {
-        "grid": "Luzon",
-        "plant": "La Trinidad-Bauang 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May10",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "La Trinidad-Bauang 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May10",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "La Trinidad-Bauang 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Oct15",
-        "end": "Oct15"
+      "grid": "Luzon",
+      "plant": "La Trinidad-Bauang 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Oct15",
+      "end": "Oct15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr4",
-        "end": "Apr4"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr4",
+      "end": "Apr4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul19",
-        "end": "Jul19"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul19",
+      "end": "Jul19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul26",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul26",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Mexico-Concepcion 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May9",
-        "end": "May9"
+      "grid": "Luzon",
+      "plant": "Mexico-Concepcion 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May9",
+      "end": "May9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Mexico-San Rafael 230 kV Line",
-        "capacity": 0.0,
-        "start": "Mar29",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "Mexico-San Rafael 230 kV Line",
+      "capacity": 0.0,
+      "start": "Mar29",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Malolos-Hermosa 230 kV Line",
-        "capacity": 0.0,
-        "start": "Feb22",
-        "end": "Feb22"
+      "grid": "Luzon",
+      "plant": "Malolos-Hermosa 230 kV Line",
+      "capacity": 0.0,
+      "start": "Feb22",
+      "end": "Feb22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Malolos-Hermosa 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jul19",
-        "end": "Jul19"
+      "grid": "Luzon",
+      "plant": "Malolos-Hermosa 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jul19",
+      "end": "Jul19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Muntinlupa-Manila 230 kV Line",
-        "capacity": 0.0,
-        "start": "Mar8",
-        "end": "Mar8"
+      "grid": "Luzon",
+      "plant": "Muntinlupa-Manila 230 kV Line",
+      "capacity": 0.0,
+      "start": "Mar8",
+      "end": "Mar8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Muntinlupa-Manila 230 kV Line",
-        "capacity": 0.0,
-        "start": "May9",
-        "end": "May9"
+      "grid": "Luzon",
+      "plant": "Muntinlupa-Manila 230 kV Line",
+      "capacity": 0.0,
+      "start": "May9",
+      "end": "May9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Muntinlupa-Manila 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug30",
-        "end": "Aug30"
+      "grid": "Luzon",
+      "plant": "Muntinlupa-Manila 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug30",
+      "end": "Aug30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jan24",
-        "end": "Jan24"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jan24",
+      "end": "Jan24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr25",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul11"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga-Daraga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb8",
-        "end": "Feb8"
+      "grid": "Luzon",
+      "plant": "Naga-Daraga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga-Daraga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr11",
-        "end": "Apr11"
+      "grid": "Luzon",
+      "plant": "Naga-Daraga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr11",
+      "end": "Apr11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga-Daraga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun14",
-        "end": "Jun14"
+      "grid": "Luzon",
+      "plant": "Naga-Daraga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun14",
+      "end": "Jun14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga-Daraga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug2",
-        "end": "Aug2"
+      "grid": "Luzon",
+      "plant": "Naga-Daraga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug2",
+      "end": "Aug2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 1",
-        "capacity": 0.0,
-        "start": "May27",
-        "end": "May27"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 1",
+      "capacity": 0.0,
+      "start": "May27",
+      "end": "May27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun16",
-        "end": "Jun16"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun16",
+      "end": "Jun16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul22",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul22",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep16",
-        "end": "Sep16"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep16",
+      "end": "Sep16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Binga 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Feb8",
-        "end": "Feb8"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Binga 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-Binga 230kV Line 1",
-        "capacity": 0.0,
-        "start": "May22",
-        "end": "May24"
+      "grid": "Luzon",
+      "plant": "Nagsaag-Binga 230kV Line 1",
+      "capacity": 0.0,
+      "start": "May22",
+      "end": "May24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 2",
-        "capacity": 0.0,
-        "start": "Mar28",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 2",
+      "capacity": 0.0,
+      "start": "Mar28",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 1",
-        "capacity": 0.0,
-        "start": "Mar14",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 1",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-San Roque 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun28"
+      "grid": "Luzon",
+      "plant": "Nagsaag-San Roque 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Olongapo-Subic 230kV line",
-        "capacity": 0.0,
-        "start": "Apr5",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "Olongapo-Subic 230kV line",
+      "capacity": 0.0,
+      "start": "Apr5",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Pantabangan-Nagsaag 230 kV Line",
-        "capacity": 0.0,
-        "start": "Oct24",
-        "end": "Oct24"
+      "grid": "Luzon",
+      "plant": "Pantabangan-Nagsaag 230 kV Line",
+      "capacity": 0.0,
+      "start": "Oct24",
+      "end": "Oct24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Payocpoc-Bauang 230 kV Line",
-        "capacity": 0.0,
-        "start": "Oct30",
-        "end": "Nov1"
+      "grid": "Luzon",
+      "plant": "Payocpoc-Bauang 230 kV Line",
+      "capacity": 0.0,
+      "start": "Oct30",
+      "end": "Nov1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Pagbilao-Pagbilao 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug15",
-        "end": "Aug15"
+      "grid": "Luzon",
+      "plant": "Pagbilao-Pagbilao 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug15",
+      "end": "Aug15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-Dona Imelda Line",
-        "capacity": 0.0,
-        "start": "Jan31",
-        "end": "Jan31"
+      "grid": "Luzon",
+      "plant": "Quezon-Dona Imelda Line",
+      "capacity": 0.0,
+      "start": "Jan31",
+      "end": "Jan31"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-Dona Imelda Line",
-        "capacity": 0.0,
-        "start": "Mar9",
-        "end": "Mar9"
+      "grid": "Luzon",
+      "plant": "Quezon-Dona Imelda Line",
+      "capacity": 0.0,
+      "start": "Mar9",
+      "end": "Mar9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Duhat-Balintawak 230 kV L1",
-        "capacity": 0.0,
-        "start": "Jan10",
-        "end": "Jan10"
+      "grid": "Luzon",
+      "plant": "Duhat-Balintawak 230 kV L1",
+      "capacity": 0.0,
+      "start": "Jan10",
+      "end": "Jan10"
     },
     {
-        "grid": "Luzon",
-        "plant": "Duhat-Balintawak 230 kV L1",
-        "capacity": 0.0,
-        "start": "Jul5",
-        "end": "Jul5"
+      "grid": "Luzon",
+      "plant": "Duhat-Balintawak 230 kV L1",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-Mexico 230 kV Line",
-        "capacity": 0.0,
-        "start": "Mar17",
-        "end": "Mar17"
+      "grid": "Luzon",
+      "plant": "Quezon-Mexico 230 kV Line",
+      "capacity": 0.0,
+      "start": "Mar17",
+      "end": "Mar17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-Mexico 230 kV Line",
-        "capacity": 0.0,
-        "start": "Apr21",
-        "end": "Apr22"
+      "grid": "Luzon",
+      "plant": "Quezon-Mexico 230 kV Line",
+      "capacity": 0.0,
+      "start": "Apr21",
+      "end": "Apr22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-San Jose 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar17",
-        "end": "Mar17"
+      "grid": "Luzon",
+      "plant": "Quezon-San Jose 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar17",
+      "end": "Mar17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-San Jose 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "Quezon-San Jose 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Santiago-Gamu 230 kV Line",
-        "capacity": 0.0,
-        "start": "Apr26",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "Santiago-Gamu 230 kV Line",
+      "capacity": 0.0,
+      "start": "Apr26",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "230kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr11",
-        "end": "Apr11"
+      "grid": "Luzon",
+      "plant": "230kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr11",
+      "end": "Apr11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Santiago-Tuguegarao 230KV LINE",
-        "capacity": 0.0,
-        "start": "Apr19",
-        "end": "Apr19"
+      "grid": "Luzon",
+      "plant": "Santiago-Tuguegarao 230KV LINE",
+      "capacity": 0.0,
+      "start": "Apr19",
+      "end": "Apr19"
     },
     {
-        "grid": "Luzon",
-        "plant": "8LI1SAX-SAY",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "8LI1SAX-SAY",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Salong-SLTEC 230 kV L1 (CO)",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Salong-SLTEC 230 kV L1 (CO)",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Esteban-Laoag 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Apr1",
-        "end": "Apr2"
+      "grid": "Luzon",
+      "plant": "San Esteban-Laoag 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Apr1",
+      "end": "Apr2"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Esteban-Laoag 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun13",
-        "end": "Jun13"
+      "grid": "Luzon",
+      "plant": "San Esteban-Laoag 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun13",
+      "end": "Jun13"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Hermosa 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jan25",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "San Jose-Hermosa 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jan25",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Hermosa 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jun21",
-        "end": "Jun21"
+      "grid": "Luzon",
+      "plant": "San Jose-Hermosa 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jun21",
+      "end": "Jun21"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Hermosa 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jul5",
-        "end": "Jul5"
+      "grid": "Luzon",
+      "plant": "San Jose-Hermosa 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jul5",
+      "end": "Jul5"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Malolos 230 kV Line",
-        "capacity": 0.0,
-        "start": "Aug2",
-        "end": "Aug2"
+      "grid": "Luzon",
+      "plant": "San Jose-Malolos 230 kV Line",
+      "capacity": 0.0,
+      "start": "Aug2",
+      "end": "Aug2"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose - San Rafael 230KV Line",
-        "capacity": 0.0,
-        "start": "May10",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "San Jose - San Rafael 230KV Line",
+      "capacity": 0.0,
+      "start": "May10",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose - San Rafael 230KV Line",
-        "capacity": 0.0,
-        "start": "May24",
-        "end": "May24"
+      "grid": "Luzon",
+      "plant": "San Jose - San Rafael 230KV Line",
+      "capacity": 0.0,
+      "start": "May24",
+      "end": "May24"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar21",
-        "end": "Mar21"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar21",
+      "end": "Mar21"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May16",
-        "end": "May16"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May16"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul19",
-        "end": "Jul19"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul19",
+      "end": "Jul19"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep19",
-        "end": "Sep19"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep19",
+      "end": "Sep19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Kalayaan-Lumban 230 kV L",
-        "capacity": 0.0,
-        "start": "Jun5",
-        "end": "Jun5"
+      "grid": "Luzon",
+      "plant": "Kalayaan-Lumban 230 kV L",
+      "capacity": 0.0,
+      "start": "Jun5",
+      "end": "Jun5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Kalayaan-Lumban 230 kV L",
-        "capacity": 0.0,
-        "start": "Jun19",
-        "end": "Jun20"
+      "grid": "Luzon",
+      "plant": "Kalayaan-Lumban 230 kV L",
+      "capacity": 0.0,
+      "start": "Jun19",
+      "end": "Jun20"
     },
     {
-        "grid": "Luzon",
-        "plant": "Kalayaan-Lumban 230 kV L",
-        "capacity": 0.0,
-        "start": "Jun30",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "Kalayaan-Lumban 230 kV L",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Rafael - Cabanatuan 230kV line",
-        "capacity": 0.0,
-        "start": "Mar22",
-        "end": "Mar22"
+      "grid": "Luzon",
+      "plant": "San Rafael - Cabanatuan 230kV line",
+      "capacity": 0.0,
+      "start": "Mar22",
+      "end": "Mar22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "May16",
-        "end": "May16"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "May16",
+      "end": "May16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jul1",
-        "end": "Jul1"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jul1",
+      "end": "Jul1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Aug18",
-        "end": "Aug18"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Aug18",
+      "end": "Aug18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Sep8",
-        "end": "Sep8"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Sep8",
+      "end": "Sep8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L1",
-        "capacity": 0.0,
-        "start": "Jan6",
-        "end": "Jan6"
+      "grid": "Luzon",
+      "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L1",
+      "capacity": 0.0,
+      "start": "Jan6",
+      "end": "Jan6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L1",
-        "capacity": 0.0,
-        "start": "Oct28",
-        "end": "Oct28"
+      "grid": "Luzon",
+      "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L1",
+      "capacity": 0.0,
+      "start": "Oct28",
+      "end": "Oct28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Jan17",
-        "end": "Jan17"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Jan17",
+      "end": "Jan17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 1",
-        "capacity": 0.0,
-        "start": "Oct17",
-        "end": "Oct17"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 1",
+      "capacity": 0.0,
+      "start": "Oct17",
+      "end": "Oct17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul19",
-        "end": "Jul19"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul19",
+      "end": "Jul19"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Oct4",
-        "end": "Oct4"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Oct4",
+      "end": "Oct4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bauang-La Trinidad 230 kV L1 Breaker",
-        "capacity": 0.0,
-        "start": "Mar27",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "Bauang-La Trinidad 230 kV L1 Breaker",
+      "capacity": 0.0,
+      "start": "Mar27",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bolo 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bolo 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bolo 230kV Line 2",
-        "capacity": 0.0,
-        "start": "May2",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bolo 230kV Line 2",
+      "capacity": 0.0,
+      "start": "May2",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balingueo-Bolo 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Oct31",
-        "end": "Oct31"
+      "grid": "Luzon",
+      "plant": "Balingueo-Bolo 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Oct31",
+      "end": "Oct31"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bayombong-Santiago 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr12",
-        "end": "Apr12"
+      "grid": "Luzon",
+      "plant": "Bayombong-Santiago 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr12",
+      "end": "Apr12"
     },
     {
-        "grid": "Luzon",
-        "plant": "BCCPP-Lamao 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "BCCPP-Lamao 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Balsik - San Marcelino 230kV line 2",
-        "capacity": 0.0,
-        "start": "Apr21",
-        "end": "Apr21"
+      "grid": "Luzon",
+      "plant": "Balsik - San Marcelino 230kV line 2",
+      "capacity": 0.0,
+      "start": "Apr21",
+      "end": "Apr21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul8",
-        "end": "Jul8"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul8",
+      "end": "Jul8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul14",
-        "end": "Jul14"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul14",
+      "end": "Jul14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul22",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "Binan - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul22",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan- Dasmarinas 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb22",
-        "end": "Feb22"
+      "grid": "Luzon",
+      "plant": "Binan- Dasmarinas 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb22",
+      "end": "Feb22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binga-Ambuklao 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb22",
-        "end": "Feb22"
+      "grid": "Luzon",
+      "plant": "Binga-Ambuklao 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb22",
+      "end": "Feb22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binga-La Trinidad 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "Binga-La Trinidad 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun11",
-        "end": "Jun11"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun11",
+      "end": "Jun11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Labrador 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Bolo-Labrador 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun27"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bolo-Sual 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Bolo-Sual 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Calaca-Binan 230 kV Line",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Calaca-Binan 230 kV Line",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun3",
-        "end": "Jun3"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun3",
+      "end": "Jun3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov4",
-        "end": "Nov4"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov4",
+      "end": "Nov4"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay - Plant A 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep21",
-        "end": "Sep21"
+      "grid": "Luzon",
+      "plant": "Bay - Plant A 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep21",
+      "end": "Sep21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay-Plant B 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul16",
-        "end": "Jul16"
+      "grid": "Luzon",
+      "plant": "Bay-Plant B 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul16",
+      "end": "Jul16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "May3",
-        "end": "May3"
+      "grid": "Luzon",
+      "plant": "Bay - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "May3",
+      "end": "May3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bay - Calamba 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun28",
-        "end": "Jun28"
+      "grid": "Luzon",
+      "plant": "Bay - Calamba 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun28",
+      "end": "Jun28"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jan4",
-        "end": "Jan4"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jan4",
+      "end": "Jan4"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar16"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar16"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr26",
-        "end": "Apr27"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr26",
+      "end": "Apr27"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May6",
-        "end": "May7"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May6",
+      "end": "May7"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun13",
-        "end": "Jun13"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun13",
+      "end": "Jun13"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Juan-Calauan 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov14",
-        "end": "Nov14"
+      "grid": "Luzon",
+      "plant": "San Juan-Calauan 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov14",
+      "end": "Nov14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Concepcion-Clark 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb28",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "Concepcion-Clark 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Concepcion-San Manuel Line 2",
-        "capacity": 0.0,
-        "start": "Apr25",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "Concepcion-San Manuel Line 2",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb19",
-        "end": "Feb19"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb19",
+      "end": "Feb19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar3",
-        "end": "Mar3"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar3",
+      "end": "Mar3"
     },
     {
-        "grid": "Luzon",
-        "plant": "Daraga-Bacman 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May24",
-        "end": "May24"
+      "grid": "Luzon",
+      "plant": "Daraga-Bacman 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May24",
+      "end": "May24"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar8",
-        "end": "Mar8"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar8",
+      "end": "Mar8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas-Amadeo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Dec6",
-        "end": "Dec6"
+      "grid": "Luzon",
+      "plant": "Dasmarinas-Amadeo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Dec6",
+      "end": "Dec6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Dasmarinas- Las Pinas 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr3",
-        "end": "Apr5"
+      "grid": "Luzon",
+      "plant": "Dasmarinas- Las Pinas 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr3",
+      "end": "Apr5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca- Labo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug6",
-        "end": "Aug12"
+      "grid": "Luzon",
+      "plant": "Gumaca- Labo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug6",
+      "end": "Aug12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Gumaca- Labo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep23",
-        "end": "Sep23"
+      "grid": "Luzon",
+      "plant": "Gumaca- Labo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep23",
+      "end": "Sep23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Hermosa-BCCPP 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Hermosa-BCCPP 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lamao - Alas-asin 230kV line 2",
-        "capacity": 0.0,
-        "start": "Jul18",
-        "end": "Jul18"
+      "grid": "Luzon",
+      "plant": "Lamao - Alas-asin 230kV line 2",
+      "capacity": 0.0,
+      "start": "Jul18",
+      "end": "Jul18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar29",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar29",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr26",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr26",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "Labo-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul9",
-        "end": "Jul15"
+      "grid": "Luzon",
+      "plant": "Labo-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul9",
+      "end": "Jul15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Limay - Batangas 230kV line 2",
-        "capacity": 0.0,
-        "start": "Aug16",
-        "end": "Aug16"
+      "grid": "Luzon",
+      "plant": "Limay - Batangas 230kV line 2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun17",
-        "end": "Jun17"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun17",
+      "end": "Jun17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep2",
-        "end": "Sep2"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep2",
+      "end": "Sep2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov18",
-        "end": "Nov18"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov18",
+      "end": "Nov18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Gumaca 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Dec16",
-        "end": "Dec16"
+      "grid": "Luzon",
+      "plant": "Lumban - Gumaca 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Dec16",
+      "end": "Dec16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar18",
-        "end": "Mar18"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar18",
+      "end": "Mar18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "May2",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "May2",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul22",
-        "end": "Jul22"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul22",
+      "end": "Jul22"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug23",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug23",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - Malaya  230kV Line 2",
-        "capacity": 0.0,
-        "start": "Oct21",
-        "end": "Oct21"
+      "grid": "Luzon",
+      "plant": "Lumban - Malaya  230kV Line 2",
+      "capacity": 0.0,
+      "start": "Oct21",
+      "end": "Oct21"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - San Juan 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar18",
-        "end": "Mar19"
+      "grid": "Luzon",
+      "plant": "Lumban - San Juan 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar18",
+      "end": "Mar19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - San Juan 230kV Line 2",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "Lumban - San Juan 230kV Line 2",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - San Juan 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov11",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "Lumban - San Juan 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov11",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Lumban - San Juan 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov11",
-        "end": "Nov11"
+      "grid": "Luzon",
+      "plant": "Lumban - San Juan 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov11",
+      "end": "Nov11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jan25",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jan25",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May2",
-        "end": "May2"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May2",
+      "end": "May2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Masinloc-Bolo 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Masinloc-Bolo 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Mexico-Concepcion 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May30",
-        "end": "May30"
+      "grid": "Luzon",
+      "plant": "Mexico-Concepcion 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Mexico-Hermosa 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Feb15",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "Mexico-Hermosa 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "Mexico - San Rafael 230kV line 2",
-        "capacity": 0.0,
-        "start": "Apr11",
-        "end": "Apr11"
+      "grid": "Luzon",
+      "plant": "Mexico - San Rafael 230kV line 2",
+      "capacity": 0.0,
+      "start": "Apr11",
+      "end": "Apr11"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jan25",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jan25",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr26",
-        "end": "Apr26"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr26",
+      "end": "Apr26"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 2",
-        "capacity": 0.0,
-        "start": "May28",
-        "end": "May28"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 2",
+      "capacity": 0.0,
+      "start": "May28",
+      "end": "May28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun17",
-        "end": "Jun17"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun17",
+      "end": "Jun17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul23",
-        "end": "Jul23"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul23",
+      "end": "Jul23"
     },
     {
-        "grid": "Luzon",
-        "plant": "Naga - Tiwi C 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov13",
-        "end": "Nov13"
+      "grid": "Luzon",
+      "plant": "Naga - Tiwi C 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov13",
+      "end": "Nov13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 1",
-        "capacity": 0.0,
-        "start": "Feb28",
-        "end": "Mar1"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 1",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Mar1"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 2",
-        "capacity": 0.0,
-        "start": "Apr11",
-        "end": "Apr12"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 2",
+      "capacity": 0.0,
+      "start": "Apr11",
+      "end": "Apr12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Pagbilao-Pagbilao 230kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug16",
-        "end": "Aug16"
+      "grid": "Luzon",
+      "plant": "Pagbilao-Pagbilao 230kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug16"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-San Jose 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jan26",
-        "end": "Jan27"
+      "grid": "Luzon",
+      "plant": "Quezon-San Jose 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jan26",
+      "end": "Jan27"
     },
     {
-        "grid": "Luzon",
-        "plant": "Quezon-San Jose 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Apr19",
-        "end": "Apr19"
+      "grid": "Luzon",
+      "plant": "Quezon-San Jose 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Apr19",
+      "end": "Apr19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Salong-SLTEC 230 kV L2 (CO)",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "Salong-SLTEC 230 kV L2 (CO)",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Esteban-Laoag 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar30",
-        "end": "Mar31"
+      "grid": "Luzon",
+      "plant": "San Esteban-Laoag 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar31"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Esteban-Laoag 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun14",
-        "end": "Jun14"
+      "grid": "Luzon",
+      "plant": "San Esteban-Laoag 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun14",
+      "end": "Jun14"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Mar22",
-        "end": "Mar22"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Mar22",
+      "end": "Mar22"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May17",
-        "end": "May17"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May17",
+      "end": "May17"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug1",
-        "end": "Aug1"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug1",
+      "end": "Aug1"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Taytay 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Nov14",
-        "end": "Nov14"
+      "grid": "Luzon",
+      "plant": "San Jose-Taytay 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Nov14",
+      "end": "Nov14"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "May17",
-        "end": "May17"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "May17",
+      "end": "May17"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jul2",
-        "end": "Jul2"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jul2",
+      "end": "Jul2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Aug19",
-        "end": "Aug19"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Aug19",
+      "end": "Aug19"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tayabas-Naga 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Sep9",
-        "end": "Sep9"
+      "grid": "Luzon",
+      "plant": "Tayabas-Naga 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Sep9",
+      "end": "Sep9"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L2",
-        "capacity": 0.0,
-        "start": "Jan5",
-        "end": "Jan5"
+      "grid": "Luzon",
+      "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L2",
+      "capacity": 0.0,
+      "start": "Jan5",
+      "end": "Jan5"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L2",
-        "capacity": 0.0,
-        "start": "Oct29",
-        "end": "Oct29"
+      "grid": "Luzon",
+      "plant": "Tiwi Plant A - Tiwi Plant C 230 kV L2",
+      "capacity": 0.0,
+      "start": "Oct29",
+      "end": "Oct29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jan18",
-        "end": "Jan18"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jan18",
+      "end": "Jan18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Jun6",
-        "end": "Jun6"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Jun6",
+      "end": "Jun6"
     },
     {
-        "grid": "Luzon",
-        "plant": "Taytay-Malaya 230 kV Line 2",
-        "capacity": 0.0,
-        "start": "Oct18",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "Taytay-Malaya 230 kV Line 2",
+      "capacity": 0.0,
+      "start": "Oct18",
+      "end": "Oct18"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 3",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 3",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 3",
-        "capacity": 0.0,
-        "start": "May30",
-        "end": "May30"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 3",
+      "capacity": 0.0,
+      "start": "May30",
+      "end": "May30"
     },
     {
-        "grid": "Luzon",
-        "plant": "Hermosa - BCCPP 230kV Line 3",
-        "capacity": 0.0,
-        "start": "Aug2",
-        "end": "Aug2"
+      "grid": "Luzon",
+      "plant": "Hermosa - BCCPP 230kV Line 3",
+      "capacity": 0.0,
+      "start": "Aug2",
+      "end": "Aug2"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 4",
-        "capacity": 0.0,
-        "start": "Feb8",
-        "end": "Feb8"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 4",
+      "capacity": 0.0,
+      "start": "Feb8",
+      "end": "Feb8"
     },
     {
-        "grid": "Luzon",
-        "plant": "Binan-Muntinlupa 230 kV Line 4",
-        "capacity": 0.0,
-        "start": "May31",
-        "end": "May31"
+      "grid": "Luzon",
+      "plant": "Binan-Muntinlupa 230 kV Line 4",
+      "capacity": 0.0,
+      "start": "May31",
+      "end": "May31"
     },
     {
-        "grid": "Luzon",
-        "plant": "Bantay-Currimao 115 kV Line",
-        "capacity": 0.0,
-        "start": "Jun30",
-        "end": "Jun30"
+      "grid": "Luzon",
+      "plant": "Bantay-Currimao 115 kV Line",
+      "capacity": 0.0,
+      "start": "Jun30",
+      "end": "Jun30"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1BIN-SPE",
-        "capacity": 0.0,
-        "start": "Jun7",
-        "end": "Jun7"
+      "grid": "Luzon",
+      "plant": "6LI1BIN-SPE",
+      "capacity": 0.0,
+      "start": "Jun7",
+      "end": "Jun7"
     },
     {
-        "grid": "Luzon",
-        "plant": "Currimao-Laoag 115kV Line",
-        "capacity": 0.0,
-        "start": "Mar30",
-        "end": "Mar30"
+      "grid": "Luzon",
+      "plant": "Currimao-Laoag 115kV Line",
+      "capacity": 0.0,
+      "start": "Mar30",
+      "end": "Mar30"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Jun14",
-        "end": "Jun14"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Jun14",
+      "end": "Jun14"
     },
     {
-        "grid": "Luzon",
-        "plant": "6LI1DAS-ROS",
-        "capacity": 0.0,
-        "start": "Sep12",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "6LI1DAS-ROS",
+      "capacity": 0.0,
+      "start": "Sep12",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag-Burgos 115 kV Line (CO)-SED",
-        "capacity": 0.0,
-        "start": "May13",
-        "end": "May13"
+      "grid": "Luzon",
+      "plant": "Laoag-Burgos 115 kV Line (CO)-SED",
+      "capacity": 0.0,
+      "start": "May13",
+      "end": "May13"
     },
     {
-        "grid": "Luzon",
-        "plant": "Laoag-Pasuquin Solar 115 kV L1 (CO)",
-        "capacity": 0.0,
-        "start": "May6",
-        "end": "May6"
+      "grid": "Luzon",
+      "plant": "Laoag-Pasuquin Solar 115 kV L1 (CO)",
+      "capacity": 0.0,
+      "start": "May6",
+      "end": "May6"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Esteban-Bantay 115 kV Line",
-        "capacity": 0.0,
-        "start": "Jun12",
-        "end": "Jun12"
+      "grid": "Luzon",
+      "plant": "San Esteban-Bantay 115 kV Line",
+      "capacity": 0.0,
+      "start": "Jun12",
+      "end": "Jun12"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Angat 115 kV L1",
-        "capacity": 0.0,
-        "start": "Oct11",
-        "end": "Oct11"
+      "grid": "Luzon",
+      "plant": "San Jose-Angat 115 kV L1",
+      "capacity": 0.0,
+      "start": "Oct11",
+      "end": "Oct11"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Angat 115 kV L2",
-        "capacity": 0.0,
-        "start": "Jan11",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "San Jose-Angat 115 kV L2",
+      "capacity": 0.0,
+      "start": "Jan11",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose-Angat 115 kV L3",
-        "capacity": 0.0,
-        "start": "Oct24",
-        "end": "Oct24"
+      "grid": "Luzon",
+      "plant": "San Jose-Angat 115 kV L3",
+      "capacity": 0.0,
+      "start": "Oct24",
+      "end": "Oct24"
     },
     {
-        "grid": "Luzon",
-        "plant": "San Jose - Angat 115kV line",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "San Jose - Angat 115kV line",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01BAN",
-        "capacity": 0.0,
-        "start": "Jan29",
-        "end": "Jan29"
+      "grid": "Luzon",
+      "plant": "6XF01BAN",
+      "capacity": 0.0,
+      "start": "Jan29",
+      "end": "Jan29"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01CLR",
-        "capacity": 0.0,
-        "start": "May10",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "6XF01CLR",
+      "capacity": 0.0,
+      "start": "May10",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01CLR",
-        "capacity": 0.0,
-        "start": "May10",
-        "end": "May10"
+      "grid": "Luzon",
+      "plant": "6XF01CLR",
+      "capacity": 0.0,
+      "start": "May10",
+      "end": "May10"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01LAO",
-        "capacity": 0.0,
-        "start": "Jun11",
-        "end": "Jun11"
+      "grid": "Luzon",
+      "plant": "6XF01LAO",
+      "capacity": 0.0,
+      "start": "Jun11",
+      "end": "Jun11"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01ROS",
-        "capacity": 0.0,
-        "start": "Mar29",
-        "end": "Mar29"
+      "grid": "Luzon",
+      "plant": "6XF01ROS",
+      "capacity": 0.0,
+      "start": "Mar29",
+      "end": "Mar29"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF01SES",
-        "capacity": 0.0,
-        "start": "Nov26",
-        "end": "Nov26"
+      "grid": "Luzon",
+      "plant": "6XF01SES",
+      "capacity": 0.0,
+      "start": "Nov26",
+      "end": "Nov26"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF02BAN",
-        "capacity": 0.0,
-        "start": "Jan28",
-        "end": "Jan28"
+      "grid": "Luzon",
+      "plant": "6XF02BAN",
+      "capacity": 0.0,
+      "start": "Jan28",
+      "end": "Jan28"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF02LAO",
-        "capacity": 0.0,
-        "start": "Jan25",
-        "end": "Jan25"
+      "grid": "Luzon",
+      "plant": "6XF02LAO",
+      "capacity": 0.0,
+      "start": "Jan25",
+      "end": "Jan25"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF02LAO",
-        "capacity": 0.0,
-        "start": "May20",
-        "end": "May20"
+      "grid": "Luzon",
+      "plant": "6XF02LAO",
+      "capacity": 0.0,
+      "start": "May20",
+      "end": "May20"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF02ROS",
-        "capacity": 0.0,
-        "start": "Jun28",
-        "end": "Jun28"
+      "grid": "Luzon",
+      "plant": "6XF02ROS",
+      "capacity": 0.0,
+      "start": "Jun28",
+      "end": "Jun28"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF02SES",
-        "capacity": 0.0,
-        "start": "Mar5",
-        "end": "Mar5"
+      "grid": "Luzon",
+      "plant": "6XF02SES",
+      "capacity": 0.0,
+      "start": "Mar5",
+      "end": "Mar5"
     },
     {
-        "grid": "Luzon",
-        "plant": "6XF03ROS",
-        "capacity": 0.0,
-        "start": "Oct10",
-        "end": "Oct10"
+      "grid": "Luzon",
+      "plant": "6XF03ROS",
+      "capacity": 0.0,
+      "start": "Oct10",
+      "end": "Oct10"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01AMB",
-        "capacity": 0.0,
-        "start": "Sep5",
-        "end": "Sep5"
+      "grid": "Luzon",
+      "plant": "8XF01AMB",
+      "capacity": 0.0,
+      "start": "Sep5",
+      "end": "Sep5"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01BAY",
-        "capacity": 0.0,
-        "start": "Apr18",
-        "end": "Apr18"
+      "grid": "Luzon",
+      "plant": "8XF01BAY",
+      "capacity": 0.0,
+      "start": "Apr18",
+      "end": "Apr18"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01BOT",
-        "capacity": 0.0,
-        "start": "Jan23",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "8XF01BOT",
+      "capacity": 0.0,
+      "start": "Jan23",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01BYZ",
-        "capacity": 0.0,
-        "start": "Mar24",
-        "end": "Mar24"
+      "grid": "Luzon",
+      "plant": "8XF01BYZ",
+      "capacity": 0.0,
+      "start": "Mar24",
+      "end": "Mar24"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01CBN",
-        "capacity": 0.0,
-        "start": "Jun11",
-        "end": "Jun11"
+      "grid": "Luzon",
+      "plant": "8XF01CBN",
+      "capacity": 0.0,
+      "start": "Jun11",
+      "end": "Jun11"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01DAR",
-        "capacity": 0.0,
-        "start": "Mar26",
-        "end": "Mar26"
+      "grid": "Luzon",
+      "plant": "8XF01DAR",
+      "capacity": 0.0,
+      "start": "Mar26",
+      "end": "Mar26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01GUM",
-        "capacity": 0.0,
-        "start": "Apr7",
-        "end": "Apr7"
+      "grid": "Luzon",
+      "plant": "8XF01GUM",
+      "capacity": 0.0,
+      "start": "Apr7",
+      "end": "Apr7"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01LBO",
-        "capacity": 0.0,
-        "start": "Aug20",
-        "end": "Aug26"
+      "grid": "Luzon",
+      "plant": "8XF01LBO",
+      "capacity": 0.0,
+      "start": "Aug20",
+      "end": "Aug26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01LMN",
-        "capacity": 0.0,
-        "start": "Jun4",
-        "end": "Jun4"
+      "grid": "Luzon",
+      "plant": "8XF01LMN",
+      "capacity": 0.0,
+      "start": "Jun4",
+      "end": "Jun4"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01LPI",
-        "capacity": 0.0,
-        "start": "Aug9",
-        "end": "Aug9"
+      "grid": "Luzon",
+      "plant": "8XF01LPI",
+      "capacity": 0.0,
+      "start": "Aug9",
+      "end": "Aug9"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01LPI",
-        "capacity": 0.0,
-        "start": "Sep6",
-        "end": "Sep6"
+      "grid": "Luzon",
+      "plant": "8XF01LPI",
+      "capacity": 0.0,
+      "start": "Sep6",
+      "end": "Sep6"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01LTR",
-        "capacity": 0.0,
-        "start": "Jan14",
-        "end": "Jan14"
+      "grid": "Luzon",
+      "plant": "8XF01LTR",
+      "capacity": 0.0,
+      "start": "Jan14",
+      "end": "Jan14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01MUN",
-        "capacity": 0.0,
-        "start": "Jun7",
-        "end": "Jun7"
+      "grid": "Luzon",
+      "plant": "8XF01MUN",
+      "capacity": 0.0,
+      "start": "Jun7",
+      "end": "Jun7"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01NCS",
-        "capacity": 0.0,
-        "start": "Oct12",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "8XF01NCS",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct18"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01NGS",
-        "capacity": 0.0,
-        "start": "Oct23",
-        "end": "Oct23"
+      "grid": "Luzon",
+      "plant": "8XF01NGS",
+      "capacity": 0.0,
+      "start": "Oct23",
+      "end": "Oct23"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01QUE",
-        "capacity": 0.0,
-        "start": "Feb10",
-        "end": "Feb10"
+      "grid": "Luzon",
+      "plant": "8XF01QUE",
+      "capacity": 0.0,
+      "start": "Feb10",
+      "end": "Feb10"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01QUE",
-        "capacity": 0.0,
-        "start": "Apr7",
-        "end": "Apr8"
+      "grid": "Luzon",
+      "plant": "8XF01QUE",
+      "capacity": 0.0,
+      "start": "Apr7",
+      "end": "Apr8"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01SJO",
-        "capacity": 0.0,
-        "start": "Mar14",
-        "end": "Mar14"
+      "grid": "Luzon",
+      "plant": "8XF01SJO",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF01SMN",
-        "capacity": 0.0,
-        "start": "Feb26",
-        "end": "Feb26"
+      "grid": "Luzon",
+      "plant": "8XF01SMN",
+      "capacity": 0.0,
+      "start": "Feb26",
+      "end": "Feb26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02BAC",
-        "capacity": 0.0,
-        "start": "Feb28",
-        "end": "Feb28"
+      "grid": "Luzon",
+      "plant": "8XF02BAC",
+      "capacity": 0.0,
+      "start": "Feb28",
+      "end": "Feb28"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02BAC",
-        "capacity": 0.0,
-        "start": "Sep19",
-        "end": "Sep19"
+      "grid": "Luzon",
+      "plant": "8XF02BAC",
+      "capacity": 0.0,
+      "start": "Sep19",
+      "end": "Sep19"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02BAY",
-        "capacity": 0.0,
-        "start": "Feb15",
-        "end": "Feb15"
+      "grid": "Luzon",
+      "plant": "8XF02BAY",
+      "capacity": 0.0,
+      "start": "Feb15",
+      "end": "Feb15"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02BAY",
-        "capacity": 0.0,
-        "start": "Apr12",
-        "end": "Apr12"
+      "grid": "Luzon",
+      "plant": "8XF02BAY",
+      "capacity": 0.0,
+      "start": "Apr12",
+      "end": "Apr12"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02BOT",
-        "capacity": 0.0,
-        "start": "Jun19",
-        "end": "Jun19"
+      "grid": "Luzon",
+      "plant": "8XF02BOT",
+      "capacity": 0.0,
+      "start": "Jun19",
+      "end": "Jun19"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02CBN",
-        "capacity": 0.0,
-        "start": "Jun18",
-        "end": "Jun18"
+      "grid": "Luzon",
+      "plant": "8XF02CBN",
+      "capacity": 0.0,
+      "start": "Jun18",
+      "end": "Jun18"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02CLC",
-        "capacity": 0.0,
-        "start": "Nov15",
-        "end": "Nov15"
+      "grid": "Luzon",
+      "plant": "8XF02CLC",
+      "capacity": 0.0,
+      "start": "Nov15",
+      "end": "Nov15"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02DIM",
-        "capacity": 0.0,
-        "start": "Mar7",
-        "end": "Mar7"
+      "grid": "Luzon",
+      "plant": "8XF02DIM",
+      "capacity": 0.0,
+      "start": "Mar7",
+      "end": "Mar7"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02GUM",
-        "capacity": 0.0,
-        "start": "Apr14",
-        "end": "Apr14"
+      "grid": "Luzon",
+      "plant": "8XF02GUM",
+      "capacity": 0.0,
+      "start": "Apr14",
+      "end": "Apr14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02LAL",
-        "capacity": 0.0,
-        "start": "Oct6",
-        "end": "Oct6"
+      "grid": "Luzon",
+      "plant": "8XF02LAL",
+      "capacity": 0.0,
+      "start": "Oct6",
+      "end": "Oct6"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02LBO",
-        "capacity": 0.0,
-        "start": "Sep3",
-        "end": "Sep9"
+      "grid": "Luzon",
+      "plant": "8XF02LBO",
+      "capacity": 0.0,
+      "start": "Sep3",
+      "end": "Sep9"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02LPI",
-        "capacity": 0.0,
-        "start": "Aug16",
-        "end": "Aug16"
+      "grid": "Luzon",
+      "plant": "8XF02LPI",
+      "capacity": 0.0,
+      "start": "Aug16",
+      "end": "Aug16"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02LTR",
-        "capacity": 0.0,
-        "start": "Jan15",
-        "end": "Jan15"
+      "grid": "Luzon",
+      "plant": "8XF02LTR",
+      "capacity": 0.0,
+      "start": "Jan15",
+      "end": "Jan15"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02MUN",
-        "capacity": 0.0,
-        "start": "Jun14",
-        "end": "Jun14"
+      "grid": "Luzon",
+      "plant": "8XF02MUN",
+      "capacity": 0.0,
+      "start": "Jun14",
+      "end": "Jun14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02NAG",
-        "capacity": 0.0,
-        "start": "Feb5",
-        "end": "Feb5"
+      "grid": "Luzon",
+      "plant": "8XF02NAG",
+      "capacity": 0.0,
+      "start": "Feb5",
+      "end": "Feb5"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02SAN",
-        "capacity": 0.0,
-        "start": "Apr10",
-        "end": "Apr10"
+      "grid": "Luzon",
+      "plant": "8XF02SAN",
+      "capacity": 0.0,
+      "start": "Apr10",
+      "end": "Apr10"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02SJO",
-        "capacity": 0.0,
-        "start": "Mar28",
-        "end": "Mar28"
+      "grid": "Luzon",
+      "plant": "8XF02SJO",
+      "capacity": 0.0,
+      "start": "Mar28",
+      "end": "Mar28"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF02TYT",
-        "capacity": 0.0,
-        "start": "Jul26",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "8XF02TYT",
+      "capacity": 0.0,
+      "start": "Jul26",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03BAU",
-        "capacity": 0.0,
-        "start": "Sep26",
-        "end": "Sep26"
+      "grid": "Luzon",
+      "plant": "8XF03BAU",
+      "capacity": 0.0,
+      "start": "Sep26",
+      "end": "Sep26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03BAY",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "8XF03BAY",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03BTN",
-        "capacity": 0.0,
-        "start": "Nov14",
-        "end": "Nov14"
+      "grid": "Luzon",
+      "plant": "8XF03BTN",
+      "capacity": 0.0,
+      "start": "Nov14",
+      "end": "Nov14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03DAR",
-        "capacity": 0.0,
-        "start": "May14",
-        "end": "May14"
+      "grid": "Luzon",
+      "plant": "8XF03DAR",
+      "capacity": 0.0,
+      "start": "May14",
+      "end": "May14"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03DIM",
-        "capacity": 0.0,
-        "start": "May1",
-        "end": "May1"
+      "grid": "Luzon",
+      "plant": "8XF03DIM",
+      "capacity": 0.0,
+      "start": "May1",
+      "end": "May1"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03LAB",
-        "capacity": 0.0,
-        "start": "Oct3",
-        "end": "Oct3"
+      "grid": "Luzon",
+      "plant": "8XF03LAB",
+      "capacity": 0.0,
+      "start": "Oct3",
+      "end": "Oct3"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03LPI",
-        "capacity": 0.0,
-        "start": "Aug23",
-        "end": "Aug23"
+      "grid": "Luzon",
+      "plant": "8XF03LPI",
+      "capacity": 0.0,
+      "start": "Aug23",
+      "end": "Aug23"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03MUN",
-        "capacity": 0.0,
-        "start": "Jun28",
-        "end": "Jun28"
+      "grid": "Luzon",
+      "plant": "8XF03MUN",
+      "capacity": 0.0,
+      "start": "Jun28",
+      "end": "Jun28"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03NAG",
-        "capacity": 0.0,
-        "start": "Mar7",
-        "end": "Mar7"
+      "grid": "Luzon",
+      "plant": "8XF03NAG",
+      "capacity": 0.0,
+      "start": "Mar7",
+      "end": "Mar7"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03SRA",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "8XF03SRA",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03TUG",
-        "capacity": 0.0,
-        "start": "Feb18",
-        "end": "Feb18"
+      "grid": "Luzon",
+      "plant": "8XF03TUG",
+      "capacity": 0.0,
+      "start": "Feb18",
+      "end": "Feb18"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF03TYT",
-        "capacity": 0.0,
-        "start": "Aug8",
-        "end": "Aug8"
+      "grid": "Luzon",
+      "plant": "8XF03TYT",
+      "capacity": 0.0,
+      "start": "Aug8",
+      "end": "Aug8"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF04DAR",
-        "capacity": 0.0,
-        "start": "Jun11",
-        "end": "Jun11"
+      "grid": "Luzon",
+      "plant": "8XF04DAR",
+      "capacity": 0.0,
+      "start": "Jun11",
+      "end": "Jun11"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF05CON",
-        "capacity": 0.0,
-        "start": "Apr23",
-        "end": "Apr23"
+      "grid": "Luzon",
+      "plant": "8XF05CON",
+      "capacity": 0.0,
+      "start": "Apr23",
+      "end": "Apr23"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF05CON",
-        "capacity": 0.0,
-        "start": "Nov5",
-        "end": "Nov5"
+      "grid": "Luzon",
+      "plant": "8XF05CON",
+      "capacity": 0.0,
+      "start": "Nov5",
+      "end": "Nov5"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF05DAR",
-        "capacity": 0.0,
-        "start": "Jul16",
-        "end": "Jul16"
+      "grid": "Luzon",
+      "plant": "8XF05DAR",
+      "capacity": 0.0,
+      "start": "Jul16",
+      "end": "Jul16"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF05LPI",
-        "capacity": 0.0,
-        "start": "Oct3",
-        "end": "Oct3"
+      "grid": "Luzon",
+      "plant": "8XF05LPI",
+      "capacity": 0.0,
+      "start": "Oct3",
+      "end": "Oct3"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF07QUE",
-        "capacity": 0.0,
-        "start": "Feb17",
-        "end": "Mar10"
+      "grid": "Luzon",
+      "plant": "8XF07QUE",
+      "capacity": 0.0,
+      "start": "Feb17",
+      "end": "Mar10"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XF08BCC",
-        "capacity": 0.0,
-        "start": "Oct26",
-        "end": "Oct26"
+      "grid": "Luzon",
+      "plant": "8XF08BCC",
+      "capacity": 0.0,
+      "start": "Oct26",
+      "end": "Oct26"
     },
     {
-        "grid": "Luzon",
-        "plant": "8Z-XF01BAC",
-        "capacity": 0.0,
-        "start": "Sep12",
-        "end": "Sep12"
+      "grid": "Luzon",
+      "plant": "8Z-XF01BAC",
+      "capacity": 0.0,
+      "start": "Sep12",
+      "end": "Sep12"
     },
     {
-        "grid": "Luzon",
-        "plant": "8Z-XF01GAM",
-        "capacity": 0.0,
-        "start": "Apr25",
-        "end": "Apr25"
+      "grid": "Luzon",
+      "plant": "8Z-XF01GAM",
+      "capacity": 0.0,
+      "start": "Apr25",
+      "end": "Apr25"
     },
     {
-        "grid": "Luzon",
-        "plant": "8Z-XF01TUG",
-        "capacity": 0.0,
-        "start": "Feb4",
-        "end": "Feb4"
+      "grid": "Luzon",
+      "plant": "8Z-XF01TUG",
+      "capacity": 0.0,
+      "start": "Feb4",
+      "end": "Feb4"
     },
     {
-        "grid": "Luzon",
-        "plant": "8Z-XF02SES",
-        "capacity": 0.0,
-        "start": "Jun12",
-        "end": "Jun12"
+      "grid": "Luzon",
+      "plant": "8Z-XF02SES",
+      "capacity": 0.0,
+      "start": "Jun12",
+      "end": "Jun12"
     },
     {
-        "grid": "Luzon",
-        "plant": "8Z-XF02TUG",
-        "capacity": 0.0,
-        "start": "Feb11",
-        "end": "Feb11"
+      "grid": "Luzon",
+      "plant": "8Z-XF02TUG",
+      "capacity": 0.0,
+      "start": "Feb11",
+      "end": "Feb11"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF01BLZ",
-        "capacity": 0.0,
-        "start": "Feb7",
-        "end": "Feb7"
+      "grid": "Luzon",
+      "plant": "9XF01BLZ",
+      "capacity": 0.0,
+      "start": "Feb7",
+      "end": "Feb7"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF01BLZ",
-        "capacity": 0.0,
-        "start": "Jun13",
-        "end": "Jun13"
+      "grid": "Luzon",
+      "plant": "9XF01BLZ",
+      "capacity": 0.0,
+      "start": "Jun13",
+      "end": "Jun13"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF01NGS",
-        "capacity": 0.0,
-        "start": "Jan31",
-        "end": "Feb1"
+      "grid": "Luzon",
+      "plant": "9XF01NGS",
+      "capacity": 0.0,
+      "start": "Jan31",
+      "end": "Feb1"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF01TAY",
-        "capacity": 0.0,
-        "start": "Sep18",
-        "end": "Sep18"
+      "grid": "Luzon",
+      "plant": "9XF01TAY",
+      "capacity": 0.0,
+      "start": "Sep18",
+      "end": "Sep18"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF02BLZ",
-        "capacity": 0.0,
-        "start": "Feb21",
-        "end": "Feb21"
+      "grid": "Luzon",
+      "plant": "9XF02BLZ",
+      "capacity": 0.0,
+      "start": "Feb21",
+      "end": "Feb21"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF02BLZ",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun27"
+      "grid": "Luzon",
+      "plant": "9XF02BLZ",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun27"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF02DAS",
-        "capacity": 0.0,
-        "start": "Aug22",
-        "end": "Aug22"
+      "grid": "Luzon",
+      "plant": "9XF02DAS",
+      "capacity": 0.0,
+      "start": "Aug22",
+      "end": "Aug22"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF02NGS",
-        "capacity": 0.0,
-        "start": "Jan10",
-        "end": "Jan11"
+      "grid": "Luzon",
+      "plant": "9XF02NGS",
+      "capacity": 0.0,
+      "start": "Jan10",
+      "end": "Jan11"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF03BLZ",
-        "capacity": 0.0,
-        "start": "Mar20",
-        "end": "Mar20"
+      "grid": "Luzon",
+      "plant": "9XF03BLZ",
+      "capacity": 0.0,
+      "start": "Mar20",
+      "end": "Mar20"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF03BLZ",
-        "capacity": 0.0,
-        "start": "Jul12",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "9XF03BLZ",
+      "capacity": 0.0,
+      "start": "Jul12",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF03TAY",
-        "capacity": 0.0,
-        "start": "Oct9",
-        "end": "Oct9"
+      "grid": "Luzon",
+      "plant": "9XF03TAY",
+      "capacity": 0.0,
+      "start": "Oct9",
+      "end": "Oct9"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF04BLZ",
-        "capacity": 0.0,
-        "start": "Apr4",
-        "end": "Apr4"
+      "grid": "Luzon",
+      "plant": "9XF04BLZ",
+      "capacity": 0.0,
+      "start": "Apr4",
+      "end": "Apr4"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF04BLZ",
-        "capacity": 0.0,
-        "start": "Jul26",
-        "end": "Jul26"
+      "grid": "Luzon",
+      "plant": "9XF04BLZ",
+      "capacity": 0.0,
+      "start": "Jul26",
+      "end": "Jul26"
     },
     {
-        "grid": "Luzon",
-        "plant": "9XF05DAS",
-        "capacity": 0.0,
-        "start": "Aug29",
-        "end": "Aug29"
+      "grid": "Luzon",
+      "plant": "9XF05DAS",
+      "capacity": 0.0,
+      "start": "Aug29",
+      "end": "Aug29"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag 230kV Bus 1",
-        "capacity": 0.0,
-        "start": "Jul11",
-        "end": "Jul12"
+      "grid": "Luzon",
+      "plant": "Nagsaag 230kV Bus 1",
+      "capacity": 0.0,
+      "start": "Jul11",
+      "end": "Jul12"
     },
     {
-        "grid": "Luzon",
-        "plant": "Nagsaag-San Roque 230kV Line 1",
-        "capacity": 0.0,
-        "start": "Jun27",
-        "end": "Jun28"
+      "grid": "Luzon",
+      "plant": "Nagsaag-San Roque 230kV Line 1",
+      "capacity": 0.0,
+      "start": "Jun27",
+      "end": "Jun28"
     },
     {
-        "grid": "Luzon",
-        "plant": "Tiwi C 230 kV Shunt Reactor",
-        "capacity": 0.0,
-        "start": "Apr30",
-        "end": "Apr30"
+      "grid": "Luzon",
+      "plant": "Tiwi C 230 kV Shunt Reactor",
+      "capacity": 0.0,
+      "start": "Apr30",
+      "end": "Apr30"
     },
     {
-        "grid": "Luzon",
-        "plant": "8XC02TUG_Tuguegarao 220KV",
-        "capacity": 0.0,
-        "start": "Jan23",
-        "end": "Jan23"
+      "grid": "Luzon",
+      "plant": "8XC02TUG_Tuguegarao 220KV",
+      "capacity": 0.0,
+      "start": "Jan23",
+      "end": "Jan23"
     },
     {
-        "grid": "Luzon",
-        "plant": "0LI1NCS-OCS",
-        "capacity": 0.0,
-        "start": "Mar14",
-        "end": "Mar14"
+      "grid": "Luzon",
+      "plant": "0LI1NCS-OCS",
+      "capacity": 0.0,
+      "start": "Mar14",
+      "end": "Mar14"
     },
     {
-        "grid": "Luzon",
-        "plant": "0LI1NCS-OCS",
-        "capacity": 0.0,
-        "start": "Oct12",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "0LI1NCS-OCS",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct18"
     },
     {
-        "grid": "Luzon",
-        "plant": "0LI2NCS-OCS",
-        "capacity": 0.0,
-        "start": "Mar15",
-        "end": "Mar15"
+      "grid": "Luzon",
+      "plant": "0LI2NCS-OCS",
+      "capacity": 0.0,
+      "start": "Mar15",
+      "end": "Mar15"
     },
     {
-        "grid": "Luzon",
-        "plant": "0LI2NCS-OCS",
-        "capacity": 0.0,
-        "start": "Oct12",
-        "end": "Oct18"
+      "grid": "Luzon",
+      "plant": "0LI2NCS-OCS",
+      "capacity": 0.0,
+      "start": "Oct12",
+      "end": "Oct18"
     }
-],
+  ],
   "mindanao_plants": [
     {
       "grid": "Mindanao",
@@ -14241,8 +14445,6 @@ const DASHBOARD_DATA = {
     }
   ]
 };
-
-
 
 
 // SLD Network Topology

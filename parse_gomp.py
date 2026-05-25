@@ -33,11 +33,12 @@ def parse_gomp_pdf(filepath):
             if not line:
                 continue
                 
-            if "VISAYAS Grid Operating" in line:
+            line_upper = line.upper()
+            if "VISAYAS GRID OPERATING" in line_upper:
                 current_grid = "Visayas"
-            elif "MINDANAO Grid Operating" in line:
+            elif "MINDANAO GRID OPERATING" in line_upper:
                 current_grid = "Mindanao"
-            elif "LUZON Grid Operating" in line:
+            elif "LUZON GRID OPERATING" in line_upper:
                 current_grid = "Luzon"
                 
             match = pattern.search(line)

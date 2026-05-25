@@ -1030,7 +1030,13 @@
                   Geographic Grid Spatial Explorer
                   <div class="card-subtitle">Locational mapping of power generating facilities and regional distribution cooperatives across the Philippine electrical grid</div>
                 </div>
-                <span id="sim-badge" class="badge" style="background:#f1f5f9; color:#475569; border:none; display:none; align-items:center; gap:6px; font-weight:700;"><span style="width:6px; height:6px; border-radius:50%; background:#ef4444; animation: pulse 1s infinite;"></span>SIMULATOR ACTIVE</span>
+                <div style="display:flex; align-items:center; gap:16px;">
+                  <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                    <input type="checkbox" id="typhoon-overlay-toggle" style="width:16px; height:16px; accent-color:var(--primary-color);">
+                    <span style="font-size:13px; font-weight:600; color:var(--text-primary);">Simulate Typhoon Impact</span>
+                  </label>
+                  <span id="sim-badge" class="badge" style="background:#f1f5f9; color:#475569; border:none; display:none; align-items:center; gap:6px; font-weight:700;"><span style="width:6px; height:6px; border-radius:50%; background:#ef4444; animation: pulse 1s infinite;"></span>SIMULATOR ACTIVE</span>
+                </div>
               </div>
               <div id="grid-leaflet-map" style="flex-grow: 1; height: 500px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); z-index: 1;"></div>
             </div>
@@ -1205,12 +1211,12 @@
           
           <!-- Simulation Controls -->
           <div class="card sim-controls-card" style="margin-bottom: 16px; padding: 16px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; flex-wrap: wrap;">
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 0;">
               <div style="display:flex; gap: 16px; align-items: baseline; margin-bottom: 4px;">
                 <span id="topology-current-date" style="font-weight:700; font-size:16px; color:var(--text-primary);">January 1, 2026</span>
-                <span id="topology-offline-mw" style="font-weight:600; color:var(--text-muted); font-size:14px;">0 MW Scheduled Offline</span>
+                <span id="topology-offline-mw" style="font-weight:600; color:var(--status-red); font-size:14px;">0 MW Scheduled Offline</span>
               </div>
-              <div id="topology-breakdown" style="display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 8px; font-size: 11px; color:var(--text-muted);">
+              <div id="topology-breakdown" style="display:flex; justify-content:flex-end; gap: 12px; margin-bottom: 12px; font-size: 11px; color:var(--text-muted); width: 100%;">
                 <!-- Breakdown injected here via JS -->
               </div>
               <div id="topology-offline-plants-list" style="display:flex; flex-wrap:wrap; gap: 6px; margin-bottom: 12px; max-height: 80px; overflow-y:auto; padding-right:8px; align-items:flex-start;">
@@ -1218,6 +1224,12 @@
               </div>
               <input type="range" id="topology-timeline-slider" min="0" max="1095" value="0" style="width:100%; cursor:pointer;">
             </div>
+            <select id="topology-grid-filter" class="select-input" style="width: 150px; border-radius:6px; border:1px solid var(--border-color); padding: 8px;">
+              <option value="All">All Grids</option>
+              <option value="Luzon">Luzon</option>
+              <option value="Visayas">Visayas</option>
+              <option value="Mindanao">Mindanao</option>
+            </select>
             <button id="topology-play-btn" class="btn" style="background:var(--accent-color); color:white; padding:8px 16px; border-radius:6px; border:none; cursor:pointer;">Play Sim</button>
           </div>
           

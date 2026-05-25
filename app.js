@@ -2293,6 +2293,60 @@ function initLeafletMap() {
     state.mapMarkers.push(marker);
   });
 
+  const typhoonToggle = document.getElementById('typhoon-overlay-toggle');
+  let typhoonPolygon = null;
+
+  if (typhoonToggle) {
+    typhoonToggle.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        // Draw typhoon path over Luzon/Visayas
+        const latlngs = [
+          [13.0, 126.0],
+          [13.8, 123.5],
+          [14.2, 121.2],
+          [14.8, 119.8],
+          [16.0, 118.0]
+        ];
+        
+        typhoonPolygon = L.polyline(latlngs, {
+          color: '#3b82f6',
+          opacity: 0.3,
+          weight: 90, 
+          lineCap: 'round',
+          lineJoin: 'round'
+        }).addTo(state.mapInstance);
+
+        // Highlight plants near the typhoon path
+        state.mapMarkers.forEach(m => {
+          if (m.isPlant) {
+            const lat = m.getLatLng().lat;
+            const lng = m.getLatLng().lng;
+            // Simple proximity check for the "danger zone"
+            if (lat > 13.0 && lat < 15.5 && lng > 119.5 && lng < 124.0) {
+              m.setStyle({ fillColor: '#ef4444', color: '#fef08a', weight: 3 });
+              m.setRadius(12);
+            }
+          }
+        });
+      } else {
+        if (typhoonPolygon) {
+          state.mapInstance.removeLayer(typhoonPolygon);
+          typhoonPolygon = null;
+        }
+        // Allow the simulation engine to restore normal styling on next tick
+        if (!state.simPlaying) {
+          state.mapMarkers.forEach(m => {
+            if (m.isPlant) {
+              const isOffline = state.powerPlants.find(p => p.facility.trim() + ' | ' + p.unit.trim() === m.facilityKey)?.activeOutage;
+              m.setStyle({ fillColor: isOffline ? '#ef4444' : '#10b981', color: '#ffffff', weight: 2 });
+              m.setRadius(9);
+            }
+          });
+        }
+      }
+    });
+  }
+
   // Precompute and initialize simulated timeline controllers
   precomputeSimulationTimeline();
   initSimulation();
@@ -3245,7 +3299,14 @@ function setupTopologySimulation() {
     slider.addEventListener('input', (e) => {
       topologyState.currentDayOffset = parseInt(e.target.value);
       updateTopologyForCurrentDate();
-  if (state.charts.probChart) state.charts.probChart.draw();
+      if (state.charts.probChart) state.charts.probChart.draw();
+    });
+  }
+
+  const topologyGridFilter = document.getElementById('topology-grid-filter');
+  if (topologyGridFilter) {
+    topologyGridFilter.addEventListener('change', () => {
+      updateTopologyForCurrentDate();
     });
   }
   
@@ -3311,6 +3372,23 @@ function isGompActiveOnDate(o, d) {
   return d >= start && d <= end;
 }
 
+function getSubGrid(plantName, grid) {
+  const name = plantName.toLowerCase();
+  if (grid === 'Luzon') {
+    if (name.includes('sual') || name.includes('masinloc') || name.includes('baka') || name.includes('magat') || name.includes('angat') || name.includes('san roque')) return 'North Luzon';
+    return 'South Luzon';
+  } else if (grid === 'Visayas') {
+    if (name.includes('pedc') || name.includes('pbc') || name.includes('panay')) return 'Panay';
+    if (name.includes('cedc') || name.includes('tvi') || name.includes('kepco') || name.includes('cebu')) return 'Cebu';
+    if (name.includes('palimpinon') || name.includes('negros')) return 'Negros';
+    return 'Leyte-Samar';
+  } else if (grid === 'Mindanao') {
+    if (name.includes('gnpower') || name.includes('kauswagan') || name.includes('agus')) return 'North Mindanao';
+    return 'South Mindanao';
+  }
+  return grid;
+}
+
 function calculateAlertProbabilities() {
   const timeline = [];
   
@@ -3319,29 +3397,32 @@ function calculateAlertProbabilities() {
     d.setDate(d.getDate() + i);
     
     let luzonMw = 0, visayasMw = 0, mindanaoMw = 0;
+    let nLuzMw = 0, sLuzMw = 0, panayMw = 0, cebuMw = 0, negrosMw = 0, nMinMw = 0, sMinMw = 0;
     
     state.gompOutages.forEach(o => {
       if (isGompActiveOnDate(o, d)) {
-        const cap = parseFloat(o.capacity) || 0;
-        if (o.grid === 'Luzon') luzonMw += cap;
-        else if (o.grid === 'Visayas') visayasMw += cap;
-        else if (o.grid === 'Mindanao') mindanaoMw += cap;
+        const cap = parseFloat(String(o.capacity).replace(/,/g, '')) || 0;
+        const subGrid = getSubGrid(o.plant, o.grid);
+        if (o.grid === 'Luzon') { luzonMw += cap; if (subGrid === 'North Luzon') nLuzMw += cap; else sLuzMw += cap; }
+        else if (o.grid === 'Visayas') { visayasMw += cap; if (subGrid === 'Panay') panayMw += cap; else if (subGrid === 'Cebu') cebuMw += cap; else negrosMw += cap; }
+        else if (o.grid === 'Mindanao') { mindanaoMw += cap; if (subGrid === 'North Mindanao') nMinMw += cap; else sMinMw += cap; }
       }
     });
     
+    // Sub-grid bottlenecks override global thresholds
     let luzonRed = 0, luzonYellow = 0;
-    if (luzonMw >= 4000) { luzonRed = 80; luzonYellow = 20; }
-    else if (luzonMw >= 3000) { luzonRed = 20; luzonYellow = 60; }
+    if (luzonMw >= 4000 || sLuzMw >= 2500 || nLuzMw >= 1500) { luzonRed = 80; luzonYellow = 20; }
+    else if (luzonMw >= 3000 || sLuzMw >= 1800) { luzonRed = 20; luzonYellow = 60; }
     else if (luzonMw >= 2000) { luzonRed = 0; luzonYellow = 25; }
     
     let visayasRed = 0, visayasYellow = 0;
-    if (visayasMw >= 1100) { visayasRed = 80; visayasYellow = 20; }
-    else if (visayasMw >= 800) { visayasRed = 20; visayasYellow = 60; }
+    if (visayasMw >= 1100 || panayMw >= 300 || cebuMw >= 600) { visayasRed = 80; visayasYellow = 20; }
+    else if (visayasMw >= 800 || panayMw >= 200 || cebuMw >= 400) { visayasRed = 20; visayasYellow = 60; }
     else if (visayasMw >= 500) { visayasRed = 0; visayasYellow = 25; }
     
     let minRed = 0, minYellow = 0;
-    if (mindanaoMw >= 1400) { minRed = 80; minYellow = 20; }
-    else if (mindanaoMw >= 1000) { minRed = 20; minYellow = 60; }
+    if (mindanaoMw >= 1400 || nMinMw >= 800 || sMinMw >= 700) { minRed = 80; minYellow = 20; }
+    else if (mindanaoMw >= 1000 || nMinMw >= 600) { minRed = 20; minYellow = 60; }
     else if (mindanaoMw >= 700) { minRed = 0; minYellow = 25; }
     
     timeline.push({ 
@@ -3349,7 +3430,8 @@ function calculateAlertProbabilities() {
       luzMw: luzonMw, visMw: visayasMw, minMw: mindanaoMw,
       luzonRed, luzonYellow, 
       visayasRed, visayasYellow, 
-      minRed, minYellow 
+      minRed, minYellow,
+      nLuzMw, sLuzMw, panayMw, cebuMw, nMinMw, sMinMw
     });
   }
   
@@ -3608,23 +3690,50 @@ function renderTopologyView() {
     g.attr('transform', e.transform);
   }));
   
-  const nodes = DASHBOARD_DATA.network_topology.nodes.map(d => Object.create(d));
-  const links = DASHBOARD_DATA.network_topology.edges.map(d => Object.create(d));
+  const filteredNodes = DASHBOARD_DATA.network_topology.nodes.filter(d => d.grid !== 'UNKNOWN' && d.id !== 'GRID_UNKNOWN' && d.name !== 'UNKNOWN');
+  const validNodeIds = new Set(filteredNodes.map(n => n.id));
+  const filteredLinks = DASHBOARD_DATA.network_topology.edges.filter(d => validNodeIds.has(d.source) && validNodeIds.has(d.target));
+  
+  const nodes = filteredNodes.map(d => Object.create(d));
+  const links = filteredLinks.map(d => Object.create(d));
+  
+  // Add major interconnections
+  if (validNodeIds.has('GRID_LUZON') && validNodeIds.has('GRID_VISAYAS')) {
+    links.push({ source: 'GRID_LUZON', target: 'GRID_VISAYAS', value: 20, isInterconnection: true, label: 'HVDC (Luzon-Visayas)' });
+  }
+  if (validNodeIds.has('GRID_VISAYAS') && validNodeIds.has('GRID_MINDANAO')) {
+    links.push({ source: 'GRID_VISAYAS', target: 'GRID_MINDANAO', value: 20, isInterconnection: true, label: 'MVIP (Visayas-Mindanao)' });
+  }
   
   // Link distance based on hierarchy
   topologyState.simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(d => d.id).distance(d => d.value === 10 ? 100 : 20))
+      .force('link', d3.forceLink(links).id(d => d.id).distance(d => {
+        if (d.isInterconnection) return 200; // keep grids spaced out
+        return d.value === 10 ? 100 : 20;
+      }))
       .force('charge', d3.forceManyBody().strength(-30))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collide', d3.forceCollide().radius(8));
       
   topologyState.linkElements = g.append('g')
-      .attr('stroke', '#334155')
-      .attr('stroke-opacity', 0.6)
       .selectAll('line')
       .data(links)
       .join('line')
-      .attr('stroke-width', d => Math.sqrt(d.value));
+      .attr('stroke', d => d.isInterconnection ? '#3b82f6' : '#334155')
+      .attr('stroke-opacity', d => d.isInterconnection ? 0.9 : 0.6)
+      .attr('stroke-width', d => d.isInterconnection ? 3 : Math.sqrt(d.value))
+      .attr('stroke-dasharray', d => d.isInterconnection ? '6,4' : 'none');
+      
+  // Add text labels for interconnections
+  topologyState.linkLabelElements = g.append('g')
+      .selectAll('text')
+      .data(links.filter(d => d.isInterconnection))
+      .join('text')
+      .attr('font-size', '10px')
+      .attr('fill', '#1d4ed8')
+      .attr('font-weight', 'bold')
+      .attr('text-anchor', 'middle')
+      .text(d => d.label);
       
   topologyState.nodeElements = g.append('g')
       .selectAll('circle')
@@ -3644,16 +3753,16 @@ function renderTopologyView() {
       .attr('stroke-width', 1.5)
       .attr('class', 'd3-node');
       
-  // Add labels for grids and stations
-  g.append('g')
+  topologyState.nodeLabels = g.append('g')
       .selectAll('text')
       .data(nodes.filter(d => d.type === 'grid' || d.type === 'station'))
       .join('text')
-      .text(d => d.name)
-      .attr('font-size', d => d.type === 'grid' ? '12px' : '8px')
-      .attr('fill', '#cbd5e1')
       .attr('dx', 12)
-      .attr('dy', 4);
+      .attr('dy', 4)
+      .attr('font-size', d => d.type === 'grid' ? '12px' : '8px')
+      .attr('font-weight', d => d.type === 'grid' ? 'bold' : 'normal')
+      .attr('fill', '#cbd5e1')
+      .text(d => d.name);
 
   topologyState.simulation.on('tick', () => {
     topologyState.linkElements
@@ -3662,11 +3771,17 @@ function renderTopologyView() {
         .attr('x2', d => d.target.x)
         .attr('y2', d => d.target.y);
         
+    if (topologyState.linkLabelElements) {
+      topologyState.linkLabelElements
+          .attr('x', d => (d.source.x + d.target.x) / 2)
+          .attr('y', d => (d.source.y + d.target.y) / 2 - 5);
+    }
+        
     topologyState.nodeElements
         .attr('cx', d => d.x)
         .attr('cy', d => d.y);
         
-    g.selectAll('text')
+    topologyState.nodeLabels
         .attr('x', d => d.x)
         .attr('y', d => d.y);
   });
@@ -3683,17 +3798,21 @@ function updateTopologyForCurrentDate() {
     dateStrEl.textContent = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   }
   
+  const gridFilter = document.getElementById('topology-grid-filter')?.value || 'All';
+
   // Find outages for this date
-  const activeOutages = state.gompOutages.filter(o => isGompActiveOnDate(o, d));
+  const activeOutages = state.gompOutages.filter(o => isGompActiveOnDate(o, d) && (gridFilter === 'All' || o.grid === gridFilter));
   
   let totalMw = 0;
   let luzMw = 0, visMw = 0, minMw = 0;
+  let nLuzMw = 0, sLuzMw = 0, panayMw = 0, cebuMw = 0, negrosMw = 0, nMinMw = 0, sMinMw = 0;
   activeOutages.forEach(o => {
-    const cap = parseFloat(o.capacity) || 0;
+    const cap = parseFloat(String(o.capacity).replace(/,/g, '')) || 0;
     totalMw += cap;
-    if (o.grid === 'Luzon') luzMw += cap;
-    else if (o.grid === 'Visayas') visMw += cap;
-    else if (o.grid === 'Mindanao') minMw += cap;
+    const subGrid = getSubGrid(o.plant, o.grid);
+    if (o.grid === 'Luzon') { luzMw += cap; if (subGrid === 'North Luzon') nLuzMw += cap; else sLuzMw += cap; }
+    else if (o.grid === 'Visayas') { visMw += cap; if (subGrid === 'Panay') panayMw += cap; else if (subGrid === 'Cebu') cebuMw += cap; else negrosMw += cap; }
+    else if (o.grid === 'Mindanao') { minMw += cap; if (subGrid === 'North Mindanao') nMinMw += cap; else sMinMw += cap; }
   });
   
   const mwEl = document.getElementById('topology-offline-mw');
@@ -3701,38 +3820,47 @@ function updateTopologyForCurrentDate() {
     mwEl.textContent = `- ${Math.round(totalMw).toLocaleString()} MW Scheduled Offline Total`;
   }
   
-  // Calculate probabilities for breakdown
+  // Calculate probabilities for breakdown (using sub-grid logic)
   let lRed = 0, lYel = 0;
-  if (luzMw >= 4000) { lRed = 80; lYel = 20; }
-  else if (luzMw >= 3000) { lRed = 20; lYel = 60; }
+  if (luzMw >= 4000 || sLuzMw >= 2500 || nLuzMw >= 1500) { lRed = 80; lYel = 20; }
+  else if (luzMw >= 3000 || sLuzMw >= 1800) { lRed = 20; lYel = 60; }
   else if (luzMw >= 2000) { lRed = 0; lYel = 25; }
   
   let vRed = 0, vYel = 0;
-  if (visMw >= 1100) { vRed = 80; vYel = 20; }
-  else if (visMw >= 800) { vRed = 20; vYel = 60; }
+  if (visMw >= 1100 || panayMw >= 300 || cebuMw >= 600) { vRed = 80; vYel = 20; }
+  else if (visMw >= 800 || panayMw >= 200 || cebuMw >= 400) { vRed = 20; vYel = 60; }
   else if (visMw >= 500) { vRed = 0; vYel = 25; }
   
   let mRed = 0, mYel = 0;
-  if (minMw >= 1400) { mRed = 80; mYel = 20; }
-  else if (minMw >= 1000) { mRed = 20; mYel = 60; }
+  if (minMw >= 1400 || nMinMw >= 800 || sMinMw >= 700) { mRed = 80; mYel = 20; }
+  else if (minMw >= 1000 || nMinMw >= 600) { mRed = 20; mYel = 60; }
   else if (minMw >= 700) { mRed = 0; mYel = 25; }
   
-  const bdEl = document.getElementById('topology-breakdown');
-  if (bdEl) {
-    bdEl.innerHTML = `
-      <div style="background:rgba(59, 130, 246, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #3b82f6;">
-        <strong style="color:#3b82f6">Luzon:</strong> ${Math.round(luzMw)} MW 
-        <span style="color:#ef4444; margin-left:4px;">Red: ${lRed}%</span> | <span style="color:#f59e0b">Yel: ${lYel}%</span>
-      </div>
-      <div style="background:rgba(139, 92, 246, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #8b5cf6;">
-        <strong style="color:#8b5cf6">Visayas:</strong> ${Math.round(visMw)} MW 
-        <span style="color:#ef4444; margin-left:4px;">Red: ${vRed}%</span> | <span style="color:#f59e0b">Yel: ${vYel}%</span>
-      </div>
-      <div style="background:rgba(16, 185, 129, 0.1); padding:4px 8px; border-radius:4px; border-left:2px solid #10b981;">
-        <strong style="color:#10b981">Mindanao:</strong> ${Math.round(minMw)} MW 
-        <span style="color:#ef4444; margin-left:4px;">Red: ${mRed}%</span> | <span style="color:#f59e0b">Yel: ${mYel}%</span>
+  // WESM Financial Impact Simulator
+  let luzPrice = 5000, visPrice = 5000, minPrice = 5000;
+  if (lRed >= 50) luzPrice = 32000; else if (lYel >= 50) luzPrice = 15000;
+  if (vRed >= 50) visPrice = 32000; else if (vYel >= 50) visPrice = 15000;
+  if (mRed >= 50) minPrice = 32000; else if (mYel >= 50) minPrice = 15000;
+  
+  // Assume 15% WESM exposure, Peak Demands: L=13000, V=2500, M=2200
+  const luzCost = (13000 * 0.15) * Math.max(0, luzPrice - 5000);
+  const visCost = (2500 * 0.15) * Math.max(0, visPrice - 5000);
+  const minCost = (2200 * 0.15) * Math.max(0, minPrice - 5000);
+  const totalCostHour = luzCost + visCost + minCost;
+  
+  let wesmHtml = '';
+  if (totalCostHour > 0) {
+    wesmHtml = `
+      <div style="background:rgba(239, 68, 68, 0.1); padding:6px 12px; border-radius:6px; border-left:3px solid #ef4444; display:inline-flex; flex-direction:column; align-items:flex-end;">
+        <span style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Est. Consumer Cost (WESM)</span>
+        <span style="font-size:16px; font-weight:800; color:#ef4444; font-family:var(--font-title);">+₱${(totalCostHour / 1e6).toFixed(1)}M / hour</span>
       </div>
     `;
+  }
+
+  const bdEl = document.getElementById('topology-breakdown');
+  if (bdEl) {
+    bdEl.innerHTML = wesmHtml;
   }
   
   // Map GOMP plant names to SLD node names. GOMP uses facility names, SLD uses RESOURCE NAME.
